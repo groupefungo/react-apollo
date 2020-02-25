@@ -1,0 +1,18 @@
+{
+  "name": "@fungo-js-modules/core",
+  "version": "1.0.0",
+  "description": "js modules",
+  "main": "./core.js",
+  "scripts": {
+    "dev": "../../node_modules/webpack/bin/webpack.js --config ../../build-utils/webpack.config.js --env.env=dev --env.packageName=core",
+    "build": "../../node_modules/webpack/bin/webpack.js --config ../../build-utils/webpack.config.js --env.env=prod  --env.packageName=core",
+    "build:analyze": "npm run build -- --env.addon=bundleanalyze --env.addon=bundlevisualizer",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "Robin Wieruch <opensource@rwieruch.com> (https://www.robinwieruch.de)",
+  "license": "MIT",
+  "devDependencies": {},
+  "peerDependencies": {},
+  "dependencies": {}
+}
