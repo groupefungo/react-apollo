@@ -9,6 +9,11 @@
     "build:analyze": "npm run build -- --env.addon=bundleanalyze --env.addon=bundlevisualizer",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
+  "repository" : {
+    "type" : "git",
+    "url": "ssh://git@github.com/groupefungo/fungo-js-modules.git",
+    "directory": "packages/core"
+  },
   "keywords": [],
   "author": "Robin Wieruch <opensource@rwieruch.com> (https://www.robinwieruch.de)",
   "license": "MIT",

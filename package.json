@@ -1,5 +1,5 @@
 {
-  "name": "@fungo-js-modules/app",
+  "name": "fungo-js-modules",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,6 +8,10 @@
     "build": "webpack --config build-utils/webpack.config.js --env.env=prod",
     "build:analyze": "npm run build -- --env.addon=bundleanalyze --env.addon=bundlevisualizer",
     "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository" : {
+    "type" : "git",
+    "url": "ssh://git@github.com/groupefungo/fungo-js-modules.git"
   },
   "keywords": [],
   "author": "Robin Wieruch <opensource@rwieruch.com> (https://www.robinwieruch.de)",
