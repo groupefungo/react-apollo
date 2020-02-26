@@ -1,8 +1,8 @@
 {
   "name": "@groupefungo/js-modules-core",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "js modules",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "dev": "../../node_modules/webpack/bin/webpack.js --config ../../build-utils/webpack.config.js --env.env=dev --env.packageName=core",
     "build": "../../node_modules/webpack/bin/webpack.js --config ../../build-utils/webpack.config.js --env.env=prod  --env.packageName=core",

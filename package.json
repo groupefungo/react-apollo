@@ -1,8 +1,8 @@
 {
   "name": "@groupefungo/js-modules-app",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "./index.js",
   "scripts": {
     "start": "webpack-dev-server --config build-utils/webpack.config.js --env.env=dev",
     "build": "babel src -d ./ --copy-files",
