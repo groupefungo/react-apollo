@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 import {useMutation, useQuery} from 'react-apollo';
 import {Route, Switch, Link, Redirect, BrowserRouter as Router} from 'react-router-dom';
-import useAuth from './useAuth';
-import {ProvideAuth} from './useAuth';
+
+import {useAuth, ProvideAuth, useUserGql} from '../Hooks';
 
 export default {
   gql,
@@ -14,5 +14,6 @@ export default {
   Link,
   useAuth,
   Router,
-  ProvideAuth
+  ProvideAuth,
+  useUserGql
 };

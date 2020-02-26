@@ -1,8 +1,8 @@
 {
   "name": "@groupefungo/js-modules-core",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "js modules",
-  "main": "./index.js",
+  "main": "src/index.js",
   "scripts": {
     "dev": "../../node_modules/webpack/bin/webpack.js --config ../../build-utils/webpack.config.js --env.env=dev --env.packageName=core",
     "build": "../../node_modules/webpack/bin/webpack.js --config ../../build-utils/webpack.config.js --env.env=prod  --env.packageName=core",
@@ -23,7 +23,5 @@
   "devDependencies": {},
   "peerDependencies": {},
   "dependencies": {},
-  "files": [
-    "dist"
-  ]
+  "files": ["Apollo", "Context", "Hooks", "AppContext", "AppContextProvider", "./index.js"]
 }

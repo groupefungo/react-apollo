@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import { map } from 'lodash';
-import sum from './otherFile.js';
-import App from './App';
+import sum from './Container/otherFile.js';
+import App from './Container';
 
 console.log(sum(2, 5));
 
@@ -15,6 +15,6 @@ const MyApp = () => (
   </App>
 );
 
-ReactDOM.render(<MyApp/>, document.getElementById('app'));
+ReactDOM.render(<MyApp/>, document.getElementById('root'));
 
 console.log(process.env.NODE_ENV);

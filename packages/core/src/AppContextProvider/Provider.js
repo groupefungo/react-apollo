@@ -1,13 +1,12 @@
 import React from 'react'
 
-import uses from './uses'
-import AppContext from './AppContext'
+import {appUses, AppContext} from '../Context'
 
 export default ({children}) => {
-  const {ProvideAuth, Router} = uses;
+  const {ProvideAuth, Router} = appUses;
 
   return (
-    <AppContext.Provider value={uses}>
+    <AppContext.Provider value={appUses}>
       <ProvideAuth>
         <Router>
           {children}

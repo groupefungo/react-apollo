@@ -37,7 +37,7 @@ function useProvideAuth() {
   };
 }
 
-// Provider component that wraps your app and makes auth object ...
+// Provider component that wraps your Container and makes auth object ...
 // ... available to any child component that calls useAuth().
 export function ProvideAuth({ children }) {
   const auth = useProvideAuth();

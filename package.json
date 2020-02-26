@@ -1,26 +1,27 @@
 {
   "name": "@groupefungo/js-modules-app",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
-  "main": "./src/App.js",
+  "main": "./dist/index.js",
   "scripts": {
     "start": "webpack-dev-server --config build-utils/webpack.config.js --env.env=dev",
-    "build": "webpack --config build-utils/webpack.config.js --env.env=prod",
+    "build": "babel src -d ./ --copy-files",
     "build:analyze": "npm run build -- --env.addon=bundleanalyze --env.addon=bundlevisualizer",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
-  "repository" : {
-    "type" : "git",
+  "repository": {
+    "type": "git",
     "url": "ssh://git@github.com/groupefungo/fungo-js-modules.git"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [],
   "author": "Robin Wieruch <opensource@rwieruch.com> (https://www.robinwieruch.de)",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.8.4",
+    "@babel/cli": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
     "@types/react": "^16.9.22",
@@ -43,7 +44,8 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.2.2",
-    "webpack-visualizer-plugin": "^0.1.11"
+    "webpack-visualizer-plugin": "^0.1.11",
+    "@groupefungo/js-modules-core": "file:./packages/core"
   },
   "peerDependencies": {
     "dotenv-webpack": "^1.7.0",
@@ -53,5 +55,7 @@
   "dependencies": {
     "lodash": "^4.17.15"
   },
-  "files": ["dist"]
+  "files": [
+    "Container", "./index.js"
+  ]
 }

@@ -1,4 +1,4 @@
-import useAppContext from './useAppContext';
+import useAppContext from '../AppContext/useAppContext';
 
 export default () => {
   const { gql, useQuery, useMutation } = useAppContext();
