@@ -1,8 +1,8 @@
 {
   "name": "@groupefungo/js-modules-app",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "./src/App.js",
   "scripts": {
     "start": "webpack-dev-server --config build-utils/webpack.config.js --env.env=dev",
     "build": "webpack --config build-utils/webpack.config.js --env.env=prod",
