@@ -1,6 +1,6 @@
 {
   "name": "@groupefungo/js-modules-core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "js modules",
   "main": "./core.js",
   "scripts": {
