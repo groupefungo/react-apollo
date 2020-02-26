@@ -1,8 +1,8 @@
 {
   "name": "@groupefungo/js-modules-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "start": "webpack-dev-server --config build-utils/webpack.config.js --env.env=dev",
     "build": "webpack --config build-utils/webpack.config.js --env.env=prod",
@@ -52,5 +52,6 @@
   },
   "dependencies": {
     "lodash": "^4.17.15"
-  }
+  },
+  "files": ["dist"]
 }

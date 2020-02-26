@@ -2,3 +2,4 @@ dist/*
 node_modules/*
 /.npmrc
 /packages/core/.npmrc
+/packages/core/node_modules/.cache/terser-webpack-plugin/
