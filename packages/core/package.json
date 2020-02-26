@@ -1,5 +1,5 @@
 {
-  "name": "@fungo-js-modules/core",
+  "name": "@groupefungo/js-modules-core",
   "version": "1.0.0",
   "description": "js modules",
   "main": "./core.js",
@@ -9,10 +9,13 @@
     "build:analyze": "npm run build -- --env.addon=bundleanalyze --env.addon=bundlevisualizer",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
-  "repository" : {
-    "type" : "git",
+  "repository": {
+    "type": "git",
     "url": "ssh://git@github.com/groupefungo/fungo-js-modules.git",
     "directory": "packages/core"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [],
   "author": "Robin Wieruch <opensource@rwieruch.com> (https://www.robinwieruch.de)",

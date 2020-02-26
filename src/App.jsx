@@ -1,6 +1,6 @@
 import React from 'react';
 import {ApolloProvider} from 'react-apollo';
-import {APOLLO_CLIENT, AppContextProvider} from '@fungo-js-modules/core';
+import {APOLLO_CLIENT, AppContextProvider} from '@groupefungo/js-modules-core';
 
 export default ({children}) => (
   <ApolloProvider client={APOLLO_CLIENT}>

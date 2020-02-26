@@ -1,5 +1,5 @@
 {
-  "name": "fungo-js-modules",
+  "name": "@groupefungo/js-modules-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,6 +12,9 @@
   "repository" : {
     "type" : "git",
     "url": "ssh://git@github.com/groupefungo/fungo-js-modules.git"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
   },
   "keywords": [],
   "author": "Robin Wieruch <opensource@rwieruch.com> (https://www.robinwieruch.de)",
