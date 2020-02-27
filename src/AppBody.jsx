@@ -1,5 +1,5 @@
 import React from 'react';
-import {appUses} from "@groupefungo/js-modules-core/Context";
+import {appUses} from "@groupefungo/react-apollo.core/Context";
 
 const RootComponent = () => {
   const {Link} = appUses;

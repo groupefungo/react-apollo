@@ -3,3 +3,5 @@ node_modules/*
 /packages/core/.npmrc
 /packages/core/node_modules/.cache/terser-webpack-plugin/
 /.idea
+/packages/theme/node_modules/
+/packages/core/node_modules/
