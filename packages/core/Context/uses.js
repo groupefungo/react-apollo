@@ -28,6 +28,7 @@ var _default = {
   ProvideAuth: _Hooks.ProvideAuth,
   useUserGql: _Hooks.useUserGql,
   useRouter: _Hooks.useRouter,
-  useQueryWrapper: _Hooks.useQueryWrapper
+  useQueryWrapper: _Hooks.useQueryWrapper,
+  ApolloProvider: _reactApollo.ApolloProvider
 };
 exports["default"] = _default;
