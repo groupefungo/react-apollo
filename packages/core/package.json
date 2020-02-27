@@ -5,6 +5,7 @@
   "main": "./index.js",
   "scripts": {
     "prod": "../../node_modules/webpack/bin/webpack.js --config ../../build-utils/webpack.config.js --env.env=prod --env.packageName=core",
+    "start": "../../node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ../../build-utils/webpack.config.js --env.env=dev --env.packageName=core",
     "build": "babel ./src -d ./ --copy-files",
     "build:analyze": "npm run prod -- --env.addon=bundleanalyze --env.addon=bundlevisualizer",
     "test": "echo \"Error: no test specified\" && exit 0"
@@ -30,11 +31,17 @@
     "react-dom": "^16.12.0"
   },
   "dependencies": {
-    "@groupefungo/react-apollo.theme": "^1.0.0",
+    "@date-io/date-fns": "^1.3.13",
+    "@material-ui/core": "^4.9.4",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.44",
+    "@material-ui/pickers": "^3.2.10",
+    "@popperjs/core": "^2.0.6",
     "apollo-boost": "^0.4.7",
     "apollo-client": "^2.6.8",
     "apollo-upload-client": "^12.1.0",
     "apollo-utilities": "^1.3.3",
+    "date-fns": "^2.10.0",
     "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",
     "react-apollo": "^3.1.3",

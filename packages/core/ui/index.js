@@ -3,13 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "useUiContext", {
+Object.defineProperty(exports, "default", {
   enumerable: true,
   get: function get() {
-    return _UseContext["default"];
+    return _ThemeContextProvider["default"];
   }
 });
 
-var _UseContext = _interopRequireDefault(require("./UseContext"));
+var _ThemeContextProvider = _interopRequireDefault(require("./ThemeContextProvider"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

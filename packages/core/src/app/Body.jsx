@@ -1,5 +1,5 @@
 import React from 'react';
-import appUses from "@groupefungo/react-apollo.core/app/ext";
+import appUses from "./ext";
 
 const RootComponent = () => {
   const {Link} = appUses;

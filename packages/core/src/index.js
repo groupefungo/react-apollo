@@ -1,3 +1,19 @@
-export {default as APOLLO_CLIENT} from './app/Apollo';
-export {default as AppContextProvider} from './app/AppContextProvider';
-export {default as ThemeContextProvider} from './ui/ThemeContextProvider';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import App from './app/Container';
+import AppBody from './app/Body';
+import AppFooter from "./ui/AppFooter";
+
+const MyApp = () => {
+  return (
+    <App>
+      <AppBody />
+      <AppFooter />
+    </App>
+  );
+};
+
+ReactDOM.render(<MyApp/>, document.getElementById('root'));
+
+console.log(process.env.NODE_ENV);

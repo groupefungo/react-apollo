@@ -1,5 +1,6 @@
 import React from 'react';
-import {AppContextProvider, ThemeContextProvider} from '@groupefungo/react-apollo.core';
+import AppContextProvider from '.';
+import ThemeContextProvider from '../ui';
 
 export default ({children, t}) => {
   return (

@@ -1,7 +1,7 @@
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/Container.js',
   mode: 'production',
   devtool: 'source-map',
   plugins: [

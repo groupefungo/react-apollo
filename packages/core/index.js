@@ -1,31 +1,21 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-Object.defineProperty(exports, "APOLLO_CLIENT", {
-  enumerable: true,
-  get: function get() {
-    return _Apollo["default"];
-  }
-});
-Object.defineProperty(exports, "AppContextProvider", {
-  enumerable: true,
-  get: function get() {
-    return _AppContextProvider["default"];
-  }
-});
-Object.defineProperty(exports, "ThemeContextProvider", {
-  enumerable: true,
-  get: function get() {
-    return _ThemeContextProvider["default"];
-  }
-});
+var _react = _interopRequireDefault(require("react"));
 
-var _Apollo = _interopRequireDefault(require("./app/Apollo"));
+var _reactDom = _interopRequireDefault(require("react-dom"));
 
-var _AppContextProvider = _interopRequireDefault(require("./app/AppContextProvider"));
+var _Container = _interopRequireDefault(require("./app/Container"));
 
-var _ThemeContextProvider = _interopRequireDefault(require("./ui/ThemeContextProvider"));
+var _Body = _interopRequireDefault(require("./app/Body"));
+
+var _AppFooter = _interopRequireDefault(require("./ui/AppFooter"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var MyApp = function MyApp() {
+  return _react["default"].createElement(_Container["default"], null, _react["default"].createElement(_Body["default"], null), _react["default"].createElement(_AppFooter["default"], null));
+};
+
+_reactDom["default"].render(_react["default"].createElement(MyApp, null), document.getElementById('root'));
+
+console.log(process.env.NODE_ENV);

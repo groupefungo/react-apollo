@@ -1,1 +1,1 @@
-export {default as useUiContext} from './UseContext';
+export {default} from './ThemeContextProvider';

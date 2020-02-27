@@ -3,11 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "useAppContext", {
+Object.defineProperty(exports, "default", {
   enumerable: true,
   get: function get() {
-    return _useAppContext.useAppContext;
+    return _AppContextProvider["default"];
   }
 });
 
-var _useAppContext = require("./UseContext/useAppContext");
+var _AppContextProvider = _interopRequireDefault(require("./AppContextProvider"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
