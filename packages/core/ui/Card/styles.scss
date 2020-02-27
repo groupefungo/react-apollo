@@ -1,0 +1,14 @@
+.filterItem {
+  font-size: 70px !important;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out !important;
+  opacity: 100%;
+  &:hover {
+    transform: scale(1.2);
+     background-color: transparent;
+
+  }
+}
+
+.filterItem-checked {
+}
