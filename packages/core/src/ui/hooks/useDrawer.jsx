@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const useDrawer = () => {
+export default () => {
   const [state, setState] = useState(false);
 
   const toggleDrawer = (open) => (event) => {

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.BaseSelect = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -11,7 +11,7 @@ var _UseContext = _interopRequireDefault(require("./UseContext"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var BaseSelect = function BaseSelect(_ref) {
+var _default = function _default(_ref) {
   var _ref$e = _ref.e,
       e = _ref$e === void 0 ? '' : _ref$e,
       n = _ref.n,
@@ -46,4 +46,4 @@ var BaseSelect = function BaseSelect(_ref) {
   }));
 };
 
-exports.BaseSelect = BaseSelect;
+exports["default"] = _default;

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.useDrawer = void 0;
+exports["default"] = void 0;
 
 var _react = require("react");
 
@@ -15,7 +15,7 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var useDrawer = function useDrawer() {
+var _default = function _default() {
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       state = _useState2[0],
@@ -37,4 +37,4 @@ var useDrawer = function useDrawer() {
   };
 };
 
-exports.useDrawer = useDrawer;
+exports["default"] = _default;

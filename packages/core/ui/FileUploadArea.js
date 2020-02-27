@@ -3,17 +3,17 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.FileUploadArea = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
 var _UseContext = _interopRequireDefault(require("./UseContext"));
 
-var _ChipsArray = require("./ChipsArray");
+var _ChipsArray = _interopRequireDefault(require("./ChipsArray"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var FileUploadArea = function FileUploadArea(_ref) {
+var _default = function _default(_ref) {
   var chipsData = _ref.chipsData,
       chipClicked = _ref.chipClicked,
       chipDeleted = _ref.chipDeleted;
@@ -43,11 +43,11 @@ var FileUploadArea = function FileUploadArea(_ref) {
     elevation: 0
   }, _react["default"].createElement(Box, {
     padding: 1
-  }, _react["default"].createElement(_ChipsArray.ChipsArray, {
+  }, _react["default"].createElement(_ChipsArray["default"], {
     chipClicked: chipClicked,
     chipsData: chipsData,
     chipDeleted: chipDeleted
   }))))));
 };
 
-exports.FileUploadArea = FileUploadArea;
+exports["default"] = _default;

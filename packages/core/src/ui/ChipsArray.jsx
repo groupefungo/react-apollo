@@ -2,7 +2,7 @@ import React from 'react';
 
 import useUiContext from './UseContext';
 
-export function ChipsArray({ chipsData, size, chipDeleted, chipClicked }) {
+export default ({ chipsData, size, chipDeleted, chipClicked }) => {
   const { Chip, GetAppIcon, Grid } = useUiContext();
 
   return (

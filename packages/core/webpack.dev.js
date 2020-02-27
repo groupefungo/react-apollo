@@ -5,7 +5,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './', 'dist'),
     publicPath: '/',
-    filename: 'Container.js'
+    filename: 'index.js'
   },
   devServer: {
     contentBase: './dist'

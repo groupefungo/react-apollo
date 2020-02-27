@@ -9,13 +9,13 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _ClickAwayListener = _interopRequireDefault(require("@material-ui/core/ClickAwayListener"));
+
 var _UseContext = _interopRequireDefault(require("../UseContext"));
 
 var _UseContext2 = _interopRequireDefault(require("../../app/UseContext"));
 
-var _ClickAwayListener = _interopRequireDefault(require("@material-ui/core/ClickAwayListener"));
-
-var _FooterNavigationPanel = require("../FooterNavigationPanel");
+var _FooterNavigationPanel = _interopRequireDefault(require("../FooterNavigationPanel"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -99,7 +99,7 @@ var _default = function _default() {
     onClickAway: handleClickAway
   }, _react["default"].createElement(Grid, {
     item: true
-  }, _react["default"].createElement(_FooterNavigationPanel.FooterNavigationPanel, {
+  }, _react["default"].createElement(_FooterNavigationPanel["default"], {
     onClose: handleChange
   })))), _react["default"].createElement(Grid, {
     container: true,

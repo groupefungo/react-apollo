@@ -1,7 +1,7 @@
 import React from 'react';
 import useUiContext from '../UseContext';
 
-import { FilterList } from './FilterList';
+import FilterList from './FilterList';
 
 export default ({ onClick, filters, value = '0', label }) => {
   const { makeStyles } = useUiContext();

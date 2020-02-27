@@ -1,8 +1,8 @@
 import React from 'react';
 import useUiContext from './UseContext';
-import useAppContext from '../app/Context';
+import useAppContext from '../app/UseContext';
 
-export const BreadcrumbsWrapper = ({ data }) => {
+export default ({ data }) => {
   const appContext = useAppContext();
 
   const { Breadcrumbs, Typography } = useUiContext();

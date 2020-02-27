@@ -1,4 +1,4 @@
-import useUiContext from './UseContext';
+import useUiContext from '../UseContext';
 
 export default () => {
   const { makeStyles } = useUiContext();

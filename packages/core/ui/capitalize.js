@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.capitalize = void 0;
+exports["default"] = void 0;
 
 function _toArray(arr) { return _arrayWithHoles(arr) || _iterableToArray(arr) || _nonIterableRest(); }
 
@@ -13,7 +13,7 @@ function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var capitalize = function capitalize(_ref) {
+var _default = function _default(_ref) {
   var _ref2 = _toArray(_ref),
       initial = _ref2[0],
       rest = _ref2.slice(1);
@@ -21,4 +21,4 @@ var capitalize = function capitalize(_ref) {
   return "".concat(initial.toUpperCase()).concat(rest.join(''));
 };
 
-exports.capitalize = capitalize;
+exports["default"] = _default;

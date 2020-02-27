@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const BaseList = ({ data, rowRender }) => (
+export default ({ data, rowRender }) => (
   <>
     {
       data && (

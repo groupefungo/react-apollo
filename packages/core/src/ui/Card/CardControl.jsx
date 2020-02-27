@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import CancelIcon from '@material-ui/icons/Cancel';
+
 import useUiContext from '../UseContext';
 import useAppContext from '../../app/UseContext';
-import CancelIcon from '@material-ui/icons/Cancel';
-import { ChipsArray } from '../ChipsArray';
+import ChipsArray from '../ChipsArray';
 import useChipFiles from '../hooks/useChipFiles';
-import { CustomCardHeader } from './CustomCardHeader';
-import { DeleteWarning } from './DeleteWarning';
+import CustomCardHeader from './CustomCardHeader';
+import DeleteWarning from './DeleteWarning';
 
 export default (props) => {
   const { title, description, category, action, actionLabel, files, date, id, deleteCardFunction } = props;

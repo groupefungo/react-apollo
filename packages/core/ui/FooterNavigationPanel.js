@@ -5,7 +5,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.FooterNavigationPanel = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -27,7 +27,7 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var FooterNavigationPanel = function FooterNavigationPanel(_ref) {
+var _default = function _default(_ref) {
   var onClose = _ref.onClose;
   var appContext = (0, _UseContext2["default"])();
   var useRouter = appContext.useRouter;
@@ -144,4 +144,4 @@ var FooterNavigationPanel = function FooterNavigationPanel(_ref) {
   }, _react["default"].createElement(PeopleAltIcon, null)))))));
 };
 
-exports.FooterNavigationPanel = FooterNavigationPanel;
+exports["default"] = _default;

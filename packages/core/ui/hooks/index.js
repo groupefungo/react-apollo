@@ -3,10 +3,12 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _exportNames = {
-  useQueryWrapper: true,
-  useFormStyles: true
-};
+Object.defineProperty(exports, "useDrawer", {
+  enumerable: true,
+  get: function get() {
+    return _useDrawer["default"];
+  }
+});
 Object.defineProperty(exports, "useQueryWrapper", {
   enumerable: true,
   get: function get() {
@@ -19,22 +21,19 @@ Object.defineProperty(exports, "useFormStyles", {
     return _useFormStyles["default"];
   }
 });
-
-var _useDrawer = require("./useDrawer");
-
-Object.keys(_useDrawer).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _useDrawer[key];
-    }
-  });
+Object.defineProperty(exports, "useChipFiles", {
+  enumerable: true,
+  get: function get() {
+    return _useChipFiles["default"];
+  }
 });
+
+var _useDrawer = _interopRequireDefault(require("./useDrawer"));
 
 var _useQueryWrapper = _interopRequireDefault(require("./useQueryWrapper"));
 
 var _useFormStyles = _interopRequireDefault(require("./useFormStyles"));
+
+var _useChipFiles = _interopRequireDefault(require("./useChipFiles"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

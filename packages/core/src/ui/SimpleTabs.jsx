@@ -1,6 +1,6 @@
 import React from 'react';
 import useUiContext from './UseContext';
-import useAppContext from '../app/Context';
+import useAppContext from '../app/UseContext';
 
 const a11yProps = (index) => (
   {

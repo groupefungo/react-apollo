@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.TemporaryDrawer = TemporaryDrawer;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -11,7 +11,7 @@ var _UseContext = _interopRequireDefault(require("./UseContext"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function TemporaryDrawer(_ref) {
+var _default = function _default(_ref) {
   var topItems = _ref.topItems,
       bottomItems = _ref.bottomItems,
       drawer = _ref.drawer;
@@ -49,4 +49,6 @@ function TemporaryDrawer(_ref) {
     open: state,
     onClose: toggleDrawer(false)
   }, sideList())));
-}
+};
+
+exports["default"] = _default;

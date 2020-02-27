@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.KeyboardDatePickerBase = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -11,7 +11,7 @@ var _UseContext = _interopRequireDefault(require("./UseContext"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var KeyboardDatePickerBase = function KeyboardDatePickerBase(_ref) {
+var _default = function _default(_ref) {
   var value = _ref.value,
       changed = _ref.changed,
       name = _ref.name;
@@ -39,4 +39,4 @@ var KeyboardDatePickerBase = function KeyboardDatePickerBase(_ref) {
   }));
 };
 
-exports.KeyboardDatePickerBase = KeyboardDatePickerBase;
+exports["default"] = _default;

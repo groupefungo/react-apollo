@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _UseContext = _interopRequireDefault(require("../UseContext"));
 
-var _FilterList = require("./FilterList");
+var _FilterList = _interopRequireDefault(require("./FilterList"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -62,7 +62,7 @@ var _default = function _default(_ref) {
     "aria-label": "filters",
     name: "filters",
     value: value
-  }, _react["default"].createElement(_FilterList.FilterList, {
+  }, _react["default"].createElement(_FilterList["default"], {
     filters: filters,
     onClick: onClick,
     selectedValue: value

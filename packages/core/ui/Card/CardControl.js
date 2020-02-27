@@ -9,19 +9,19 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _Cancel = _interopRequireDefault(require("@material-ui/icons/Cancel"));
+
 var _UseContext = _interopRequireDefault(require("../UseContext"));
 
 var _UseContext2 = _interopRequireDefault(require("../../app/UseContext"));
 
-var _Cancel = _interopRequireDefault(require("@material-ui/icons/Cancel"));
-
-var _ChipsArray = require("../ChipsArray");
+var _ChipsArray = _interopRequireDefault(require("../ChipsArray"));
 
 var _useChipFiles2 = _interopRequireDefault(require("../hooks/useChipFiles"));
 
-var _CustomCardHeader = require("./CustomCardHeader");
+var _CustomCardHeader = _interopRequireDefault(require("./CustomCardHeader"));
 
-var _DeleteWarning = require("./DeleteWarning");
+var _DeleteWarning = _interopRequireDefault(require("./DeleteWarning"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -94,7 +94,7 @@ var _default = function _default(props) {
     height: "inherit"
   }, _react["default"].createElement(Grid, {
     item: true
-  }, _react["default"].createElement(_DeleteWarning.DeleteWarning, {
+  }, _react["default"].createElement(_DeleteWarning["default"], {
     open: openDeleteWarning,
     title: title,
     handleCancel: handleClose,
@@ -115,7 +115,7 @@ var _default = function _default(props) {
     top: -10,
     left: -10,
     position: "absolute"
-  }, _react["default"].createElement(_CustomCardHeader.CustomCardHeader, {
+  }, _react["default"].createElement(_CustomCardHeader["default"], {
     createdAt: date
   })), deleteCardFunction && _react["default"].createElement(Fade, {
     "in": isHovered,
@@ -148,7 +148,7 @@ var _default = function _default(props) {
   }, _react["default"].createElement(Typography, {
     color: "textPrimary",
     paragraph: true
-  }, description)), files && files.length > 0 && _react["default"].createElement(Box, null, _react["default"].createElement(_ChipsArray.ChipsArray, {
+  }, description)), files && files.length > 0 && _react["default"].createElement(Box, null, _react["default"].createElement(_ChipsArray["default"], {
     chipsData: chipsData(),
     chipClicked: function chipClicked(file) {
       return _chipClicked(file);

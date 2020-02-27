@@ -1,9 +1,9 @@
 import React from 'react';
 import useUiContext from './UseContext';
 
-import { ChipsArray } from './ChipsArray';
+import ChipsArray from './ChipsArray';
 
-export const FileUploadArea = ({ chipsData, chipClicked, chipDeleted }) => {
+export default ({ chipsData, chipClicked, chipDeleted }) => {
   const { Grid, Typography, Paper, Box } = useUiContext();
 
   return (

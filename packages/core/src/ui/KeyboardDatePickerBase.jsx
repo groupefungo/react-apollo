@@ -1,7 +1,7 @@
 import React from 'react';
 import useUiContext from './UseContext';
 
-export const KeyboardDatePickerBase = ({ value, changed, name }) => {
+export default ({ value, changed, name }) => {
   const { MuiPickersUtilsProvider, KeyboardDatePicker, DateFnsUtils } = useUiContext();
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>

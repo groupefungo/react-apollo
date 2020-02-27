@@ -1,7 +1,7 @@
 import React from 'react';
 import useUiContext from './UseContext';
 
-export function TemporaryDrawer({ topItems, bottomItems, drawer }) {
+export default ({ topItems, bottomItems, drawer }) => {
   const { makeStyles } = useUiContext();
   const useStyles = makeStyles({
     list: {

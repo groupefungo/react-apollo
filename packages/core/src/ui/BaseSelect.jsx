@@ -1,7 +1,7 @@
 import React from 'react';
 import useUiContext from './UseContext';
 
-export const BaseSelect = ({ e = '', n, v, c, d, r = false, disabled = false }) => {
+export default ({ e = '', n, v, c, d, r = false, disabled = false }) => {
   const { Select, MenuItem } = useUiContext();
   return (
     <Select

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+
 import useUiContext from '../UseContext';
 import useAppContext from '../../app/UseContext';
-
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import { FooterNavigationPanel } from '../FooterNavigationPanel';
+import FooterNavigationPanel from '../FooterNavigationPanel';
 
 export default () => {
   const appContext = useAppContext();
