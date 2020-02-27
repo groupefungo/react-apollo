@@ -5,7 +5,7 @@
   "main": "./Container/index.js",
   "scripts": {
     "start": "webpack-dev-server --config build-utils/webpack.config.js --env.env=dev",
-    "build": "babel src -d ./ --copy-files",
+    "build": "babel src/Container -d ./Container --copy-files",
     "build:analyze": "npm run build -- --env.addon=bundleanalyze --env.addon=bundlevisualizer",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
