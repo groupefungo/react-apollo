@@ -9,7 +9,7 @@ const a11yProps = (index) => (
   }
 );
 
-export const SimpleTabs = (props) => {
+export default (props) => {
   const appContext = useAppContext();
   const { AppBar, Tabs, Tab } = useUiContext();
 

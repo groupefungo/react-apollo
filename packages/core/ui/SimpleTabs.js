@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.SimpleTabs = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -22,7 +22,7 @@ var a11yProps = function a11yProps(index) {
   };
 };
 
-var SimpleTabs = function SimpleTabs(props) {
+var _default = function _default(props) {
   var appContext = (0, _UseContext2["default"])();
 
   var _useUiContext = (0, _UseContext["default"])(),
@@ -90,4 +90,4 @@ var SimpleTabs = function SimpleTabs(props) {
   }))));
 };
 
-exports.SimpleTabs = SimpleTabs;
+exports["default"] = _default;

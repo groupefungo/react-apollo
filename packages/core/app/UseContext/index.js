@@ -6,8 +6,10 @@ Object.defineProperty(exports, "__esModule", {
 Object.defineProperty(exports, "default", {
   enumerable: true,
   get: function get() {
-    return _useAppContext.useAppContext;
+    return _useAppContext["default"];
   }
 });
 
-var _useAppContext = require("./useAppContext");
+var _useAppContext = _interopRequireDefault(require("./useAppContext"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
