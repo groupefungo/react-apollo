@@ -3,9 +3,9 @@ import {ApolloProvider} from 'react-apollo';
 import {APOLLO_CLIENT, AppContextProvider} from '@groupefungo/react-apollo.core';
 import {ThemeContextProvider} from '@groupefungo/react-apollo.theme';
 
-export default ({children}) => {
+export default ({children, t}) => {
   return (
-    <ThemeContextProvider>
+    <ThemeContextProvider t={t}>
       <ApolloProvider client={APOLLO_CLIENT}>
         <AppContextProvider>
           {children}

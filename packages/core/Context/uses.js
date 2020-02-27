@@ -26,6 +26,8 @@ var _default = {
   useAuth: _Hooks.useAuth,
   Router: _reactRouterDom.BrowserRouter,
   ProvideAuth: _Hooks.ProvideAuth,
-  useUserGql: _Hooks.useUserGql
+  useUserGql: _Hooks.useUserGql,
+  useRouter: _Hooks.useRouter,
+  useQueryWrapper: _Hooks.useQueryWrapper
 };
 exports["default"] = _default;
