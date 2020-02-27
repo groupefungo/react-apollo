@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _uses = _interopRequireDefault(require("../Context/uses"));
 
-var _muiTheme = _interopRequireDefault(require("../mui-theme"));
+var _muiTheme = _interopRequireDefault(require("../Context/mui-theme"));
 
 var _UiContext = _interopRequireDefault(require("../Context/UiContext"));
 
@@ -23,7 +23,6 @@ var _default = function _default(_ref) {
       Container = _uses["default"].Container,
       CssBaseline = _uses["default"].CssBaseline;
   var theme = createMuiTheme(t || _muiTheme["default"]);
-  console.log('uiUses2', _uses["default"]);
   return _react["default"].createElement(_UiContext["default"].Provider, {
     value: _uses["default"]
   }, _react["default"].createElement(ThemeProvider, {
