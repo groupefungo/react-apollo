@@ -41,11 +41,8 @@
     "react-router-dom": "^5.1.2"
   },
   "files": [
-    "Apollo",
-    "Context",
-    "AppContext",
-    "AppContextProvider",
-    "Hooks",
+    "ui",
+    "app",
     "index.js"
   ]
 }
