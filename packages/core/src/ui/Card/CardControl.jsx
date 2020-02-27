@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import useUiContext from './UseContext';
-import useAppContext from '../app/Context';
+import useUiContext from '../UseContext';
+import useAppContext from '../../app/UseContext';
 import CancelIcon from '@material-ui/icons/Cancel';
 import { ChipsArray } from '../ChipsArray';
 import useChipFiles from '../hooks/useChipFiles';
 import { CustomCardHeader } from './CustomCardHeader';
 import { DeleteWarning } from './DeleteWarning';
 
-export const CardControl = (props) => {
+export default (props) => {
   const { title, description, category, action, actionLabel, files, date, id, deleteCardFunction } = props;
   const [isHovered, setIsHovered] = useState(false);
   const [openDeleteWarning, setOpenDeleteWarning] = useState(false);

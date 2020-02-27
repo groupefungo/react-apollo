@@ -1,7 +1,7 @@
 import React from 'react';
-import useUiContext from './UseContext';
+import useUiContext from '../UseContext';
 
-export const CustomCardHeader = ({ createdAt = '', category = '' }) => {
+export default ({ createdAt = '', category = '' }) => {
   const { Grid, Typography, Box } = useUiContext();
   const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   const date = new Date(createdAt);

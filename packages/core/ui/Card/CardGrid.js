@@ -7,16 +7,16 @@ exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _UseContext = _interopRequireDefault(require("./UseContext"));
+var _UseContext = _interopRequireDefault(require("../UseContext"));
 
-var _Context = _interopRequireDefault(require("../app/Context"));
+var _UseContext2 = _interopRequireDefault(require("../../app/UseContext"));
 
-var _CardControl = require("./CardControl");
+var _CardControl = _interopRequireDefault(require("./CardControl"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = function _default(props) {
-  var appContext = (0, _Context["default"])();
+  var appContext = (0, _UseContext2["default"])();
   var router = appContext.useRouter();
   var data = props.data,
       titleHandler = props.titleHandler,
@@ -48,7 +48,7 @@ var _default = function _default(props) {
       sm: 6,
       md: 4,
       lg: 4
-    }, _react["default"].createElement(_CardControl.CardControl, {
+    }, _react["default"].createElement(_CardControl["default"], {
       key: d.id,
       id: d.id,
       title: titleHandler && titleHandler(d) || d.title,

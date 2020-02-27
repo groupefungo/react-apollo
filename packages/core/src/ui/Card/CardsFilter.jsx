@@ -1,9 +1,9 @@
 import React from 'react';
-import useUiContext from './UseContext';
+import useUiContext from '../UseContext';
 
 import { FilterList } from './FilterList';
 
-export const CardsFilter = ({ onClick, filters, value = '0', label }) => {
+export default ({ onClick, filters, value = '0', label }) => {
   const { makeStyles } = useUiContext();
 
   const useStyles = makeStyles((theme) => (

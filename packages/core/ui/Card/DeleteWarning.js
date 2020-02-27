@@ -3,11 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.DeleteWarning = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _UseContext = _interopRequireDefault(require("./UseContext"));
+var _UseContext = _interopRequireDefault(require("../UseContext"));
 
 var _DialogActions = _interopRequireDefault(require("@material-ui/core/DialogActions"));
 
@@ -19,7 +19,7 @@ var _DialogTitle = _interopRequireDefault(require("@material-ui/core/DialogTitle
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var DeleteWarning = function DeleteWarning(props) {
+var _default = function _default(props) {
   var open = props.open,
       title = props.title,
       handleCancel = props.handleCancel,
@@ -48,4 +48,4 @@ var DeleteWarning = function DeleteWarning(props) {
   }, "Supprimer")));
 };
 
-exports.DeleteWarning = DeleteWarning;
+exports["default"] = _default;

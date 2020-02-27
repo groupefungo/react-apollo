@@ -1,11 +1,11 @@
 import React from 'react';
-import useUiContext from './UseContext';
+import useUiContext from '../UseContext';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
-export const DeleteWarning = (props) => {
+export default (props) => {
   const { open, title, handleCancel, handleConfirm } = props;
   const { Dialog, Button } = useUiContext();
 

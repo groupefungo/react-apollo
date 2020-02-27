@@ -1,8 +1,7 @@
 import React from 'react';
-import useUiContext from './UseContext';
-import useAppContext from '../app/Context';
-
-import { CardControl } from './CardControl';
+import useUiContext from '../UseContext';
+import useAppContext from '../../app/UseContext';
+import CardControl from './CardControl';
 
 export default (props) => {
   const appContext = useAppContext();

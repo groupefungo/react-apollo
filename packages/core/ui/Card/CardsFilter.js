@@ -3,17 +3,17 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.CardsFilter = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _UseContext = _interopRequireDefault(require("./UseContext"));
+var _UseContext = _interopRequireDefault(require("../UseContext"));
 
 var _FilterList = require("./FilterList");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var CardsFilter = function CardsFilter(_ref) {
+var _default = function _default(_ref) {
   var onClick = _ref.onClick,
       filters = _ref.filters,
       _ref$value = _ref.value,
@@ -69,4 +69,4 @@ var CardsFilter = function CardsFilter(_ref) {
   })))));
 };
 
-exports.CardsFilter = CardsFilter;
+exports["default"] = _default;

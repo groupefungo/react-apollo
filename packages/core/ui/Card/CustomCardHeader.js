@@ -3,15 +3,15 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.CustomCardHeader = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _UseContext = _interopRequireDefault(require("./UseContext"));
+var _UseContext = _interopRequireDefault(require("../UseContext"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var CustomCardHeader = function CustomCardHeader(_ref) {
+var _default = function _default(_ref) {
   var _ref$createdAt = _ref.createdAt,
       createdAt = _ref$createdAt === void 0 ? '' : _ref$createdAt,
       _ref$category = _ref.category,
@@ -48,4 +48,4 @@ var CustomCardHeader = function CustomCardHeader(_ref) {
   }, category)));
 };
 
-exports.CustomCardHeader = CustomCardHeader;
+exports["default"] = _default;

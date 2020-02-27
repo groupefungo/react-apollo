@@ -1,5 +1,5 @@
 import React from 'react';
-import useUiContext from './UseContext';
+import useUiContext from '../UseContext';
 
 export default ({ id, className, changed }) => {
   const { AttachFile, Button } = useUiContext();

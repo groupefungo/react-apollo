@@ -5,13 +5,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.CardControl = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _UseContext = _interopRequireDefault(require("./UseContext"));
+var _UseContext = _interopRequireDefault(require("../UseContext"));
 
-var _Context = _interopRequireDefault(require("../app/Context"));
+var _UseContext2 = _interopRequireDefault(require("../../app/UseContext"));
 
 var _Cancel = _interopRequireDefault(require("@material-ui/icons/Cancel"));
 
@@ -37,7 +37,7 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var CardControl = function CardControl(props) {
+var _default = function _default(props) {
   var title = props.title,
       description = props.description,
       category = props.category,
@@ -58,7 +58,7 @@ var CardControl = function CardControl(props) {
       openDeleteWarning = _useState4[0],
       setOpenDeleteWarning = _useState4[1];
 
-  var appContext = (0, _Context["default"])();
+  var appContext = (0, _UseContext2["default"])();
   var useRouter = appContext.useRouter;
   var router = useRouter();
 
@@ -167,4 +167,4 @@ var CardControl = function CardControl(props) {
   }, actionLabel)))))));
 };
 
-exports.CardControl = CardControl;
+exports["default"] = _default;

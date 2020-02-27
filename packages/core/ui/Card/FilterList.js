@@ -3,11 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.FilterList = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _UseContext = _interopRequireDefault(require("./UseContext"));
+var _UseContext = _interopRequireDefault(require("../UseContext"));
 
 require("./styles.scss");
 
@@ -15,7 +15,7 @@ var _StyledRadio = _interopRequireDefault(require("./StyledRadio"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var FilterList = function FilterList(props) {
+var _default = function _default(props) {
   var filters = props.filters,
       _onClick = props.onClick,
       selectedValue = props.selectedValue;
@@ -43,4 +43,4 @@ var FilterList = function FilterList(props) {
   });
 };
 
-exports.FilterList = FilterList;
+exports["default"] = _default;

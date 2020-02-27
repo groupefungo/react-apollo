@@ -1,6 +1,6 @@
 import React from 'react';
-import useUiContext from './UseContext';
-import useAppContext from '../app/Context';
+import useUiContext from '../UseContext';
+import useAppContext from '../../app/UseContext';
 
 export default ({ title, routePath, customAction }) => {
   const appContext = useAppContext();

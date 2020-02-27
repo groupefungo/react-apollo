@@ -1,10 +1,10 @@
 import React from 'react';
-import useUiContext from './UseContext';
+import useUiContext from '../UseContext';
 
 import './styles.scss';
 import StyledRadio from './StyledRadio';
 
-export const FilterList = (props) => {
+export default (props) => {
   const { filters, onClick, selectedValue } = props;
 
   const { FormControlLabel } = useUiContext();

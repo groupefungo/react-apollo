@@ -7,9 +7,9 @@ exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _UseContext = _interopRequireDefault(require("./UseContext"));
+var _UseContext = _interopRequireDefault(require("../UseContext"));
 
-var _Context = _interopRequireDefault(require("../app/Context"));
+var _UseContext2 = _interopRequireDefault(require("../../app/UseContext"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -17,7 +17,7 @@ var _default = function _default(_ref) {
   var title = _ref.title,
       routePath = _ref.routePath,
       customAction = _ref.customAction;
-  var appContext = (0, _Context["default"])();
+  var appContext = (0, _UseContext2["default"])();
 
   var _useUiContext = (0, _UseContext["default"])(),
       Grid = _useUiContext.Grid,
