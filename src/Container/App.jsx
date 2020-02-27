@@ -6,11 +6,11 @@ import {ThemeContextProvider} from '@groupefungo/react-apollo.theme';
 export default ({children}) => {
   return (
     <ThemeContextProvider>
-    <ApolloProvider client={APOLLO_CLIENT}>
-      <AppContextProvider>
-        {children}
-      </AppContextProvider>
-    </ApolloProvider>
+      <ApolloProvider client={APOLLO_CLIENT}>
+        <AppContextProvider>
+          {children}
+        </AppContextProvider>
+      </ApolloProvider>
     </ThemeContextProvider>
   );
 }
