@@ -11,13 +11,15 @@ var _reactApollo = require("react-apollo");
 
 var _reactApollo2 = require("@groupefungo/react-apollo.core");
 
+var _reactApollo3 = require("@groupefungo/react-apollo.theme");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = function _default(_ref) {
   var children = _ref.children;
-  return _react["default"].createElement(_reactApollo.ApolloProvider, {
+  return _react["default"].createElement(_reactApollo3.ThemeContextProvider, null, _react["default"].createElement(_reactApollo.ApolloProvider, {
     client: _reactApollo2.APOLLO_CLIENT
-  }, _react["default"].createElement(_reactApollo2.AppContextProvider, null, children));
+  }, _react["default"].createElement(_reactApollo2.AppContextProvider, null, children)));
 };
 
 exports["default"] = _default;
