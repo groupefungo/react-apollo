@@ -1,6 +1,6 @@
 {
   "name": "@groupefungo/react-apollo.app",
-  "version": "1.0.5",
+  "version": "1.0.0",
   "description": "",
   "main": "./Container/index.js",
   "scripts": {
