@@ -1,6 +1,6 @@
 import React from 'react';
 import {ApolloProvider} from 'react-apollo';
-import {APOLLO_CLIENT, AppContextProvider} from '@groupefungo/js-modules-core';
+import {APOLLO_CLIENT, AppContextProvider} from '@groupefungo/react-apollo.core';
 
 export default ({children}) => {
   return (
