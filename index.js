@@ -10,6 +10,8 @@ var _otherFile = _interopRequireDefault(require("./Container/otherFile.js"));
 
 var _Container = _interopRequireDefault(require("./Container"));
 
+var _AppBody = _interopRequireDefault(require("./AppBody"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 console.log((0, _otherFile["default"])(2, 5));
@@ -18,7 +20,7 @@ console.log((0, _lodash.map)([1, 2], function (i) {
 }));
 
 var MyApp = function MyApp() {
-  return _react["default"].createElement(_Container["default"], null, "asdfasdfasdf");
+  return _react["default"].createElement(_Container["default"], null, _react["default"].createElement(_AppBody["default"], null));
 };
 
 _reactDom["default"].render(_react["default"].createElement(MyApp, null), document.getElementById('root'));

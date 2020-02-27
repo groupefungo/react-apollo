@@ -1,17 +1,17 @@
 {
-  "name": "@groupefungo/js-modules-core",
-  "version": "1.0.6",
+  "name": "@groupefungo/react-apollo.core",
+  "version": "1.0.0",
   "description": "js modules",
   "main": "index.js",
   "scripts": {
     "dev": "../../node_modules/webpack/bin/webpack.js --config ../../build-utils/webpack.config.js --env.env=dev --env.packageName=core",
-    "build": "../../node_modules/webpack/bin/webpack.js --config ../../build-utils/webpack.config.js --env.env=prod  --env.packageName=core",
+    "build": "babel src -d ./ --copy-files",
     "build:analyze": "npm run build -- --env.addon=bundleanalyze --env.addon=bundlevisualizer",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com/groupefungo/fungo-js-modules.git",
+    "url": "ssh://git@github.com/groupefungo/react-apollo.git",
     "directory": "packages/core"
   },
   "publishConfig": {

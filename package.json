@@ -1,6 +1,6 @@
 {
-  "name": "@groupefungo/js-modules-app",
-  "version": "1.0.7",
+  "name": "@groupefungo/react-apollo.app",
+  "version": "1.0.0",
   "description": "",
   "main": "./Container/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com/groupefungo/fungo-js-modules.git"
+    "url": "ssh://git@github.com/groupefungo/react-apollo.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
