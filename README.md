@@ -1,6 +1,6 @@
-# webpack-advanced-setup
+# react-apollo
 
-Advanced Webpack setup for a JavaScript projects for frontend applications. [Read more about it.](https://www.robinwieruch.de/webpack-advanced-setup-tutorial/)
+Boilerplate pour react apollo
 
 ## Installation
 
@@ -13,4 +13,4 @@ Advanced Webpack setup for a JavaScript projects for frontend applications. [Rea
 
 * cd ../..
 * npm start
-* visit `http://localhost:8080/`
+* visite `http://localhost:8080/`
