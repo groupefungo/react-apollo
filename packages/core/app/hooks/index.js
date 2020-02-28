@@ -46,7 +46,7 @@ var _useAuth = _interopRequireWildcard(require("./useAuth"));
 
 var _useRouter = _interopRequireDefault(require("./useRouter"));
 
-var _useUserGql = _interopRequireDefault(require("./useUserGql"));
+var _useUserGql = _interopRequireDefault(require("../UseUserGql/useUserGql"));
 
 var _useQueryWrapper = _interopRequireDefault(require("./useQueryWrapper"));
 

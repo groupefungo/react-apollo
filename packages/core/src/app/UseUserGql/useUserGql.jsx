@@ -1,6 +1,6 @@
 import useAppContext from '../UseContext';
 
-export default () => {
+export const useUserGql = () => {
   const { gql, useQuery, useMutation } = useAppContext();
 
   const USER_FRAGMENT = gql`

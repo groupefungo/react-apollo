@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.useUserGql = void 0;
 
 var _UseContext = _interopRequireDefault(require("../UseContext"));
 
@@ -71,7 +71,7 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var _default = function _default() {
+var useUserGql = function useUserGql() {
   var _useAppContext = (0, _UseContext["default"])(),
       gql = _useAppContext.gql,
       useQuery = _useAppContext.useQuery,
@@ -127,4 +127,4 @@ var _default = function _default() {
   };
 };
 
-exports["default"] = _default;
+exports.useUserGql = useUserGql;

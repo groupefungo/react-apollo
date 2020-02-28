@@ -10,7 +10,7 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _useUserGql = _interopRequireDefault(require("./useUserGql"));
+var _useUserGql = _interopRequireDefault(require("../UseUserGql/useUserGql"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

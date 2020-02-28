@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext, createContext } from 'react';
-import useUserGql from './useUserGql';
+import useUserGql from '../UseUserGql/useUserGql';
 
 const authContext = createContext(null);
 
