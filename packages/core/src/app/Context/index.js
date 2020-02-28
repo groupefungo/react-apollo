@@ -1,2 +1,1 @@
-export {default as AppContext} from './Context';
-export {default as appUses} from '../ext';
+export {default} from './Context';

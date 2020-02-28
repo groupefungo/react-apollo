@@ -10,7 +10,7 @@ exports.useAuth = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _useUserGql = _interopRequireDefault(require("../UseUserGql/useUserGql"));
+var _UseUserGql = _interopRequireDefault(require("../UseUserGql"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -42,7 +42,7 @@ function useProvideAuth() {
       user = _useState2[0],
       setUser = _useState2[1];
 
-  var _useUserGql$useMeQuer = (0, _useUserGql["default"])().useMeQuery(),
+  var _useUserGql$useMeQuer = (0, _UseUserGql["default"])().useMeQuery(),
       data = _useUserGql$useMeQuer.data;
 
   (0, _react.useEffect)(function () {
