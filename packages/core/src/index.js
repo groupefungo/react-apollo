@@ -4,9 +4,10 @@ import ReactDOM from 'react-dom';
 import App from './app/Container';
 import AppBody from './app/Body';
 
+import t from './muitheme-override';
 const MyApp = () => {
   return (
-    <App>
+    <App t={t}>
       <AppBody />
     </App>
   );

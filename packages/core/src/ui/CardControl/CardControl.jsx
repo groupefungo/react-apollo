@@ -4,7 +4,7 @@ import CancelIcon from '@material-ui/icons/Cancel';
 import useUiContext from '../UseContext';
 import useAppContext from '../../app/UseContext';
 import ChipsArray from '../ChipsArray';
-import useChipFiles from '../UseChipFiles/useChipFiles';
+import useChipFiles from '../UseChipFiles';
 import CustomCardHeader from '../CustomCardHeader';
 import DeleteWarning from '../DeleteWarning';
 

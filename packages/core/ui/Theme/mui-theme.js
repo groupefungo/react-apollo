@@ -232,14 +232,21 @@ var _default = {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        padding: 5,
+        padding: 15,
         paddingBottom: 2,
-        width: 'inherit'
+        width: 'inherit',
+        minHeight: 225,
+        borderRadius: 15
       }
     },
     MuiCardContent: {
       root: {
+        display: 'flex',
+        width: 'inherit',
+        flexDirection: 'column',
+        wordBreak: 'break-word',
         flexGrow: 1,
+        justifyContent: 'space-between',
         padding: 2,
         marginTop: 5
       }
@@ -248,7 +255,8 @@ var _default = {
       root: {
         paddingTop: 0,
         paddingLeft: 2,
-        paddingBottom: 2
+        paddingBottom: 2,
+        marginTop: 10
       }
     },
     MuiCardActions: {
@@ -300,10 +308,10 @@ var _default = {
       lineHeight: '1.20588em'
     },
     title: {
-      color: _theme["default"].app.titleFontColor,
-      fontSize: '1.2rem',
+      color: 'primary',
+      fontSize: '3rem',
       fontWeight: 400,
-      lineHeight: '1.20588em'
+      lineHeight: '1.5em'
     },
     h1: {
       color: _theme["default"].app.titleFontColor,

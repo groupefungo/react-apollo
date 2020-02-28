@@ -17,7 +17,7 @@ var _UseContext2 = _interopRequireDefault(require("../../app/UseContext"));
 
 var _ChipsArray = _interopRequireDefault(require("../ChipsArray"));
 
-var _useChipFiles2 = _interopRequireDefault(require("../UseChipFiles/useChipFiles"));
+var _UseChipFiles = _interopRequireDefault(require("../UseChipFiles"));
 
 var _CustomCardHeader = _interopRequireDefault(require("../CustomCardHeader"));
 
@@ -62,7 +62,7 @@ var _default = function _default(props) {
   var useRouter = appContext.useRouter;
   var router = useRouter();
 
-  var _useChipFiles = (0, _useChipFiles2["default"])(files),
+  var _useChipFiles = (0, _UseChipFiles["default"])(files),
       chipsData = _useChipFiles.chipsData,
       _chipClicked = _useChipFiles.chipClicked;
 
