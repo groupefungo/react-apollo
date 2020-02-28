@@ -105,5 +105,6 @@ query centerUsers($id: ID!) {
     useMeQuery,
     useCenterUsersQuery,
     useMutateUser,
+    useDestroyUser,
   };
 };

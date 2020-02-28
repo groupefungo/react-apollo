@@ -138,7 +138,8 @@ var useUserGql = function useUserGql() {
     useUsersQuery: useUsersQuery,
     useMeQuery: useMeQuery,
     useCenterUsersQuery: useCenterUsersQuery,
-    useMutateUser: useMutateUser
+    useMutateUser: useMutateUser,
+    useDestroyUser: useDestroyUser
   };
 };
 
