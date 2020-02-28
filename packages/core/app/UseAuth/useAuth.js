@@ -42,8 +42,8 @@ function useProvideAuth() {
       user = _useState2[0],
       setUser = _useState2[1];
 
-  var _useUserGql$useMeQuer = (0, _UseUserGql["default"])().useMeQuery(),
-      data = _useUserGql$useMeQuer.data;
+  var _patate$useMeQuery = (0, _UseUserGql["default"])().useMeQuery(),
+      data = _patate$useMeQuery.data;
 
   (0, _react.useEffect)(function () {
     if (data && data.me) {

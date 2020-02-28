@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext, createContext } from 'react';
-import useUserGql from '../UseUserGql';
+import patate from '../UseUserGql';
 
 const authContext = createContext(null);
 
@@ -11,7 +11,7 @@ export const useAuth = () => useContext(authContext);
 function useProvideAuth() {
   const [user, setUser] = useState(null);
 
-  const { data } = useUserGql().useMeQuery();
+  const { data } = patate().useMeQuery();
 
   useEffect(() => {
     if (data && data.me) {

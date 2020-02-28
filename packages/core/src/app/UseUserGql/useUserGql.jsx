@@ -1,86 +1,109 @@
-import useAppContext from '@groupefungo/react-apollo.core/app/UseContext';
+import useAppContext from '../UseContext';
 
 export const useUserGql = () => {
-  const appContext = useAppContext();
-  const {gql, useQuery, useMutation} = appContext;
-  const CATEGORY_FRAGMENT = gql`
-  fragment categoryFragment on Category {
+  const { gql, useQuery, useMutation } = useAppContext();
+
+  const USER_FRAGMENT = gql`
+  fragment UserFragment on User {
     id
-    title
-    parentId
+    email
+    firstName
+    lastName
+    password
+    centerIds
     isValid
-    visibleToCenters
     errors {
       keys
       messages
-    }
+    }  
   }
-  `;
-  const MUTATE_CATEGORY = gql`
-  mutation MutateCategory($attrs: CategoryInput!){
-    mutateCategory(attrs: $attrs){
-      category {
-        ...categoryFragment
+`;
+
+  const MUTATE_USER = gql`
+  mutation MutateUser($attrs: UserInput!){
+    mutateUser(attrs: $attrs){
+      user {
+        ...UserFragment
       }
     }
   }
-  ${CATEGORY_FRAGMENT}
+  ${USER_FRAGMENT}
+`;
+
+  const GET_USER = gql`
+  query user($userID: ID){
+    user(id: $userID){
+      ...UserFragment
+    }
+  }
+  ${USER_FRAGMENT}
+`;
+
+  const GET_USERS = gql`
+  query {
+    users {
+      ...UserFragment
+    }
+  }
+  ${USER_FRAGMENT}
+`;
+
+  const ME = gql`
+  query me {
+    me {
+      id
+      email
+      firstName
+      lastName
+    }
+  }
+`;
+
+  const GET_CENTER_USERS = gql`
+query centerUsers($id: ID!) {
+  centerUsers(id: $id) {
+    ...UserFragment
+  }
+}
+  ${USER_FRAGMENT}
+`;
+
+  const DESTROY_USER = gql`
+  mutation destroyUser($id: ID!){ 
+    destroyUser(id: $id){ 
+        ...UserFragment
+    }
+  }
+  ${USER_FRAGMENT}
  `;
-  const GET_CATEGORY = gql`
-  query category($categoryID: ID){
-    category(id: $categoryID){
-      ...categoryFragment
-    }
-  }
-  ${CATEGORY_FRAGMENT}
-`;
-  const GET_CATEGORIES = gql`
-  query categories($parentOnly: Int){
-    categories(parentOnly: $parentOnly) {
-      ...categoryFragment
-    }
-  }
-  ${CATEGORY_FRAGMENT}
-`;
-  const GET_SUBCATEGORIES = gql`
-  query subcategoriesByCategory($id: ID!){
-    subcategoriesByCategory(id: $id){
-      ...categoryFragment
-    }
-  }
-   ${CATEGORY_FRAGMENT}
-`;
-  const DESTROY_CATEGORY = gql`
-  mutation destroyCategory($id: ID!){ 
-    destroyCategory(id: $id){ 
-        ...categoryFragment
-    }
-  }
-  ${CATEGORY_FRAGMENT}
- `;
-  const useCategoryQuery = (id) => useQuery(GET_CATEGORY, {
-    fetchPolicy: 'network-only',
-    variables: {categoryID: id},
-  });
-  const useParentCategoriesQuery = () => useQuery(GET_CATEGORIES, {
-    fetchPolicy: 'network-only',
-    variables: {parentOnly: 1},
-  });
-  const useCategoriesQuery = () => useQuery(GET_CATEGORIES, {
+
+  const useMeQuery = () => useQuery(ME, {
     fetchPolicy: 'network-only',
   });
-  const useSubCategoriesQuery = (id) => useQuery(GET_SUBCATEGORIES, {
+
+  const useUserQuery = (id) => useQuery(GET_USER, {
     fetchPolicy: 'network-only',
-    variables: {id},
+    variables: { userID: id },
   });
-  const useMutateCategory = () => useMutation(MUTATE_CATEGORY);
-  const useDestroyCategory = () => useMutation(DESTROY_CATEGORY);
+
+  const useUsersQuery = () => useQuery(GET_USERS, {
+    fetchPolicy: 'network-only',
+  });
+
+  const useCenterUsersQuery = (id) => useQuery(GET_CENTER_USERS, {
+    fetchPolicy: 'network-only',
+    variables: { id },
+  });
+
+  const useDestroyUser = () => useMutation(DESTROY_USER);
+
+  const useMutateUser = () => useMutation(MUTATE_USER);
+
   return {
-    useSubCategoriesQuery,
-    useCategoriesQuery,
-    useCategoryQuery,
-    useMutateCategory,
-    useParentCategoriesQuery,
-    useDestroyCategory,
+    useUserQuery,
+    useUsersQuery,
+    useMeQuery,
+    useCenterUsersQuery,
+    useMutateUser,
   };
 };
