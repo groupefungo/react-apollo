@@ -8,12 +8,10 @@ var _Container = _interopRequireDefault(require("./app/Container"));
 
 var _Body = _interopRequireDefault(require("./app/Body"));
 
-var _AppFooter = _interopRequireDefault(require("./ui/AppFooter"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var MyApp = function MyApp() {
-  return _react["default"].createElement(_Container["default"], null, _react["default"].createElement(_Body["default"], null), _react["default"].createElement(_AppFooter["default"], null));
+  return _react["default"].createElement(_Container["default"], null, _react["default"].createElement(_Body["default"], null));
 };
 
 _reactDom["default"].render(_react["default"].createElement(MyApp, null), document.getElementById('root'));
