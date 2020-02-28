@@ -1,4 +1,4 @@
-export default (useQueryHandle, queryResultName) => {
+export const useQueryWrapper = (useQueryHandle, queryResultName) => {
   const { data, error } = useQueryHandle();
 
   if (error) return { error };

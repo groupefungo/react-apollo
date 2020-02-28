@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.useCompleteState = void 0;
 
 var _react = require("react");
 
@@ -21,7 +21,7 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var _default = function _default(initState) {
+var useCompleteState = function useCompleteState(initState) {
   var _useState = (0, _react.useState)(initState),
       _useState2 = _slicedToArray(_useState, 2),
       state = _useState2[0],
@@ -72,4 +72,4 @@ var _default = function _default(initState) {
   };
 };
 
-exports["default"] = _default;
+exports.useCompleteState = useCompleteState;

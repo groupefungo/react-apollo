@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.useRouter = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -18,7 +18,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 // Hook
-var _default = function _default() {
+var useRouter = function useRouter() {
   var params = (0, _reactRouterDom.useParams)();
   var location = (0, _reactRouterDom.useLocation)();
   var history = (0, _reactRouterDom.useHistory)();
@@ -44,4 +44,4 @@ var _default = function _default() {
   }, [params, match, location, history]);
 };
 
-exports["default"] = _default;
+exports.useRouter = useRouter;

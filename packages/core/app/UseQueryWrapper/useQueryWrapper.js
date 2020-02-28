@@ -3,9 +3,9 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.useQueryWrapper = void 0;
 
-var _default = function _default(useQueryHandle, queryResultName) {
+var useQueryWrapper = function useQueryWrapper(useQueryHandle, queryResultName) {
   var _useQueryHandle = useQueryHandle(),
       data = _useQueryHandle.data,
       error = _useQueryHandle.error;
@@ -25,4 +25,4 @@ var _default = function _default(useQueryHandle, queryResultName) {
   };
 };
 
-exports["default"] = _default;
+exports.useQueryWrapper = useQueryWrapper;

@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.ProvideAuth = ProvideAuth;
-exports["default"] = void 0;
+exports.useAuth = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -29,12 +29,12 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var authContext = (0, _react.createContext)(null); // Hook for child components to get the auth object ...
 // ... and re-render when it changes.
 
-var _default = function _default() {
+var useAuth = function useAuth() {
   return (0, _react.useContext)(authContext);
 }; // Provider hook that creates auth object and handles state
 
 
-exports["default"] = _default;
+exports.useAuth = useAuth;
 
 function useProvideAuth() {
   var _useState = (0, _react.useState)(null),

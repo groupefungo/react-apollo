@@ -5,7 +5,7 @@ const authContext = createContext(null);
 
 // Hook for child components to get the auth object ...
 // ... and re-render when it changes.
-export default () => useContext(authContext);
+export const useAuth = () => useContext(authContext);
 
 // Provider hook that creates auth object and handles state
 function useProvideAuth() {

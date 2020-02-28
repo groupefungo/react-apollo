@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, useLocation, useHistory, useRouteMatch } from 'react-router-dom';
 
 // Hook
-export default () => {
+export const useRouter = () => {
   const params = useParams();
   const location = useLocation();
   const history = useHistory();

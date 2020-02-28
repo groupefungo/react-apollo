@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default (initState) => {
+export const useCompleteState = (initState) => {
   const [state, setState] = useState(initState);
 
   const stateChanged = (name, value) => {
