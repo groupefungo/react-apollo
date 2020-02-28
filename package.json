@@ -43,12 +43,12 @@
     "react-dom": "^16.12.0"
   },
   "dependencies": {
-    "@groupefungo/react-apollo.core": "^1.0.0",
-    "@material-ui/lab": "^4.0.0-alpha.44",
-    "@material-ui/pickers": "^3.2.10",
     "@date-io/date-fns": "^1.3.13",
+    "@groupefungo/react-apollo.core": "^1.0.3",
     "@material-ui/core": "^4.9.4",
     "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.44",
+    "@material-ui/pickers": "^3.2.10",
     "@popperjs/core": "^2.0.6",
     "apollo-boost": "^0.4.7",
     "apollo-client": "^2.6.8",
@@ -57,9 +57,9 @@
     "date-fns": "^2.10.0",
     "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",
+    "lodash": "^4.17.15",
     "react-apollo": "^3.1.3",
-    "react-router-dom": "^5.1.2",
-    "lodash": "^4.17.15"
+    "react-router-dom": "^5.1.2"
   },
   "files": [
     "Container"
