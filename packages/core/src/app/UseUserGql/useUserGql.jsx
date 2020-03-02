@@ -56,6 +56,7 @@ export const useUserGql = () => {
       email
       firstName
       lastName
+      roles
     }
   }
 `;

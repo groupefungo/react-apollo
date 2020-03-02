@@ -30,7 +30,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  query me {\n    me {\n      id\n      email\n      firstName\n      lastName\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  query me {\n    me {\n      id\n      email\n      firstName\n      lastName\n      roles\n    }\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
