@@ -11,6 +11,7 @@ export const useUserGql = () => {
     lastName
     password
     centerIds
+    roles
     isValid
     errors {
       keys
