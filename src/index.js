@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import {map} from 'lodash';
 import sum from './Container/otherFile.js';
 
-import App from '@groupefungo/react-apollo.core/app';
+import App from '@groupefungo/react-apollo.core/app/Container';
 
 console.log(sum(2, 5));
 
