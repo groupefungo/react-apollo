@@ -6,7 +6,7 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _Container = _interopRequireDefault(require("./app/Container"));
 
-var _Body = _interopRequireDefault(require("./app/Body"));
+var _Body = _interopRequireDefault(require("./app/examples/Body"));
 
 var _muithemeOverride = _interopRequireDefault(require("./muitheme-override"));
 
