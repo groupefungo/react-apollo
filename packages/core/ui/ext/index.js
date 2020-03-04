@@ -187,6 +187,8 @@ var _StyledRadio = _interopRequireDefault(require("../StyledRadio"));
 
 var _TitleControl = _interopRequireDefault(require("../TitleControl"));
 
+var _TemporaryDrawer = _interopRequireDefault(require("../TemporaryDrawer"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = {
@@ -266,8 +268,8 @@ var _default = {
   CardsFilter: _CardsFilter["default"],
   Error: _Error["default"],
   FilterList: _FilterList["default"],
-  UseChipFile: _UseChipFiles["default"],
-  UseDrawer: _UseDrawer["default"],
+  useChipFile: _UseChipFiles["default"],
+  useDrawer: _UseDrawer["default"],
   UseFormStyles: _UseFormStyles["default"],
   BaseList: _BaseList["default"],
   BaseSelect: _BaseSelect["default"],
@@ -282,6 +284,7 @@ var _default = {
   SimpleTable: _SimpleTable["default"],
   SimpleTabs: _SimpleTabs["default"],
   StyledRadio: _StyledRadio["default"],
-  TitleControl: _TitleControl["default"]
+  TitleControl: _TitleControl["default"],
+  TemporaryDrawer: _TemporaryDrawer["default"]
 };
 exports["default"] = _default;

@@ -81,8 +81,8 @@ import CardControl from "../CardControl";
 import CardsFilter from "../CardsFilter";
 import Error from '../Error';
 import FilterList from "../FilterList";
-import UseChipFile from "../UseChipFiles";
-import UseDrawer from "../UseDrawer";
+import useChipFile from "../UseChipFiles";
+import useDrawer from "../UseDrawer";
 import UseFormStyles from "../UseFormStyles";
 import BaseList from "../BaseList";
 import BaseSelect from "../BaseSelect";
@@ -98,6 +98,7 @@ import SimpleTable from "../SimpleTable";
 import SimpleTabs from "../SimpleTabs";
 import StyledRadio from "../StyledRadio";
 import TitleControl from "../TitleControl";
+import TemporaryDrawer from "../TemporaryDrawer";
 
 export default {
   makeStyles,
@@ -176,8 +177,8 @@ export default {
   CardsFilter,
   Error,
   FilterList,
-  UseChipFile,
-  UseDrawer,
+  useChipFile,
+  useDrawer,
   UseFormStyles,
   BaseList,
   BaseSelect,
@@ -192,6 +193,7 @@ export default {
   SimpleTable,
   SimpleTabs,
   StyledRadio,
-  TitleControl
+  TitleControl,
+  TemporaryDrawer,
 }
 ;
