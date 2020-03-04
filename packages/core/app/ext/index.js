@@ -44,6 +44,10 @@ var _default = {
   useRouter: _UseRouter["default"],
   useQueryWrapper: _UseQueryWrapper["default"],
   ApolloProvider: _reactApollo.ApolloProvider,
-  useCompleteState: _UseCompleteState["default"]
+  useCompleteState: _UseCompleteState["default"],
+  useParams: _reactRouterDom.useParams,
+  useLocation: _reactRouterDom.useLocation,
+  useHistory: _reactRouterDom.useHistory,
+  useRouteMatch: _reactRouterDom.useRouteMatch
 };
 exports["default"] = _default;

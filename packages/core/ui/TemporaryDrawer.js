@@ -13,11 +13,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 var _default = function _default(_ref) {
   var topItems = _ref.topItems,
-      bottomItems = _ref.bottomItems,
-      drawer = _ref.drawer;
+      bottomItems = _ref.bottomItems;
 
   var _useUiContext = (0, _UseContext["default"])(),
-      makeStyles = _useUiContext.makeStyles;
+      makeStyles = _useUiContext.makeStyles,
+      DrawerState = _useUiContext.DrawerState;
 
   var useStyles = makeStyles({
     list: {
@@ -28,8 +28,8 @@ var _default = function _default(_ref) {
     }
   });
   var classes = useStyles();
-  var toggleDrawer = drawer.toggleDrawer,
-      state = drawer.state;
+  var toggleDrawer = DrawerState.toggleDrawer,
+      state = DrawerState.state;
 
   var _useUiContext2 = (0, _UseContext["default"])(),
       List = _useUiContext2.List,

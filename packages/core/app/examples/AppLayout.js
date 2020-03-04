@@ -20,10 +20,9 @@ var _default = function _default() {
       IconButton = _useUiContext.IconButton,
       Menu = _useUiContext.Menu,
       Typography = _useUiContext.Typography,
-      useDrawer = _useUiContext.useDrawer;
+      DrawerState = _useUiContext.DrawerState;
 
-  var drawer = useDrawer();
-  var toggleDrawer = drawer.toggleDrawer;
+  var toggleDrawer = DrawerState.toggleDrawer;
   return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(AppBar, {
     color: "default",
     position: "fixed",
@@ -37,9 +36,7 @@ var _default = function _default() {
     variant: "h4",
     noWrap: true,
     color: "secondary"
-  }, "WECATOSKEYAKAN"))), _react["default"].createElement(Toolbar, null), _react["default"].createElement(_SideBarMenu.SideBarMenu, {
-    drawer: drawer
-  }));
+  }, "WECATOSKEYAKAN"))), _react["default"].createElement(Toolbar, null), _react["default"].createElement(_SideBarMenu.SideBarMenu, null));
 };
 
 exports["default"] = _default;

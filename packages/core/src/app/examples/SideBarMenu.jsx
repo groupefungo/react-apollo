@@ -2,7 +2,7 @@ import React from 'react';
 import useUiContext from '../../ui/UseContext';
 import useAppContext from '../UseContext';
 
-export const SideBarMenu = ({ drawer }) => {
+export const SideBarMenu = () => {
   const appContext = useAppContext();
 
   const { useRouter } = appContext;
@@ -23,6 +23,6 @@ export const SideBarMenu = ({ drawer }) => {
   );
 
   return (
-    <TemporaryDrawer bottomItems={[]} topItems={topItems()} drawer={drawer} />
+    <TemporaryDrawer bottomItems={[]} topItems={topItems()} />
   );
 };

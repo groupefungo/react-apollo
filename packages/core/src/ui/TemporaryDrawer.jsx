@@ -1,8 +1,8 @@
 import React from 'react';
 import useUiContext from './UseContext';
 
-export default ({ topItems, bottomItems, drawer }) => {
-  const { makeStyles } = useUiContext();
+export default ({ topItems, bottomItems }) => {
+  const { makeStyles, DrawerState } = useUiContext();
   const useStyles = makeStyles({
     list: {
       width: 250,
@@ -13,7 +13,7 @@ export default ({ topItems, bottomItems, drawer }) => {
   });
 
   const classes = useStyles();
-  const { toggleDrawer, state } = drawer;
+  const { toggleDrawer, state } = DrawerState;
 
   const { List, Divider, Drawer } = useUiContext();
 

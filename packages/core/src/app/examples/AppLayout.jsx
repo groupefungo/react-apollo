@@ -3,10 +3,9 @@ import useUiContext from '../../ui/UseContext';
 import {SideBarMenu} from './SideBarMenu';
 
 export default () => {
-  const {AppBar, Toolbar, IconButton, Menu, Typography, useDrawer} = useUiContext();
+  const {AppBar, Toolbar, IconButton, Menu, Typography, DrawerState} = useUiContext();
 
-  const drawer = useDrawer();
-  const {toggleDrawer} = drawer;
+  const {toggleDrawer} = DrawerState;
 
   return (
     <>
@@ -27,7 +26,7 @@ export default () => {
       </AppBar>
       <Toolbar/>
 
-      <SideBarMenu drawer={drawer}/>
+      <SideBarMenu />
     </>
   );
 };

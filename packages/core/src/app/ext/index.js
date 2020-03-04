@@ -1,6 +1,8 @@
 import gql from 'graphql-tag';
 import {useMutation, useQuery, ApolloProvider} from 'react-apollo';
-import {Route, Switch, Link, Redirect, BrowserRouter as Router} from 'react-router-dom';
+import {
+  Route, Switch, Link, Redirect, BrowserRouter as Router, useParams, useLocation, useHistory, useRouteMatch
+} from 'react-router-dom';
 
 import useAuth, { ProvideAuth } from '../UseAuth';
 import useUserGql from '../UseUserGql';
@@ -23,5 +25,9 @@ export default {
   useRouter,
   useQueryWrapper,
   ApolloProvider,
-  useCompleteState
+  useCompleteState,
+  useParams,
+  useLocation,
+  useHistory,
+  useRouteMatch
 };

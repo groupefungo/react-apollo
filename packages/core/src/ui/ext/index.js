@@ -100,7 +100,7 @@ import StyledRadio from "../StyledRadio";
 import TitleControl from "../TitleControl";
 import TemporaryDrawer from "../TemporaryDrawer";
 
-export default {
+const ext = {
   makeStyles,
   Chip,
   Container,
@@ -178,7 +178,6 @@ export default {
   Error,
   FilterList,
   useChipFile,
-  useDrawer,
   UseFormStyles,
   BaseList,
   BaseSelect,
@@ -195,5 +194,11 @@ export default {
   StyledRadio,
   TitleControl,
   TemporaryDrawer,
-}
-;
+};
+
+export default () => (
+  {
+    ...ext,
+    DrawerState: useDrawer()
+  }
+);

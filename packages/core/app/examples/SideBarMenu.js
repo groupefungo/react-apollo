@@ -13,8 +13,7 @@ var _UseContext2 = _interopRequireDefault(require("../UseContext"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var SideBarMenu = function SideBarMenu(_ref) {
-  var drawer = _ref.drawer;
+var SideBarMenu = function SideBarMenu() {
   var appContext = (0, _UseContext2["default"])();
   var useRouter = appContext.useRouter;
   var router = useRouter();
@@ -49,8 +48,7 @@ var SideBarMenu = function SideBarMenu(_ref) {
 
   return _react["default"].createElement(TemporaryDrawer, {
     bottomItems: [],
-    topItems: topItems(),
-    drawer: drawer
+    topItems: topItems()
   });
 };
 
