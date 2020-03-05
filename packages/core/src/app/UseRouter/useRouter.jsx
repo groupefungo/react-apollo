@@ -1,8 +1,10 @@
 import React from 'react';
-import { useParams, useLocation, useHistory, useRouteMatch } from 'react-router-dom';
+import {useAppContext} from "../UseContext/useAppContext";
 
 // Hook
 export const useRouter = () => {
+  const { useParams, useLocation, useHistory, useRouteMatch } = useAppContext();
+  
   const params = useParams();
   const location = useLocation();
   const history = useHistory();

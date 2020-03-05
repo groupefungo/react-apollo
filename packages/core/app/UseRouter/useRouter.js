@@ -7,7 +7,7 @@ exports.useRouter = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _reactRouterDom = require("react-router-dom");
+var _useAppContext2 = require("../UseContext/useAppContext");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -19,10 +19,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 // Hook
 var useRouter = function useRouter() {
-  var params = (0, _reactRouterDom.useParams)();
-  var location = (0, _reactRouterDom.useLocation)();
-  var history = (0, _reactRouterDom.useHistory)();
-  var match = (0, _reactRouterDom.useRouteMatch)(); // Return our custom router object
+  var _useAppContext = (0, _useAppContext2.useAppContext)(),
+      useParams = _useAppContext.useParams,
+      useLocation = _useAppContext.useLocation,
+      useHistory = _useAppContext.useHistory,
+      useRouteMatch = _useAppContext.useRouteMatch;
+
+  var params = useParams();
+  var location = useLocation();
+  var history = useHistory();
+  var match = useRouteMatch(); // Return our custom router object
   // Memoize so that a new object is only returned if something changes
 
   return _react["default"].useMemo(function () {

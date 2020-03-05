@@ -1,8 +1,8 @@
 import React from 'react';
 import useUiContext from './UseContext';
 
-export default ({ topItems, bottomItems, drawer }) => {
-  const { makeStyles } = useUiContext();
+export default ({topItems, bottomItems}) => {
+  const {makeStyles, DrawerState} = useUiContext();
   const useStyles = makeStyles({
     list: {
       width: 250,
@@ -13,9 +13,9 @@ export default ({ topItems, bottomItems, drawer }) => {
   });
 
   const classes = useStyles();
-  const { toggleDrawer, state } = drawer;
+  const {toggleDrawer, state} = DrawerState;
 
-  const { List, Divider, Drawer } = useUiContext();
+  const {List, Divider, Drawer} = useUiContext();
 
   const sideList = () => (
     <div
@@ -27,7 +27,7 @@ export default ({ topItems, bottomItems, drawer }) => {
       <List>
         {topItems}
       </List>
-      <Divider />
+      <Divider/>
       <List>
         {bottomItems}
       </List>
@@ -35,12 +35,10 @@ export default ({ topItems, bottomItems, drawer }) => {
   );
 
   return (
-    <>
-      <div>
-        <Drawer open={state} onClose={toggleDrawer(false)}>
-          {sideList()}
-        </Drawer>
-      </div>
-    </>
+    <div>
+      <Drawer open={state} onClose={toggleDrawer(false)}>
+        {sideList()}
+      </Drawer>
+    </div>
   );
 }

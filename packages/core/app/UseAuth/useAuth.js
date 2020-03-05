@@ -36,20 +36,22 @@ var useAuth = function useAuth() {
 
 exports.useAuth = useAuth;
 
-function useProvideAuth() {
+var useProvideAuth = function useProvideAuth() {
   var _useState = (0, _react.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
       user = _useState2[0],
       setUser = _useState2[1];
 
-  var _patate$useMeQuery = (0, _UseUserGql["default"])().useMeQuery(),
-      data = _patate$useMeQuery.data;
+  var _useUserGql$useMeQuer = (0, _UseUserGql["default"])().useMeQuery(),
+      data = _useUserGql$useMeQuer.data,
+      error = _useUserGql$useMeQuer.error;
 
   (0, _react.useEffect)(function () {
     if (data && data.me) {
       setUser(data.me);
     }
   }, [data]);
+  if (error) throw error;
 
   var signout = function signout() {
     var meta = document.querySelector("meta[name='csrf-token']");
@@ -71,7 +73,7 @@ function useProvideAuth() {
     user: user,
     signout: signout
   };
-} // Provider component that wraps your Container and makes auth object ...
+}; // Provider component that wraps your Container and makes auth object ...
 // ... available to any child component that calls useAuth().
 
 

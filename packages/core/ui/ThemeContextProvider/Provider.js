@@ -18,13 +18,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var _default = function _default(_ref) {
   var t = _ref.t,
       children = _ref.children;
-  var ThemeProvider = _ext["default"].ThemeProvider,
-      createMuiTheme = _ext["default"].createMuiTheme,
-      Container = _ext["default"].Container,
-      CssBaseline = _ext["default"].CssBaseline;
+  var ext = (0, _ext["default"])();
+  var ThemeProvider = ext.ThemeProvider,
+      createMuiTheme = ext.createMuiTheme,
+      Container = ext.Container,
+      CssBaseline = ext.CssBaseline;
   var theme = createMuiTheme(t || _muiTheme["default"]);
   return _react["default"].createElement(_Context["default"].Provider, {
-    value: _ext["default"]
+    value: ext
   }, _react["default"].createElement(ThemeProvider, {
     theme: theme
   }, _react["default"].createElement(Container, null, _react["default"].createElement(CssBaseline, null), children)));

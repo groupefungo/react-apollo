@@ -1,3 +1,3 @@
 import React from 'react';
 
-export default ({ msg }) => <p>{`ERROR${msg}`}</p>;
+export default ({ msg }) => <p>{`${msg}`}</p>;

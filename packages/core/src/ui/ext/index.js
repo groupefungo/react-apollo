@@ -34,9 +34,9 @@ import TableBody from '@material-ui/core/TableBody';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import HelpOutlineOutlinedIcon from '@material-ui/icons/HelpOutlineOutlined';
 
-import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
+import {MuiPickersUtilsProvider, KeyboardDatePicker} from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
-import { ThemeProvider, createMuiTheme } from '@material-ui/core';
+import {ThemeProvider, createMuiTheme} from '@material-ui/core';
 
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/icons/Menu';
@@ -75,7 +75,32 @@ import DialogContent from '@material-ui/core/DialogContent';
 
 import AppsIcon from '@material-ui/icons/Apps';
 
-export default {
+import AddButton from "../AddButton";
+import AttachMultipleFiles from "../AttachMultipleFiles";
+import CardControl from "../CardControl";
+import CardsFilter from "../CardsFilter";
+import Error from '../Error';
+import FilterList from "../FilterList";
+import useChipFile from "../UseChipFiles";
+import useDrawer from "../UseDrawer";
+import UseFormStyles from "../UseFormStyles";
+import BaseList from "../BaseList";
+import BaseSelect from "../BaseSelect";
+import BreadcrumbsWrapper from "../BreadcrumbsWrapper";
+import ChipsArray from "../ChipsArray";
+import CustomCardHeader from "../CustomCardHeader";
+import DeleteWarning from "../DeleteWarning";
+import DescriptionControl from "../DescriptionControl";
+import FileUploadArea from "../FileUploadArea";
+import Header from "../Header";
+import KeyboardDatePickerBase from '../KeyboardDatePickerBase';
+import SimpleTable from "../SimpleTable";
+import SimpleTabs from "../SimpleTabs";
+import StyledRadio from "../StyledRadio";
+import TitleControl from "../TitleControl";
+import TemporaryDrawer from "../TemporaryDrawer";
+
+const ext = {
   makeStyles,
   Chip,
   Container,
@@ -145,5 +170,35 @@ export default {
   PostAddIcon,
   Zoom,
   Dialog,
-  DialogContent
+  DialogContent,
+  AddButton,
+  AttachMultipleFiles,
+  CardControl,
+  CardsFilter,
+  Error,
+  FilterList,
+  useChipFile,
+  UseFormStyles,
+  BaseList,
+  BaseSelect,
+  BreadcrumbsWrapper,
+  ChipsArray,
+  CustomCardHeader,
+  DeleteWarning,
+  DescriptionControl,
+  FileUploadArea,
+  Header,
+  KeyboardDatePickerBase,
+  SimpleTable,
+  SimpleTabs,
+  StyledRadio,
+  TitleControl,
+  TemporaryDrawer,
 };
+
+export default () => (
+  {
+    ...ext,
+    DrawerState: useDrawer()
+  }
+);

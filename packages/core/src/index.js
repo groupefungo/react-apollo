@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './app/Container';
-import AppBody from './app/Body';
+import AppBody from './app/examples/Body';
 
 import t from './muitheme-override';
 const MyApp = () => {
