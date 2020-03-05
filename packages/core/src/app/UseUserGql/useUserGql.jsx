@@ -11,7 +11,9 @@ export const useUserGql = () => {
     lastName
     password
     centerIds
-    roles
+    roles {
+      name
+    }
     isValid
     errors {
       keys
@@ -56,7 +58,9 @@ export const useUserGql = () => {
       email
       firstName
       lastName
-      roles
+      roles {
+        name
+      }
     }
   }
 `;

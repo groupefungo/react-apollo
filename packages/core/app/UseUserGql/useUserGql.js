@@ -30,7 +30,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  query me {\n    me {\n      id\n      email\n      firstName\n      lastName\n      roles\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  query me {\n    me {\n      id\n      email\n      firstName\n      lastName\n      roles {\n        name\n      }\n    }\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -70,7 +70,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  fragment UserFragment on User {\n    id\n    email\n    firstName\n    lastName\n    password\n    centerIds\n    roles\n    isValid\n    errors {\n      keys\n      messages\n    }  \n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  fragment UserFragment on User {\n    id\n    email\n    firstName\n    lastName\n    password\n    centerIds\n    roles {\n      name\n    }\n    isValid\n    errors {\n      keys\n      messages\n    }  \n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
