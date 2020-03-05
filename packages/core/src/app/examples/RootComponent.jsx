@@ -1,9 +1,9 @@
-import appUses from "../ext";
+import useAppExt from "../ext";
 import React from "react";
 import CardGrid from "../../ui/CardGrid/CardGrid";
 
 export default () => {
-  const {Link} = appUses;
+  const {Link} = useAppExt();
   return (
     <>
       <CardGrid

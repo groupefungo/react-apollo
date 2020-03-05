@@ -14,7 +14,9 @@ var _CardGrid = _interopRequireDefault(require("../../ui/CardGrid/CardGrid"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = function _default() {
-  var Link = _ext["default"].Link;
+  var _useAppExt = (0, _ext["default"])(),
+      Link = _useAppExt.Link;
+
   return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_CardGrid["default"], {
     data: [{
       id: 1,
