@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 export const useDrawer = () => {
+  console.log('using drawer toggle - init');
   const [state, setState] = useState(true);
 
   const toggleDrawer = (open) => (event) => {

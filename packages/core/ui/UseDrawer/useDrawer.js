@@ -16,6 +16,8 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var useDrawer = function useDrawer() {
+  console.log('using drawer toggle - init');
+
   var _useState = (0, _react.useState)(true),
       _useState2 = _slicedToArray(_useState, 2),
       state = _useState2[0],
