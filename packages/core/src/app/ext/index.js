@@ -10,7 +10,7 @@ import useRouter from '../UseRouter';
 import useQueryWrapper from '../UseQueryWrapper';
 import useCompleteState from '../UseCompleteState';
 
-export default {
+const ext = {
   gql,
   useQuery,
   useMutation,
@@ -31,3 +31,5 @@ export default {
   useHistory,
   useRouteMatch
 };
+
+export default () => ext;

@@ -29,7 +29,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var _default = {
+var ext = {
   gql: _graphqlTag["default"],
   useQuery: _reactApollo.useQuery,
   useMutation: _reactApollo.useMutation,
@@ -50,4 +50,9 @@ var _default = {
   useHistory: _reactRouterDom.useHistory,
   useRouteMatch: _reactRouterDom.useRouteMatch
 };
+
+var _default = function _default() {
+  return ext;
+};
+
 exports["default"] = _default;

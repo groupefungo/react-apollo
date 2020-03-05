@@ -11,6 +11,10 @@ export const SideBarMenu = () => {
 
   const topItems = () => (
     <>
+      <ListItem button key="0">
+        <ListItemText primary="Home" onClick={() => router.push('/')} />
+      </ListItem>
+      <Divider />
       <ListItem button key="1">
         <ListItemText primary="Rc" onClick={() => router.push('/rc')} />
       </ListItem>

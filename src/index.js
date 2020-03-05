@@ -5,6 +5,8 @@ import {map} from 'lodash';
 import sum from './Container/otherFile.js';
 
 import App from '@groupefungo/react-apollo.core/app/Container';
+import AppLayout from "@groupefungo/react-apollo.core/app/examples/AppLayout";
+import Body from "@groupefungo/react-apollo.core/app/examples/Body";
 
 console.log(sum(2, 5));
 
@@ -13,7 +15,8 @@ console.log(map([1, 2], i => i + 1));
 const MyApp = () => {
   return (
     <App>
-      in app
+      <Body/>
+      <AppLayout/>
     </App>
   );
 };

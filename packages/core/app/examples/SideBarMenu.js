@@ -29,6 +29,14 @@ var SideBarMenu = function SideBarMenu() {
   var topItems = function topItems() {
     return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(ListItem, {
       button: true,
+      key: "0"
+    }, _react["default"].createElement(ListItemText, {
+      primary: "Home",
+      onClick: function onClick() {
+        return router.push('/');
+      }
+    })), _react["default"].createElement(Divider, null), _react["default"].createElement(ListItem, {
+      button: true,
       key: "1"
     }, _react["default"].createElement(ListItemText, {
       primary: "Rc",

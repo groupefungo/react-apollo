@@ -1,14 +1,15 @@
 import React from 'react'
 
-import appUses from '../ext';
+import useExt from '../ext';
 import AppContext from '../Context/Context';
 import APOLLO_CLIENT from "../Apollo";
 
 export default ({children}) => {
-  const {ProvideAuth, Router, ApolloProvider} = appUses;
+  const appExt = useExt();
+  const {ProvideAuth, Router, ApolloProvider} = appExt;
 
   return (
-    <AppContext.Provider value={appUses}>
+    <AppContext.Provider value={appExt}>
       <ApolloProvider client={APOLLO_CLIENT}>
         <ProvideAuth>
           <Router>
