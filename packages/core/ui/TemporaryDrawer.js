@@ -45,10 +45,10 @@ var _default = function _default(_ref) {
     }, _react["default"].createElement(List, null, topItems), _react["default"].createElement(Divider, null), _react["default"].createElement(List, null, bottomItems));
   };
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement("div", null, _react["default"].createElement(Drawer, {
+  return _react["default"].createElement("div", null, _react["default"].createElement(Drawer, {
     open: state,
     onClose: toggleDrawer(false)
-  }, sideList())));
+  }, sideList()));
 };
 
 exports["default"] = _default;
