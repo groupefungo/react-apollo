@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useContext, createContext } from 'react';
-import patate from '../UseUserGql';
+import React, {useState, useEffect, useContext, createContext} from 'react';
+import useUserGql from '../UseUserGql';
 
 const authContext = createContext(null);
 
@@ -8,10 +8,12 @@ const authContext = createContext(null);
 export const useAuth = () => useContext(authContext);
 
 // Provider hook that creates auth object and handles state
-function useProvideAuth() {
+const useProvideAuth = () => {
   const [user, setUser] = useState(null);
 
-  const { data } = patate().useMeQuery();
+  const {data, error} = useUserGql().useMeQuery();
+
+  if (error) return {error};
 
   useEffect(() => {
     if (data && data.me) {
@@ -22,7 +24,7 @@ function useProvideAuth() {
   const signout = () => {
     const meta = document.querySelector("meta[name='csrf-token']");
     const token = meta.getAttribute('content');
-    return fetch('/users/sign_out', { method: 'DELETE', headers: { 'X-CSRF-Token': token } })
+    return fetch('/users/sign_out', {method: 'DELETE', headers: {'X-CSRF-Token': token}})
       .then(() => {
         setUser(false);
         window.location.href = '/';
@@ -39,7 +41,7 @@ function useProvideAuth() {
 
 // Provider component that wraps your Container and makes auth object ...
 // ... available to any child component that calls useAuth().
-export function ProvideAuth({ children }) {
+export function ProvideAuth({children}) {
   const auth = useProvideAuth();
   return <authContext.Provider value={auth}>{children}</authContext.Provider>;
 }
