@@ -20,7 +20,5 @@ module.exports = ({ env, addon, packageName }) => {
     packageConfig = require(`../packages/${packageName}/webpack.${env}.js`)
   }
 
-  const toExport = webpackMerge(commonConfig, envConfig, ...getAddons(addon), packageConfig);
-  console.log('toExport', toExport.module.rules);
-  return toExport;
+  return webpackMerge(commonConfig, envConfig, ...getAddons(addon), packageConfig);
 };
