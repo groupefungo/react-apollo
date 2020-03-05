@@ -13,13 +13,13 @@ const useProvideAuth = () => {
 
   const {data, error} = useUserGql().useMeQuery();
 
-  if (error) return {error};
-
   useEffect(() => {
     if (data && data.me) {
       setUser(data.me);
     }
   }, [data]);
+
+  if (error) throw error;
 
   const signout = () => {
     const meta = document.querySelector("meta[name='csrf-token']");

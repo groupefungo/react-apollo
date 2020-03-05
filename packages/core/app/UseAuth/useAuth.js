@@ -46,14 +46,12 @@ var useProvideAuth = function useProvideAuth() {
       data = _useUserGql$useMeQuer.data,
       error = _useUserGql$useMeQuer.error;
 
-  if (error) return {
-    error: error
-  };
   (0, _react.useEffect)(function () {
     if (data && data.me) {
       setUser(data.me);
     }
   }, [data]);
+  if (error) throw error;
 
   var signout = function signout() {
     var meta = document.querySelector("meta[name='csrf-token']");

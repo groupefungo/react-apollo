@@ -11,7 +11,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 var _default = function _default(_ref) {
   var msg = _ref.msg;
-  return _react["default"].createElement("p", null, "ERROR".concat(msg));
+  return _react["default"].createElement("p", null, "".concat(msg));
 };
 
 exports["default"] = _default;
