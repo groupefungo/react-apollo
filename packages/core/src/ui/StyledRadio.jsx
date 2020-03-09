@@ -2,7 +2,8 @@ import React from 'react';
 import useUiContext from './UseContext';
 
 export default (props) => {
-  const { Radio, GroupWorkIcon } = useUiContext();
+  const { logo } = props;
+  const { Radio } = useUiContext();
 
   return (
     <Radio
@@ -11,14 +12,10 @@ export default (props) => {
       color="default"
       checkedIcon={
         (
-          <GroupWorkIcon
-            color="primary"
-            fontSize="inherit"
-            className="filterItem-checked"
-          />
+          <img src={logo} height={50} width={50} />
         )
       }
-      icon={<GroupWorkIcon color="disabled" fontSize="inherit" />}
+      icon={<img src={logo} height={30} width={30} style={{ opacity: '50%' }} />}
       {...props}
     />
   );

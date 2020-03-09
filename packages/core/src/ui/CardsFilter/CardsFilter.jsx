@@ -3,7 +3,7 @@ import useUiContext from '../UseContext';
 
 import FilterList from '../FilterList/FilterList';
 
-export default ({ onClick, filters, value = '0', label }) => {
+export default ({ onClick, filters, value = '0' }) => {
   const { makeStyles } = useUiContext();
 
   const useStyles = makeStyles((theme) => (

@@ -87,9 +87,7 @@ export default (props) => {
                 {
                   description && (
                     <Box flexGrow={1}>
-                      <Typography color="textPrimary" paragraph>
-                        {description}
-                      </Typography>
+                      {description}
                     </Box>
                   )
                 }

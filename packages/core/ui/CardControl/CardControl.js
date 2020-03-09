@@ -145,10 +145,7 @@ var _default = function _default(props) {
     light: true
   }), _react["default"].createElement(CardContent, null, description && _react["default"].createElement(Box, {
     flexGrow: 1
-  }, _react["default"].createElement(Typography, {
-    color: "textPrimary",
-    paragraph: true
-  }, description)), files && files.length > 0 && _react["default"].createElement(Box, null, _react["default"].createElement(_ChipsArray["default"], {
+  }, description), files && files.length > 0 && _react["default"].createElement(Box, null, _react["default"].createElement(_ChipsArray["default"], {
     chipsData: chipsData(),
     chipClicked: function chipClicked(file) {
       return _chipClicked(file);

@@ -17,8 +17,7 @@ var _default = function _default(_ref) {
   var onClick = _ref.onClick,
       filters = _ref.filters,
       _ref$value = _ref.value,
-      value = _ref$value === void 0 ? '0' : _ref$value,
-      label = _ref.label;
+      value = _ref$value === void 0 ? '0' : _ref$value;
 
   var _useUiContext = (0, _UseContext["default"])(),
       makeStyles = _useUiContext.makeStyles;

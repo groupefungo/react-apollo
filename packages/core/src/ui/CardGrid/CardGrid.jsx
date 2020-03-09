@@ -5,21 +5,44 @@ import CardControl from '../CardControl/CardControl';
 
 export default (props) => {
   const appContext = useAppContext();
-
-  const router = appContext.useRouter();
+  const { useRouter } = appContext;
+  const router = useRouter();
   const {
-    data, titleHandler, descriptionHandler, categoryHandler, deleteCardFunction, dateHandler,
+    data,
+    titleHandler,
+    descriptionHandler,
+    categoryHandler,
+    deleteCardFunction,
+    dateHandler,
+    rowDisplay,
   } = props;
-  const { match: { url: resourcesPath } } = router;
+
+  let { resourcesPath } = props;
+  if (!resourcesPath) {
+    const { match } = router;
+    const { url } = match;
+    resourcesPath = url;
+  }
+
+  let xs = 12;
+  let sm = 6;
+  let md = 4;
+  let lg = 4;
+
+  if (rowDisplay) {
+    xs = sm = md = lg = 12;
+  } else {
+    xs = sm = md = lg = null;
+  }
 
   const { Grid, Box } = useUiContext();
 
   return (
     <Box display="flex" flexGrow={1} mt={4}>
-      <Grid container spacing={1} direction="row" alignItems="stretch">
+      <Grid container spacing={1} alignItems="stretch">
         {
           data.map((d) => (
-            <Grid key={d.id} container item xs={12} sm={6} md={4} lg={4}>
+            <Grid key={d.id} item xs={xs} sm={sm} md={md} lg={lg}>
               <CardControl
                 key={d.id}
                 id={d.id}

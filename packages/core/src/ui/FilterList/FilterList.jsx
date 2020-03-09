@@ -1,7 +1,5 @@
 import React from 'react';
 import useUiContext from '../UseContext';
-
-import '../cardStyles.scss';
 import StyledRadio from '../StyledRadio';
 
 export default (props) => {
@@ -11,15 +9,16 @@ export default (props) => {
 
   return (
     filters.map((filter) => {
-      const { id, title, name } = filter;
+      const { id, title, name, logo } = filter;
       if (!title && !name) return null;
+
 
       return (
         <FormControlLabel
           key={id}
           value={id}
           onClick={() => onClick(id)}
-          control={<StyledRadio checked={(id === selectedValue)} />}
+          control={<StyledRadio checked={(id === selectedValue)} logo={logo.url}/>}
           label={title || name}
           labelPlacement="bottom"
         />

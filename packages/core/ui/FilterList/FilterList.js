@@ -9,8 +9,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _UseContext = _interopRequireDefault(require("../UseContext"));
 
-require("../cardStyles.scss");
-
 var _StyledRadio = _interopRequireDefault(require("../StyledRadio"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -26,7 +24,8 @@ var _default = function _default(props) {
   return filters.map(function (filter) {
     var id = filter.id,
         title = filter.title,
-        name = filter.name;
+        name = filter.name,
+        logo = filter.logo;
     if (!title && !name) return null;
     return _react["default"].createElement(FormControlLabel, {
       key: id,
@@ -35,7 +34,8 @@ var _default = function _default(props) {
         return _onClick(id);
       },
       control: _react["default"].createElement(_StyledRadio["default"], {
-        checked: id === selectedValue
+        checked: id === selectedValue,
+        logo: logo.url
       }),
       label: title || name,
       labelPlacement: "bottom"

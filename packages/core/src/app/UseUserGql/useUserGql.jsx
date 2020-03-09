@@ -11,6 +11,7 @@ export const useUserGql = () => {
     lastName
     password
     centerIds
+    roleIds
     roles {
       name
     }
@@ -58,6 +59,7 @@ export const useUserGql = () => {
       email
       firstName
       lastName
+      roleIds
       roles {
         name
       }
