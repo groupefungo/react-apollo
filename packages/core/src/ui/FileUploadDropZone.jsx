@@ -63,7 +63,7 @@ const rejectStyle = {
 
 export default (props) => {
   const { fileChanged, file } = props;
-  const { filename } = file;
+  const { filename } = file || {};
   const initFiles = (file && filename) ? [file] : [];
   const [files, setFiles] = useState(initFiles);
   const { getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject } = useDropzone({
