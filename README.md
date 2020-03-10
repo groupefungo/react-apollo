@@ -10,6 +10,7 @@ Boilerplate pour react apollo
 
 * cd packages/core
 * npm install
+* #make changes
 * npm build
 
 ## test example app that references packages/core container from within, check packages/core/src/index.js
@@ -19,8 +20,8 @@ Boilerplate pour react apollo
 
 ## publish core
 
-* update version in packages/core/package.json
-* push modifs
+* #update version in packages/core/package.json
+* #push modifs
 * npm publish
 
 ## test example app that references packages/core container from without
