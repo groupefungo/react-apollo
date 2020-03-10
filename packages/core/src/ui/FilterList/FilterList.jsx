@@ -11,13 +11,16 @@ export default (props) => {
       const {id, title, name, logo} = filter;
       if (!title && !name) return null;
 
-      let checkedIcon = <GroupWorkIcon color="primary" />;
-      let icon = <GroupWorkIcon/>;
+      let checkedIcon = <GroupWorkIcon
+        color="primary"
+        fontSize="inherit"
+      />;
+      let icon = <GroupWorkIcon fontSize="inherit" color="disabled"/>;
 
       const {url} = logo || {};
       if (url) {
         checkedIcon = <img src={url} height={50} width={50} />;
-        icon = <img src={url} height={30} width={30} style={{ opacity: '50%' }} />;
+        icon = <img src={url} height={50} width={50} style={{ opacity: '50%' }} />;
       }
 
       return (

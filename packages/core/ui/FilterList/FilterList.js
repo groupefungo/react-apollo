@@ -30,10 +30,14 @@ var _default = function _default(props) {
     if (!title && !name) return null;
 
     var checkedIcon = _react["default"].createElement(GroupWorkIcon, {
-      color: "primary"
+      color: "primary",
+      fontSize: "inherit"
     });
 
-    var icon = _react["default"].createElement(GroupWorkIcon, null);
+    var icon = _react["default"].createElement(GroupWorkIcon, {
+      fontSize: "inherit",
+      color: "disabled"
+    });
 
     var _ref = logo || {},
         url = _ref.url;
@@ -46,8 +50,8 @@ var _default = function _default(props) {
       });
       icon = _react["default"].createElement("img", {
         src: url,
-        height: 30,
-        width: 30,
+        height: 50,
+        width: 50,
         style: {
           opacity: '50%'
         }

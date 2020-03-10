@@ -1,5 +1,6 @@
 import React from 'react';
 import useUiContext from './UseContext';
+import './cardStyles.scss'
 
 export default (props) => {
   const { icon, checkedIcon } = props;
