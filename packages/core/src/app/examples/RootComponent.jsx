@@ -20,6 +20,10 @@ export default () => {
       <div>
         <Link to="/form">To form component (/form)</Link>
       </div>
+
+      <div>
+        <Link to="/multipurpose_table">To MultiPurposeTable component (/multipurpose_table)</Link>
+      </div>
     </>
   );
 }
