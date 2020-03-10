@@ -27,7 +27,10 @@ var _default = function _default(props) {
         name = filter.name,
         logo = filter.logo;
     if (!title && !name) return null;
-    var logoUrl = logo.url;
+
+    var _ref = logo || {},
+        url = _ref.url;
+
     return _react["default"].createElement(FormControlLabel, {
       key: id,
       value: id,
@@ -36,7 +39,7 @@ var _default = function _default(props) {
       },
       control: _react["default"].createElement(_StyledRadio["default"], {
         checked: id === selectedValue,
-        logo: logoUrl
+        logo: url
       }),
       label: title || name,
       labelPlacement: "bottom"
