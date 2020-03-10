@@ -11,7 +11,7 @@ var _UseContext = _interopRequireDefault(require("../UseContext"));
 
 var _UseContext2 = _interopRequireDefault(require("../../app/UseContext"));
 
-var _CardControl = _interopRequireDefault(require("../CardControl/CardControl"));
+var _CardControl = _interopRequireDefault(require("../CardControl"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -38,12 +38,7 @@ var _default = function _default(props) {
   var sm = 6;
   var md = 4;
   var lg = 4;
-
-  if (rowDisplay) {
-    xs = sm = md = lg = 12;
-  } else {
-    xs = sm = md = lg = null;
-  }
+  rowDisplay ? xs = sm = md = lg = 12 : null;
 
   var _useUiContext = (0, _UseContext["default"])(),
       Grid = _useUiContext.Grid,

@@ -1,7 +1,7 @@
 import React from 'react';
 import useUiContext from '../UseContext';
 import useAppContext from '../../app/UseContext';
-import CardControl from '../CardControl/CardControl';
+import CardControl from '../CardControl';
 
 export default (props) => {
   const appContext = useAppContext();
@@ -29,11 +29,7 @@ export default (props) => {
   let md = 4;
   let lg = 4;
 
-  if (rowDisplay) {
-    xs = sm = md = lg = 12;
-  } else {
-    xs = sm = md = lg = null;
-  }
+  (rowDisplay) ? xs = sm = md = lg = 12 : null;
 
   const { Grid, Box } = useUiContext();
 
