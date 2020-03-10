@@ -2,7 +2,7 @@ import React from 'react';
 import useUiContext from './UseContext';
 
 export default (props) => {
-  const { logo } = props;
+  const { icon, checkedIcon } = props;
   const { Radio } = useUiContext();
 
   return (
@@ -10,12 +10,8 @@ export default (props) => {
       className="filterItem"
       disableRipple
       color="default"
-      checkedIcon={
-        (
-          <img src={logo} height={50} width={50} />
-        )
-      }
-      icon={<img src={logo} height={30} width={30} style={{ opacity: '50%' }} />}
+      checkedIcon={checkedIcon}
+      icon={icon}
       {...props}
     />
   );
