@@ -4,7 +4,6 @@ import StyledRadio from '../StyledRadio';
 
 export default (props) => {
   const { filters, onClick, selectedValue } = props;
-
   const { FormControlLabel } = useUiContext();
 
   return (
@@ -12,13 +11,14 @@ export default (props) => {
       const { id, title, name, logo } = filter;
       if (!title && !name) return null;
 
+      const {url: logoUrl} = logo;
 
       return (
         <FormControlLabel
           key={id}
           value={id}
           onClick={() => onClick(id)}
-          control={<StyledRadio checked={(id === selectedValue)} logo={logo.url}/>}
+          control={<StyledRadio checked={(id === selectedValue)} logo={logoUrl}/>}
           label={title || name}
           labelPlacement="bottom"
         />
