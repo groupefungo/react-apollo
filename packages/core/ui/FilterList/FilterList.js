@@ -19,7 +19,8 @@ var _default = function _default(props) {
       selectedValue = props.selectedValue;
 
   var _useUiContext = (0, _UseContext["default"])(),
-      FormControlLabel = _useUiContext.FormControlLabel;
+      FormControlLabel = _useUiContext.FormControlLabel,
+      GroupWorkIcon = _useUiContext.GroupWorkIcon;
 
   return filters.map(function (filter) {
     var id = filter.id,
@@ -28,8 +29,34 @@ var _default = function _default(props) {
         logo = filter.logo;
     if (!title && !name) return null;
 
+    var checkedIcon = _react["default"].createElement(GroupWorkIcon, {
+      color: "primary",
+      fontSize: "inherit"
+    });
+
+    var icon = _react["default"].createElement(GroupWorkIcon, {
+      fontSize: "inherit",
+      color: "disabled"
+    });
+
     var _ref = logo || {},
         url = _ref.url;
+
+    if (url) {
+      checkedIcon = _react["default"].createElement("img", {
+        src: url,
+        height: 50,
+        width: 50
+      });
+      icon = _react["default"].createElement("img", {
+        src: url,
+        height: 50,
+        width: 50,
+        style: {
+          opacity: '50%'
+        }
+      });
+    }
 
     return _react["default"].createElement(FormControlLabel, {
       key: id,
@@ -39,7 +66,8 @@ var _default = function _default(props) {
       },
       control: _react["default"].createElement(_StyledRadio["default"], {
         checked: id === selectedValue,
-        logo: url
+        checkedIcon: checkedIcon,
+        icon: icon
       }),
       label: title || name,
       labelPlacement: "bottom"
