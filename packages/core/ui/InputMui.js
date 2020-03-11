@@ -55,21 +55,13 @@ function InputMui(props) {
     type: type,
     value: value
   };
-
-  if (type === 'number') {
-    inputProps.min = 1;
-    inputProps.max = 10;
-  }
-
   return _react["default"].createElement(TextField, _extends({
     variant: "outlined",
     label: label,
     onChange: onChange,
     InputLabelProps: inputLabelProps,
     inputProps: inputProps
-  }, remainingProps, {
-    fullWidth: true
-  }));
+  }, remainingProps));
 }
 
 InputMui.defaultProps = {
