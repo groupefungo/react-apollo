@@ -12,7 +12,7 @@ export default ({t, children}) => {
   return (
     <UiContext.Provider value={ext}>
       <ThemeProvider theme={theme}>
-        <Container>
+        <Container fixed disableGutters>
           <CssBaseline/>
           {children}
         </Container>

@@ -15,10 +15,6 @@ function InputMui(props) {
   }
 
   const inputProps = { type, value };
-  if (type === 'number') {
-    inputProps.min = 1;
-    inputProps.max = 10;
-  }
 
   return (
     <TextField
@@ -28,7 +24,6 @@ function InputMui(props) {
       InputLabelProps={inputLabelProps}
       inputProps={inputProps}
       {...remainingProps}
-      fullWidth
     />
   );
 }
