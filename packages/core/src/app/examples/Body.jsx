@@ -4,6 +4,7 @@ import RootComponent from "./RootComponent";
 import RouteComponent from "./RouteComponent";
 import FormComponent from "./FormComponent";
 import AppLayout from "./AppLayout";
+import MultiPurposeTableComponent from "./MultiPuposeTableComponent";
 
 export default () => {
   const {Route, Switch} = useAppContext();
@@ -17,6 +18,7 @@ export default () => {
         <Route component={RootComponent} path={'/'} exact/>
         <Route component={RouteComponent} path={'/rc'} exact/>
         <Route component={FormComponent} path={'/form'} exact/>
+        <Route component={MultiPurposeTableComponent} path={'/multipurpose_table'} exact />
       </Switch>
     </>
   )

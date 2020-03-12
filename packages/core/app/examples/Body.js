@@ -17,6 +17,8 @@ var _FormComponent = _interopRequireDefault(require("./FormComponent"));
 
 var _AppLayout = _interopRequireDefault(require("./AppLayout"));
 
+var _MultiPuposeTableComponent = _interopRequireDefault(require("./MultiPuposeTableComponent"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = function _default() {
@@ -35,6 +37,10 @@ var _default = function _default() {
   }), _react["default"].createElement(Route, {
     component: _FormComponent["default"],
     path: '/form',
+    exact: true
+  }), _react["default"].createElement(Route, {
+    component: _MultiPuposeTableComponent["default"],
+    path: '/multipurpose_table',
     exact: true
   })));
 };

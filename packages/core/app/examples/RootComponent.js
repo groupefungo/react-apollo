@@ -37,7 +37,9 @@ var _default = function _default() {
     to: "/rc"
   }, "To route component (/rc)")), _react["default"].createElement("div", null, _react["default"].createElement(Link, {
     to: "/form"
-  }, "To form component (/form)")));
+  }, "To form component (/form)")), _react["default"].createElement("div", null, _react["default"].createElement(Link, {
+    to: "/multipurpose_table"
+  }, "To MultiPurposeTable component (/multipurpose_table)")));
 };
 
 exports["default"] = _default;

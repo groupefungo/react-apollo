@@ -28,7 +28,10 @@ var _default = function _default(_ref) {
     value: ext
   }, _react["default"].createElement(ThemeProvider, {
     theme: theme
-  }, _react["default"].createElement(Container, null, _react["default"].createElement(CssBaseline, null), children)));
+  }, _react["default"].createElement(Container, {
+    fixed: true,
+    disableGutters: true
+  }, _react["default"].createElement(CssBaseline, null), children)));
 };
 
 exports["default"] = _default;
