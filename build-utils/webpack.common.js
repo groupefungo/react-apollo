@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.tsx',
   module: {
     rules: [
       {
@@ -34,7 +34,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.scss']
+    extensions: ['*', '.ts', '.tsx', '.js', '.jsx', '.scss']
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -46,9 +46,13 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../', 'dist'),
     publicPath: '/',
-    filename: 'Container.js'
+    filename: 'Container.tsx'
   },
   devServer: {
     contentBase: './dist'
   },
+  externals: {
+    "react": "React",
+    "react-dom": "ReactDOM",
+  }
 };

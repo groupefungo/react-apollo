@@ -1,11 +1,11 @@
 const path = require('path');
 
 module.exports = {
-  entry: './index.js',
+  entry: './index.tsx',
   output: {
     path: path.resolve(__dirname, './', 'dist'),
     publicPath: '/',
-    filename: 'index.js'
+    filename: 'index.tsx'
   },
   devServer: {
     contentBase: './dist'

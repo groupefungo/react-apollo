@@ -13,7 +13,7 @@ Boilerplate pour react apollo
 * #make changes
 * npm build
 
-## test example app that references packages/core container from within, check packages/core/src/index.js
+## test example app that references packages/core container from within, check packages/core/src/index.tsx
 
 * npm start
 * visite `http://localhost:8080/`
