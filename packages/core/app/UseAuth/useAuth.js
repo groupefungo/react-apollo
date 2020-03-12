@@ -50,7 +50,8 @@ var useProvideAuth = function useProvideAuth() {
     if (data && data.me) {
       setUser(data.me);
     }
-  }, [data]); // if (error) throw error;
+  }, [data]);
+  if (error && !!process.env.PACKAGING) throw error;
 
   var signout = function signout() {
     var meta = document.querySelector("meta[name='csrf-token']");

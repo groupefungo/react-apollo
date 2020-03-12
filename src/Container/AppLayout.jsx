@@ -20,7 +20,7 @@ export default () => {
             <Menu/>
           </IconButton>
           <Typography variant="h4" noWrap color="secondary">
-            WECATOSKEYAKAN
+            SITE APP
           </Typography>
         </Toolbar>
       </AppBar>

@@ -7,7 +7,7 @@ import UiContext from '../Context/Context'
 export default ({t, children}) => {
   const ext = useExt();
   const {ThemeProvider, createMuiTheme, Container, CssBaseline} = ext;
-  const theme = createMuiTheme(t || muiTheme);
+  const theme = createMuiTheme({...muiTheme, ...t});
 
   return (
     <UiContext.Provider value={ext}>

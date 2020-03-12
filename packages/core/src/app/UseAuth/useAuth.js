@@ -19,7 +19,7 @@ const useProvideAuth = () => {
     }
   }, [data]);
 
-  // if (error) throw error;
+  if (error && !!process.env.PACKAGING) throw error;
 
   const signout = () => {
     const meta = document.querySelector("meta[name='csrf-token']");
