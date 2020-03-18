@@ -61,7 +61,7 @@ function MultiPurposeTablePagination(props) {
 
   return (
     <TableFooter component="div">
-      <div style={{display: 'flex'}}>
+      <div style={{display: 'flex'}} id="multipurpose_table_pagination_wrapper">
         <SelectMui
           name={first ? 'first' : 'last'}
           label="Rows Per Page"
@@ -70,8 +70,8 @@ function MultiPurposeTablePagination(props) {
           value={first || last}
         />
         <div style={{display: 'flex'}}>
-          <IconButton disabled={!hasPreviousPage} onClick={handleBack}><ArrowBackIcon/></IconButton>
-          <IconButton disabled={!hasNextPage} onClick={handleNext}><ArrowForwardIcon/></IconButton>
+          <IconButton id="multipurpose_table_pagination_previous_page_button" disabled={!hasPreviousPage} onClick={handleBack}><ArrowBackIcon/></IconButton>
+          <IconButton id="multipurpose_table_pagination_next_page_button" disabled={!hasNextPage} onClick={handleNext}><ArrowForwardIcon/></IconButton>
         </div>
       </div>
     </TableFooter>
