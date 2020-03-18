@@ -32,6 +32,15 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var perPageOptions = [5, 10, 15, 25, 50, 100];
+var initialConnectionFilters = {
+  first: 10,
+  last: null,
+  after: null,
+  before: null,
+  reverse: null,
+  sortKey: null,
+  query: ''
+};
 
 function MultiPurposeTablePagination(props) {
   var _useUiContext = (0, _UseContext["default"])(),
@@ -43,7 +52,9 @@ function MultiPurposeTablePagination(props) {
   var connection = connectionState.state,
       setState = connectionState.setState;
   var first = connection.first,
-      last = connection.last;
+      last = connection.last,
+      sortKey = connection.sortKey,
+      reverse = connection.reverse;
   var startCursor = pageInfo.startCursor,
       endCursor = pageInfo.endCursor,
       hasNextPage = pageInfo.hasNextPage,
@@ -52,22 +63,11 @@ function MultiPurposeTablePagination(props) {
   var handleRowChange = function handleRowChange(_ref) {
     var target = _ref.target;
     var value = target.value;
-
-    if (!hasPreviousPage) {
-      setState(_objectSpread({}, connection, {
-        before: null,
-        after: null,
-        last: null,
-        first: value
-      }));
-    } else {
-      setState(_objectSpread({}, connection, {
-        before: startCursor,
-        after: null,
-        last: value,
-        first: null
-      }));
-    }
+    setState(_objectSpread({}, initialConnectionFilters, {
+      sortKey: sortKey,
+      reverse: reverse,
+      first: value
+    }));
   };
 
   var handleBack = function handleBack() {
@@ -98,6 +98,7 @@ function MultiPurposeTablePagination(props) {
     },
     id: "multipurpose_table_pagination_wrapper"
   }, _react["default"].createElement(SelectMui, {
+    id: "multipurpose_table_pagination_rows_per_page_select",
     name: first ? 'first' : 'last',
     label: "Rows Per Page",
     onChange: handleRowChange,
