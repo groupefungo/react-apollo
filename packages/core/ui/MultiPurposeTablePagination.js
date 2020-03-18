@@ -95,7 +95,8 @@ function MultiPurposeTablePagination(props) {
   }, _react["default"].createElement("div", {
     style: {
       display: 'flex'
-    }
+    },
+    id: "multipurpose_table_pagination_wrapper"
   }, _react["default"].createElement(SelectMui, {
     name: first ? 'first' : 'last',
     label: "Rows Per Page",
@@ -107,9 +108,11 @@ function MultiPurposeTablePagination(props) {
       display: 'flex'
     }
   }, _react["default"].createElement(IconButton, {
+    id: "multipurpose_table_pagination_previous_page_button",
     disabled: !hasPreviousPage,
     onClick: handleBack
   }, _react["default"].createElement(_ArrowBack["default"], null)), _react["default"].createElement(IconButton, {
+    id: "multipurpose_table_pagination_next_page_button",
     disabled: !hasNextPage,
     onClick: handleNext
   }, _react["default"].createElement(_ArrowForward["default"], null)))));
