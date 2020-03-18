@@ -63,6 +63,7 @@ function MultiPurposeTablePagination(props) {
     <TableFooter component="div">
       <div style={{display: 'flex'}} id="multipurpose_table_pagination_wrapper">
         <SelectMui
+          id="multipurpose_table_pagination_rows_per_page_select"
           name={first ? 'first' : 'last'}
           label="Rows Per Page"
           onChange={handleRowChange}
