@@ -46,7 +46,8 @@ var _default = function _default(props) {
       files = props.files,
       date = props.date,
       id = props.id,
-      deleteCardFunction = props.deleteCardFunction;
+      deleteCardFunction = props.deleteCardFunction,
+      disabled = props.disabled;
 
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -87,23 +88,35 @@ var _default = function _default(props) {
       Box = _useUiContext.Box,
       IconButton = _useUiContext.IconButton,
       Fade = _useUiContext.Fade,
-      Grid = _useUiContext.Grid;
+      makeStyles = _useUiContext.makeStyles;
 
+  var useStyles = makeStyles(function (theme) {
+    return {
+      description: {
+        '&:after': {
+          content: '""',
+          width: '100%',
+          height: '60px',
+          position: 'absolute',
+          left: 0,
+          bottom: 30,
+          background: "linear-gradient(transparent, ".concat(theme.palette.background.paper, ")")
+        }
+      }
+    };
+  });
+  var classes = useStyles();
   return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(Box, {
-    width: "inherit",
-    height: "inherit"
-  }, _react["default"].createElement(Grid, {
-    item: true
+    width: "100%",
+    height: "100%",
+    flexGrow: 1,
+    position: "relative"
   }, _react["default"].createElement(_DeleteWarning["default"], {
     open: openDeleteWarning,
     title: title,
     handleCancel: handleClose,
     handleConfirm: handleConfirm
-  }), _react["default"].createElement(Box, {
-    position: "relative",
-    flexGrow: 1,
-    margin: 1
-  }, _react["default"].createElement(Card, {
+  }), _react["default"].createElement(Card, {
     raised: isHovered,
     onMouseEnter: function onMouseEnter() {
       return setIsHovered(true);
@@ -116,7 +129,8 @@ var _default = function _default(props) {
     left: -10,
     position: "absolute"
   }, _react["default"].createElement(_CustomCardHeader["default"], {
-    createdAt: date
+    createdAt: date,
+    disabled: disabled
   })), deleteCardFunction && _react["default"].createElement(Fade, {
     "in": isHovered,
     timeout: 300,
@@ -145,7 +159,9 @@ var _default = function _default(props) {
     light: true
   }), _react["default"].createElement(CardContent, null, description && _react["default"].createElement(Box, {
     flexGrow: 1
-  }, description), files && files.length > 0 && _react["default"].createElement(Box, null, _react["default"].createElement(_ChipsArray["default"], {
+  }, _react["default"].createElement("div", {
+    className: classes.description
+  }, " ", description, "  ")), files && files.length > 0 && _react["default"].createElement(Box, null, _react["default"].createElement(_ChipsArray["default"], {
     chipsData: chipsData(),
     chipClicked: function chipClicked(file) {
       return _chipClicked(file);
@@ -161,7 +177,7 @@ var _default = function _default(props) {
     size: "small",
     color: "primary",
     onClick: action
-  }, actionLabel)))))));
+  }, actionLabel)))));
 };
 
 exports["default"] = _default;

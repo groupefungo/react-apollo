@@ -25,7 +25,8 @@ var _default = function _default(props) {
       categoryHandler = props.categoryHandler,
       deleteCardFunction = props.deleteCardFunction,
       dateHandler = props.dateHandler,
-      rowDisplay = props.rowDisplay;
+      rowDisplay = props.rowDisplay,
+      disabledHandler = props.disabledHandler;
   var resourcesPath = props.resourcesPath;
 
   if (!resourcesPath) {
@@ -50,7 +51,7 @@ var _default = function _default(props) {
     mt: 4
   }, _react["default"].createElement(Grid, {
     container: true,
-    spacing: 1,
+    spacing: 3,
     alignItems: "stretch"
   }, data.map(function (d) {
     return _react["default"].createElement(Grid, {
@@ -72,7 +73,8 @@ var _default = function _default(props) {
       actionLabel: "D\xE9tail",
       files: d.files,
       date: dateHandler && dateHandler(d) || d.createdAt,
-      deleteCardFunction: deleteCardFunction
+      deleteCardFunction: deleteCardFunction,
+      disabled: disabledHandler && disabledHandler(d)
     }));
   })));
 };
