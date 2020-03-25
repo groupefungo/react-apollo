@@ -16,6 +16,8 @@ export default (props) => {
         dateHandler,
         rowDisplay,
         disabledHandler,
+        action,
+        actionLabel,
     } = props;
 
     let {resourcesPath} = props;
@@ -46,8 +48,8 @@ export default (props) => {
                                 title={(titleHandler && titleHandler(d)) || d.title}
                                 description={(descriptionHandler && descriptionHandler(d)) || d.description}
                                 category={categoryHandler && categoryHandler(d)}
-                                action={() => router.push(`${resourcesPath}/${d.id}`)}
-                                actionLabel="Détail"
+                                action={ (action && action(d)) || (() => router.push(`${resourcesPath}/${d.id}`))}
+                                actionLabel={actionLabel || "Détail"}
                                 files={d.files}
                                 date={(dateHandler && dateHandler(d)) || d.createdAt}
                                 deleteCardFunction={deleteCardFunction}

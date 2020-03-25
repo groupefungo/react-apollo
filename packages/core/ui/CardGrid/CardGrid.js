@@ -26,7 +26,9 @@ var _default = function _default(props) {
       deleteCardFunction = props.deleteCardFunction,
       dateHandler = props.dateHandler,
       rowDisplay = props.rowDisplay,
-      disabledHandler = props.disabledHandler;
+      disabledHandler = props.disabledHandler,
+      action = props.action,
+      actionLabel = props.actionLabel;
   var resourcesPath = props.resourcesPath;
 
   if (!resourcesPath) {
@@ -67,10 +69,10 @@ var _default = function _default(props) {
       title: titleHandler && titleHandler(d) || d.title,
       description: descriptionHandler && descriptionHandler(d) || d.description,
       category: categoryHandler && categoryHandler(d),
-      action: function action() {
+      action: action && action(d) || function () {
         return router.push("".concat(resourcesPath, "/").concat(d.id));
       },
-      actionLabel: "D\xE9tail",
+      actionLabel: actionLabel || "Détail",
       files: d.files,
       date: dateHandler && dateHandler(d) || d.createdAt,
       deleteCardFunction: deleteCardFunction,

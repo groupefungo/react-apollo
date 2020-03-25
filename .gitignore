@@ -5,3 +5,4 @@ node_modules/*
 /.idea
 /packages/theme/node_modules/
 /packages/core/node_modules/
+/packages/core/.idea/

@@ -83,12 +83,26 @@ var rejectStyle = {
 
 var _default = function _default(props) {
   var fileChanged = props.fileChanged,
-      file = props.file;
+      file = props.file,
+      multiple = props.multiple;
 
   var _ref = file || {},
-      filename = _ref.filename;
+      filename = _ref.filename; // const initFiles = (file && filename) ? [file] : [];
 
-  var initFiles = file && filename ? [file] : [];
+
+  var initFiles = function initFiles() {
+    var previousFiles = [];
+
+    if (multiple) {
+      file.map(function (f) {
+        return previousFiles.push(f);
+      });
+      return previousFiles;
+    }
+
+    if (file && filename) return [file];
+    return [];
+  };
 
   var _useState = (0, _react.useState)(initFiles),
       _useState2 = _slicedToArray(_useState, 2),
@@ -97,7 +111,7 @@ var _default = function _default(props) {
 
   var _useDropzone = (0, _reactDropzone.useDropzone)({
     accept: 'image/*',
-    multiple: false,
+    multiple: !!multiple,
     onDrop: function onDrop(acceptedFiles) {
       setFiles(acceptedFiles.map(function (file) {
         return Object.assign(file, {
@@ -113,19 +127,30 @@ var _default = function _default(props) {
       isDragAccept = _useDropzone.isDragAccept,
       isDragReject = _useDropzone.isDragReject;
 
+  var removeFile = function removeFile(file) {
+    return function () {
+      var updatedFiles = files.filter(function (e) {
+        return e !== file;
+      });
+      setFiles(updatedFiles);
+      fileChanged(updatedFiles);
+    };
+  };
+
   var style = (0, _react.useMemo)(function () {
     return _objectSpread({}, baseStyle, {}, isDragActive ? activeStyle : {}, {}, isDragAccept ? acceptStyle : {}, {}, isDragReject ? rejectStyle : {});
   }, [isDragActive, isDragReject]);
-  var thumbs = files.map(function (file) {
+  var thumbs = files.map(function (file, index) {
     return _react["default"].createElement("div", {
       style: thumb,
-      key: "div".concat(file.filename)
+      key: "div".concat(file).concat(index)
     }, _react["default"].createElement("div", {
       style: thumbInner,
-      key: "subdiv ".concat(file.filename)
+      key: "subdiv ".concat(file).concat(index)
     }, _react["default"].createElement("img", {
       src: file.url || file.preview,
-      style: img
+      style: img,
+      onClick: removeFile(file)
     })));
   });
   (0, _react.useEffect)(function () {

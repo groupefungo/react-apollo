@@ -1,0 +1,32 @@
+import React from 'react';
+import useUiContext from '../UseContext';
+import useAppContext from '../../app/UseContext';
+
+export default ({ title, routePath, customAction }) => {
+  const appContext = useAppContext();
+  const { Grid, Tooltip, Fab, EditIcon } = useUiContext();
+
+  const { useRouter } = appContext;
+  const router = useRouter();
+  if (routePath && customAction) return null;
+
+  return (
+    <Grid item xs={2} sm={1}>
+      <Tooltip title={title} aria-label="add" placement="left">
+        <Fab
+          color="secondary"
+          aria-label="add"
+          style={{
+            zIndex: 1299,
+            top: 30,
+            right: 30,
+            position: 'fixed',
+          }}
+        >
+          {(customAction) && (<EditIcon onClick={customAction} />)}
+          {(routePath) && (<EditIcon onClick={() => router.push(routePath)} />)}
+        </Fab>
+      </Tooltip>
+    </Grid>
+  );
+};

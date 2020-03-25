@@ -73,6 +73,10 @@ var _Divider = _interopRequireDefault(require("@material-ui/core/Divider"));
 
 var _Drawer = _interopRequireDefault(require("@material-ui/core/Drawer"));
 
+var _EditButton = _interopRequireDefault(require("../EditButton"));
+
+var _Edit = _interopRequireDefault(require("@material-ui/icons/Edit"));
+
 var _Error = _interopRequireDefault(require("../Error"));
 
 var _Fab = _interopRequireDefault(require("@material-ui/core/Fab"));
@@ -189,6 +193,8 @@ var _UseDrawer = _interopRequireDefault(require("../UseDrawer"));
 
 var _UseFormStyles = _interopRequireDefault(require("../UseFormStyles"));
 
+var _Visibility = _interopRequireDefault(require("@material-ui/icons/Visibility"));
+
 var _Zoom = _interopRequireDefault(require("@material-ui/core/Zoom"));
 
 var _pickers = require("@material-ui/pickers");
@@ -239,6 +245,8 @@ var ext = {
   DialogContent: _DialogContent["default"],
   Divider: _Divider["default"],
   Drawer: _Drawer["default"],
+  EditButton: _EditButton["default"],
+  EditIcon: _Edit["default"],
   Error: _Error["default"],
   Fab: _Fab["default"],
   Fade: _Fade["default"],
@@ -299,6 +307,7 @@ var ext = {
   Typography: _Typography["default"],
   useChipFile: _UseChipFiles["default"],
   UseFormStyles: _UseFormStyles["default"],
+  VisibilityIcon: _Visibility["default"],
   Zoom: _Zoom["default"]
 };
 

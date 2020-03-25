@@ -32,6 +32,8 @@ import DialogContent from '@material-ui/core/DialogContent';
 import Dialog from '@material-ui/core/Dialog';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
+import EditButton from "../EditButton";
+import EditIcon from '@material-ui/icons/Edit';
 import Error from '../Error';
 import Fab from '@material-ui/core/Fab';
 import Fade from '@material-ui/core/Fade';
@@ -90,6 +92,7 @@ import Typography from '@material-ui/core/Typography';
 import useChipFile from "../UseChipFiles";
 import useDrawer from "../UseDrawer";
 import UseFormStyles from "../UseFormStyles";
+import VisibilityIcon from '@material-ui/icons/Visibility';
 import Zoom from '@material-ui/core/Zoom';
 import {MuiPickersUtilsProvider, KeyboardDatePicker} from '@material-ui/pickers';
 import {ThemeProvider, createMuiTheme} from '@material-ui/core';
@@ -130,6 +133,8 @@ const ext = {
   DialogContent,
   Divider,
   Drawer,
+  EditButton,
+  EditIcon,
   Error,
   Fab,
   Fade,
@@ -190,6 +195,7 @@ const ext = {
   Typography,
   useChipFile,
   UseFormStyles,
+  VisibilityIcon,
   Zoom,
 };
 
