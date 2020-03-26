@@ -23,7 +23,7 @@ export default ({ id, className, changed }) => {
           aria-label="upload a file"
           startIcon={<AttachFile />}
         >
-          Ajouter pièces jointes
+          Ajouter des pièces jointes
         </Button>
       </label>
     </>
