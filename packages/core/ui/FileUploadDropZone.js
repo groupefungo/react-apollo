@@ -11,6 +11,10 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _reactDropzone = require("react-dropzone");
 
+var _Typography = _interopRequireDefault(require("@material-ui/core/Typography"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -41,8 +45,8 @@ var thumb = {
   border: '1px solid #eaeaea',
   marginBottom: 8,
   marginRight: 8,
-  width: 100,
-  height: 100,
+  width: 50,
+  height: 50,
   padding: 4,
   boxSizing: 'border-box'
 };
@@ -69,7 +73,7 @@ var baseStyle = {
   backgroundColor: '#fafafa',
   color: '#bdbdbd',
   outline: 'none',
-  transition: 'border .24s ease-in-out'
+  transition: 'all .24s ease-in-out'
 };
 var activeStyle = {
   borderColor: '#2196f3'
@@ -80,11 +84,20 @@ var acceptStyle = {
 var rejectStyle = {
   borderColor: '#ff1744'
 };
+var bigContainer = {
+  display: 'flex',
+  borderColor: '#cccc',
+  borderWidth: 2,
+  borderRadius: 2
+};
 
 var _default = function _default(props) {
   var fileChanged = props.fileChanged,
       file = props.file,
-      multiple = props.multiple;
+      multiple = props.multiple,
+      _props$placeHolder = props.placeHolder,
+      placeHolder = _props$placeHolder === void 0 ? 'Déposez-vos fichiers ici' : _props$placeHolder,
+      thumbsLabel = props.thumbsLabel;
 
   var _ref = file || {},
       filename = _ref.filename; // const initFiles = (file && filename) ? [file] : [];
@@ -163,11 +176,14 @@ var _default = function _default(props) {
   }, [files]);
   return _react["default"].createElement("section", {
     className: "container"
-  }, _react["default"].createElement("div", getRootProps({
-    style: style
-  }), _react["default"].createElement("input", getInputProps()), _react["default"].createElement("p", null, "Glissez votre fichier dans cet encadr\xE9 ou cliquez \xE0 l'int\xE9rieur pour t\xE9l\xE9verser votre logo")), _react["default"].createElement("aside", {
+  }, thumbsLabel && thumbs.length > 0 && _react["default"].createElement(_Typography["default"], {
+    variant: "caption",
+    color: "textSecondary"
+  }, thumbsLabel), _react["default"].createElement("aside", {
     style: thumbsContainer
-  }, thumbs));
+  }, thumbs), _react["default"].createElement("div", getRootProps({
+    style: style
+  }), _react["default"].createElement("input", getInputProps()), _react["default"].createElement("p", null, placeHolder, " ")));
 };
 
 exports["default"] = _default;

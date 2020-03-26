@@ -39,7 +39,7 @@ var _default = function _default(_ref) {
     component: "span",
     "aria-label": "upload a file",
     startIcon: _react["default"].createElement(AttachFile, null)
-  }, "Joindre un fichier")));
+  }, "Ajouter des pi\xE8ces jointes")));
 };
 
 exports["default"] = _default;

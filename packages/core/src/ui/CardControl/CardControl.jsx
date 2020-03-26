@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import CancelIcon from '@material-ui/icons/Cancel';
-
+import VisibilityIcon from '@material-ui/icons/Visibility';
 import useUiContext from '../UseContext';
 import useAppContext from '../../app/UseContext';
 import ChipsArray from '../ChipsArray';
@@ -133,6 +133,9 @@ export default (props) => {
                                         </Typography>
                                     )
                                 }
+                                <IconButton onClick={() => setOpenDeleteWarning(true)}>
+                                    <VisibilityIcon fontSize="small" color="primary"/>
+                                </IconButton>
                                 <Button
                                     size="small"
                                     color="primary"

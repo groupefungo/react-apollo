@@ -11,6 +11,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _Cancel = _interopRequireDefault(require("@material-ui/icons/Cancel"));
 
+var _Visibility = _interopRequireDefault(require("@material-ui/icons/Visibility"));
+
 var _UseContext = _interopRequireDefault(require("../UseContext"));
 
 var _UseContext2 = _interopRequireDefault(require("../../app/UseContext"));
@@ -173,7 +175,14 @@ var _default = function _default(props) {
   }, category), !category && _react["default"].createElement(Typography, {
     color: "textSecondary",
     variant: "caption"
-  }), _react["default"].createElement(Button, {
+  }), _react["default"].createElement(IconButton, {
+    onClick: function onClick() {
+      return setOpenDeleteWarning(true);
+    }
+  }, _react["default"].createElement(_Visibility["default"], {
+    fontSize: "small",
+    color: "primary"
+  })), _react["default"].createElement(Button, {
     size: "small",
     color: "primary",
     onClick: action
