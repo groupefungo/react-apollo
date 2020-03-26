@@ -141,7 +141,14 @@ MultiPurposeTable.propTypes = {
       })]),
   ).isRequired,
   data: PropTypes.object.isRequired,
-  headers: PropTypes.arrayOf(PropTypes.object).isRequired,
+  headers: PropTypes.arrayOf(
+    PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.shape({
+        name: PropTypes.string,
+        component: PropTypes.func,
+      })]),
+  ).isRequired,
   loading: PropTypes.bool.isRequired,
   objects: PropTypes.string.isRequired,
   connectionState: PropTypes.object.isRequired,
