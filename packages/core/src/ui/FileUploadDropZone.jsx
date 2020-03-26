@@ -1,11 +1,12 @@
-import React, {useEffect, useState, useMemo} from 'react';
-import {useDropzone} from 'react-dropzone';
+import React, { useEffect, useState, useMemo } from 'react';
+import { useDropzone } from 'react-dropzone';
+import Typography from '@material-ui/core/Typography';
 
 const thumbsContainer = {
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    marginTop: 16
+    marginTop: 16,
 };
 
 const thumb = {
@@ -14,22 +15,22 @@ const thumb = {
     border: '1px solid #eaeaea',
     marginBottom: 8,
     marginRight: 8,
-    width: 100,
-    height: 100,
+    width: 50,
+    height: 50,
     padding: 4,
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
 };
 
 const thumbInner = {
     display: 'flex',
     minWidth: 0,
-    overflow: 'hidden'
+    overflow: 'hidden',
 };
 
 const img = {
     display: 'block',
     width: 'auto',
-    height: '100%'
+    height: '100%',
 };
 
 const baseStyle = {
@@ -45,7 +46,7 @@ const baseStyle = {
     backgroundColor: '#fafafa',
     color: '#bdbdbd',
     outline: 'none',
-    transition: 'border .24s ease-in-out'
+    transition: 'all .24s ease-in-out',
 };
 
 const activeStyle = {
@@ -60,10 +61,17 @@ const rejectStyle = {
     borderColor: '#ff1744'
 };
 
+const bigContainer = {
+    display: 'flex',
+    borderColor: '#cccc',
+    borderWidth: 2,
+    borderRadius: 2,
+};
+
 
 export default (props) => {
-    const {fileChanged, file, multiple} = props;
-    const {filename} = file || {};
+    const { fileChanged, file, multiple, placeHolder = 'Déposez-vos fichiers ici', thumbsLabel } = props;
+    const { filename } = file || {};
     // const initFiles = (file && filename) ? [file] : [];
     const initFiles = () => {
         const previousFiles = [];
@@ -77,7 +85,7 @@ export default (props) => {
 
     };
     const [files, setFiles] = useState(initFiles);
-    const {getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject} = useDropzone({
+    const { getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject } = useDropzone({
         accept: 'image/*',
         multiple: !!multiple,
         onDrop: (acceptedFiles) => {
@@ -122,14 +130,16 @@ export default (props) => {
 
     return (
         <section className="container">
-            <div {...getRootProps({style})}>
-                <input {...getInputProps()} />
-                <p>Glissez votre fichier dans cet encadré ou cliquez à l'intérieur pour téléverser votre
-                    logo</p>
-            </div>
+            {thumbsLabel && (thumbs.length > 0) && (
+                <Typography variant="caption" color="textSecondary">{thumbsLabel}</Typography>
+            )}
             <aside style={thumbsContainer}>
                 {thumbs}
             </aside>
+            <div {...getRootProps({ style })}>
+                <input {...getInputProps()} />
+                <p>{placeHolder} </p>
+            </div>
         </section>
     );
 };
