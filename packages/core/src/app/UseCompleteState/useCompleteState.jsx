@@ -23,6 +23,11 @@ export const useCompleteState = (initState) => {
 
   const nameWillChangeToValue = (name) => (value) => formInputChanged({target: { name, value }});
 
+  const namedDateAttributeToValue = (name) => (value) => {
+    const dateValue = new Date(value);
+    formInputChanged({target: { name, value: dateValue.toLocaleDateString() }});
+  }
+
   const stateErrorsToHash = () => {
     const { errors } = state;
     return errors.keys.reduce((errs, cur, i) => (
@@ -39,6 +44,7 @@ export const useCompleteState = (initState) => {
     stateChanged,
     formInputChanged,
     nameWillChangeToValue,
-    stateErrorsToHash
+    stateErrorsToHash,
+    namedDateAttributeToValue
   };
 };

@@ -55,6 +55,18 @@ var useCompleteState = function useCompleteState(initState) {
     };
   };
 
+  var namedDateAttributeToValue = function namedDateAttributeToValue(name) {
+    return function (value) {
+      var dateValue = new Date(value);
+      formInputChanged({
+        target: {
+          name: name,
+          value: dateValue.toLocaleDateString()
+        }
+      });
+    };
+  };
+
   var stateErrorsToHash = function stateErrorsToHash() {
     var errors = state.errors;
     return errors.keys.reduce(function (errs, cur, i) {
@@ -68,7 +80,8 @@ var useCompleteState = function useCompleteState(initState) {
     stateChanged: stateChanged,
     formInputChanged: formInputChanged,
     nameWillChangeToValue: nameWillChangeToValue,
-    stateErrorsToHash: stateErrorsToHash
+    stateErrorsToHash: stateErrorsToHash,
+    namedDateAttributeToValue: namedDateAttributeToValue
   };
 };
 
