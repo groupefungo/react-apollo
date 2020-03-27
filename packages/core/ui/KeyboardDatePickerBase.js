@@ -17,26 +17,24 @@ var _default = function _default(_ref) {
       name = _ref.name;
 
   var _useUiContext = (0, _UseContext["default"])(),
-      MuiPickersUtilsProvider = _useUiContext.MuiPickersUtilsProvider,
-      KeyboardDatePicker = _useUiContext.KeyboardDatePicker,
-      DateFnsUtils = _useUiContext.DateFnsUtils;
+      KeyboardDatePicker = _useUiContext.KeyboardDatePicker;
 
-  return _react["default"].createElement(MuiPickersUtilsProvider, {
-    utils: DateFnsUtils
-  }, _react["default"].createElement(KeyboardDatePicker, {
+  return _react["default"].createElement(KeyboardDatePicker, {
     name: name,
     disableToolbar: true,
     autoOk: true,
     variant: "inline",
-    format: "dd / MM / yyyy",
+    format: "dd/MM/yyyy",
+    placeholder: "10/10/2018",
     id: "date-picker-inline",
     label: "Date",
     value: value,
     onChange: changed,
+    minDate: new Date(),
     KeyboardButtonProps: {
       'aria-label': 'change date'
     }
-  }));
+  });
 };
 
 exports["default"] = _default;

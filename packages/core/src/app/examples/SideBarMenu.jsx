@@ -23,6 +23,10 @@ export const SideBarMenu = () => {
         <ListItemIcon><MailIcon /></ListItemIcon>
         <ListItemText primary="Form" onClick={() => router.push('/form')} />
       </ListItem>
+      <ListItem button key="3">
+        <ListItemIcon></ListItemIcon>
+        <ListItemText primary="DatePicker" onClick={() => router.push('/datepicker')} />
+      </ListItem>
     </>
   );
 
