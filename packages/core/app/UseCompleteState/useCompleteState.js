@@ -59,7 +59,7 @@ var useCompleteState = function useCompleteState(initState) {
 
   var namedDateAttributeToValue = function namedDateAttributeToValue(name) {
     return function (value) {
-      var fd = (0, _dateFns.format)(value, 'MM/dd/yyyy');
+      var fd = (0, _dateFns.format)(value, 'yyyy-MM-dd');
       console.log('date change', fd);
       formInputChanged({
         target: {

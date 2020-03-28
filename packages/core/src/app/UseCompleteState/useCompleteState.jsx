@@ -25,7 +25,7 @@ export const useCompleteState = (initState) => {
   const nameWillChangeToValue = (name) => (value) => formInputChanged({target: { name, value }});
 
   const namedDateAttributeToValue = (name) => (value) => {
-    const fd = format(value, 'MM/dd/yyyy');
+    const fd = format(value, 'yyyy-MM-dd');
     console.log('date change', fd);
     formInputChanged({target: { name, value: fd }});
   }
