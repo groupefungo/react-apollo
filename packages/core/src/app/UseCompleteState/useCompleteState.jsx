@@ -25,10 +25,11 @@ export const useCompleteState = (initState) => {
   const nameWillChangeToValue = (name) => (value) => formInputChanged({target: { name, value }});
 
   const namedDateAttributeToValue = (name) => (value) => {
-    const fd = format(value, 'yyyy-MM-dd');
-    console.log('date change', fd);
+    console.log('date changed', value);
+    const fd = format(value, 'yyyy-MM-dd ');
     formInputChanged({target: { name, value: fd }});
-  }
+    console.log('date changed set', fd);
+  };
 
   const stateErrorsToHash = () => {
     const { errors } = state;
