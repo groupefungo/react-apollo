@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { format } from 'date-fns'
 
 export const useCompleteState = (initState) => {
   const [state, setState] = useState(initState);
@@ -24,8 +25,9 @@ export const useCompleteState = (initState) => {
   const nameWillChangeToValue = (name) => (value) => formInputChanged({target: { name, value }});
 
   const namedDateAttributeToValue = (name) => (value) => {
-    const dateValue = new Date(value);
-    formInputChanged({target: { name, value: dateValue.toLocaleDateString() }});
+    const fd = format(value, 'MM/dd/yyyy');
+    console.log('date change', fd);
+    formInputChanged({target: { name, value: fd }});
   }
 
   const stateErrorsToHash = () => {
