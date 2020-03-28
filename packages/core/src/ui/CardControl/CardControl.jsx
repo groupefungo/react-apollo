@@ -133,16 +133,9 @@ export default (props) => {
                                         </Typography>
                                     )
                                 }
-                                <IconButton onClick={() => setOpenDeleteWarning(true)}>
+                                <IconButton onClick={action}>
                                     <VisibilityIcon fontSize="small" color="primary"/>
                                 </IconButton>
-                                <Button
-                                    size="small"
-                                    color="primary"
-                                    onClick={action}
-                                >
-                                    {actionLabel}
-                                </Button>
                             </CardActions>
                         </Card>
             </Box>

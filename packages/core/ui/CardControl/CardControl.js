@@ -176,17 +176,11 @@ var _default = function _default(props) {
     color: "textSecondary",
     variant: "caption"
   }), _react["default"].createElement(IconButton, {
-    onClick: function onClick() {
-      return setOpenDeleteWarning(true);
-    }
+    onClick: action
   }, _react["default"].createElement(_Visibility["default"], {
     fontSize: "small",
     color: "primary"
-  })), _react["default"].createElement(Button, {
-    size: "small",
-    color: "primary",
-    onClick: action
-  }, actionLabel)))));
+  }))))));
 };
 
 exports["default"] = _default;
