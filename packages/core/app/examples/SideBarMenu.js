@@ -51,6 +51,14 @@ var SideBarMenu = function SideBarMenu() {
       onClick: function onClick() {
         return router.push('/form');
       }
+    })), _react["default"].createElement(ListItem, {
+      button: true,
+      key: "3"
+    }, _react["default"].createElement(ListItemIcon, null), _react["default"].createElement(ListItemText, {
+      primary: "DatePicker",
+      onClick: function onClick() {
+        return router.push('/datepicker');
+      }
     })));
   };
 

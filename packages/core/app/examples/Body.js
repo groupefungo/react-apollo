@@ -19,6 +19,8 @@ var _AppLayout = _interopRequireDefault(require("./AppLayout"));
 
 var _MultiPuposeTableComponent = _interopRequireDefault(require("./MultiPuposeTableComponent"));
 
+var _DatePickerComponent = _interopRequireDefault(require("./DatePickerComponent"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = function _default() {
@@ -37,6 +39,10 @@ var _default = function _default() {
   }), _react["default"].createElement(Route, {
     component: _FormComponent["default"],
     path: '/form',
+    exact: true
+  }), _react["default"].createElement(Route, {
+    component: _DatePickerComponent["default"],
+    path: '/datepicker',
     exact: true
   }), _react["default"].createElement(Route, {
     component: _MultiPuposeTableComponent["default"],
