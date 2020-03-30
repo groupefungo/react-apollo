@@ -48,7 +48,7 @@ export default (props) => {
                                 title={(titleHandler && titleHandler(d)) || d.title}
                                 description={(descriptionHandler && descriptionHandler(d)) || d.description}
                                 category={categoryHandler && categoryHandler(d)}
-                                action={ (action && action(d)) || (() => router.push(`${resourcesPath}/${d.id}`))}
+                                action={ action? action(d) : () => router.push(`${resourcesPath}/${d.id}`)}
                                 actionLabel={actionLabel || "Détail"}
                                 files={d.files}
                                 date={(dateHandler && dateHandler(d)) || d.createdAt}

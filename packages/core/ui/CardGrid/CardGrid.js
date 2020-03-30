@@ -69,7 +69,7 @@ var _default = function _default(props) {
       title: titleHandler && titleHandler(d) || d.title,
       description: descriptionHandler && descriptionHandler(d) || d.description,
       category: categoryHandler && categoryHandler(d),
-      action: action && action(d) || function () {
+      action: action ? action(d) : function () {
         return router.push("".concat(resourcesPath, "/").concat(d.id));
       },
       actionLabel: actionLabel || "Détail",
