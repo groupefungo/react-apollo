@@ -176,7 +176,8 @@ var _default = function _default(props) {
     color: "textSecondary",
     variant: "caption"
   }), _react["default"].createElement(IconButton, {
-    onClick: action
+    onClick: action,
+    title: actionLabel
   }, _react["default"].createElement(_Visibility["default"], {
     fontSize: "small",
     color: "primary"
