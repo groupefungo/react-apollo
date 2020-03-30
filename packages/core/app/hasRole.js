@@ -5,10 +5,12 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _useAppContext2 = require("./UseContext/useAppContext");
+var _UseContext = _interopRequireDefault(require("./UseContext"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = function _default(userRole) {
-  var _useAppContext = (0, _useAppContext2.useAppContext)(),
+  var _useAppContext = (0, _UseContext["default"])(),
       useAuth = _useAppContext.useAuth;
 
   var auth = useAuth();

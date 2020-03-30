@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.useUserGql = void 0;
+exports["default"] = void 0;
 
 var _UseContext = _interopRequireDefault(require("../UseContext"));
 
@@ -70,7 +70,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  fragment UserFragment on User {\n    id\n    email\n    firstName\n    lastName\n    password\n    centerIds\n    roleIds\n    roles {\n      name\n    }\n    isValid\n    errors {\n      keys\n      messages\n    }  \n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  fragment UserFragment on User {\n    id\n    email\n    firstName\n    lastName\n    password\n    centerIds\n    roleIds\n    roles {\n      name\n    }\n    emailNotifications\n    isValid\n    errors {\n      keys\n      messages\n    }  \n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -81,7 +81,7 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var useUserGql = function useUserGql() {
+var _default = function _default() {
   var _useAppContext = (0, _UseContext["default"])(),
       gql = _useAppContext.gql,
       useQuery = _useAppContext.useQuery,
@@ -143,4 +143,4 @@ var useUserGql = function useUserGql() {
   };
 };
 
-exports.useUserGql = useUserGql;
+exports["default"] = _default;

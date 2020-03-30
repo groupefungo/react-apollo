@@ -1,6 +1,6 @@
 import useAppContext from '../UseContext';
 
-export const useUserGql = () => {
+export default () => {
   const { gql, useQuery, useMutation } = useAppContext();
 
   const USER_FRAGMENT = gql`
@@ -15,6 +15,7 @@ export const useUserGql = () => {
     roles {
       name
     }
+    emailNotifications
     isValid
     errors {
       keys
