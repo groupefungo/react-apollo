@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useDropzone } from 'react-dropzone';
 import Typography from '@material-ui/core/Typography';
+import useUiContext from './UseContext';
+import CancelIcon from '@material-ui/icons/Cancel';
 
 const thumbsContainer = {
     display: 'flex',
@@ -25,6 +27,13 @@ const thumbInner = {
     display: 'flex',
     minWidth: 0,
     overflow: 'hidden',
+};
+
+const thumbDelete = {
+    position: 'absolute',
+    width: 40,
+    height: 40,
+    backgroundColor: 'rgba(255,255,255,0.5)',
 };
 
 const img = {
@@ -70,6 +79,7 @@ const bigContainer = {
 
 
 export default (props) => {
+    const [deleteButton, setDeleteButton] = useState(-1);
     const { fileChanged, file, multiple, placeHolder = 'Déposez-vos fichiers ici', thumbsLabel } = props;
     const { filename } = file || {};
     // const initFiles = (file && filename) ? [file] : [];
@@ -85,6 +95,10 @@ export default (props) => {
 
     };
     const [files, setFiles] = useState(initFiles);
+    const {
+        Fade,
+        IconButton,
+    } = useUiContext();
     const { getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject } = useDropzone({
         accept: 'image/*',
         multiple: !!multiple,
@@ -111,12 +125,30 @@ export default (props) => {
     ]);
 
     const thumbs = files.map((file, index) => (
-        <div style={thumb} key={`div${file}${index}`}>
+        <div
+            style={thumb}
+            key={`div${file}${index}`}
+            onMouseEnter={() => setDeleteButton(index)}
+            onMouseLeave={() => setDeleteButton(-1)}
+            onClick={removeFile(file)}
+        >
+            <Fade in={deleteButton === index}>
+                <div style={thumbDelete}>
+                    <IconButton
+                        onClick={removeFile(file)}
+                        style={{
+                            left: 20,
+                            bottom: 20,
+                        }}
+                    >
+                        <CancelIcon fontSize="small" color="primary" />
+                    </IconButton>
+                </div>
+            </Fade>
             <div style={thumbInner} key={`subdiv ${file}${index}`}>
                 <img
                     src={file.url || file.preview}
                     style={img}
-                    onClick={removeFile(file)}
                 />
             </div>
         </div>
