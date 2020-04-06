@@ -34,11 +34,8 @@ var useChipFiles = function useChipFiles(stateFiles) {
 
   var chipDeleted = function chipDeleted(chipToDelete) {
     return function () {
-      var updatedFileList = [];
-      Array.from(stateFiles).forEach(function (file) {
-        if (file.name !== chipToDelete.key && file.id !== chipToDelete.id) {
-          updatedFileList.push(file);
-        }
+      var updatedFileList = stateFiles.filter(function (chip) {
+        return chip.name && chip.name !== chipToDelete.key || chip.id !== chipToDelete.id;
       });
       setFilesState(updatedFileList);
     };

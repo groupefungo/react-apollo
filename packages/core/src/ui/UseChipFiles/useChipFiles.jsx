@@ -37,16 +37,7 @@ export const useChipFiles = (stateFiles, setFilesState = null) => {
   };
 
   const chipDeleted = (chipToDelete) => () => {
-    const updatedFileList = [];
-    Array.from(stateFiles)
-      .forEach(
-        (file) => {
-          if (file.name !== chipToDelete.key && file.id !== chipToDelete.id) {
-            updatedFileList.push(file);
-          }
-        },
-      );
-
+    const updatedFileList = stateFiles.filter(chip => (chip.name && chip.name !== chipToDelete.key) || (chip.id !== chipToDelete.id) );
     setFilesState(updatedFileList);
   };
 
