@@ -29,6 +29,14 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -68,7 +76,11 @@ var thumbDelete = {
 var img = {
   display: 'block',
   width: 'auto',
-  height: '100%'
+  height: '100%',
+  cursor: 'pointer',
+  '&::hover': {
+    opacity: '50%'
+  }
 };
 var baseStyle = {
   flex: 1,
@@ -111,12 +123,10 @@ var _default = function _default(props) {
       file = props.file,
       multiple = props.multiple,
       _props$placeHolder = props.placeHolder,
-      placeHolder = _props$placeHolder === void 0 ? 'Déposez-vos fichiers ici' : _props$placeHolder,
-      thumbsLabel = props.thumbsLabel;
+      placeHolder = _props$placeHolder === void 0 ? 'Déposez-vos fichiers ici' : _props$placeHolder;
 
   var _ref = file || {},
-      filename = _ref.filename; // const initFiles = (file && filename) ? [file] : [];
-
+      filename = _ref.filename;
 
   var initFiles = function initFiles() {
     var previousFiles = [];
@@ -132,24 +142,34 @@ var _default = function _default(props) {
     return [];
   };
 
+  var _useUiContext = (0, _UseContext["default"])(),
+      Fade = _useUiContext.Fade,
+      IconButton = _useUiContext.IconButton;
+
   var _useState3 = (0, _react.useState)(initFiles),
       _useState4 = _slicedToArray(_useState3, 2),
       files = _useState4[0],
       setFiles = _useState4[1];
 
-  var _useUiContext = (0, _UseContext["default"])(),
-      Fade = _useUiContext.Fade,
-      IconButton = _useUiContext.IconButton;
-
   var _useDropzone = (0, _reactDropzone.useDropzone)({
     accept: 'image/*',
     multiple: !!multiple,
     onDrop: function onDrop(acceptedFiles) {
-      setFiles(acceptedFiles.map(function (file) {
-        return Object.assign(file, {
-          preview: URL.createObjectURL(file)
-        });
-      }));
+      if (multiple) {
+        var newFiles = [].concat(_toConsumableArray(files), _toConsumableArray(acceptedFiles.map(function (file) {
+          return Object.assign(file, {
+            preview: URL.createObjectURL(file)
+          });
+        })));
+        setFiles(newFiles);
+      } else {
+        setFiles(acceptedFiles.map(function (file) {
+          return Object.assign(file, {
+            preview: URL.createObjectURL(file)
+          });
+        }));
+      }
+
       fileChanged(acceptedFiles);
     }
   }),
@@ -203,21 +223,19 @@ var _default = function _default(props) {
       src: file.url || file.preview,
       style: img
     })));
-  });
-  (0, _react.useEffect)(function () {
-    return function () {
-      // Make sure to revoke the data uris to avoid memory leaks
-      files.forEach(function (file) {
-        return URL.revokeObjectURL(file.preview);
-      });
-    };
-  }, [files]);
+  }); // ** Voir si c'est problematique **
+  // useEffect(() => () => {
+  //   // Make sure to revoke the data uris to avoid memory leaks
+  //   files.forEach((file) => URL.revokeObjectURL(file.preview));
+  //   console.log(file);
+  // }, [files]);
+
   return _react["default"].createElement("section", {
     className: "container"
-  }, thumbsLabel && thumbs.length > 0 && _react["default"].createElement(_Typography["default"], {
+  }, thumbs.length > 0 && _react["default"].createElement(_Typography["default"], {
     variant: "caption",
     color: "textSecondary"
-  }, thumbsLabel), _react["default"].createElement("aside", {
+  }, "Images de diaporama"), _react["default"].createElement("aside", {
     style: thumbsContainer
   }, thumbs), _react["default"].createElement("div", getRootProps({
     style: style

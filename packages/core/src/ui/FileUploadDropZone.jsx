@@ -40,6 +40,10 @@ const img = {
     display: 'block',
     width: 'auto',
     height: '100%',
+    cursor: 'pointer',
+    '&::hover': {
+        opacity: '50%',
+    },
 };
 
 const baseStyle = {
@@ -80,9 +84,8 @@ const bigContainer = {
 
 export default (props) => {
     const [deleteButton, setDeleteButton] = useState(-1);
-    const { fileChanged, file, multiple, placeHolder = 'Déposez-vos fichiers ici', thumbsLabel } = props;
+    const { fileChanged, file, multiple, placeHolder = 'Déposez-vos fichiers ici' } = props;
     const { filename } = file || {};
-    // const initFiles = (file && filename) ? [file] : [];
     const initFiles = () => {
         const previousFiles = [];
         if (multiple) {
@@ -92,20 +95,23 @@ export default (props) => {
         if (file && filename) return [file];
 
         return [];
-
     };
+    const {Fade, IconButton} = useUiContext();
     const [files, setFiles] = useState(initFiles);
-    const {
-        Fade,
-        IconButton,
-    } = useUiContext();
     const { getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject } = useDropzone({
         accept: 'image/*',
         multiple: !!multiple,
         onDrop: (acceptedFiles) => {
-            setFiles(acceptedFiles.map((file) => Object.assign(file, {
-                preview: URL.createObjectURL(file),
-            })));
+            if (multiple) {
+                const newFiles = [...files, ...acceptedFiles.map((file) => Object.assign(file, {
+                    preview: URL.createObjectURL(file),
+                }))];
+                setFiles(newFiles);
+            } else {
+                setFiles(acceptedFiles.map((file) => Object.assign(file, {
+                    preview: URL.createObjectURL(file),
+                })));
+            }
             fileChanged(acceptedFiles);
         },
     });
@@ -154,16 +160,18 @@ export default (props) => {
         </div>
     ));
 
-    useEffect(() => () => {
-        // Make sure to revoke the data uris to avoid memory leaks
-        files.forEach((file) => URL.revokeObjectURL(file.preview));
-    }, [files]);
+    // ** Voir si c'est problematique **
+    // useEffect(() => () => {
+    //   // Make sure to revoke the data uris to avoid memory leaks
+    //   files.forEach((file) => URL.revokeObjectURL(file.preview));
+    //   console.log(file);
+    // }, [files]);
 
 
     return (
         <section className="container">
-            {thumbsLabel && (thumbs.length > 0) && (
-                <Typography variant="caption" color="textSecondary">{thumbsLabel}</Typography>
+            {thumbs.length > 0 && (
+                <Typography variant="caption" color="textSecondary">Images de diaporama</Typography>
             )}
             <aside style={thumbsContainer}>
                 {thumbs}
