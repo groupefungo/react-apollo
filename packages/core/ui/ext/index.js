@@ -179,6 +179,8 @@ var _Select = _interopRequireDefault(require("@material-ui/core/Select"));
 
 var _SelectMui = _interopRequireDefault(require("../SelectMui"));
 
+var _Send = _interopRequireDefault(require("@material-ui/icons/Send"));
+
 var _SimpleTable = _interopRequireDefault(require("../SimpleTable"));
 
 var _SimpleTabs = _interopRequireDefault(require("../SimpleTabs"));
@@ -222,6 +224,8 @@ var _Typography = _interopRequireDefault(require("@material-ui/core/Typography")
 var _UseChipFiles = _interopRequireDefault(require("../UseChipFiles"));
 
 var _UseDrawer = _interopRequireDefault(require("../UseDrawer"));
+
+var _UseSnackBar = _interopRequireDefault(require("../UseSnackBar"));
 
 var _UseFormStyles = _interopRequireDefault(require("../UseFormStyles"));
 
@@ -324,6 +328,7 @@ var ext = {
   Menu: _Menu["default"],
   MenuItem: _MenuItem["default"],
   MuiPickersUtilsProvider: _pickers.MuiPickersUtilsProvider,
+  MuiAlert: _Alert["default"],
   MultiPurposeTable: _MultiPurposeTable["default"],
   Paper: _Paper["default"],
   PeopleAltIcon: _PeopleAlt["default"],
@@ -334,6 +339,7 @@ var ext = {
   SaveIcon: _Save["default"],
   Select: _Select["default"],
   SelectMui: _SelectMui["default"],
+  SendIcon: _Send["default"],
   SimpleTable: _SimpleTable["default"],
   SimpleTabs: _SimpleTabs["default"],
   Snackbar: _Snackbar["default"],
@@ -364,7 +370,8 @@ var ext = {
 
 var _default = function _default() {
   return _objectSpread({}, ext, {
-    DrawerState: (0, _UseDrawer["default"])()
+    DrawerState: (0, _UseDrawer["default"])(),
+    SnackBar: (0, _UseSnackBar["default"])()
   });
 };
 

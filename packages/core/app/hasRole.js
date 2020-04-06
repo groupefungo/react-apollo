@@ -15,7 +15,7 @@ var _default = function _default(userRole) {
 
   var auth = useAuth();
   var user = auth.user;
-  var roles = user.roles;
+  var roles = user && user.roles || [];
   return roles.find(function (r) {
     return r.name === userRole;
   });

@@ -1,0 +1,1 @@
+export {useSnackBar as default} from './useSnackBar';
