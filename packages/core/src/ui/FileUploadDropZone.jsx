@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useDropzone } from 'react-dropzone';
 import Typography from '@material-ui/core/Typography';
+import useUiContext from './UseContext';
+import CancelIcon from '@material-ui/icons/Cancel';
 
 const thumbsContainer = {
     display: 'flex',
@@ -27,10 +29,21 @@ const thumbInner = {
     overflow: 'hidden',
 };
 
+const thumbDelete = {
+    position: 'absolute',
+    width: 40,
+    height: 40,
+    backgroundColor: 'rgba(255,255,255,0.5)',
+};
+
 const img = {
     display: 'block',
     width: 'auto',
     height: '100%',
+    cursor: 'pointer',
+    '&::hover': {
+        opacity: '50%',
+    },
 };
 
 const baseStyle = {
@@ -70,9 +83,9 @@ const bigContainer = {
 
 
 export default (props) => {
-    const { fileChanged, file, multiple, placeHolder = 'Déposez-vos fichiers ici', thumbsLabel } = props;
+    const [deleteButton, setDeleteButton] = useState(-1);
+    const { fileChanged, file, multiple, placeHolder = 'Déposez-vos fichiers ici' } = props;
     const { filename } = file || {};
-    // const initFiles = (file && filename) ? [file] : [];
     const initFiles = () => {
         const previousFiles = [];
         if (multiple) {
@@ -82,16 +95,23 @@ export default (props) => {
         if (file && filename) return [file];
 
         return [];
-
     };
+    const {Fade, IconButton} = useUiContext();
     const [files, setFiles] = useState(initFiles);
     const { getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject } = useDropzone({
         accept: 'image/*',
         multiple: !!multiple,
         onDrop: (acceptedFiles) => {
-            setFiles(acceptedFiles.map((file) => Object.assign(file, {
-                preview: URL.createObjectURL(file),
-            })));
+            if (multiple) {
+                const newFiles = [...files, ...acceptedFiles.map((file) => Object.assign(file, {
+                    preview: URL.createObjectURL(file),
+                }))];
+                setFiles(newFiles);
+            } else {
+                setFiles(acceptedFiles.map((file) => Object.assign(file, {
+                    preview: URL.createObjectURL(file),
+                })));
+            }
             fileChanged(acceptedFiles);
         },
     });
@@ -111,27 +131,47 @@ export default (props) => {
     ]);
 
     const thumbs = files.map((file, index) => (
-        <div style={thumb} key={`div${file}${index}`}>
+        <div
+            style={thumb}
+            key={`div${file}${index}`}
+            onMouseEnter={() => setDeleteButton(index)}
+            onMouseLeave={() => setDeleteButton(-1)}
+            onClick={removeFile(file)}
+        >
+            <Fade in={deleteButton === index}>
+                <div style={thumbDelete}>
+                    <IconButton
+                        onClick={removeFile(file)}
+                        style={{
+                            left: 20,
+                            bottom: 20,
+                        }}
+                    >
+                        <CancelIcon fontSize="small" color="primary" />
+                    </IconButton>
+                </div>
+            </Fade>
             <div style={thumbInner} key={`subdiv ${file}${index}`}>
                 <img
                     src={file.url || file.preview}
                     style={img}
-                    onClick={removeFile(file)}
                 />
             </div>
         </div>
     ));
 
-    useEffect(() => () => {
-        // Make sure to revoke the data uris to avoid memory leaks
-        files.forEach((file) => URL.revokeObjectURL(file.preview));
-    }, [files]);
+    // ** Voir si c'est problematique **
+    // useEffect(() => () => {
+    //   // Make sure to revoke the data uris to avoid memory leaks
+    //   files.forEach((file) => URL.revokeObjectURL(file.preview));
+    //   console.log(file);
+    // }, [files]);
 
 
     return (
         <section className="container">
-            {thumbsLabel && (thumbs.length > 0) && (
-                <Typography variant="caption" color="textSecondary">{thumbsLabel}</Typography>
+            {thumbs.length > 0 && (
+                <Typography variant="caption" color="textSecondary">Images de diaporama</Typography>
             )}
             <aside style={thumbsContainer}>
                 {thumbs}
