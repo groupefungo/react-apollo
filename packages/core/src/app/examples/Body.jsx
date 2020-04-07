@@ -6,6 +6,7 @@ import FormComponent from "./FormComponent";
 import AppLayout from "./AppLayout";
 import MultiPurposeTableComponent from "./MultiPuposeTableComponent";
 import DatePickerComponent from "./DatePickerComponent";
+import SimpleTableComponent from "./SimpleTableComponent";
 
 export default () => {
   const {Route, Switch} = useAppContext();
@@ -21,6 +22,7 @@ export default () => {
         <Route component={FormComponent} path={'/form'} exact/>
         <Route component={DatePickerComponent} path={'/datepicker'} exact />
         <Route component={MultiPurposeTableComponent} path={'/multipurpose_table'} exact />
+        <Route component={SimpleTableComponent} path={'/simple_table'} exact />
       </Switch>
     </>
   )

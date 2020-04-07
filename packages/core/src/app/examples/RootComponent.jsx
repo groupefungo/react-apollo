@@ -54,6 +54,10 @@ export default () => {
             <div>
                 <Link to="/multipurpose_table">To MultiPurposeTable component (/multipurpose_table)</Link>
             </div>
+
+          <div>
+            <Link to="/simple_table">To SimpleTable component (/simple_table)</Link>
+          </div>
         </>
     );
 }

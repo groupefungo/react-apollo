@@ -21,6 +21,8 @@ var _MultiPuposeTableComponent = _interopRequireDefault(require("./MultiPuposeTa
 
 var _DatePickerComponent = _interopRequireDefault(require("./DatePickerComponent"));
 
+var _SimpleTableComponent = _interopRequireDefault(require("./SimpleTableComponent"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = function _default() {
@@ -47,6 +49,10 @@ var _default = function _default() {
   }), _react["default"].createElement(Route, {
     component: _MultiPuposeTableComponent["default"],
     path: '/multipurpose_table',
+    exact: true
+  }), _react["default"].createElement(Route, {
+    component: _SimpleTableComponent["default"],
+    path: '/simple_table',
     exact: true
   })));
 };
