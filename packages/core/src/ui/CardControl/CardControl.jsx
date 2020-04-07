@@ -132,7 +132,7 @@ export default (props) => {
                 </Typography>
               )
             }
-            <IconButton onClick={action} title={actionLabel}>
+            <IconButton onClick={action} title={actionLabel} id={`card-action-${id}`}>
               <VisibilityIcon fontSize="small" color="primary"/>
             </IconButton>
           </CardActions>
