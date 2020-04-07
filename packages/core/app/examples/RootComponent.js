@@ -52,7 +52,9 @@ var _default = function _default() {
     to: "/form"
   }, "To form component (/form)")), _react["default"].createElement("div", null, _react["default"].createElement(Link, {
     to: "/multipurpose_table"
-  }, "To MultiPurposeTable component (/multipurpose_table)")));
+  }, "To MultiPurposeTable component (/multipurpose_table)")), _react["default"].createElement("div", null, _react["default"].createElement(Link, {
+    to: "/alertuser"
+  }, "Alert user")));
 };
 
 exports["default"] = _default;

@@ -15,6 +15,7 @@ export const useUserGql = () => {
     roles {
       name
     }
+    emailNotifications
     isValid
     errors {
       keys
@@ -59,6 +60,7 @@ export const useUserGql = () => {
       email
       firstName
       lastName
+      centerIds
       roleIds
       roles {
         name

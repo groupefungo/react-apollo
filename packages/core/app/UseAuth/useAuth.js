@@ -10,7 +10,7 @@ exports.useAuth = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _UseUserGql = _interopRequireDefault(require("../UseUserGql"));
+var _UseContext = _interopRequireDefault(require("../UseContext"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -37,14 +37,20 @@ var useAuth = function useAuth() {
 exports.useAuth = useAuth;
 
 var useProvideAuth = function useProvideAuth() {
+  var _useAppContext = (0, _UseContext["default"])(),
+      useUserGql = _useAppContext.useUserGql;
+
   var _useState = (0, _react.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
       user = _useState2[0],
       setUser = _useState2[1];
 
-  var _useUserGql$useMeQuer = (0, _UseUserGql["default"])().useMeQuery(),
-      data = _useUserGql$useMeQuer.data,
-      error = _useUserGql$useMeQuer.error;
+  var _useUserGql = useUserGql(),
+      useMeQuery = _useUserGql.useMeQuery;
+
+  var _useMeQuery = useMeQuery(),
+      data = _useMeQuery.data,
+      error = _useMeQuery.error;
 
   (0, _react.useEffect)(function () {
     if (data && data.me) {

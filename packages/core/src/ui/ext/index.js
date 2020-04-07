@@ -76,6 +76,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import Menu from '@material-ui/icons/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MultiPurposeTable from "../MultiPurposeTable";
+import MuiAlert from '@material-ui/lab/Alert';
 import Paper from '@material-ui/core/Paper';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import PersonIcon from '@material-ui/icons/PersonSharp';
@@ -85,6 +86,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import SaveIcon from '@material-ui/icons/Save';
 import Select from '@material-ui/core/Select';
 import SelectMui from "../SelectMui";
+import SendIcon from '@material-ui/icons/Send';
 import SimpleTable from "../SimpleTable";
 import SimpleTabs from "../SimpleTabs";
 import Snackbar from '@material-ui/core/Snackbar';
@@ -107,6 +109,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import useChipFile from "../UseChipFiles";
 import useDrawer from "../UseDrawer";
+import useSnackBar from '../UseSnackBar'
 import UseFormStyles from "../UseFormStyles";
 import useTheme from "@material-ui/core/styles/useTheme";
 import VisibilityIcon from '@material-ui/icons/Visibility';
@@ -195,6 +198,7 @@ const ext = {
   Menu,
   MenuItem,
   MuiPickersUtilsProvider,
+  MuiAlert,
   MultiPurposeTable,
   Paper,
   PeopleAltIcon,
@@ -205,6 +209,7 @@ const ext = {
   SaveIcon,
   Select,
   SelectMui,
+  SendIcon,
   SimpleTable,
   SimpleTabs,
   Snackbar,
@@ -236,6 +241,7 @@ const ext = {
 export default () => (
   {
     ...ext,
-    DrawerState: useDrawer()
+    DrawerState: useDrawer(),
+    SnackBar: useSnackBar(),
   }
 );
