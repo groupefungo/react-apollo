@@ -177,7 +177,8 @@ var _default = function _default(props) {
     variant: "caption"
   }), _react["default"].createElement(IconButton, {
     onClick: action,
-    title: actionLabel
+    title: actionLabel,
+    id: "card-action-".concat(id)
   }, _react["default"].createElement(_Visibility["default"], {
     fontSize: "small",
     color: "primary"
