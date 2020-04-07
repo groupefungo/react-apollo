@@ -112,7 +112,8 @@ var useUserGql = function useUserGql() {
 
   var useUsersQuery = function useUsersQuery() {
     return useQuery(GET_USERS, {
-      fetchPolicy: 'network-only'
+      fetchPolicy: 'network-only',
+      notifyOnNetworkStatusChange: true
     });
   };
 
@@ -121,7 +122,8 @@ var useUserGql = function useUserGql() {
       fetchPolicy: 'network-only',
       variables: {
         id: id
-      }
+      },
+      notifyOnNetworkStatusChange: true
     });
   };
 

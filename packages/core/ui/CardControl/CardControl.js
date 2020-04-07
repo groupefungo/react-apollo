@@ -76,7 +76,6 @@ var _default = function _default(props) {
   var handleConfirm = function handleConfirm() {
     deleteCardFunction(id);
     handleClose();
-    router.push('/');
   };
 
   var _useUiContext = (0, _UseContext["default"])(),
