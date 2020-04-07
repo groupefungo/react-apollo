@@ -24,7 +24,6 @@ export default (props) => {
   const handleConfirm = () => {
     deleteCardFunction(id);
     handleClose();
-    router.push('/');
   };
 
   const {
