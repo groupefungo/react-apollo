@@ -18,8 +18,19 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var useBack = function useBack() {
   var _useState = (0, _react.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
-      backState = _useState2[0],
-      setBackState = _useState2[1];
+      bs = _useState2[0],
+      setBS = _useState2[1];
+
+  var setBackState = function setBackState(s) {
+    //console.log('setting backstate', s);
+    setBS(s);
+  };
+
+  var backState = function backState() {
+    var cbs = bs;
+    setBS(null);
+    return cbs;
+  };
 
   return {
     backState: backState,
