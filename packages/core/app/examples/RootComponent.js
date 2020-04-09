@@ -54,8 +54,7 @@ var _default = function _default() {
     to: "/multipurpose_table"
   }, "To MultiPurposeTable component (/multipurpose_table)")), _react["default"].createElement("div", null, _react["default"].createElement(Link, {
     to: "/simple_table"
-  }, "To SimpleTable component (/simple_table)"
-  , "To MultiPurposeTable component (/multipurpose_table)")), _react["default"].createElement("div", null, _react["default"].createElement(Link, {
+  }, "To SimpleTable component (/simple_table)")), _react["default"].createElement("div", null, _react["default"].createElement(Link, {
     to: "/alertuser"
   }, "Alert user")));
 };

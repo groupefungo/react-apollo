@@ -50,6 +50,8 @@ var _default = function _default(_ref) {
     }, object[column]);
   };
 
+  console.log("test nd");
+  console.log(rows);
   return _react["default"].createElement(TableContainer, {
     component: Paper
   }, _react["default"].createElement(Table, {
