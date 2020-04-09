@@ -21,8 +21,7 @@ export default ({ headers, rows, columns, handleRowClick }) => {
     }
     return <TableCell key={`${column}_${object.id}`}>{object[column]}</TableCell>;
   };
-  console.log("test nd");
-  console.log(rows);
+
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
