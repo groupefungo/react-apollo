@@ -83,7 +83,7 @@ export default (props) => {
             >
               <Box top={-20} right={-20} position="absolute" zIndex={3}>
                 <IconButton onClick={() => setOpenDeleteWarning(true)}>
-                  <CancelIcon fontSize="small" color="primary"/>
+                  <CancelIcon fontSize="small" color="primary" id={`card-delete-${id}`}/>
                 </IconButton>
               </Box>
             </Fade>
