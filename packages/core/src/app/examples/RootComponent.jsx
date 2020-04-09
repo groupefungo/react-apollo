@@ -56,6 +56,10 @@ export default () => {
       </div>
 
       <div>
+        <Link to="/simple_table">To SimpleTable component (/simple_table)</Link>
+      </div>
+
+      <div>
         <Link to="/alertuser">Alert user</Link>
       </div>
     </>
