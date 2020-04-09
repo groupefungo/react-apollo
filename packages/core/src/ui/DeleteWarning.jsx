@@ -16,7 +16,7 @@ export default (props) => {
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >
-      <DialogTitle id="alert-dialog-title">{`Effacer l'article ${title}?`}</DialogTitle>
+      <DialogTitle id="alert-dialog-title">{`Effacer ${title}?`}</DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
           Cliquez sur le bouton supprimer pour confirmer votre décision.

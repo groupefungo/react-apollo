@@ -149,7 +149,8 @@ var _default = function _default(props) {
     }
   }, _react["default"].createElement(_Cancel["default"], {
     fontSize: "small",
-    color: "primary"
+    color: "primary",
+    id: "card-delete-".concat(id)
   })))), _react["default"].createElement(CardHeader, {
     title: title,
     titleTypographyProps: {

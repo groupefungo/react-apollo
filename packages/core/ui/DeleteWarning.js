@@ -36,7 +36,7 @@ var _default = function _default(props) {
     "aria-describedby": "alert-dialog-description"
   }, _react["default"].createElement(_DialogTitle["default"], {
     id: "alert-dialog-title"
-  }, "Effacer l'article ".concat(title, "?")), _react["default"].createElement(_DialogContent["default"], null, _react["default"].createElement(_DialogContentText["default"], {
+  }, "Effacer ".concat(title, "?")), _react["default"].createElement(_DialogContent["default"], null, _react["default"].createElement(_DialogContentText["default"], {
     id: "alert-dialog-description"
   }, "Cliquez sur le bouton supprimer pour confirmer votre d\xE9cision.")), _react["default"].createElement(_DialogActions["default"], null, _react["default"].createElement(Button, {
     onClick: handleCancel,
