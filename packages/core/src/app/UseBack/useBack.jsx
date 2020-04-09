@@ -4,7 +4,7 @@ export const useBack = () => {
   const [bs, setBS] = useState(null);
 
   const setBackState = (s) => {
-    console.log('setting backstate', s);
+    //console.log('setting backstate', s);
     setBS(s);
   };
 

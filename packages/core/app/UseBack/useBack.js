@@ -22,7 +22,7 @@ var useBack = function useBack() {
       setBS = _useState2[1];
 
   var setBackState = function setBackState(s) {
-    console.log('setting backstate', s);
+    //console.log('setting backstate', s);
     setBS(s);
   };
 
