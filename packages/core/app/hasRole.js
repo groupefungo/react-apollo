@@ -5,17 +5,17 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _UseUserGql = _interopRequireDefault(require("./UseUserGql"));
+var _UseContext = _interopRequireDefault(require("./UseContext"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = function _default(userRole) {
-  var _useUserGql$useMeQuer = (0, _UseUserGql["default"])().useMeQuery(),
-      data = _useUserGql$useMeQuer.data;
+  var _useAppContext = (0, _UseContext["default"])(),
+      useAuth = _useAppContext.useAuth;
 
-  if (!data) return null;
-  var me = data.me;
-  var roles = me.roles;
+  var auth = useAuth();
+  var user = auth.user;
+  var roles = user && user.roles || [];
   return roles.find(function (r) {
     return r.name === userRole;
   });

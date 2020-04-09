@@ -76,7 +76,6 @@ var _default = function _default(props) {
   var handleConfirm = function handleConfirm() {
     deleteCardFunction(id);
     handleClose();
-    router.push('/');
   };
 
   var _useUiContext = (0, _UseContext["default"])(),
@@ -177,7 +176,8 @@ var _default = function _default(props) {
     variant: "caption"
   }), _react["default"].createElement(IconButton, {
     onClick: action,
-    title: actionLabel
+    title: actionLabel,
+    id: "card-action-".concat(id)
   }, _react["default"].createElement(_Visibility["default"], {
     fontSize: "small",
     color: "primary"

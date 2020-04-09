@@ -4,11 +4,12 @@ import {
   Route, Switch, Link, Redirect, BrowserRouter as Router, useParams, useLocation, useHistory, useRouteMatch
 } from 'react-router-dom';
 
-import useAuth, { ProvideAuth } from '../UseAuth';
+import useAuth, {ProvideAuth} from '../UseAuth';
 import useUserGql from '../UseUserGql';
 import useRouter from '../UseRouter';
 import useQueryWrapper from '../UseQueryWrapper';
 import useCompleteState from '../UseCompleteState';
+import useBack from "../UseBack";
 
 const ext = {
   gql,
@@ -32,4 +33,9 @@ const ext = {
   useRouteMatch
 };
 
-export default () => ext;
+export default () => (
+  {
+    ...ext,
+    UseBack: useBack()
+  }
+);

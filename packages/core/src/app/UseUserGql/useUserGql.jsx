@@ -15,6 +15,7 @@ export const useUserGql = () => {
     roles {
       name
     }
+    emailNotifications
     isValid
     errors {
       keys
@@ -59,6 +60,7 @@ export const useUserGql = () => {
       email
       firstName
       lastName
+      centerIds
       roleIds
       roles {
         name
@@ -96,11 +98,13 @@ query centerUsers($id: ID!) {
 
   const useUsersQuery = () => useQuery(GET_USERS, {
     fetchPolicy: 'network-only',
+    notifyOnNetworkStatusChange: true,
   });
 
   const useCenterUsersQuery = (id) => useQuery(GET_CENTER_USERS, {
     fetchPolicy: 'network-only',
     variables: { id },
+    notifyOnNetworkStatusChange: true,
   });
 
   const useDestroyUser = () => useMutation(DESTROY_USER);

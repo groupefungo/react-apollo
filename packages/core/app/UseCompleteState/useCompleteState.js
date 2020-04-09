@@ -78,6 +78,11 @@ var useCompleteState = function useCompleteState(initState) {
     }, {});
   };
 
+  var assureState = function assureState() {
+    var attr_anchor = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'id';
+    if (state && state[attr_anchor] !== initState[attr_anchor]) setState(initState);
+  };
+
   return {
     state: state,
     setState: setState,
@@ -85,7 +90,8 @@ var useCompleteState = function useCompleteState(initState) {
     formInputChanged: formInputChanged,
     nameWillChangeToValue: nameWillChangeToValue,
     stateErrorsToHash: stateErrorsToHash,
-    namedDateAttributeToValue: namedDateAttributeToValue
+    namedDateAttributeToValue: namedDateAttributeToValue,
+    assureState: assureState
   };
 };
 

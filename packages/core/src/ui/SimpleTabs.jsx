@@ -31,11 +31,22 @@ export default (props) => {
   const classes = useStyles();
 
   const initTab = () => {
-    const found = tabs.find((t) => {
-      const { path, routepath } = t.props;
-      return router.pathname.includes(routepath || path, 0);
-    });
+    const found = findWithExactPath() || findWithStartsWith();
     return tabs.indexOf(found);
+  };
+
+  const findWithExactPath = () => {
+    return tabs.find((t) => {
+      const { path } = t.props;
+      return router.pathname === path;
+    });
+  };
+
+  const findWithStartsWith = () => {
+    return tabs.find((t) => {
+      const { path, routepath } = t.props;
+      return router.pathname.startsWith(routepath || path);
+    });
   };
 
   const tabChanged = (path) => () => router.push(path);

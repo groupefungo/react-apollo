@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useContext, createContext} from 'react';
-import useUserGql from '../UseUserGql';
+import useAppContext from '../UseContext';
 
 const authContext = createContext(null);
 
@@ -9,9 +9,12 @@ export const useAuth = () => useContext(authContext);
 
 // Provider hook that creates auth object and handles state
 const useProvideAuth = () => {
+  const {useUserGql} = useAppContext();
+
   const [user, setUser] = useState(null);
 
-  const {data, error} = useUserGql().useMeQuery();
+  const {useMeQuery} = useUserGql();
+  const {data, error} = useMeQuery();
 
   useEffect(() => {
     if (data && data.me) {

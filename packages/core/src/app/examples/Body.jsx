@@ -7,6 +7,8 @@ import AppLayout from "./AppLayout";
 import MultiPurposeTableComponent from "./MultiPuposeTableComponent";
 import DatePickerComponent from "./DatePickerComponent";
 import SimpleTableComponent from "./SimpleTableComponent";
+import AlertUser from "../../ui/AlertUser";
+import TellUser from "./TellUser";
 
 export default () => {
   const {Route, Switch} = useAppContext();
@@ -23,7 +25,10 @@ export default () => {
         <Route component={DatePickerComponent} path={'/datepicker'} exact />
         <Route component={MultiPurposeTableComponent} path={'/multipurpose_table'} exact />
         <Route component={SimpleTableComponent} path={'/simple_table'} exact />
+        <Route component={TellUser} path={'/alertUser'} exact />
       </Switch>
+
+      <AlertUser />
     </>
   )
 };

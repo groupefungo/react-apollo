@@ -41,6 +41,10 @@ export const useCompleteState = (initState) => {
     ), {});
   };
 
+  const assureState = (attr_anchor='id') => {
+    if (state && state[attr_anchor] !== initState[attr_anchor]) setState(initState);
+  };
+
   return {
     state,
     setState,
@@ -48,6 +52,7 @@ export const useCompleteState = (initState) => {
     formInputChanged,
     nameWillChangeToValue,
     stateErrorsToHash,
-    namedDateAttributeToValue
+    namedDateAttributeToValue,
+    assureState
   };
 };
