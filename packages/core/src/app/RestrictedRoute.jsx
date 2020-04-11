@@ -1,12 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import useAppContext from './UseContext';
 import Error from '../ui/Error';
 import hasRole from './hasRole';
 
-export default ({ component: Component, children, role, hasAccess, ...rest }) => {
-  const { Route } = useAppContext();
+export default ({component: Component, children, role, hasAccess, ...rest}) => {
+  const {Route} = useAppContext();
 
   const giveAccess = hasAccess || (role && hasRole(role));
+
+  useEffect(() => {
+    if (!giveAccess) {
+      document.getElementById('restrictedError').innerHTML = "Vous n'avez pas le droit." ;
+    }
+  });
 
   return (
     <Route
@@ -14,7 +20,7 @@ export default ({ component: Component, children, role, hasAccess, ...rest }) =>
       render={(props) => (
         giveAccess
           ? (Component ? <Component {...props} {...rest} /> : children)
-          : <Error msg="Vous n'avez pas le droit." />
+          : <Error id="restrictedError" msg=""/>
       )}
     />
   );
