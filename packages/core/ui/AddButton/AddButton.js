@@ -28,6 +28,14 @@ var _default = function _default(_ref) {
   var useRouter = appContext.useRouter;
   var router = useRouter();
   if (routePath && customAction) return null;
+
+  var myOnClick = function myOnClick() {
+    if (customAction) return customAction;
+    return function () {
+      return router.push(routePath);
+    };
+  };
+
   return _react["default"].createElement(Grid, {
     item: true,
     xs: 2,
@@ -37,6 +45,7 @@ var _default = function _default(_ref) {
     "aria-label": "add",
     placement: "left"
   }, _react["default"].createElement(Fab, {
+    onClick: myOnClick(),
     color: "secondary",
     "aria-label": "add",
     style: {
@@ -45,13 +54,7 @@ var _default = function _default(_ref) {
       right: 30,
       position: 'fixed'
     }
-  }, customAction && _react["default"].createElement(AddIcon, {
-    onClick: customAction
-  }), routePath && _react["default"].createElement(AddIcon, {
-    onClick: function onClick() {
-      return router.push(routePath);
-    }
-  }))));
+  }, _react["default"].createElement(AddIcon, null))));
 };
 
 exports["default"] = _default;

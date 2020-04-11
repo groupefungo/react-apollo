@@ -111,7 +111,6 @@ export default (props) => {
                   <ChipsArray
                     chipsData={chipsData()}
                     chipClicked={(file) => chipClicked(file)}
-                    size="small"
                   />
                 </Box>
               )

@@ -33,7 +33,6 @@ var _default = function _default(_ref) {
       icon: data.id && _react["default"].createElement(GetAppIcon, null),
       onClick: chipClicked(data),
       clickable: data.id && true,
-      size: size,
       key: data.key || data.id,
       label: data.label || data.filename,
       onDelete: chipDeleted && chipDeleted(data)

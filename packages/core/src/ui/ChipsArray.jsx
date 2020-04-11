@@ -13,7 +13,6 @@ export default ({ chipsData, size, chipDeleted, chipClicked }) => {
             icon={data.id && <GetAppIcon />}
             onClick={chipClicked(data)}
             clickable={data.id && true}
-            size={size}
             key={data.key || data.id}
             label={data.label || data.filename}
             onDelete={chipDeleted && chipDeleted(data)}

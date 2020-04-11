@@ -167,8 +167,7 @@ var _default = function _default(props) {
     chipsData: chipsData(),
     chipClicked: function chipClicked(file) {
       return _chipClicked(file);
-    },
-    size: "small"
+    }
   }))), _react["default"].createElement(CardActions, null, category && _react["default"].createElement(Typography, {
     color: "textSecondary",
     variant: "caption"
