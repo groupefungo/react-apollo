@@ -40,7 +40,8 @@ var _default = function _default(_ref) {
   var giveAccess = hasAccess || role && (0, _hasRole["default"])(role);
   (0, _react.useEffect)(function () {
     if (!giveAccess) {
-      document.getElementById('restrictedError').innerHTML = "Vous n'avez pas le droit.";
+      var el = document.getElementById('restrictedError');
+      if (el) el.innerHTML = "Vous n'avez pas le droit.";
     }
   });
   return _react["default"].createElement(Route, _extends({}, rest, {

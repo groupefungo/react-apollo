@@ -10,8 +10,11 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = function _default(_ref) {
-  var msg = _ref.msg;
-  return _react["default"].createElement("p", null, "".concat(msg));
+  var id = _ref.id,
+      msg = _ref.msg;
+  return _react["default"].createElement("p", {
+    id: id
+  }, "".concat(msg));
 };
 
 exports["default"] = _default;

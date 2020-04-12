@@ -10,7 +10,8 @@ export default ({component: Component, children, role, hasAccess, ...rest}) => {
 
   useEffect(() => {
     if (!giveAccess) {
-      document.getElementById('restrictedError').innerHTML = "Vous n'avez pas le droit." ;
+      const el = document.getElementById('restrictedError');
+      if (el) el.innerHTML = "Vous n'avez pas le droit.";
     }
   });
 

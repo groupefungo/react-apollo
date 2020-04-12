@@ -70,7 +70,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  fragment UserFragment on User {\n    id\n    email\n    firstName\n    lastName\n    password\n    centerIds\n    centers {\n      name\n    }\n    roleIds\n    roles {\n      name\n    }\n    emailNotifications\n    isValid\n    errors {\n      keys\n      messages\n    }  \n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  fragment UserFragment on User {\n    id\n    email\n    firstName\n    lastName\n    password\n    centerIds\n    centers {\n      name\n    }\n    roleIds\n    roles {\n      name\n    }\n    emailNotifications\n    invitationToken\n    isValid\n    errors {\n      keys\n      messages\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

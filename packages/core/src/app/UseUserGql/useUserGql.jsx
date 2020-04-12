@@ -19,11 +19,12 @@ export const useUserGql = () => {
       name
     }
     emailNotifications
+    invitationToken
     isValid
     errors {
       keys
       messages
-    }  
+    }
   }
 `;
 

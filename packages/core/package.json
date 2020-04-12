@@ -1,10 +1,10 @@
 {
   "name": "@groupefungo/react-apollo.core",
-  "version": "1.0.80",
+  "version": "1.0.82",
   "description": "js modules",
   "main": "./index.js",
   "scripts": {
-    "prod": "../../node_modules/webpack/bin/webpack.js --config ../../build-utils/webpack.config.js --env.env=prod --env.packageName=core",
+    "prod": "../../node_modules/webpack/bi  n/webpack.js --config ../../build-utils/webpack.config.js --env.env=prod --env.packageName=core",
     "start": "../../node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ../../build-utils/webpack.config.js --env.env=dev --env.packageName=core",
     "build": "babel ./src -d ./ --copy-files",
     "build:analyze": "npm run prod -- --env.addon=bundleanalyze --env.addon=bundlevisualizer",

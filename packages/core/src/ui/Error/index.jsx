@@ -1,3 +1,3 @@
 import React from 'react';
 
-export default ({ msg }) => <p>{`${msg}`}</p>;
+export default ({ id, msg }) => <p id={id}>{`${msg}`}</p>;
