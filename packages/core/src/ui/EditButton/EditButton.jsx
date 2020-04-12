@@ -10,10 +10,16 @@ export default ({ title, routePath, customAction }) => {
   const router = useRouter();
   if (routePath && customAction) return null;
 
+  const myOnClick = () => {
+    if (customAction) return customAction;
+    return () => router.push(routePath);
+  };
+
   return (
     <Grid item xs={2} sm={1}>
       <Tooltip title={title} aria-label="add" placement="left">
         <Fab
+          onClick={myOnClick()}
           color="secondary"
           aria-label="add"
           style={{
@@ -23,8 +29,7 @@ export default ({ title, routePath, customAction }) => {
             position: 'fixed',
           }}
         >
-          {(customAction) && (<EditIcon onClick={customAction} />)}
-          {(routePath) && (<EditIcon onClick={() => router.push(routePath)} />)}
+          <EditIcon />
         </Fab>
       </Tooltip>
     </Grid>

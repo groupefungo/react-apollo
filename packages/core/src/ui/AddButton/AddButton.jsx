@@ -13,7 +13,7 @@ export default ({ title, routePath, customAction }) => {
   const myOnClick = () => {
     if (customAction) return customAction;
     return () => router.push(routePath);
-  }
+  };
 
   return (
     <Grid item xs={2} sm={1}>

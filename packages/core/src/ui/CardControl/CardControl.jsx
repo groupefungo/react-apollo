@@ -1,16 +1,18 @@
 import React, {useState} from 'react';
 import CancelIcon from '@material-ui/icons/Cancel';
+import Badge from '@material-ui/core/Badge';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import useUiContext from '../UseContext';
 import useAppContext from '../../app/UseContext';
-import ChipsArray from '../ChipsArray';
 import useChipFiles from '../UseChipFiles';
 import CustomCardHeader from '../CustomCardHeader';
 import DeleteWarning from '../DeleteWarning';
 
 
 export default (props) => {
-  const {title, description, category, action, actionLabel, files, date, id, deleteCardFunction, disabled} = props;
+  const {
+    title, description, category, action, actionLabel, files, date, id, deleteCardFunction, disabled, titleIcon,
+  } = props;
   const [isHovered, setIsHovered] = useState(false);
   const [openDeleteWarning, setOpenDeleteWarning] = useState(false);
   const appContext = useAppContext();
@@ -37,7 +39,9 @@ export default (props) => {
     Box,
     IconButton,
     Fade,
-    makeStyles
+    makeStyles,
+    AttachmentIcon,
+    Tooltip
   } = useUiContext();
 
   const useStyles = makeStyles((theme) => ({
@@ -52,9 +56,17 @@ export default (props) => {
         background: `linear-gradient(transparent, ${theme.palette.background.paper})`,
       },
     },
+    noMaxWidth: {
+      maxWidth: 'none',
+    },
   }));
 
+
   const classes = useStyles();
+
+  const fileBadgeTooltip = <ul style={{'list-style-type': 'none'}}>
+    {files && files.length > 0 && (files.map((f) => <li>{f.filename}</li>))}
+  </ul>;
 
   return (
     <>
@@ -98,23 +110,22 @@ export default (props) => {
           />
           <Divider light/>
           <CardContent>
-            {
-              description && (
+            {description && (
+              <>
                 <Box flexGrow={1}>
                   <div className={classes.description}> {description}  </div>
                 </Box>
-              )
-            }
-            {
-              files && (files.length > 0) && (
-                <Box>
-                  <ChipsArray
-                    chipsData={chipsData()}
-                    chipClicked={(file) => chipClicked(file)}
-                  />
-                </Box>
-              )
-            }
+                {files && files.length > 0 && (
+                  <Box top={40} right={20} position="absolute" zIndex={3}>
+                    <Tooltip title={fileBadgeTooltip} placement="right" classes={{ tooltip: classes.noMaxWidth }}>
+                      <Badge badgeContent={files.length} color="primary">
+                        <AttachmentIcon/>
+                      </Badge>
+                    </Tooltip>
+                  </Box>
+                )}
+              </>
+            )}
           </CardContent>
           <CardActions>
             {

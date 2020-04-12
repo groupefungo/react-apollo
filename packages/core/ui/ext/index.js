@@ -19,6 +19,8 @@ var _Apps = _interopRequireDefault(require("@material-ui/icons/Apps"));
 
 var _AttachFile = _interopRequireDefault(require("@material-ui/icons/AttachFile"));
 
+var _Attachment = _interopRequireDefault(require("@material-ui/icons/Attachment"));
+
 var _AttachMultipleFiles = _interopRequireDefault(require("../AttachMultipleFiles"));
 
 var _Avatar = _interopRequireDefault(require("@material-ui/core/Avatar"));
@@ -255,6 +257,7 @@ var ext = {
   AppBar: _AppBar["default"],
   AppsIcon: _Apps["default"],
   AttachFile: _AttachFile["default"],
+  AttachmentIcon: _Attachment["default"],
   AttachMultipleFiles: _AttachMultipleFiles["default"],
   Autocomplete: _Autocomplete["default"],
   Avatar: _Avatar["default"],

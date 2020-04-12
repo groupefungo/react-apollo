@@ -5,6 +5,7 @@ import Alert from '@material-ui/lab/Alert';
 import AppBar from '@material-ui/core/AppBar/AppBar';
 import AppsIcon from '@material-ui/icons/Apps';
 import AttachFile from '@material-ui/icons/AttachFile';
+import AttachmentIcon from '@material-ui/icons/Attachment';
 import AttachMultipleFiles from "../AttachMultipleFiles";
 import Avatar from '@material-ui/core/Avatar';
 import Autocomplete from '@material-ui/lab/Autocomplete';
@@ -125,6 +126,7 @@ const ext = {
   AppBar,
   AppsIcon,
   AttachFile,
+  AttachmentIcon,
   AttachMultipleFiles,
   Autocomplete,
   Avatar,

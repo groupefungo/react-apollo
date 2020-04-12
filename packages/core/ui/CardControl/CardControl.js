@@ -11,13 +11,13 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _Cancel = _interopRequireDefault(require("@material-ui/icons/Cancel"));
 
+var _Badge = _interopRequireDefault(require("@material-ui/core/Badge"));
+
 var _Visibility = _interopRequireDefault(require("@material-ui/icons/Visibility"));
 
 var _UseContext = _interopRequireDefault(require("../UseContext"));
 
 var _UseContext2 = _interopRequireDefault(require("../../app/UseContext"));
-
-var _ChipsArray = _interopRequireDefault(require("../ChipsArray"));
 
 var _UseChipFiles = _interopRequireDefault(require("../UseChipFiles"));
 
@@ -49,7 +49,8 @@ var _default = function _default(props) {
       date = props.date,
       id = props.id,
       deleteCardFunction = props.deleteCardFunction,
-      disabled = props.disabled;
+      disabled = props.disabled,
+      titleIcon = props.titleIcon;
 
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -67,7 +68,7 @@ var _default = function _default(props) {
 
   var _useChipFiles = (0, _UseChipFiles["default"])(files),
       chipsData = _useChipFiles.chipsData,
-      _chipClicked = _useChipFiles.chipClicked;
+      chipClicked = _useChipFiles.chipClicked;
 
   var handleClose = function handleClose() {
     return setOpenDeleteWarning(false);
@@ -89,7 +90,9 @@ var _default = function _default(props) {
       Box = _useUiContext.Box,
       IconButton = _useUiContext.IconButton,
       Fade = _useUiContext.Fade,
-      makeStyles = _useUiContext.makeStyles;
+      makeStyles = _useUiContext.makeStyles,
+      AttachmentIcon = _useUiContext.AttachmentIcon,
+      Tooltip = _useUiContext.Tooltip;
 
   var useStyles = makeStyles(function (theme) {
     return {
@@ -103,10 +106,22 @@ var _default = function _default(props) {
           bottom: 30,
           background: "linear-gradient(transparent, ".concat(theme.palette.background.paper, ")")
         }
+      },
+      noMaxWidth: {
+        maxWidth: 'none'
       }
     };
   });
   var classes = useStyles();
+
+  var fileBadgeTooltip = _react["default"].createElement("ul", {
+    style: {
+      'list-style-type': 'none'
+    }
+  }, files && files.length > 0 && files.map(function (f) {
+    return _react["default"].createElement("li", null, f.filename);
+  }));
+
   return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(Box, {
     width: "100%",
     height: "100%",
@@ -159,16 +174,25 @@ var _default = function _default(props) {
     }
   }), _react["default"].createElement(Divider, {
     light: true
-  }), _react["default"].createElement(CardContent, null, description && _react["default"].createElement(Box, {
+  }), _react["default"].createElement(CardContent, null, description && _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(Box, {
     flexGrow: 1
   }, _react["default"].createElement("div", {
     className: classes.description
-  }, " ", description, "  ")), files && files.length > 0 && _react["default"].createElement(Box, null, _react["default"].createElement(_ChipsArray["default"], {
-    chipsData: chipsData(),
-    chipClicked: function chipClicked(file) {
-      return _chipClicked(file);
+  }, " ", description, "  ")), files && files.length > 0 && _react["default"].createElement(Box, {
+    top: 40,
+    right: 20,
+    position: "absolute",
+    zIndex: 3
+  }, _react["default"].createElement(Tooltip, {
+    title: fileBadgeTooltip,
+    placement: "right",
+    classes: {
+      tooltip: classes.noMaxWidth
     }
-  }))), _react["default"].createElement(CardActions, null, category && _react["default"].createElement(Typography, {
+  }, _react["default"].createElement(_Badge["default"], {
+    badgeContent: files.length,
+    color: "primary"
+  }, _react["default"].createElement(AttachmentIcon, null)))))), _react["default"].createElement(CardActions, null, category && _react["default"].createElement(Typography, {
     color: "textSecondary",
     variant: "caption"
   }, category), !category && _react["default"].createElement(Typography, {
