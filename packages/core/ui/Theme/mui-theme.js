@@ -268,7 +268,6 @@ var _default = {
     },
     MuiChip: {
       label: {
-        maxWidth: 100,
         textOverflow: 'ellipsis'
       }
     }

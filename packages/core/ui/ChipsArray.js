@@ -26,17 +26,14 @@ var _default = function _default(_ref) {
     container: true,
     spacing: 1
   }, chipsData.map(function (data) {
-    return _react["default"].createElement(Grid, {
-      item: true,
-      key: data.key || data.id
-    }, _react["default"].createElement(Chip, {
+    return _react["default"].createElement(Chip, {
       icon: data.id && _react["default"].createElement(GetAppIcon, null),
       onClick: chipClicked(data),
       clickable: data.id && true,
       key: data.key || data.id,
       label: data.label || data.filename,
       onDelete: chipDeleted && chipDeleted(data)
-    }));
+    });
   }));
 };
 
