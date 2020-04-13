@@ -17,10 +17,6 @@ var _Visibility = _interopRequireDefault(require("@material-ui/icons/Visibility"
 
 var _UseContext = _interopRequireDefault(require("../UseContext"));
 
-var _UseContext2 = _interopRequireDefault(require("../../app/UseContext"));
-
-var _UseChipFiles = _interopRequireDefault(require("../UseChipFiles"));
-
 var _CustomCardHeader = _interopRequireDefault(require("../CustomCardHeader"));
 
 var _DeleteWarning = _interopRequireDefault(require("../DeleteWarning"));
@@ -62,14 +58,6 @@ var _default = function _default(props) {
       openDeleteWarning = _useState4[0],
       setOpenDeleteWarning = _useState4[1];
 
-  var appContext = (0, _UseContext2["default"])();
-  var useRouter = appContext.useRouter;
-  var router = useRouter();
-
-  var _useChipFiles = (0, _UseChipFiles["default"])(files),
-      chipsData = _useChipFiles.chipsData,
-      chipClicked = _useChipFiles.chipClicked;
-
   var handleClose = function handleClose() {
     return setOpenDeleteWarning(false);
   };
@@ -83,7 +71,6 @@ var _default = function _default(props) {
       Card = _useUiContext.Card,
       CardHeader = _useUiContext.CardHeader,
       Divider = _useUiContext.Divider,
-      Button = _useUiContext.Button,
       CardContent = _useUiContext.CardContent,
       CardActions = _useUiContext.CardActions,
       Typography = _useUiContext.Typography,
@@ -119,7 +106,9 @@ var _default = function _default(props) {
       'list-style-type': 'none'
     }
   }, files && files.length > 0 && files.map(function (f) {
-    return _react["default"].createElement("li", null, f.filename);
+    return _react["default"].createElement("li", {
+      key: "file-".concat(f.id)
+    }, f.filename);
   }));
 
   return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(Box, {
@@ -175,7 +164,8 @@ var _default = function _default(props) {
   }), _react["default"].createElement(Divider, {
     light: true
   }), _react["default"].createElement(CardContent, null, description && _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(Box, {
-    flexGrow: 1
+    flexGrow: 1,
+    mt: 2
   }, _react["default"].createElement("div", {
     className: classes.description
   }, " ", description, "  ")), files && files.length > 0 && _react["default"].createElement(Box, {

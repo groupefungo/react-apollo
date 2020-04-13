@@ -3,8 +3,6 @@ import CancelIcon from '@material-ui/icons/Cancel';
 import Badge from '@material-ui/core/Badge';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import useUiContext from '../UseContext';
-import useAppContext from '../../app/UseContext';
-import useChipFiles from '../UseChipFiles';
 import CustomCardHeader from '../CustomCardHeader';
 import DeleteWarning from '../DeleteWarning';
 
@@ -15,11 +13,6 @@ export default (props) => {
   } = props;
   const [isHovered, setIsHovered] = useState(false);
   const [openDeleteWarning, setOpenDeleteWarning] = useState(false);
-  const appContext = useAppContext();
-  const {useRouter} = appContext;
-  const router = useRouter();
-
-  const {chipsData, chipClicked} = useChipFiles(files);
 
   const handleClose = () => setOpenDeleteWarning(false);
 
@@ -32,7 +25,6 @@ export default (props) => {
     Card,
     CardHeader,
     Divider,
-    Button,
     CardContent,
     CardActions,
     Typography,
@@ -65,7 +57,7 @@ export default (props) => {
   const classes = useStyles();
 
   const fileBadgeTooltip = <ul style={{'list-style-type': 'none'}}>
-    {files && files.length > 0 && (files.map((f) => <li>{f.filename}</li>))}
+    {files && files.length > 0 && (files.map((f) => <li key={`file-${f.id}`}>{f.filename}</li>))}
   </ul>;
 
   return (
@@ -112,7 +104,7 @@ export default (props) => {
           <CardContent>
             {description && (
               <>
-                <Box flexGrow={1}>
+                <Box flexGrow={1} mt={2}>
                   <div className={classes.description}> {description}  </div>
                 </Box>
                 {files && files.length > 0 && (
