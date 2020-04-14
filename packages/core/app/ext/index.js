@@ -15,8 +15,6 @@ var _reactRouterDom = require("react-router-dom");
 
 var _UseAuth = _interopRequireWildcard(require("../UseAuth"));
 
-var _UseUserGql = _interopRequireDefault(require("../UseUserGql"));
-
 var _UseRouter = _interopRequireDefault(require("../UseRouter"));
 
 var _UseQueryWrapper = _interopRequireDefault(require("../UseQueryWrapper"));
@@ -48,7 +46,6 @@ var ext = {
   useAuth: _UseAuth["default"],
   Router: _reactRouterDom.BrowserRouter,
   ProvideAuth: _UseAuth.ProvideAuth,
-  useUserGql: _UseUserGql["default"],
   useRouter: _UseRouter["default"],
   useQueryWrapper: _UseQueryWrapper["default"],
   ApolloProvider: _reactApollo.ApolloProvider,

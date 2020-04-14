@@ -16,7 +16,8 @@ var _Apollo = _interopRequireDefault(require("../Apollo"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = function _default(_ref) {
-  var children = _ref.children;
+  var useProvideAuth = _ref.useProvideAuth,
+      children = _ref.children;
   var appExt = (0, _ext["default"])();
   var ProvideAuth = appExt.ProvideAuth,
       Router = appExt.Router,
@@ -25,7 +26,9 @@ var _default = function _default(_ref) {
     value: appExt
   }, _react["default"].createElement(ApolloProvider, {
     client: _Apollo["default"]
-  }, _react["default"].createElement(ProvideAuth, null, _react["default"].createElement(Router, null, children))));
+  }, _react["default"].createElement(ProvideAuth, {
+    useProvideAuth: useProvideAuth
+  }, _react["default"].createElement(Router, null, children))));
 };
 
 exports["default"] = _default;

@@ -5,7 +5,6 @@ import {
 } from 'react-router-dom';
 
 import useAuth, {ProvideAuth} from '../UseAuth';
-import useUserGql from '../UseUserGql';
 import useRouter from '../UseRouter';
 import useQueryWrapper from '../UseQueryWrapper';
 import useCompleteState from '../UseCompleteState';
@@ -22,7 +21,6 @@ const ext = {
   useAuth,
   Router,
   ProvideAuth,
-  useUserGql,
   useRouter,
   useQueryWrapper,
   ApolloProvider,
