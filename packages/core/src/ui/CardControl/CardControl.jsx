@@ -56,7 +56,7 @@ export default (props) => {
 
   const classes = useStyles();
 
-  const fileBadgeTooltip = <ul style={{'list-style-type': 'none'}}>
+  const fileBadgeTooltip = <ul style={{listStyleType: 'none'}}>
     {files && files.length > 0 && (files.map((f) => <li key={`file-${f.id}`}>{f.filename}</li>))}
   </ul>;
 

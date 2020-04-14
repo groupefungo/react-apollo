@@ -103,7 +103,7 @@ var _default = function _default(props) {
 
   var fileBadgeTooltip = _react["default"].createElement("ul", {
     style: {
-      'list-style-type': 'none'
+      listStyleType: 'none'
     }
   }, files && files.length > 0 && files.map(function (f) {
     return _react["default"].createElement("li", {
