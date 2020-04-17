@@ -50,7 +50,7 @@ var _default = function _default(props) {
   var classes = useStyles();
 
   var initTab = function initTab() {
-    var found = findWithExactPath() || findWithStartsWith();
+    var found = findWithExactPath() || findWithRegexPath() || findWithStartsWith();
     return tabs.indexOf(found);
   };
 
@@ -58,6 +58,14 @@ var _default = function _default(props) {
     return tabs.find(function (t) {
       var path = t.props.path;
       return router.pathname === path;
+    });
+  };
+
+  var findWithRegexPath = function findWithRegexPath() {
+    return tabs.find(function (t) {
+      var regexpath = t.props.regexpath;
+      if (regexpath) return router.pathname.match(regexpath);
+      return false;
     });
   };
 

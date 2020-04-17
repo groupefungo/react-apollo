@@ -31,7 +31,7 @@ export default (props) => {
   const classes = useStyles();
 
   const initTab = () => {
-    const found = findWithExactPath() || findWithStartsWith();
+    const found = findWithExactPath() || findWithRegexPath() || findWithStartsWith();
     return tabs.indexOf(found);
   };
 
@@ -39,6 +39,14 @@ export default (props) => {
     return tabs.find((t) => {
       const { path } = t.props;
       return router.pathname === path;
+    });
+  };
+
+  const findWithRegexPath = () => {
+    return tabs.find((t) => {
+      const { regexpath } = t.props;
+      if (regexpath) return router.pathname.match(regexpath);
+      return false;
     });
   };
 
