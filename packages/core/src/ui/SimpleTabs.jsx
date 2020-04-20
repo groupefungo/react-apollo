@@ -16,15 +16,17 @@ export default (props) => {
   const { useRouter } = appContext;
   const router = useRouter();
 
-  const { tabs } = props;
+  const { tabs, smaller } = props;
 
   const { makeStyles } = useUiContext();
   const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
+      position: 'relative',
+      zIndex: smaller ? 1 : 2,
       backgroundColor: theme.palette.background.paper,
-      marginLeft: -theme.spacing(4),
-      marginRight: -theme.spacing(4),
+      marginLeft: smaller ? -theme.spacing(2) : -theme.spacing(4),
+      marginRight: smaller ? -theme.spacing(2) : -theme.spacing(4),
     },
   }));
 

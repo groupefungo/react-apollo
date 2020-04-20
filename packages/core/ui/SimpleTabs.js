@@ -32,7 +32,8 @@ var _default = function _default(props) {
 
   var useRouter = appContext.useRouter;
   var router = useRouter();
-  var tabs = props.tabs;
+  var tabs = props.tabs,
+      smaller = props.smaller;
 
   var _useUiContext2 = (0, _UseContext["default"])(),
       makeStyles = _useUiContext2.makeStyles;
@@ -41,9 +42,11 @@ var _default = function _default(props) {
     return {
       root: {
         flexGrow: 1,
+        position: 'relative',
+        zIndex: smaller ? 1 : 2,
         backgroundColor: theme.palette.background.paper,
-        marginLeft: -theme.spacing(4),
-        marginRight: -theme.spacing(4)
+        marginLeft: smaller ? -theme.spacing(2) : -theme.spacing(4),
+        marginRight: smaller ? -theme.spacing(2) : -theme.spacing(4)
       }
     };
   });
