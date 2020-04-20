@@ -28,13 +28,21 @@ var useRouter = function useRouter() {
   var params = useParams();
   var location = useLocation();
   var history = useHistory();
-  var match = useRouteMatch(); // Return our custom router object
+  var match = useRouteMatch();
+  var push = history.push;
+
+  var pushPath = function pushPath(path) {
+    return function () {
+      return push(path);
+    };
+  }; // Return our custom router object
   // Memoize so that a new object is only returned if something changes
+
 
   return _react["default"].useMemo(function () {
     return {
       // For convenience add push(), replace(), pathname at top level
-      push: history.push,
+      push: push,
       replace: history.replace,
       pathname: location.pathname,
       // Merge params and parsed query string into single "query" object
@@ -45,7 +53,8 @@ var useRouter = function useRouter() {
       // access to extra React Router functionality if needed.
       match: match,
       location: location,
-      history: history
+      history: history,
+      pushPath: pushPath
     };
   }, [params, match, location, history]);
 };
