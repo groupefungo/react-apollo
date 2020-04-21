@@ -30,7 +30,6 @@ var _default = function _default(_ref) {
     label: "Date",
     value: value,
     onChange: changed,
-    minDate: new Date(),
     KeyboardButtonProps: {
       'aria-label': 'change date'
     }

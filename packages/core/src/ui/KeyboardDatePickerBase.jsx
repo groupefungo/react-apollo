@@ -15,7 +15,6 @@ export default ({value, changed, name}) => {
       label="Date"
       value={value}
       onChange={changed}
-      minDate={new Date()}
       KeyboardButtonProps={{
         'aria-label': 'change date',
       }}
