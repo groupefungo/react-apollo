@@ -9,6 +9,7 @@ import useRouter from '../UseRouter';
 import useQueryWrapper from '../UseQueryWrapper';
 import useCompleteState from '../UseCompleteState';
 import useBack from "../UseBack";
+import useProcessing from "../UseProcessing";
 
 const ext = {
   gql,
@@ -34,6 +35,7 @@ const ext = {
 export default () => (
   {
     ...ext,
-    UseBack: useBack()
+    UseBack: useBack(),
+    UseProcessing: useProcessing(),
   }
 );

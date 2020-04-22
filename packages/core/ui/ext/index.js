@@ -83,6 +83,10 @@ var _DialogContent = _interopRequireDefault(require("@material-ui/core/DialogCon
 
 var _Dialog = _interopRequireDefault(require("@material-ui/core/Dialog"));
 
+var _DialogContentText = _interopRequireDefault(require("@material-ui/core/DialogContentText"));
+
+var _DialogTitle = _interopRequireDefault(require("@material-ui/core/DialogTitle"));
+
 var _Divider = _interopRequireDefault(require("@material-ui/core/Divider"));
 
 var _Drawer = _interopRequireDefault(require("@material-ui/core/Drawer"));
@@ -290,6 +294,8 @@ var ext = {
   DescriptionControl: _DescriptionControl["default"],
   Dialog: _Dialog["default"],
   DialogContent: _DialogContent["default"],
+  DialogContentText: _DialogContentText["default"],
+  DialogTitle: _DialogTitle["default"],
   Divider: _Divider["default"],
   Drawer: _Drawer["default"],
   EditButton: _EditButton["default"],
