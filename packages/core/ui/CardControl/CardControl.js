@@ -45,8 +45,7 @@ var _default = function _default(props) {
       date = props.date,
       id = props.id,
       deleteCardFunction = props.deleteCardFunction,
-      disabled = props.disabled,
-      titleIcon = props.titleIcon;
+      disabled = props.disabled;
 
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -103,7 +102,8 @@ var _default = function _default(props) {
 
   var fileBadgeTooltip = _react["default"].createElement("ul", {
     style: {
-      listStyleType: 'none'
+      listStyleType: 'none',
+      padding: 0
     }
   }, files && files.length > 0 && files.map(function (f) {
     return _react["default"].createElement("li", {

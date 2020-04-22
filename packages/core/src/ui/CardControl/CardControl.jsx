@@ -9,7 +9,7 @@ import DeleteWarning from '../DeleteWarning';
 
 export default (props) => {
   const {
-    title, description, category, action, actionLabel, files, date, id, deleteCardFunction, disabled, titleIcon,
+    title, description, category, action, actionLabel, files, date, id, deleteCardFunction, disabled,
   } = props;
   const [isHovered, setIsHovered] = useState(false);
   const [openDeleteWarning, setOpenDeleteWarning] = useState(false);
@@ -56,7 +56,7 @@ export default (props) => {
 
   const classes = useStyles();
 
-  const fileBadgeTooltip = <ul style={{listStyleType: 'none'}}>
+  const fileBadgeTooltip = <ul style={{listStyleType: 'none', padding: 0}}>
     {files && files.length > 0 && (files.map((f) => <li key={`file-${f.id}`}>{f.filename}</li>))}
   </ul>;
 
@@ -109,7 +109,8 @@ export default (props) => {
                 </Box>
                 {files && files.length > 0 && (
                   <Box top={40} right={20} position="absolute" zIndex={3}>
-                    <Tooltip title={fileBadgeTooltip} placement="right" classes={{ tooltip: classes.noMaxWidth }}>
+                    <Tooltip title={fileBadgeTooltip} placement="right"
+                             classes={{tooltip: classes.noMaxWidth}}>
                       <Badge badgeContent={files.length} color="primary">
                         <AttachmentIcon/>
                       </Badge>
