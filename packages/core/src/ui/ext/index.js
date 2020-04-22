@@ -37,6 +37,8 @@ import DeleteWarning from "../DeleteWarning";
 import DescriptionControl from "../DescriptionControl";
 import DialogContent from '@material-ui/core/DialogContent';
 import Dialog from '@material-ui/core/Dialog';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import EditButton from "../EditButton";
@@ -159,6 +161,8 @@ const ext = {
   DescriptionControl,
   Dialog,
   DialogContent,
+  DialogContentText,
+  DialogTitle,
   Divider,
   Drawer,
   EditButton,
