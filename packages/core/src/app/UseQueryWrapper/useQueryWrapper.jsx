@@ -1,5 +1,5 @@
 export const useQueryWrapper = (useQueryHandle, queryResultName) => {
-  const { data, error } = useQueryHandle();
+  const { data, error, refetch } = useQueryHandle();
 
   if (error) return { error };
   if (!data) return { resultField: null };
@@ -7,5 +7,5 @@ export const useQueryWrapper = (useQueryHandle, queryResultName) => {
   const { [queryResultName]: resultField } = data;
   if (!resultField) return { resultField: null };
 
-  return { resultField };
+  return { resultField, refetch };
 };

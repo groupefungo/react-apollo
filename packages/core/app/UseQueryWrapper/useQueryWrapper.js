@@ -8,7 +8,8 @@ exports.useQueryWrapper = void 0;
 var useQueryWrapper = function useQueryWrapper(useQueryHandle, queryResultName) {
   var _useQueryHandle = useQueryHandle(),
       data = _useQueryHandle.data,
-      error = _useQueryHandle.error;
+      error = _useQueryHandle.error,
+      refetch = _useQueryHandle.refetch;
 
   if (error) return {
     error: error
@@ -21,7 +22,8 @@ var useQueryWrapper = function useQueryWrapper(useQueryHandle, queryResultName) 
     resultField: null
   };
   return {
-    resultField: resultField
+    resultField: resultField,
+    refetch: refetch
   };
 };
 
