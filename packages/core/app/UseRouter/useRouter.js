@@ -32,8 +32,12 @@ var useRouter = function useRouter() {
   var push = history.push;
 
   var pushPath = function pushPath(path) {
+    return push(path);
+  };
+
+  var pushedPath = function pushedPath(path) {
     return function () {
-      return push(path);
+      return pushPath(path);
     };
   }; // Return our custom router object
   // Memoize so that a new object is only returned if something changes
@@ -54,7 +58,8 @@ var useRouter = function useRouter() {
       match: match,
       location: location,
       history: history,
-      pushPath: pushPath
+      pushPath: pushPath,
+      pushedPath: pushedPath
     };
   }, [params, match, location, history]);
 };

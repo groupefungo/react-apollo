@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { format } from 'date-fns'
+import {useState} from 'react';
+import {format} from 'date-fns'
 
 export const useCompleteState = (initState) => {
   const [state, setState] = useState(initState);
@@ -12,8 +12,8 @@ export const useCompleteState = (initState) => {
   };
 
   const formInputChanged = ({target}) => {
-    const { name, type } = target;
-    let { value } = target;
+    const {name, type} = target;
+    let {value} = target;
 
     if (type === 'checkbox') {
       value = !state[name];
@@ -22,17 +22,17 @@ export const useCompleteState = (initState) => {
     stateChanged(name, value);
   };
 
-  const nameWillChangeToValue = (name) => (value) => formInputChanged({target: { name, value }});
+  const nameWillChangeToValue = (name) => (value) => formInputChanged({target: {name, value}});
 
   const namedDateAttributeToValue = (name) => (value) => {
     console.log('date changed', value);
     const fd = format(value, 'yyyy-MM-dd ');
-    formInputChanged({target: { name, value: fd }});
+    formInputChanged({target: {name, value: fd}});
     console.log('date changed set', fd);
   };
 
   const stateErrorsToHash = () => {
-    const { errors } = state;
+    const {errors} = state;
     return errors.keys.reduce((errs, cur, i) => (
       {
         ...errs,
@@ -41,8 +41,20 @@ export const useCompleteState = (initState) => {
     ), {});
   };
 
-  const assureState = (attr_anchor='id') => {
-    if (state && state[attr_anchor] !== initState[attr_anchor]) setState(initState);
+  const assureState = (attr_anchor = 'id') => {
+    if (state) {
+      if (state[attr_anchor] !== initState[attr_anchor]) {
+        setState(initState);
+      } else {
+        if (initState) {
+          const {updatedAt} = state;
+          const {updatedAt: initUpdatedAt} = initState;
+          if (updatedAt && initUpdatedAt && updatedAt !== initUpdatedAt) {
+            setState(initState);
+          }
+        }
+      }
+    }
   };
 
   return {

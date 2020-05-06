@@ -80,7 +80,21 @@ var useCompleteState = function useCompleteState(initState) {
 
   var assureState = function assureState() {
     var attr_anchor = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'id';
-    if (state && state[attr_anchor] !== initState[attr_anchor]) setState(initState);
+
+    if (state) {
+      if (state[attr_anchor] !== initState[attr_anchor]) {
+        setState(initState);
+      } else {
+        if (initState) {
+          var updatedAt = state.updatedAt;
+          var initUpdatedAt = initState.updatedAt;
+
+          if (updatedAt && initUpdatedAt && updatedAt !== initUpdatedAt) {
+            setState(initState);
+          }
+        }
+      }
+    }
   };
 
   return {

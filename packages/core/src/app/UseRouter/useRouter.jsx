@@ -10,7 +10,8 @@ export const useRouter = () => {
   const history = useHistory();
   const match = useRouteMatch();
   const {push} = history;
-  const pushPath = (path) => () => push(path);
+  const pushPath = (path) => push(path);
+  const pushedPath = (path) => () => pushPath(path);
 
   // Return our custom router object
   // Memoize so that a new object is only returned if something changes
@@ -30,6 +31,7 @@ export const useRouter = () => {
       location,
       history,
       pushPath,
+      pushedPath,
     }
   ), [params, match, location, history]);
 }
