@@ -10,6 +10,7 @@ import useQueryWrapper from '../UseQueryWrapper';
 import useCompleteState from '../UseCompleteState';
 import useBack from "../UseBack";
 import useProcessing from "../UseProcessing";
+import useTranslate from "../UseTranslate";
 
 const ext = {
   gql,
@@ -29,7 +30,8 @@ const ext = {
   useParams,
   useLocation,
   useHistory,
-  useRouteMatch
+  useRouteMatch,
+  useTranslate
 };
 
 export default () => (

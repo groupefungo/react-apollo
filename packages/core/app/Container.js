@@ -18,10 +18,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var _default = function _default(_ref) {
   var useProvideAuth = _ref.useProvideAuth,
       processingText = _ref.processingText,
-      children = _ref.children,
-      t = _ref.t;
+      thm = _ref.thm,
+      children = _ref.children;
   return _react["default"].createElement(_ErrorBoundary["default"], null, _react["default"].createElement(_ui["default"], {
-    t: t
+    thm: thm
   }, _react["default"].createElement(_["default"], {
     useProvideAuth: useProvideAuth,
     processingText: processingText

@@ -22,7 +22,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var _default = function _default(_ref) {
-  var t = _ref.t,
+  var thm = _ref.thm,
       children = _ref.children;
   var ext = (0, _ext["default"])();
   var ThemeProvider = ext.ThemeProvider,
@@ -31,7 +31,7 @@ var _default = function _default(_ref) {
       CssBaseline = ext.CssBaseline,
       MuiPickersUtilsProvider = ext.MuiPickersUtilsProvider,
       DateFnsUtils = ext.DateFnsUtils;
-  var theme = createMuiTheme(_objectSpread({}, _muiTheme["default"], {}, t));
+  var theme = createMuiTheme(_objectSpread({}, _muiTheme["default"], {}, thm));
   return _react["default"].createElement(_Context["default"].Provider, {
     value: ext
   }, _react["default"].createElement(ThemeProvider, {
