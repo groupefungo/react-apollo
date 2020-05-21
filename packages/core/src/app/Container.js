@@ -3,14 +3,11 @@ import AppContextProvider from '.';
 import ThemeContextProvider from '../ui';
 import ErrorBoundary from "../ui/ErrorBoundary";
 
-export default ({useProvideAuth, processingText, thm, children}) => {
+export default ({useProvideAuth, thm, children}) => {
   return (
     <ErrorBoundary>
       <ThemeContextProvider thm={thm}>
-        <AppContextProvider
-          useProvideAuth={useProvideAuth}
-          processingText={processingText}
-        >
+        <AppContextProvider useProvideAuth={useProvideAuth}>
           {children}
         </AppContextProvider>
       </ThemeContextProvider>
