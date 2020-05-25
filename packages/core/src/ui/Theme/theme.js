@@ -1,4 +1,4 @@
-r3const variables = {
+const variables = {
   backgroundLightColor: '#fdfdfd',
   bodyBackground: '#F8F8F8',
   brandColor: '#006F9C',
