@@ -105,7 +105,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import SimpleTable from "../SimpleTable";
 import SimpleTabs from "../SimpleTabs";
 import Snackbar from '@material-ui/core/Snackbar';
-import Skeleton from "@material-ui/lab";
+import Skeleton from "@material-ui/lab/Skeleton";
 import StyledRadio from "../StyledRadio";
 import SwapVertIcon from '@material-ui/icons/SwapVert';
 import Tab from '@material-ui/core/Tab';

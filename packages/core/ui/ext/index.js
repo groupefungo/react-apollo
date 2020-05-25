@@ -217,7 +217,7 @@ var _SimpleTabs = _interopRequireDefault(require("../SimpleTabs"));
 
 var _Snackbar = _interopRequireDefault(require("@material-ui/core/Snackbar"));
 
-var _lab = _interopRequireDefault(require("@material-ui/lab"));
+var _Skeleton = _interopRequireDefault(require("@material-ui/lab/Skeleton"));
 
 var _StyledRadio = _interopRequireDefault(require("../StyledRadio"));
 
@@ -392,7 +392,7 @@ var ext = {
   ShoppingCartIcon: _ShoppingCart["default"],
   SimpleTabs: _SimpleTabs["default"],
   Snackbar: _Snackbar["default"],
-  Skeleton: _lab["default"],
+  Skeleton: _Skeleton["default"],
   StyledRadio: _StyledRadio["default"],
   SwapVertIcon: _SwapVert["default"],
   Tab: _Tab["default"],
