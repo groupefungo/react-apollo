@@ -100,6 +100,7 @@ import SaveIcon from '@material-ui/icons/Save';
 import SearchIcon from '@material-ui/icons/Search';
 import Select from '@material-ui/core/Select';
 import SelectMui from "../SelectMui";
+import SelectFromQuery from "../SelectFromQuery/SelectFromQuery";
 import SendIcon from '@material-ui/icons/Send';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import SimpleTable from "../SimpleTable";
@@ -108,6 +109,7 @@ import Snackbar from '@material-ui/core/Snackbar';
 import Skeleton from "@material-ui/lab/Skeleton";
 import StyledRadio from "../StyledRadio";
 import SwapVertIcon from '@material-ui/icons/SwapVert';
+import SyncIcon from '@material-ui/icons/Sync';
 import Tab from '@material-ui/core/Tab';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -241,6 +243,7 @@ const ext = {
   SearchIcon,
   Select,
   SelectMui,
+  SelectFromQuery,
   SendIcon,
   ShoppingCartIcon,
   SimpleTabs,
@@ -248,6 +251,7 @@ const ext = {
   Skeleton,
   StyledRadio,
   SwapVertIcon,
+  SyncIcon,
   Tab,
   Table,
   TableBody,

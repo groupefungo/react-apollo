@@ -207,6 +207,8 @@ var _Select = _interopRequireDefault(require("@material-ui/core/Select"));
 
 var _SelectMui = _interopRequireDefault(require("../SelectMui"));
 
+var _SelectFromQuery = _interopRequireDefault(require("../SelectFromQuery/SelectFromQuery"));
+
 var _Send = _interopRequireDefault(require("@material-ui/icons/Send"));
 
 var _ShoppingCart = _interopRequireDefault(require("@material-ui/icons/ShoppingCart"));
@@ -222,6 +224,8 @@ var _Skeleton = _interopRequireDefault(require("@material-ui/lab/Skeleton"));
 var _StyledRadio = _interopRequireDefault(require("../StyledRadio"));
 
 var _SwapVert = _interopRequireDefault(require("@material-ui/icons/SwapVert"));
+
+var _Sync = _interopRequireDefault(require("@material-ui/icons/Sync"));
 
 var _Tab = _interopRequireDefault(require("@material-ui/core/Tab"));
 
@@ -388,6 +392,7 @@ var ext = {
   SearchIcon: _Search["default"],
   Select: _Select["default"],
   SelectMui: _SelectMui["default"],
+  SelectFromQuery: _SelectFromQuery["default"],
   SendIcon: _Send["default"],
   ShoppingCartIcon: _ShoppingCart["default"],
   SimpleTabs: _SimpleTabs["default"],
@@ -395,6 +400,7 @@ var ext = {
   Skeleton: _Skeleton["default"],
   StyledRadio: _StyledRadio["default"],
   SwapVertIcon: _SwapVert["default"],
+  SyncIcon: _Sync["default"],
   Tab: _Tab["default"],
   Table: _Table["default"],
   TableBody: _TableBody["default"],
