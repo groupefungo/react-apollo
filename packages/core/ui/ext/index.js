@@ -19,6 +19,8 @@ var _AppBar = _interopRequireDefault(require("@material-ui/core/AppBar/AppBar"))
 
 var _Apps = _interopRequireDefault(require("@material-ui/icons/Apps"));
 
+var _AssignmentIndOutlined = _interopRequireDefault(require("@material-ui/icons/AssignmentIndOutlined"));
+
 var _ArrowBack = _interopRequireDefault(require("@material-ui/icons/ArrowBack"));
 
 var _ArrowForward = _interopRequireDefault(require("@material-ui/icons/ArrowForward"));
@@ -48,6 +50,8 @@ var _BreadcrumbsWrapper = _interopRequireDefault(require("../BreadcrumbsWrapper"
 var _Business = _interopRequireDefault(require("@material-ui/icons/Business"));
 
 var _Button = _interopRequireDefault(require("@material-ui/core/Button"));
+
+var _ButtonGroup = _interopRequireDefault(require("@material-ui/core/ButtonGroup"));
 
 var _Cancel = _interopRequireDefault(require("@material-ui/icons/Cancel"));
 
@@ -131,6 +135,8 @@ var _FileUploadArea = _interopRequireDefault(require("../FileUploadArea"));
 
 var _FilterList = _interopRequireDefault(require("../FilterList"));
 
+var _FolderOutlined = _interopRequireDefault(require("@material-ui/icons/FolderOutlined"));
+
 var _FormControl = _interopRequireDefault(require("@material-ui/core/FormControl"));
 
 var _FormControlLabel = _interopRequireDefault(require("@material-ui/core/FormControlLabel"));
@@ -152,6 +158,8 @@ var _Group = _interopRequireDefault(require("@material-ui/icons/Group"));
 var _Header = _interopRequireDefault(require("../Header"));
 
 var _HelpOutlineOutlined = _interopRequireDefault(require("@material-ui/icons/HelpOutlineOutlined"));
+
+var _HomeWorkOutlined = _interopRequireDefault(require("@material-ui/icons/HomeWorkOutlined"));
 
 var _IconButton = _interopRequireDefault(require("@material-ui/core/IconButton"));
 
@@ -184,6 +192,10 @@ var _Menu = _interopRequireDefault(require("@material-ui/icons/Menu"));
 var _MenuItem = _interopRequireDefault(require("@material-ui/core/MenuItem"));
 
 var _MultiPurposeTable = _interopRequireDefault(require("../MultiPurposeTable"));
+
+var _NavigateNext = _interopRequireDefault(require("@material-ui/icons/NavigateNext"));
+
+var _NavigateBefore = _interopRequireDefault(require("@material-ui/icons/NavigateBefore"));
 
 var _Paper = _interopRequireDefault(require("@material-ui/core/Paper"));
 
@@ -293,6 +305,7 @@ var ext = {
   Alert: _Alert["default"],
   AppBar: _AppBar["default"],
   AppsIcon: _Apps["default"],
+  AssignmentIndOutlinedIcon: _AssignmentIndOutlined["default"],
   ArrowBackIcon: _ArrowBack["default"],
   ArrowForwardIcon: _ArrowForward["default"],
   ArrowForwardIos: _ArrowForwardIos["default"],
@@ -308,6 +321,7 @@ var ext = {
   BreadcrumbsWrapper: _BreadcrumbsWrapper["default"],
   BusinessIcon: _Business["default"],
   Button: _Button["default"],
+  ButtonGroup: _ButtonGroup["default"],
   CancelIcon: _Cancel["default"],
   Card: _Card["default"],
   CardActions: _CardActions["default"],
@@ -350,6 +364,7 @@ var ext = {
   Fade: _Fade["default"],
   FileUploadArea: _FileUploadArea["default"],
   FilterList: _FilterList["default"],
+  FolderOutlinedIcon: _FolderOutlined["default"],
   FormControl: _FormControl["default"],
   FormControlLabel: _FormControlLabel["default"],
   FormGroup: _FormGroup["default"],
@@ -361,6 +376,7 @@ var ext = {
   GroupIcon: _Group["default"],
   Header: _Header["default"],
   HelpOutlineOutlinedIcon: _HelpOutlineOutlined["default"],
+  HomeWorkOutlinedIcon: _HomeWorkOutlined["default"],
   Icon: _Icon["default"],
   InputAdornment: _InputAdornment["default"],
   IconButton: _IconButton["default"],
@@ -380,6 +396,8 @@ var ext = {
   MuiPickersUtilsProvider: _pickers.MuiPickersUtilsProvider,
   MuiAlert: _Alert["default"],
   MultiPurposeTable: _MultiPurposeTable["default"],
+  NavigateNextIcon: _NavigateNext["default"],
+  NavigateBeforeIcon: _NavigateBefore["default"],
   SimpleTable: _SimpleTable["default"],
   Paper: _Paper["default"],
   PeopleAltIcon: _PeopleAlt["default"],
