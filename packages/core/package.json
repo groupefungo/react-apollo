@@ -1,6 +1,6 @@
 {
   "name": "@groupefungo/react-apollo.core",
-  "version": "1.0.109",
+  "version": "1.0.110",
   "description": "js modules",
   "main": "./index.js",
   "scripts": {
