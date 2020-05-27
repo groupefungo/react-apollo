@@ -1,6 +1,6 @@
 {
   "name": "@groupefungo/react-apollo.core",
-  "version": "1.0.108",
+  "version": "1.0.109.np5",
   "description": "js modules",
   "main": "./index.js",
   "scripts": {
@@ -35,9 +35,11 @@
     "webpack": "^4.0.0"
   },
   "peerDependencies": {
+    "i18next": "^19.4.3",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-apollo": "^3.1.3",
+    "react-i18next": "^11.3.5",
     "@material-ui/core": "^4.9.4",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.44",
@@ -54,7 +56,6 @@
     "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",
     "node-sass": "^4.13.1",
-    "react-i18next": "^11.3.5",
     "react-router-dom": "^5.1.2",
     "sass-loader": "^8.0.2"
   },

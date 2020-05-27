@@ -16,9 +16,30 @@ var useTranslate = function useTranslate() {
       t = _useTranslation.t,
       i18n = _useTranslation.i18n;
 
+  var currentLanguage = function currentLanguage() {
+    var cl = i18n.language;
+
+    switch (cl) {
+      case 'en-US':
+      case 'en':
+        cl = 'en';
+        break;
+
+      default:
+        cl = 'fr';
+    }
+
+    return cl;
+  };
+
+  var changeLanguage = function changeLanguage(lang) {
+    return i18n.changeLanguage(lang);
+  };
+
   return {
     t: t,
-    i18n: i18n
+    currentLanguage: currentLanguage,
+    changeLanguage: changeLanguage
   };
 };
 
