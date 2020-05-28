@@ -1,18 +1,19 @@
 import React from 'react';
-import useUiContext from '@groupefungo/react-apollo.core/ui/UseContext';
-import useAppContext from '@groupefungo/react-apollo.core/app/UseContext';
+import useUiContext from 'UseContext';
+import useAppContext from '../app/UseContext';
 
-export default ({ back }) => {
-  const { useRouter, UseBack } = useAppContext();
+export default ({back}) => {
+  const {useRouter, UseBack, useTranslate} = useAppContext();
+  const {t} = useTranslate();
   const router = useRouter();
-  const { Button } = useUiContext();
+  const {Button} = useUiContext();
 
   const myBack = () => {
     if (back) return back;
 
     return () => {
-      const { push } = router;
-      const { backState } = UseBack;
+      const {push} = router;
+      const {backState} = UseBack;
       const bs = backState();
       console.log('return button state', bs);
       push(bs);
@@ -26,7 +27,7 @@ export default ({ back }) => {
       color="secondary"
       onClick={myBack()}
     >
-      Retour
+      {t('back')}
     </Button>
   );
 };

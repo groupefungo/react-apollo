@@ -7,9 +7,9 @@ exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _UseContext = _interopRequireDefault(require("@groupefungo/react-apollo.core/ui/UseContext"));
+var _UseContext = _interopRequireDefault(require("UseContext"));
 
-var _UseContext2 = _interopRequireDefault(require("@groupefungo/react-apollo.core/app/UseContext"));
+var _UseContext2 = _interopRequireDefault(require("../app/UseContext"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -18,7 +18,11 @@ var _default = function _default(_ref) {
 
   var _useAppContext = (0, _UseContext2["default"])(),
       useRouter = _useAppContext.useRouter,
-      UseBack = _useAppContext.UseBack;
+      UseBack = _useAppContext.UseBack,
+      useTranslate = _useAppContext.useTranslate;
+
+  var _useTranslate = useTranslate(),
+      t = _useTranslate.t;
 
   var router = useRouter();
 
@@ -41,7 +45,7 @@ var _default = function _default(_ref) {
     variant: "contained",
     color: "secondary",
     onClick: myBack()
-  }, "Retour");
+  }, t('back'));
 };
 
 exports["default"] = _default;
