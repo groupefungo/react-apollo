@@ -1,8 +1,7 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useDropzone } from 'react-dropzone';
-import Typography from '@material-ui/core/Typography';
 import useUiContext from './UseContext';
-import CancelIcon from '@material-ui/icons/Cancel';
+import {useAppContext} from "../app/UseContext/useAppContext";
 
 const thumbsContainer = {
     display: 'flex',
@@ -74,17 +73,11 @@ const rejectStyle = {
     borderColor: '#ff1744'
 };
 
-const bigContainer = {
-    display: 'flex',
-    borderColor: '#cccc',
-    borderWidth: 2,
-    borderRadius: 2,
-};
-
-
 export default (props) => {
+    const {useTranslate} = useAppContext();
+    const {t} = useTranslate();
     const [deleteButton, setDeleteButton] = useState(-1);
-    const { fileChanged, file, multiple, placeHolder = 'Déposez-vos fichiers ici' } = props;
+    const { fileChanged, file, multiple, placeHolder = t('deposit_files') } = props;
     const { filename } = file || {};
     const initFiles = () => {
         const previousFiles = [];
@@ -96,7 +89,7 @@ export default (props) => {
 
         return [];
     };
-    const {Fade, IconButton} = useUiContext();
+    const {Fade, IconButton, CancelIcon, Typography} = useUiContext();
     const [files, setFiles] = useState(initFiles);
     const { getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject } = useDropzone({
         accept: 'image/*',
@@ -160,18 +153,10 @@ export default (props) => {
         </div>
     ));
 
-    // ** Voir si c'est problematique **
-    // useEffect(() => () => {
-    //   // Make sure to revoke the data uris to avoid memory leaks
-    //   files.forEach((file) => URL.revokeObjectURL(file.preview));
-    //   console.log(file);
-    // }, [files]);
-
-
     return (
         <section className="container">
             {thumbs.length > 0 && (
-                <Typography variant="caption" color="textSecondary">Images de diaporama</Typography>
+                <Typography variant="caption" color="textSecondary">{t('images')}</Typography>
             )}
             <aside style={thumbsContainer}>
                 {thumbs}
