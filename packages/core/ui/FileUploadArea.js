@@ -11,12 +11,20 @@ var _UseContext = _interopRequireDefault(require("./UseContext"));
 
 var _ChipsArray = _interopRequireDefault(require("./ChipsArray"));
 
+var _useAppContext2 = require("../app/UseContext/useAppContext");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = function _default(_ref) {
   var chipsData = _ref.chipsData,
       chipClicked = _ref.chipClicked,
       chipDeleted = _ref.chipDeleted;
+
+  var _useAppContext = (0, _useAppContext2.useAppContext)(),
+      useTranslate = _useAppContext.useTranslate;
+
+  var _useTranslate = useTranslate(),
+      t = _useTranslate.t;
 
   var _useUiContext = (0, _UseContext["default"])(),
       Grid = _useUiContext.Grid,
@@ -34,7 +42,7 @@ var _default = function _default(_ref) {
   }, _react["default"].createElement(Typography, {
     variant: "caption",
     color: "textSecondary"
-  }, "Fichiers ajout\xE9s")), _react["default"].createElement(Grid, {
+  }, t('uploaded_files'))), _react["default"].createElement(Grid, {
     container: true,
     item: true
   }, _react["default"].createElement(Box, {
