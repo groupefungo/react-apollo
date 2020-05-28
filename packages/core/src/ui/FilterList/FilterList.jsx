@@ -3,13 +3,13 @@ import useUiContext from '../UseContext';
 import StyledRadio from '../StyledRadio';
 
 export default (props) => {
-  const {filters, onClick, selectedValue} = props;
+  const {filters, onClick, selectedValue, label} = props;
   const {FormControlLabel, GroupWorkIcon} = useUiContext();
 
   return (
     filters.map((filter) => {
       const {id, title, name, logo} = filter;
-      if (!title && !name) return null;
+      if (!label && !title && !name) return null;
 
       let checkedIcon = <GroupWorkIcon
         color="primary"
@@ -29,7 +29,7 @@ export default (props) => {
           value={id}
           onClick={() => onClick(id)}
           control={<StyledRadio checked={(id === selectedValue)} checkedIcon={checkedIcon} icon={icon}/>}
-          label={title || name}
+          label={(label && label(filter)) || title || name}
           labelPlacement="bottom"
         />
       );
