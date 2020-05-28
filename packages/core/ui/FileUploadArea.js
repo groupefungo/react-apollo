@@ -11,7 +11,7 @@ var _UseContext = _interopRequireDefault(require("./UseContext"));
 
 var _ChipsArray = _interopRequireDefault(require("./ChipsArray"));
 
-var _useAppContext2 = require("../app/UseContext/useAppContext");
+var _UseContext2 = _interopRequireDefault(require("../app/UseContext"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ var _default = function _default(_ref) {
       chipClicked = _ref.chipClicked,
       chipDeleted = _ref.chipDeleted;
 
-  var _useAppContext = (0, _useAppContext2.useAppContext)(),
+  var _useAppContext = (0, _UseContext2["default"])(),
       useTranslate = _useAppContext.useTranslate;
 
   var _useTranslate = useTranslate(),

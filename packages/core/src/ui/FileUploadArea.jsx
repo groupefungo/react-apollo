@@ -2,7 +2,7 @@ import React from 'react';
 import useUiContext from './UseContext';
 
 import ChipsArray from './ChipsArray';
-import {useAppContext} from "../app/UseContext/useAppContext";
+import useAppContext from "../app/UseContext";
 
 export default ({chipsData, chipClicked, chipDeleted}) => {
   const {useTranslate} = useAppContext();

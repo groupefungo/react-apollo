@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _UseContext = _interopRequireDefault(require("UseContext"));
+var _UseContext = _interopRequireDefault(require("./UseContext"));
 
 var _UseContext2 = _interopRequireDefault(require("../app/UseContext"));
 

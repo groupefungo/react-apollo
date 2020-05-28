@@ -1,5 +1,5 @@
 import React from 'react';
-import useUiContext from 'UseContext';
+import useUiContext from './UseContext';
 import useAppContext from '../app/UseContext';
 
 export default ({back}) => {
