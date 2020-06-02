@@ -14,7 +14,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var _default = function _default(_ref) {
   var value = _ref.value,
       changed = _ref.changed,
-      name = _ref.name;
+      name = _ref.name,
+      required = _ref.required,
+      disabled = _ref.disabled;
 
   var _useUiContext = (0, _UseContext["default"])(),
       KeyboardDatePicker = _useUiContext.KeyboardDatePicker;
@@ -32,7 +34,9 @@ var _default = function _default(_ref) {
     onChange: changed,
     KeyboardButtonProps: {
       'aria-label': 'change date'
-    }
+    },
+    required: required,
+    disabled: disabled
   });
 };
 
