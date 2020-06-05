@@ -67,6 +67,7 @@ var _default = function _default(_ref) {
           confirmMessage = action.confirmMessage;
 
       if (confirmMessage) {
+        action.object = object;
         setWarningAction(action);
         setOpenWarning(true);
       } else {

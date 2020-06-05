@@ -34,7 +34,7 @@ var _default = function _default(_ref) {
 
   var confirmed = function confirmed() {
     var clicked = action.clicked;
-    clicked();
+    clicked(action.object);
     setOpen(false);
   };
 

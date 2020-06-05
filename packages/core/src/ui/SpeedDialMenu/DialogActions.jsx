@@ -23,6 +23,7 @@ export default ({actions, object}) => {
     closed();
     const {clicked, confirmMessage} = action;
     if (confirmMessage) {
+      action.object = object;
       setWarningAction(action);
       setOpenWarning(true);
     } else {

@@ -10,7 +10,7 @@ export default ({open, setOpen, action}) => {
 
   const confirmed = () => {
     const {clicked} = action;
-    clicked();
+    clicked(action.object);
     setOpen(false);
   }
 
