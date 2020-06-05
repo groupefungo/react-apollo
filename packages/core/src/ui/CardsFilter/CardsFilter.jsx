@@ -3,7 +3,7 @@ import useUiContext from '../UseContext';
 
 import FilterList from '../FilterList/FilterList';
 
-export default ({ onClick, filters, value = '0' }) => {
+export default ({ onClick, filters, value = '0', label }) => {
   const { makeStyles } = useUiContext();
 
   const useStyles = makeStyles((theme) => (
@@ -35,7 +35,7 @@ export default ({ onClick, filters, value = '0' }) => {
             name="filters"
             value={value}
           >
-            <FilterList filters={filters} onClick={onClick} selectedValue={value} />
+            <FilterList filters={filters} onClick={onClick} selectedValue={value} label={label}/>
           </RadioGroup>
         </Grid>
       </Paper>

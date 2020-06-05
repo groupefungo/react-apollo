@@ -7,7 +7,7 @@ exports.useRouter = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _useAppContext2 = require("../UseContext/useAppContext");
+var _useAppContext3 = require("../UseContext/useAppContext");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -19,7 +19,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 // Hook
 var useRouter = function useRouter() {
-  var _useAppContext = (0, _useAppContext2.useAppContext)(),
+  var _useAppContext = (0, _useAppContext3.useAppContext)(),
       useParams = _useAppContext.useParams,
       useLocation = _useAppContext.useLocation,
       useHistory = _useAppContext.useHistory,
@@ -39,6 +39,21 @@ var useRouter = function useRouter() {
     return function () {
       return pushPath(path);
     };
+  };
+
+  var useRouteParam = function useRouteParam(paramName, matchUrl) {
+    var _useAppContext2 = (0, _useAppContext3.useAppContext)(),
+        useRouteMatch = _useAppContext2.useRouteMatch;
+
+    var urlRouteMatch = useRouteMatch("".concat(matchUrl));
+    var value = null;
+
+    if (urlRouteMatch) {
+      var _params = urlRouteMatch.params;
+      value = _params[paramName];
+    }
+
+    return value;
   }; // Return our custom router object
   // Memoize so that a new object is only returned if something changes
 
@@ -59,7 +74,8 @@ var useRouter = function useRouter() {
       location: location,
       history: history,
       pushPath: pushPath,
-      pushedPath: pushedPath
+      pushedPath: pushedPath,
+      useRouteParam: useRouteParam
     };
   }, [params, match, location, history]);
 };

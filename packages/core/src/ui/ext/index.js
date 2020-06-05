@@ -5,6 +5,7 @@ import AddSharpIcon from '@material-ui/icons/AddSharp';
 import Alert from '@material-ui/lab/Alert';
 import AppBar from '@material-ui/core/AppBar/AppBar';
 import AppsIcon from '@material-ui/icons/Apps';
+import AssignmentIndOutlinedIcon from '@material-ui/icons/AssignmentIndOutlined';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowForwardIos from '@material-ui/icons/ArrowForwardIos';
@@ -20,6 +21,7 @@ import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import BreadcrumbsWrapper from "../BreadcrumbsWrapper";
 import BusinessIcon from '@material-ui/icons/Business';
 import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 import CancelIcon from '@material-ui/icons/Cancel';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -61,6 +63,7 @@ import Fab from '@material-ui/core/Fab';
 import Fade from '@material-ui/core/Fade';
 import FileUploadArea from "../FileUploadArea";
 import FilterList from "../FilterList";
+import FolderOutlinedIcon from '@material-ui/icons/FolderOutlined';
 import FormControl from '@material-ui/core/FormControl';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
@@ -72,6 +75,7 @@ import GroupWorkIcon from '@material-ui/icons/GroupWork';
 import GroupIcon from '@material-ui/icons/Group';
 import Header from "../Header";
 import HelpOutlineOutlinedIcon from '@material-ui/icons/HelpOutlineOutlined';
+import HomeWorkOutlinedIcon from '@material-ui/icons/HomeWorkOutlined';
 import IconButton from '@material-ui/core/IconButton';
 import Icon from '@material-ui/core/Icon';
 import InputAdornment from '@material-ui/core/InputAdornment';
@@ -89,6 +93,8 @@ import Menu from '@material-ui/icons/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MultiPurposeTable from "../MultiPurposeTable";
 import MuiAlert from '@material-ui/lab/Alert';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import Paper from '@material-ui/core/Paper';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import PersonIcon from '@material-ui/icons/PersonSharp';
@@ -144,6 +150,7 @@ const ext = {
   Alert,
   AppBar,
   AppsIcon,
+  AssignmentIndOutlinedIcon,
   ArrowBackIcon,
   ArrowForwardIcon,
   ArrowForwardIos,
@@ -159,6 +166,7 @@ const ext = {
   BreadcrumbsWrapper,
   BusinessIcon,
   Button,
+  ButtonGroup,
   CancelIcon,
   Card,
   CardActions,
@@ -201,6 +209,7 @@ const ext = {
   Fade,
   FileUploadArea,
   FilterList,
+  FolderOutlinedIcon,
   FormControl,
   FormControlLabel,
   FormGroup,
@@ -212,6 +221,7 @@ const ext = {
   GroupIcon,
   Header,
   HelpOutlineOutlinedIcon,
+  HomeWorkOutlinedIcon,
   Icon,
   InputAdornment,
   IconButton,
@@ -231,6 +241,8 @@ const ext = {
   MuiPickersUtilsProvider,
   MuiAlert,
   MultiPurposeTable,
+  NavigateNextIcon,
+  NavigateBeforeIcon,
   SimpleTable,
   Paper,
   PeopleAltIcon,

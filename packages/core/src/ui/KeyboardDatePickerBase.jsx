@@ -1,7 +1,7 @@
 import React from 'react';
 import useUiContext from './UseContext';
 
-export default ({value, changed, name}) => {
+export default ({value, changed, name, required, disabled}) => {
   const {KeyboardDatePicker} = useUiContext();
   return (
     <KeyboardDatePicker
@@ -18,6 +18,8 @@ export default ({value, changed, name}) => {
       KeyboardButtonProps={{
         'aria-label': 'change date',
       }}
+      required={required}
+      disabled={disabled}
     />
   );
 };

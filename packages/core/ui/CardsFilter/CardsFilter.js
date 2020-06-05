@@ -17,7 +17,8 @@ var _default = function _default(_ref) {
   var onClick = _ref.onClick,
       filters = _ref.filters,
       _ref$value = _ref.value,
-      value = _ref$value === void 0 ? '0' : _ref$value;
+      value = _ref$value === void 0 ? '0' : _ref$value,
+      label = _ref.label;
 
   var _useUiContext = (0, _UseContext["default"])(),
       makeStyles = _useUiContext.makeStyles;
@@ -64,7 +65,8 @@ var _default = function _default(_ref) {
   }, _react["default"].createElement(_FilterList["default"], {
     filters: filters,
     onClick: onClick,
-    selectedValue: value
+    selectedValue: value,
+    label: label
   })))));
 };
 

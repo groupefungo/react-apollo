@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _UseContext = _interopRequireDefault(require("./UseContext"));
 
+var _UseContext2 = _interopRequireDefault(require("../app/UseContext"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = function _default(_ref) {
@@ -23,6 +25,12 @@ var _default = function _default(_ref) {
       _ref$disabled = _ref.disabled,
       disabled = _ref$disabled === void 0 ? false : _ref$disabled;
 
+  var _useAppContext = (0, _UseContext2["default"])(),
+      useTranslate = _useAppContext.useTranslate;
+
+  var _useTranslate = useTranslate(),
+      t = _useTranslate.t;
+
   var _useUiContext = (0, _UseContext["default"])(),
       Select = _useUiContext.Select,
       MenuItem = _useUiContext.MenuItem;
@@ -34,11 +42,14 @@ var _default = function _default(_ref) {
     value: v,
     onChange: c,
     required: r,
-    disabled: disabled
+    disabled: disabled,
+    inputProps: {
+      required: r
+    }
   }, _react["default"].createElement(MenuItem, {
     key: "default-".concat(n),
     value: e
-  }, _react["default"].createElement("em", null, "Aucun")), d.map(function (t) {
+  }, t('none')), d.map(function (t) {
     return _react["default"].createElement(MenuItem, {
       key: "".concat(n, "-").concat(t.id),
       value: t.id

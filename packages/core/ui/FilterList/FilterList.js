@@ -16,7 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var _default = function _default(props) {
   var filters = props.filters,
       _onClick = props.onClick,
-      selectedValue = props.selectedValue;
+      selectedValue = props.selectedValue,
+      label = props.label;
 
   var _useUiContext = (0, _UseContext["default"])(),
       FormControlLabel = _useUiContext.FormControlLabel,
@@ -27,7 +28,7 @@ var _default = function _default(props) {
         title = filter.title,
         name = filter.name,
         logo = filter.logo;
-    if (!title && !name) return null;
+    if (!label && !title && !name) return null;
 
     var checkedIcon = _react["default"].createElement(GroupWorkIcon, {
       color: "primary",
@@ -69,7 +70,7 @@ var _default = function _default(props) {
         checkedIcon: checkedIcon,
         icon: icon
       }),
-      label: title || name,
+      label: label && label(filter) || title || name,
       labelPlacement: "bottom"
     });
   });

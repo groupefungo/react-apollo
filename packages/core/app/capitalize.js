@@ -15,10 +15,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var _default = function _default(_ref) {
   var _ref2 = _toArray(_ref),
-      initial = _ref2[0],
+      i = _ref2[0],
       rest = _ref2.slice(1);
 
-  return "".concat(initial.toUpperCase()).concat(rest.join(''));
+  return i.toUpperCase() + rest.join('');
 };
 
 exports["default"] = _default;

@@ -2,14 +2,17 @@ import React from 'react';
 import useUiContext from './UseContext';
 
 import ChipsArray from './ChipsArray';
+import useAppContext from "../app/UseContext";
 
-export default ({ chipsData, chipClicked, chipDeleted }) => {
-  const { Grid, Typography, Paper, Box } = useUiContext();
+export default ({chipsData, chipClicked, chipDeleted}) => {
+  const {useTranslate} = useAppContext();
+  const {t} = useTranslate();
+  const {Grid, Typography, Paper, Box} = useUiContext();
 
   return (
     <Grid container spacing={1}>
       <Grid container item sm={12}>
-        <Typography variant="caption" color="textSecondary">Fichiers ajoutés</Typography>
+        <Typography variant="caption" color="textSecondary">{t('uploaded_files')}</Typography>
       </Grid>
       <Grid container item>
         <Box mb={1}>
