@@ -9,6 +9,7 @@ import DatePickerComponent from "./DatePickerComponent";
 import SimpleTableComponent from "./SimpleTableComponent";
 import AlertUser from "../../ui/AlertUser";
 import TellUser from "./TellUser";
+import PinchZoomPanComponentTest from './PinchZoomPanComponentTest'
 
 export default () => {
   const {Route, Switch} = useAppContext();
@@ -26,6 +27,7 @@ export default () => {
         <Route component={MultiPurposeTableComponent} path={'/multipurpose_table'} exact />
         <Route component={SimpleTableComponent} path={'/simple_table'} exact />
         <Route component={TellUser} path={'/alertUser'} exact />
+        <Route component={PinchZoomPanComponentTest} path={'/pinch_zoom_pan'} exact/>
       </Switch>
 
       <AlertUser />

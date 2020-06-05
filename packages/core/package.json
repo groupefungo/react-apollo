@@ -56,7 +56,8 @@
     "graphql-tag": "^2.10.3",
     "node-sass": "^4.13.1",
     "react-router-dom": "^5.1.2",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "fungo-pinch-zoom-pan": "file:../../../react-responsive-pinch-zoom-pan"
   },
   "files": [
     "ui",
