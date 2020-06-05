@@ -27,6 +27,8 @@ var _AlertUser = _interopRequireDefault(require("../../ui/AlertUser"));
 
 var _TellUser = _interopRequireDefault(require("./TellUser"));
 
+var _PinchZoomPanComponentTest = _interopRequireDefault(require("./PinchZoomPanComponentTest"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = function _default() {
@@ -61,6 +63,10 @@ var _default = function _default() {
   }), _react["default"].createElement(Route, {
     component: _TellUser["default"],
     path: '/alertUser',
+    exact: true
+  }), _react["default"].createElement(Route, {
+    component: _PinchZoomPanComponentTest["default"],
+    path: '/pinch_zoom_pan',
     exact: true
   })), _react["default"].createElement(_AlertUser["default"], null));
 };
