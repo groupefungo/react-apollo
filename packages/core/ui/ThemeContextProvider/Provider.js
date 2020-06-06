@@ -31,7 +31,7 @@ var _default = function _default(_ref) {
       CssBaseline = ext.CssBaseline,
       MuiPickersUtilsProvider = ext.MuiPickersUtilsProvider,
       DateFnsUtils = ext.DateFnsUtils;
-  var theme = createMuiTheme(_objectSpread({}, _muiTheme["default"], {}, thm));
+  var theme = createMuiTheme(_objectSpread({}, thm));
   return _react["default"].createElement(_Context["default"].Provider, {
     value: ext
   }, _react["default"].createElement(ThemeProvider, {
