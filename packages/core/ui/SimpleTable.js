@@ -11,8 +11,6 @@ var _UseContext = _interopRequireDefault(require("./UseContext"));
 
 var _useAppContext2 = require("../app/UseContext/useAppContext");
 
-var _SpeedDialMenu = _interopRequireDefault(require("./SpeedDialMenu/SpeedDialMenu"));
-
 var _DialogActions = _interopRequireDefault(require("./SpeedDialMenu/DialogActions"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -92,7 +90,10 @@ var _default = function _default(_ref) {
         v = _columnNameValue2[1];
 
     return _react["default"].createElement(TableCell, {
-      key: "col-".concat(n)
+      key: "col-".concat(n),
+      onClick: function onClick() {
+        return rowClicked && rowClicked(object) || null;
+      }
     }, v);
   };
 
@@ -112,8 +113,7 @@ var _default = function _default(_ref) {
     key: "header-actions"
   }, t('actions')))), _react["default"].createElement(TableBody, null, rows.map(function (object) {
     return _react["default"].createElement(TableRow, {
-      key: "row-".concat(object[rowObjectKey]),
-      onClick: rowClicked && rowClicked(object) || null
+      key: "row-".concat(object[rowObjectKey])
     }, columns.map(function (column) {
       return TableCellComponent(object, column);
     }), actions && _react["default"].createElement(TableCell, {

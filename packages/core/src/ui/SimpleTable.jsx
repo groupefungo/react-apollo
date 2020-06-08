@@ -1,7 +1,6 @@
 import React from 'react';
 import useUiContext from './UseContext';
 import {useAppContext} from "../app/UseContext/useAppContext";
-import SpeedDialMenu from "./SpeedDialMenu/SpeedDialMenu";
 import DialogActions from "./SpeedDialMenu/DialogActions";
 
 export default ({rows, translationNamespace, columns, rowObjectKey, rowClicked, actions}) => {
@@ -46,7 +45,7 @@ export default ({rows, translationNamespace, columns, rowObjectKey, rowClicked, 
 
   const TableCellComponent = (object, column) => {
     const [n, v] = columnNameValue(column, object);
-    return <TableCell key={`col-${n}`}>{v}</TableCell>;
+    return <TableCell key={`col-${n}`} onClick={() => ((rowClicked && rowClicked(object))||null)}>{v}</TableCell>;
   };
 
   return (
@@ -67,7 +66,7 @@ export default ({rows, translationNamespace, columns, rowObjectKey, rowClicked, 
         </TableHead>
         <TableBody>
           {rows.map((object) => (
-            <TableRow key={`row-${object[rowObjectKey]}`} onClick={(rowClicked && rowClicked(object))||null}>
+            <TableRow key={`row-${object[rowObjectKey]}`}>
               {columns.map((column) => TableCellComponent(object, column))}
               {actions && (
                 <TableCell key={`col-actions-${object.id}`}><DialogActions object={object} actions={actions}/></TableCell>
