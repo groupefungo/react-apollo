@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 
 import App from './app/Container';
 import AppBody from './app/examples/Body';
+import useProvideAuth from './useProvideAuth';
 
 import t from './muitheme-override';
 const MyApp = () => {
   return (
-    <App t={t}>
+    <App t={t} useProvideAuth={useProvideAuth}>
       <AppBody />
     </App>
   );
