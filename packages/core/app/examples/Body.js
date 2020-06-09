@@ -27,7 +27,7 @@ var _AlertUser = _interopRequireDefault(require("../../ui/AlertUser"));
 
 var _TellUser = _interopRequireDefault(require("./TellUser"));
 
-var _PinchZoomPanComponentTest = _interopRequireDefault(require("./PinchZoomPanComponentTest"));
+var _PinchZoomPanComponentTest = _interopRequireDefault(require("./PinchZoomPan/PinchZoomPanComponentTest"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

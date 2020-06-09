@@ -149,6 +149,11 @@ import Zoom from '@material-ui/core/Zoom';
 import {MuiPickersUtilsProvider, KeyboardDatePicker} from '@material-ui/pickers';
 import {ThemeProvider, createMuiTheme} from '@material-ui/core';
 
+import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
+import SentimentDissatisfiedIcon from '@material-ui/icons/SentimentDissatisfied';
+import SentimentSatisfiedIcon from '@material-ui/icons/SentimentSatisfied';
+import SentimentSatisfiedAltIcon from '@material-ui/icons/SentimentSatisfiedAltOutlined';
+import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfied';
 const ext = {
   AccountCircle,
   AddButton,
@@ -268,6 +273,11 @@ const ext = {
   SelectMui,
   SelectFromQuery,
   SendIcon,
+  SentimentVeryDissatisfiedIcon,
+  SentimentDissatisfiedIcon,
+  SentimentSatisfiedIcon,
+  SentimentSatisfiedAltIcon,
+  SentimentVerySatisfiedIcon,
   ShoppingCartIcon,
   SimpleTabs,
   Snackbar,

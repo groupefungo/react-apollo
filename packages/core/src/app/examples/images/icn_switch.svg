@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>icn_switch</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="58.2854828%" cy="59.7642061%" fx="58.2854828%" fy="59.7642061%" r="62.2730923%" id="radialGradient-1">
+            <stop stop-color="#0E406A" offset="0%"></stop>
+            <stop stop-color="#032B4C" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icones/switch">
+            <g id="icn_switch">
+                <g id="Badge" fill="url(#radialGradient-1)" stroke="#FFFFFF" stroke-width="0.85">
+                    <circle id="Background" cx="9.44385166" cy="9.44385166" r="9.01885166"></circle>
+                </g>
+                <text id="S" font-family="Montserrat-ExtraBold, Montserrat" font-size="13" font-weight="600" fill="#FFFFFF">
+                    <tspan x="5.2945" y="14">S</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

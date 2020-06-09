@@ -62,6 +62,10 @@ export default () => {
       <div>
         <Link to="/alertuser">Alert user</Link>
       </div>
+
+      <div>
+        <Link to="/pinch_zoom_pan">PingPoomPam</Link>
+      </div>
     </>
   );
 }

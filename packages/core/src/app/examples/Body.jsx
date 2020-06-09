@@ -9,7 +9,7 @@ import DatePickerComponent from "./DatePickerComponent";
 import SimpleTableComponent from "./SimpleTableComponent";
 import AlertUser from "../../ui/AlertUser";
 import TellUser from "./TellUser";
-import PinchZoomPanComponentTest from './PinchZoomPanComponentTest'
+import PinchZoomPanComponentTest from './PinchZoomPan/PinchZoomPanComponentTest'
 
 export default () => {
   const {Route, Switch} = useAppContext();

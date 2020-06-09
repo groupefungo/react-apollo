@@ -56,7 +56,9 @@ var _default = function _default() {
     to: "/simple_table"
   }, "To SimpleTable component (/simple_table)")), _react["default"].createElement("div", null, _react["default"].createElement(Link, {
     to: "/alertuser"
-  }, "Alert user")));
+  }, "Alert user")), _react["default"].createElement("div", null, _react["default"].createElement(Link, {
+    to: "/pinch_zoom_pan"
+  }, "PingPoomPam")));
 };
 
 exports["default"] = _default;

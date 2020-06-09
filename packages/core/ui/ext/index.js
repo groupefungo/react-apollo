@@ -303,6 +303,16 @@ var _pickers = require("@material-ui/pickers");
 
 var _core = require("@material-ui/core");
 
+var _SentimentVeryDissatisfied = _interopRequireDefault(require("@material-ui/icons/SentimentVeryDissatisfied"));
+
+var _SentimentDissatisfied = _interopRequireDefault(require("@material-ui/icons/SentimentDissatisfied"));
+
+var _SentimentSatisfied = _interopRequireDefault(require("@material-ui/icons/SentimentSatisfied"));
+
+var _SentimentSatisfiedAltOutlined = _interopRequireDefault(require("@material-ui/icons/SentimentSatisfiedAltOutlined"));
+
+var _SentimentVerySatisfied = _interopRequireDefault(require("@material-ui/icons/SentimentVerySatisfied"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -430,6 +440,11 @@ var ext = {
   SelectMui: _SelectMui["default"],
   SelectFromQuery: _SelectFromQuery["default"],
   SendIcon: _Send["default"],
+  SentimentVeryDissatisfiedIcon: _SentimentVeryDissatisfied["default"],
+  SentimentDissatisfiedIcon: _SentimentDissatisfied["default"],
+  SentimentSatisfiedIcon: _SentimentSatisfied["default"],
+  SentimentSatisfiedAltIcon: _SentimentSatisfiedAltOutlined["default"],
+  SentimentVerySatisfiedIcon: _SentimentVerySatisfied["default"],
   ShoppingCartIcon: _ShoppingCart["default"],
   SimpleTabs: _SimpleTabs["default"],
   Snackbar: _Snackbar["default"],
