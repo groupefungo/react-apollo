@@ -1,6 +1,6 @@
 {
   "name": "@groupefungo/react-apollo.core",
-  "version": "1.1.31",
+  "version": "1.1.32",
   "description": "js modules",
   "main": "./index.js",
   "scripts": {
@@ -53,7 +53,7 @@
     "node-sass": "^4.13.1",
     "react-router-dom": "^5.1.2",
     "sass-loader": "^8.0.2",
-    "react-i18next": "^11.3.5",
+    "react-i18next": "^11.5.0",
     "i18next": "^19.4.3"
   },
   "files": [
