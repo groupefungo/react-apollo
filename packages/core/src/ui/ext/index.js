@@ -101,6 +101,7 @@ import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import Paper from '@material-ui/core/Paper';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import PersonIcon from '@material-ui/icons/PersonSharp';
+import PinchZoomPan from '@groupefungo/react-responsive-pinch-zoom-pan'
 import PostAddIcon from '@material-ui/icons/PostAdd';
 import Popper from '@material-ui/core/Popper';
 import Radio from '@material-ui/core/Radio';
@@ -255,6 +256,7 @@ const ext = {
   SimpleTable,
   Paper,
   PeopleAltIcon,
+  PinchZoomPan,
   PersonIcon,
   PostAddIcon,
   Popper,

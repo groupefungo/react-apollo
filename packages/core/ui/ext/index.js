@@ -209,6 +209,8 @@ var _PeopleAlt = _interopRequireDefault(require("@material-ui/icons/PeopleAlt"))
 
 var _PersonSharp = _interopRequireDefault(require("@material-ui/icons/PersonSharp"));
 
+var _reactResponsivePinchZoomPan = _interopRequireDefault(require("@groupefungo/react-responsive-pinch-zoom-pan"));
+
 var _PostAdd = _interopRequireDefault(require("@material-ui/icons/PostAdd"));
 
 var _Popper = _interopRequireDefault(require("@material-ui/core/Popper"));
@@ -416,6 +418,7 @@ var ext = {
   SimpleTable: _SimpleTable["default"],
   Paper: _Paper["default"],
   PeopleAltIcon: _PeopleAlt["default"],
+  PinchZoomPan: _reactResponsivePinchZoomPan["default"],
   PersonIcon: _PersonSharp["default"],
   PostAddIcon: _PostAdd["default"],
   Popper: _Popper["default"],
