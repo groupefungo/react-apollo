@@ -22,7 +22,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(scss)$/,
+        test: /\.(s)?css$/,
         use: [
           // Creates `style` nodes from JS strings
           'style-loader',
@@ -36,7 +36,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.scss']
+    extensions: ['*', '.js', '.jsx', '.scss', '.css']
   },
   plugins: [
     new CleanWebpackPlugin(),
