@@ -4,6 +4,7 @@
   import ArrowBackIcon from '@material-ui/icons/ArrowBack';
   import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
   import TableFooter from '@material-ui/core/TableFooter';
+  import TablePagination from '@material-ui/core/TablePagination';
 
   const perPageOptions = [5, 10, 15, 25, 50, 100];
   const initialConnectionFilters = {
@@ -60,7 +61,7 @@
 
     return (
       <TableFooter component="div">
-        <div style={{display: 'flex'}} id="multipurpose_table_pagination_wrapper">
+        <div style={{display: 'flex', justifyContent: 'center'}} id="multipurpose_table_pagination_wrapper">
           <SelectMui
             id="multipurpose_table_pagination_rows_per_page_select"
             name={first ? 'first' : 'last'}

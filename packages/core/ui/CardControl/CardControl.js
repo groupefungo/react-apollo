@@ -113,7 +113,6 @@ var _default = function _default(props) {
 
   return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(Box, {
     width: "100%",
-    height: "100%",
     flexGrow: 1,
     position: "relative"
   }, _react["default"].createElement(_DeleteWarning["default"], {
