@@ -31,7 +31,7 @@ function InputMui(props) {
       TextField = _useUiContext.TextField;
 
   var getAdornmentElement = function getAdornmentElement(adornment) {
-    return _react["default"].createElement(InputAdornment, {
+    return /*#__PURE__*/_react["default"].createElement(InputAdornment, {
       position: "start"
     }, adornment);
   };
@@ -55,7 +55,7 @@ function InputMui(props) {
     type: type,
     value: value
   };
-  return _react["default"].createElement(TextField, _extends({
+  return /*#__PURE__*/_react["default"].createElement(TextField, _extends({
     variant: "outlined",
     label: label,
     onChange: onChange,

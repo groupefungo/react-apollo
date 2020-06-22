@@ -35,7 +35,7 @@ var _default = function _default(_ref) {
       Select = _useUiContext.Select,
       MenuItem = _useUiContext.MenuItem;
 
-  return _react["default"].createElement(Select, {
+  return /*#__PURE__*/_react["default"].createElement(Select, {
     name: n,
     labelId: "".concat(n, "Label"),
     id: "".concat(n, "Select"),
@@ -46,11 +46,11 @@ var _default = function _default(_ref) {
     inputProps: {
       required: r
     }
-  }, _react["default"].createElement(MenuItem, {
+  }, /*#__PURE__*/_react["default"].createElement(MenuItem, {
     key: "default-".concat(n),
     value: e
   }, t('none')), d.map(function (t) {
-    return _react["default"].createElement(MenuItem, {
+    return /*#__PURE__*/_react["default"].createElement(MenuItem, {
       key: "".concat(n, "-").concat(t.id),
       value: t.id
     }, t.label);

@@ -46,23 +46,23 @@ var _default = function _default(_ref) {
       Paper = _useUiContext2.Paper,
       RadioGroup = _useUiContext2.RadioGroup;
 
-  return _react["default"].createElement(Grid, {
+  return /*#__PURE__*/_react["default"].createElement(Grid, {
     container: true,
     alignItems: "center"
-  }, _react["default"].createElement(Paper, {
+  }, /*#__PURE__*/_react["default"].createElement(Paper, {
     className: classes.filterBox,
     elevation: 1
-  }, _react["default"].createElement(Grid, {
+  }, /*#__PURE__*/_react["default"].createElement(Grid, {
     container: true,
     item: true,
     spacing: 1,
     className: classes.filters
-  }, _react["default"].createElement(RadioGroup, {
+  }, /*#__PURE__*/_react["default"].createElement(RadioGroup, {
     row: true,
     "aria-label": "filters",
     name: "filters",
     value: value
-  }, _react["default"].createElement(_FilterList["default"], {
+  }, /*#__PURE__*/_react["default"].createElement(_FilterList["default"], {
     filters: filters,
     onClick: onClick,
     selectedValue: value,

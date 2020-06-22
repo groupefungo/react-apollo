@@ -43,7 +43,7 @@ var _default = function _default() {
 
   var eventDate = state.eventDate;
   console.log('rendering event date', eventDate);
-  return _react["default"].createElement(KeyboardDatePickerBase, {
+  return /*#__PURE__*/_react["default"].createElement(KeyboardDatePickerBase, {
     name: "eventDate",
     value: eventDate,
     changed: picked

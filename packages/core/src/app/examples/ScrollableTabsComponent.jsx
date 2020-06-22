@@ -1,12 +1,11 @@
 import React from "react";
-import BusinessIcon from '@material-ui/icons/Business';
 import AppContainer from '../../ui/AppContainer/AppContainer';
-import ScrollableTabs from '../../ui/ScrollableTabs/ScrollableTabs';
-import TabItem from '../../ui/ScrollableTabItem/ScrollableTabItem';
+import Tabs from '../../ui/ScrollableTabs/ScrollableTabs';
+import Tab from "../../ui/ScrollableTabItem";
 
 const mockedResponse = {
   data: {
-    lists: [
+    list: [
       {
         id: 1,
         name: "David",
@@ -53,29 +52,27 @@ const mockedResponse = {
 
 function ScrollableTabsComponent() {
   const {data} = mockedResponse;
-  const {lists} = data;
-  let mapIndex = 1;
+  const {list} = data;
 
   return (
     <AppContainer>
       <div className="scrollable-ex">
-        <ScrollableTabs>
-          <TabItem
+        <Tabs>
+          <Tab
             label="Tous"
-            tabIcon={<BusinessIcon />}
-            clickHandler={() => console.log('test')}
+            onClick={() => console.log('test')}
             index={0}
             key={`tab-${0}`}
           />
-          {lists.map((item, index) => (<TabItem
+          {list.map((item, index) => (
+            <Tab
               label={item.name}
-              tabIcon={<BusinessIcon />}
-              clickHandler={() => console.log('test')}
-              index={mapIndex++}
-              key={`tab-${index}`}
+              onClick={() => console.log('list tab clicked')}
+              index={(index + 1)}
+              key={`tab-${index + 1}`}
             />)
           )}
-        </ScrollableTabs>
+        </Tabs>
       </div>
     </AppContainer>
   )

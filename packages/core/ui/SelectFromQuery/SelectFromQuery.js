@@ -46,7 +46,7 @@ function SelectFromQuery(_ref) {
       loading = _useQueryGql.loading;
 
   if (loading) {
-    return _react["default"].createElement(Skeleton, {
+    return /*#__PURE__*/_react["default"].createElement(Skeleton, {
       width: 170,
       height: 72
     });
@@ -59,7 +59,7 @@ function SelectFromQuery(_ref) {
       label: object[objectLabel]
     };
   });
-  return _react["default"].createElement(SelectMui, _extends({
+  return /*#__PURE__*/_react["default"].createElement(SelectMui, _extends({
     label: label,
     name: name,
     options: options,

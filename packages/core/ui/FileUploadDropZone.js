@@ -27,19 +27,23 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
 
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -190,10 +194,10 @@ var _default = function _default(props) {
   };
 
   var style = (0, _react.useMemo)(function () {
-    return _objectSpread({}, baseStyle, {}, isDragActive ? activeStyle : {}, {}, isDragAccept ? acceptStyle : {}, {}, isDragReject ? rejectStyle : {});
+    return _objectSpread(_objectSpread(_objectSpread(_objectSpread({}, baseStyle), isDragActive ? activeStyle : {}), isDragAccept ? acceptStyle : {}), isDragReject ? rejectStyle : {});
   }, [isDragActive, isDragReject]);
   var thumbs = files.map(function (file, index) {
-    return _react["default"].createElement("div", {
+    return /*#__PURE__*/_react["default"].createElement("div", {
       style: thumb,
       key: "div".concat(file).concat(index),
       onMouseEnter: function onMouseEnter() {
@@ -203,37 +207,37 @@ var _default = function _default(props) {
         return setDeleteButton(-1);
       },
       onClick: removeFile(file)
-    }, _react["default"].createElement(Fade, {
+    }, /*#__PURE__*/_react["default"].createElement(Fade, {
       "in": deleteButton === index
-    }, _react["default"].createElement("div", {
+    }, /*#__PURE__*/_react["default"].createElement("div", {
       style: thumbDelete
-    }, _react["default"].createElement(IconButton, {
+    }, /*#__PURE__*/_react["default"].createElement(IconButton, {
       onClick: removeFile(file),
       style: {
         left: 20,
         bottom: 20
       }
-    }, _react["default"].createElement(CancelIcon, {
+    }, /*#__PURE__*/_react["default"].createElement(CancelIcon, {
       fontSize: "small",
       color: "primary"
-    })))), _react["default"].createElement("div", {
+    })))), /*#__PURE__*/_react["default"].createElement("div", {
       style: thumbInner,
       key: "subdiv ".concat(file).concat(index)
-    }, _react["default"].createElement("img", {
+    }, /*#__PURE__*/_react["default"].createElement("img", {
       src: file.url || file.preview,
       style: img
     })));
   });
-  return _react["default"].createElement("section", {
+  return /*#__PURE__*/_react["default"].createElement("section", {
     className: "container"
-  }, thumbs.length > 0 && _react["default"].createElement(Typography, {
+  }, thumbs.length > 0 && /*#__PURE__*/_react["default"].createElement(Typography, {
     variant: "caption",
     color: "textSecondary"
-  }, t('images')), _react["default"].createElement("aside", {
+  }, t('images')), /*#__PURE__*/_react["default"].createElement("aside", {
     style: thumbsContainer
-  }, thumbs), _react["default"].createElement("div", getRootProps({
+  }, thumbs), /*#__PURE__*/_react["default"].createElement("div", getRootProps({
     style: style
-  }), _react["default"].createElement("input", getInputProps()), _react["default"].createElement("p", null, placeHolder, " ")));
+  }), /*#__PURE__*/_react["default"].createElement("input", getInputProps()), /*#__PURE__*/_react["default"].createElement("p", null, placeHolder, " ")));
 };
 
 exports["default"] = _default;

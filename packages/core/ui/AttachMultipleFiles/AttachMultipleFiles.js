@@ -20,7 +20,7 @@ var _default = function _default(_ref) {
       AttachFile = _useUiContext.AttachFile,
       Button = _useUiContext.Button;
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement("input", {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement("input", {
     style: {
       display: 'none'
     },
@@ -29,16 +29,16 @@ var _default = function _default(_ref) {
     id: id,
     multiple: true,
     onChange: changed
-  }), _react["default"].createElement("label", {
+  }), /*#__PURE__*/_react["default"].createElement("label", {
     htmlFor: id
-  }, _react["default"].createElement(Button, {
+  }, /*#__PURE__*/_react["default"].createElement(Button, {
     variant: "contained",
     size: "small",
     disableElevation: true,
     color: "primary",
     component: "span",
     "aria-label": "upload a file",
-    startIcon: _react["default"].createElement(AttachFile, null)
+    startIcon: /*#__PURE__*/_react["default"].createElement(AttachFile, null)
   }, "Ajouter des pi\xE8ces jointes")));
 };
 

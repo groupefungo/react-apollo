@@ -21,7 +21,7 @@ var _default = function _default(_ref) {
   var _useUiContext = (0, _UseContext["default"])(),
       KeyboardDatePicker = _useUiContext.KeyboardDatePicker;
 
-  return _react["default"].createElement(KeyboardDatePicker, {
+  return /*#__PURE__*/_react["default"].createElement(KeyboardDatePicker, {
     name: name,
     disableToolbar: true,
     autoOk: true,

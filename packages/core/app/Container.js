@@ -19,9 +19,9 @@ var _default = function _default(_ref) {
   var useProvideAuth = _ref.useProvideAuth,
       thm = _ref.thm,
       children = _ref.children;
-  return _react["default"].createElement(_ErrorBoundary["default"], null, _react["default"].createElement(_ui["default"], {
+  return /*#__PURE__*/_react["default"].createElement(_ErrorBoundary["default"], null, /*#__PURE__*/_react["default"].createElement(_ui["default"], {
     thm: thm
-  }, _react["default"].createElement(_["default"], {
+  }, /*#__PURE__*/_react["default"].createElement(_["default"], {
     useProvideAuth: useProvideAuth
   }, children)));
 };

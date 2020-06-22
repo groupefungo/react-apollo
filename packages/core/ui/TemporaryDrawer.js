@@ -37,15 +37,15 @@ var _default = function _default(_ref) {
       Drawer = _useUiContext2.Drawer;
 
   var sideList = function sideList() {
-    return _react["default"].createElement("div", {
+    return /*#__PURE__*/_react["default"].createElement("div", {
       className: classes.list,
       role: "presentation",
       onClick: toggleDrawer(false),
       onKeyDown: toggleDrawer(false)
-    }, _react["default"].createElement(List, null, topItems), _react["default"].createElement(Divider, null), _react["default"].createElement(List, null, bottomItems));
+    }, /*#__PURE__*/_react["default"].createElement(List, null, topItems), /*#__PURE__*/_react["default"].createElement(Divider, null), /*#__PURE__*/_react["default"].createElement(List, null, bottomItems));
   };
 
-  return _react["default"].createElement("div", null, _react["default"].createElement(Drawer, {
+  return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement(Drawer, {
     open: state,
     onClose: toggleDrawer(false)
   }, sideList()));

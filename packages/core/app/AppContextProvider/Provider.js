@@ -24,13 +24,13 @@ var _default = function _default(_ref) {
   var ProvideAuth = appExt.ProvideAuth,
       Router = appExt.Router,
       ApolloProvider = appExt.ApolloProvider;
-  return _react["default"].createElement(_Context["default"].Provider, {
+  return /*#__PURE__*/_react["default"].createElement(_Context["default"].Provider, {
     value: appExt
-  }, _react["default"].createElement(_Dialog.Dialog, null), _react["default"].createElement(ApolloProvider, {
+  }, /*#__PURE__*/_react["default"].createElement(_Dialog.Dialog, null), /*#__PURE__*/_react["default"].createElement(ApolloProvider, {
     client: _Apollo["default"]
-  }, _react["default"].createElement(ProvideAuth, {
+  }, /*#__PURE__*/_react["default"].createElement(ProvideAuth, {
     useProvideAuth: useProvideAuth
-  }, _react["default"].createElement(Router, null, children))));
+  }, /*#__PURE__*/_react["default"].createElement(Router, null, children))));
 };
 
 exports["default"] = _default;

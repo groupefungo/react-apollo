@@ -92,7 +92,7 @@ function SimpleTableComponent() {
       Chip = _useUiContext.Chip;
 
   var SpecialColumn = function SpecialColumn(value) {
-    return _react["default"].createElement(Chip, {
+    return /*#__PURE__*/_react["default"].createElement(Chip, {
       label: value
     });
   };
@@ -117,7 +117,7 @@ function SimpleTableComponent() {
 
   var data = mockedResponse.data;
   var clients = data.clients;
-  return _react["default"].createElement(_AppContainer["default"], null, _react["default"].createElement(SimpleTable, {
+  return /*#__PURE__*/_react["default"].createElement(_AppContainer["default"], null, /*#__PURE__*/_react["default"].createElement(SimpleTable, {
     rows: clients,
     headers: headers,
     columns: columns,

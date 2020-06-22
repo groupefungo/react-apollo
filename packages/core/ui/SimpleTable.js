@@ -15,11 +15,15 @@ var _DialogActions = _interopRequireDefault(require("./SpeedDialMenu/DialogActio
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -89,7 +93,7 @@ var _default = function _default(_ref) {
         n = _columnNameValue2[0],
         v = _columnNameValue2[1];
 
-    return _react["default"].createElement(TableCell, {
+    return /*#__PURE__*/_react["default"].createElement(TableCell, {
       key: "col-".concat(n),
       onClick: function onClick() {
         return rowClicked && rowClicked(object) || null;
@@ -97,28 +101,28 @@ var _default = function _default(_ref) {
     }, v);
   };
 
-  return _react["default"].createElement(TableContainer, {
+  return /*#__PURE__*/_react["default"].createElement(TableContainer, {
     component: Paper
-  }, _react["default"].createElement(Table, {
+  }, /*#__PURE__*/_react["default"].createElement(Table, {
     className: classes.table,
     "aria-label": "simple table"
-  }, _react["default"].createElement(TableHead, null, _react["default"].createElement(TableRow, {
+  }, /*#__PURE__*/_react["default"].createElement(TableHead, null, /*#__PURE__*/_react["default"].createElement(TableRow, {
     key: "headers"
   }, columns.map(function (col) {
     var cname = columnName(col);
-    return _react["default"].createElement(TableCell, {
+    return /*#__PURE__*/_react["default"].createElement(TableCell, {
       key: "header-".concat(cname)
     }, t("".concat(translationNamespace, ".").concat(cname)));
-  }), actions && _react["default"].createElement(TableCell, {
+  }), actions && /*#__PURE__*/_react["default"].createElement(TableCell, {
     key: "header-actions"
-  }, t('actions')))), _react["default"].createElement(TableBody, null, rows.map(function (object) {
-    return _react["default"].createElement(TableRow, {
+  }, t('actions')))), /*#__PURE__*/_react["default"].createElement(TableBody, null, rows.map(function (object) {
+    return /*#__PURE__*/_react["default"].createElement(TableRow, {
       key: "row-".concat(object[rowObjectKey])
     }, columns.map(function (column) {
       return TableCellComponent(object, column);
-    }), actions && _react["default"].createElement(TableCell, {
+    }), actions && /*#__PURE__*/_react["default"].createElement(TableCell, {
       key: "col-actions-".concat(object.id)
-    }, _react["default"].createElement(_DialogActions["default"], {
+    }, /*#__PURE__*/_react["default"].createElement(_DialogActions["default"], {
       object: object,
       actions: actions
     })));

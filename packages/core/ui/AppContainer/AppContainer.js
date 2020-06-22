@@ -15,9 +15,9 @@ var _default = function _default(props) {
   var _useUiContext = (0, _UseContext["default"])(),
       Container = _useUiContext.Container;
 
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     className: "app-container-wrapper"
-  }, _react["default"].createElement(Container, null, props.children));
+  }, /*#__PURE__*/_react["default"].createElement(Container, null, props.children));
 };
 
 exports["default"] = _default;

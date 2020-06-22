@@ -18,25 +18,25 @@ var _default = function _default() {
       AppBar = _useUiContext.AppBar,
       Toolbar = _useUiContext.Toolbar,
       IconButton = _useUiContext.IconButton,
-      Menu = _useUiContext.Menu,
+      MenuIcon = _useUiContext.MenuIcon,
       Typography = _useUiContext.Typography,
       DrawerState = _useUiContext.DrawerState;
 
   var toggleDrawer = DrawerState.toggleDrawer;
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(AppBar, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(AppBar, {
     color: "default",
     position: "fixed",
     elevation: 4
-  }, _react["default"].createElement(Toolbar, null, _react["default"].createElement(IconButton, {
+  }, /*#__PURE__*/_react["default"].createElement(Toolbar, null, /*#__PURE__*/_react["default"].createElement(IconButton, {
     color: "primary",
     "aria-label": "open drawer",
     edge: "start",
     onClick: toggleDrawer(true)
-  }, _react["default"].createElement(Menu, null)), _react["default"].createElement(Typography, {
+  }, /*#__PURE__*/_react["default"].createElement(MenuIcon, null)), /*#__PURE__*/_react["default"].createElement(Typography, {
     variant: "h4",
     noWrap: true,
     color: "secondary"
-  }, "WECATOSKEYAKAN"))), _react["default"].createElement(Toolbar, null), _react["default"].createElement(_SideBarMenu.SideBarMenu, null));
+  }, "WECATOSKEYAKAN"))), /*#__PURE__*/_react["default"].createElement(Toolbar, null), /*#__PURE__*/_react["default"].createElement(_SideBarMenu.SideBarMenu, null));
 };
 
 exports["default"] = _default;

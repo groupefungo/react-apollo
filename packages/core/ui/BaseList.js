@@ -12,7 +12,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var _default = function _default(_ref) {
   var data = _ref.data,
       rowRender = _ref.rowRender;
-  return _react["default"].createElement(_react["default"].Fragment, null, data && data.map(function (d) {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, data && data.map(function (d) {
     return rowRender(d);
   }));
 };

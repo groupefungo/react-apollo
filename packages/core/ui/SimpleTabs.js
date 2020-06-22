@@ -87,13 +87,13 @@ var _default = function _default(props) {
     };
   };
 
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     className: classes.root
-  }, _react["default"].createElement(AppBar, {
+  }, /*#__PURE__*/_react["default"].createElement(AppBar, {
     position: "static",
     color: "default",
     elevation: 2
-  }, _react["default"].createElement(Tabs, {
+  }, /*#__PURE__*/_react["default"].createElement(Tabs, {
     value: initTab(),
     "aria-label": "simple tabs example",
     textColor: "inherit",
@@ -104,7 +104,7 @@ var _default = function _default(props) {
     scrollButtons: "auto" // centered
 
   }, tabs.map(function (child, index) {
-    return _react["default"].createElement(Tab, _extends({
+    return /*#__PURE__*/_react["default"].createElement(Tab, _extends({
       key: child.key
     }, child.props, a11yProps(parseInt(index, 10)), {
       onClick: tabChanged(child.props.path)

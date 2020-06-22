@@ -22,12 +22,12 @@ var _default = function _default(_ref) {
       GetAppIcon = _useUiContext.GetAppIcon,
       Grid = _useUiContext.Grid;
 
-  return _react["default"].createElement(Grid, {
+  return /*#__PURE__*/_react["default"].createElement(Grid, {
     container: true,
     spacing: 1
   }, chipsData.map(function (data) {
-    return _react["default"].createElement(Chip, {
-      icon: data.id && _react["default"].createElement(GetAppIcon, null),
+    return /*#__PURE__*/_react["default"].createElement(Chip, {
+      icon: data.id && /*#__PURE__*/_react["default"].createElement(GetAppIcon, null),
       onClick: chipClicked(data),
       clickable: data.id && true,
       key: data.key || data.id,

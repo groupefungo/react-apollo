@@ -12,7 +12,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var _default = function _default(_ref) {
   var id = _ref.id,
       msg = _ref.msg;
-  return _react["default"].createElement("p", {
+  return /*#__PURE__*/_react["default"].createElement("p", {
     id: id
   }, "".concat(msg));
 };

@@ -149,7 +149,7 @@ function MultiPurposeTableComponent() {
   var connectionState = useCompleteState(baseConnectionFilters);
 
   var SpecialColumn = function SpecialColumn(value) {
-    return _react["default"].createElement(Chip, {
+    return /*#__PURE__*/_react["default"].createElement(Chip, {
       label: value
     });
   };
@@ -177,7 +177,7 @@ function MultiPurposeTableComponent() {
 
   var data = mockedResponse.data;
   var loading = false;
-  return _react["default"].createElement(MultiPurposeTable, {
+  return /*#__PURE__*/_react["default"].createElement(MultiPurposeTable, {
     connectionState: connectionState,
     columns: columns,
     data: data || {},

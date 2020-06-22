@@ -30,14 +30,14 @@ var _default = function _default(_ref) {
       CssBaseline = ext.CssBaseline,
       MuiPickersUtilsProvider = ext.MuiPickersUtilsProvider,
       DateFnsUtils = ext.DateFnsUtils;
-  var theme = createMuiTheme(_objectSpread({}, _muiTheme["default"], {}, thm));
-  return _react["default"].createElement(_Context["default"].Provider, {
+  var theme = createMuiTheme(_objectSpread(_objectSpread({}, _muiTheme["default"]), thm));
+  return /*#__PURE__*/_react["default"].createElement(_Context["default"].Provider, {
     value: ext
-  }, _react["default"].createElement(ThemeProvider, {
+  }, /*#__PURE__*/_react["default"].createElement(ThemeProvider, {
     theme: theme
-  }, _react["default"].createElement(MuiPickersUtilsProvider, {
+  }, /*#__PURE__*/_react["default"].createElement(MuiPickersUtilsProvider, {
     utils: DateFnsUtils
-  }, _react["default"].createElement(CssBaseline, null), children)));
+  }, /*#__PURE__*/_react["default"].createElement(CssBaseline, null), children)));
 };
 
 exports["default"] = _default;

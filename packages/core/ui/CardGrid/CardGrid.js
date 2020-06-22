@@ -47,19 +47,19 @@ var _default = function _default(props) {
       Grid = _useUiContext.Grid,
       Box = _useUiContext.Box;
 
-  return _react["default"].createElement(Grid, {
+  return /*#__PURE__*/_react["default"].createElement(Grid, {
     container: true,
     spacing: 3,
     alignItems: "stretch"
   }, data.map(function (d) {
-    return _react["default"].createElement(Grid, {
+    return /*#__PURE__*/_react["default"].createElement(Grid, {
       key: d.id,
       item: true,
       xs: xs,
       sm: sm,
       md: md,
       lg: lg
-    }, _react["default"].createElement(_CardControl["default"], {
+    }, /*#__PURE__*/_react["default"].createElement(_CardControl["default"], {
       key: d.id,
       id: d.id,
       title: titleHandler && titleHandler(d) || d.title,

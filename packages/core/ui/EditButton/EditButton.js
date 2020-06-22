@@ -36,15 +36,15 @@ var _default = function _default(_ref) {
     };
   };
 
-  return _react["default"].createElement(Grid, {
+  return /*#__PURE__*/_react["default"].createElement(Grid, {
     item: true,
     xs: 2,
     sm: 1
-  }, _react["default"].createElement(Tooltip, {
+  }, /*#__PURE__*/_react["default"].createElement(Tooltip, {
     title: title,
     "aria-label": "add",
     placement: "left"
-  }, _react["default"].createElement(Fab, {
+  }, /*#__PURE__*/_react["default"].createElement(Fab, {
     onClick: myOnClick(),
     color: "secondary",
     "aria-label": "add",
@@ -54,7 +54,7 @@ var _default = function _default(_ref) {
       right: 30,
       position: 'fixed'
     }
-  }, _react["default"].createElement(EditIcon, null))));
+  }, /*#__PURE__*/_react["default"].createElement(EditIcon, null))));
 };
 
 exports["default"] = _default;

@@ -22,14 +22,14 @@ var _default = function _default(_ref) {
       Typography = _useUiContext.Typography;
 
   var Link = appContext.Link;
-  return _react["default"].createElement(Breadcrumbs, {
+  return /*#__PURE__*/_react["default"].createElement(Breadcrumbs, {
     "aria-label": "breadcrumb"
   }, data.map(function (breadcrumbData) {
-    return breadcrumbData.path ? _react["default"].createElement(Link, {
+    return breadcrumbData.path ? /*#__PURE__*/_react["default"].createElement(Link, {
       key: "breadcrumb-".concat(breadcrumbData.path),
       color: "inherit",
       to: breadcrumbData.path
-    }, breadcrumbData.label) : _react["default"].createElement(Typography, {
+    }, breadcrumbData.label) : /*#__PURE__*/_react["default"].createElement(Typography, {
       key: "breakcrumb-last",
       color: "textPrimary"
     }, breadcrumbData.label);
