@@ -62,15 +62,15 @@ function ScrollableTabsComponent() {
         <ScrollableTabs>
           <TabItem
             label="Tous"
-            tabIcon={<BusinessIcon />}
-            clickHandler={() => console.log('test')}
+            icon={<BusinessIcon/>}
+            onClick={() => console.log('test')}
             index={0}
             key={`tab-${0}`}
           />
           {lists.map((item, index) => (<TabItem
               label={item.name}
-              tabIcon={<BusinessIcon />}
-              clickHandler={() => console.log('test')}
+              icon={<BusinessIcon/>}
+              onClick={() => console.log('test')}
               index={mapIndex++}
               key={`tab-${index}`}
             />)

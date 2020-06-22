@@ -21,12 +21,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-function ScrollableTabItem(_ref) {
-  var clickHandler = _ref.clickHandler,
-      index = _ref.index,
-      label = _ref.label,
-      tabIcon = _ref.tabIcon;
-
+function ScrollableTabItem(props) {
   var _useUiContext = (0, _UseContext["default"])(),
       Tab = _useUiContext.Tab;
 
@@ -37,18 +32,9 @@ function ScrollableTabItem(_ref) {
     };
   }
 
-  return _react["default"].createElement(Tab, _extends({
-    label: label,
-    icon: tabIcon,
-    onClick: clickHandler
-  }, tabProps(index)));
+  var index = props.index;
+  return _react["default"].createElement(Tab, _extends({}, props, tabProps(index)));
 }
 
-ScrollableTabItem.propTypes = {
-  clickHandler: PropTypes.func.isRequired,
-  index: PropTypes.number.isRequired,
-  label: PropTypes.string.isRequired,
-  tabIcon: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
-};
 var _default = ScrollableTabItem;
 exports["default"] = _default;

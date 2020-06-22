@@ -61,8 +61,8 @@ function ScrollableTabsComponent() {
     className: "scrollable-ex"
   }, _react["default"].createElement(_ScrollableTabs["default"], null, _react["default"].createElement(_ScrollableTabItem["default"], {
     label: "Tous",
-    tabIcon: _react["default"].createElement(_Business["default"], null),
-    clickHandler: function clickHandler() {
+    icon: _react["default"].createElement(_Business["default"], null),
+    onClick: function onClick() {
       return console.log('test');
     },
     index: 0,
@@ -70,8 +70,8 @@ function ScrollableTabsComponent() {
   }), lists.map(function (item, index) {
     return _react["default"].createElement(_ScrollableTabItem["default"], {
       label: item.name,
-      tabIcon: _react["default"].createElement(_Business["default"], null),
-      clickHandler: function clickHandler() {
+      icon: _react["default"].createElement(_Business["default"], null),
+      onClick: function onClick() {
         return console.log('test');
       },
       index: mapIndex++,
