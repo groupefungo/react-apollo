@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _UseContext = _interopRequireDefault(require("../../ui/UseContext"));
 
+var _AppContainer = _interopRequireDefault(require("../../ui/AppContainer/AppContainer"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var mockedResponse = {
@@ -115,12 +117,12 @@ function SimpleTableComponent() {
 
   var data = mockedResponse.data;
   var clients = data.clients;
-  return _react["default"].createElement(SimpleTable, {
+  return _react["default"].createElement(_AppContainer["default"], null, _react["default"].createElement(SimpleTable, {
     rows: clients,
     headers: headers,
     columns: columns,
     handleRowClick: handleRowClick
-  });
+  }));
 }
 
 var _default = SimpleTableComponent;

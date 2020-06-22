@@ -1,3 +1,8 @@
 import React from "react";
+import AppContainer from '../../ui/AppContainer/AppContainer';
 
-export default () => (<div>in route component</div>);
+export default () => (
+  <AppContainer>
+    <div>in route component</div>
+  </AppContainer>
+);

@@ -1,6 +1,7 @@
 import useAppExt from "../ext";
 import React from "react";
 import CardGrid from "../../ui/CardGrid/CardGrid";
+import AppContainer from '../../ui/AppContainer/AppContainer';
 
 export default () => {
   const {Link} = useAppExt();
@@ -33,16 +34,20 @@ export default () => {
   ];
 
   return (
-    <>
-      <CardGrid
-        data={data}
-        addLabel="un événement"
-        resourcesPath="/events"
-        action={(obj) => () => console.log('action clicked', obj.id)}
-        actionLabel="View this object"
-        dateHandler={(e) => e.eventDate}
-        categoryHandler={(e) => e.kind}
-      />
+    <AppContainer>
+      <div style={{ margin: '24px 0' }}>in body</div>
+
+      <div style={{ marginBottom: 24 }}>
+        <CardGrid
+          data={data}
+          addLabel="un événement"
+          resourcesPath="/events"
+          action={(obj) => () => console.log('action clicked', obj.id)}
+          actionLabel="View this object"
+          dateHandler={(e) => e.eventDate}
+          categoryHandler={(e) => e.kind}
+        />
+      </div>
 
       <div>
         <Link to="/rc">To route component (/rc)</Link>
@@ -60,8 +65,12 @@ export default () => {
       </div>
 
       <div>
+        <Link to="/scrollable_tabs">To ScrollableTabs component (/scrollable_tabs)</Link>
+      </div>
+
+      <div>
         <Link to="/alertuser">Alert user</Link>
       </div>
-    </>
+    </AppContainer>
   );
 }

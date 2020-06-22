@@ -47,11 +47,7 @@ var _default = function _default(props) {
       Grid = _useUiContext.Grid,
       Box = _useUiContext.Box;
 
-  return _react["default"].createElement(Box, {
-    display: "flex",
-    flexGrow: 1,
-    mt: 4
-  }, _react["default"].createElement(Grid, {
+  return _react["default"].createElement(Grid, {
     container: true,
     spacing: 3,
     alignItems: "stretch"
@@ -78,7 +74,7 @@ var _default = function _default(props) {
       deleteCardFunction: deleteCardFunction,
       disabled: disabledHandler && disabledHandler(d)
     }));
-  })));
+  }));
 };
 
 exports["default"] = _default;

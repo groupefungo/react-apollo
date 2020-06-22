@@ -11,6 +11,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _CardGrid = _interopRequireDefault(require("../../ui/CardGrid/CardGrid"));
 
+var _AppContainer = _interopRequireDefault(require("../../ui/AppContainer/AppContainer"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = function _default() {
@@ -30,7 +32,15 @@ var _default = function _default() {
     description: '103\n' + '\n' + 'Looks like your requirement is just to fade out the text beginning at a' + ' certain height (about 150px), the text (if any) presenting at that height is considered as overflow. ',
     title: 'title'
   }];
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_CardGrid["default"], {
+  return _react["default"].createElement(_AppContainer["default"], null, _react["default"].createElement("div", {
+    style: {
+      margin: '24px 0'
+    }
+  }, "in body"), _react["default"].createElement("div", {
+    style: {
+      marginBottom: 24
+    }
+  }, _react["default"].createElement(_CardGrid["default"], {
     data: data,
     addLabel: "un \xE9v\xE9nement",
     resourcesPath: "/events",
@@ -46,7 +56,7 @@ var _default = function _default() {
     categoryHandler: function categoryHandler(e) {
       return e.kind;
     }
-  }), _react["default"].createElement("div", null, _react["default"].createElement(Link, {
+  })), _react["default"].createElement("div", null, _react["default"].createElement(Link, {
     to: "/rc"
   }, "To route component (/rc)")), _react["default"].createElement("div", null, _react["default"].createElement(Link, {
     to: "/form"
@@ -55,6 +65,8 @@ var _default = function _default() {
   }, "To MultiPurposeTable component (/multipurpose_table)")), _react["default"].createElement("div", null, _react["default"].createElement(Link, {
     to: "/simple_table"
   }, "To SimpleTable component (/simple_table)")), _react["default"].createElement("div", null, _react["default"].createElement(Link, {
+    to: "/scrollable_tabs"
+  }, "To ScrollableTabs component (/scrollable_tabs)")), _react["default"].createElement("div", null, _react["default"].createElement(Link, {
     to: "/alertuser"
   }, "Alert user")));
 };

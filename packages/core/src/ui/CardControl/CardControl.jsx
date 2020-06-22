@@ -62,7 +62,7 @@ export default (props) => {
 
   return (
     <>
-      <Box width="100%" height="100%" flexGrow={1} position="relative">
+      <Box width="100%" flexGrow={1} position="relative">
         <DeleteWarning
           open={openDeleteWarning}
           title={title}
