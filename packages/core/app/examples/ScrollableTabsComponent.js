@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _Business = _interopRequireDefault(require("@material-ui/icons/Business"));
 
-var _AppContainer = _interopRequireDefault(require("../../ui/AppContainer/AppContainer"));
+var _UseContext = _interopRequireDefault(require("../../ui/UseContext"));
 
 var _ScrollableTabs = _interopRequireDefault(require("../../ui/ScrollableTabs/ScrollableTabs"));
 
@@ -54,10 +54,13 @@ var mockedResponse = {
 };
 
 function ScrollableTabsComponent() {
+  var _useUiContext = (0, _UseContext["default"])(),
+      Container = _useUiContext.Container;
+
   var data = mockedResponse.data;
   var lists = data.lists;
   var mapIndex = 1;
-  return _react["default"].createElement(_AppContainer["default"], null, _react["default"].createElement("div", {
+  return _react["default"].createElement(Container, null, _react["default"].createElement("div", {
     className: "scrollable-ex"
   }, _react["default"].createElement(_ScrollableTabs["default"], null, _react["default"].createElement(_ScrollableTabItem["default"], {
     label: "Tous",

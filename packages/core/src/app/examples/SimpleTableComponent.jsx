@@ -1,6 +1,5 @@
 import React from "react";
 import useUiContext from '../../ui/UseContext';
-import AppContainer from '../../ui/AppContainer/AppContainer';
 
 const mockedResponse = {
   data: {
@@ -87,7 +86,7 @@ const mockedResponse = {
 };
 
 function SimpleTableComponent() {
-  const {SimpleTable, Chip} = useUiContext();
+  const {Container, SimpleTable, Chip} = useUiContext();
 
   const SpecialColumn = (value) => <Chip label={value}/>;
   const columns = [{name: 'email', component: SpecialColumn}, 'firstName', 'lastName'];
@@ -104,14 +103,14 @@ function SimpleTableComponent() {
   const {data} = mockedResponse;
   const {clients} = data;
   return (
-    <AppContainer>
+    <Container>
       <SimpleTable
         rows={clients}
         headers={headers}
         columns={columns}
         handleRowClick={handleRowClick}
       />
-    </AppContainer>
+    </Container>
   )
 }
 

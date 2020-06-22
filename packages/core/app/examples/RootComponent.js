@@ -9,15 +9,18 @@ var _ext = _interopRequireDefault(require("../ext"));
 
 var _react = _interopRequireDefault(require("react"));
 
-var _CardGrid = _interopRequireDefault(require("../../ui/CardGrid/CardGrid"));
+var _UseContext = _interopRequireDefault(require("../../ui/UseContext"));
 
-var _AppContainer = _interopRequireDefault(require("../../ui/AppContainer/AppContainer"));
+var _CardGrid = _interopRequireDefault(require("../../ui/CardGrid/CardGrid"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = function _default() {
   var _useAppExt = (0, _ext["default"])(),
       Link = _useAppExt.Link;
+
+  var _useUiContext = (0, _UseContext["default"])(),
+      Container = _useUiContext.Container;
 
   var data = [{
     id: 1,
@@ -32,7 +35,7 @@ var _default = function _default() {
     description: '103\n' + '\n' + 'Looks like your requirement is just to fade out the text beginning at a' + ' certain height (about 150px), the text (if any) presenting at that height is considered as overflow. ',
     title: 'title'
   }];
-  return _react["default"].createElement(_AppContainer["default"], null, _react["default"].createElement("div", {
+  return _react["default"].createElement(Container, null, _react["default"].createElement("div", {
     style: {
       margin: '24px 0'
     }
@@ -66,7 +69,11 @@ var _default = function _default() {
     to: "/simple_table"
   }, "To SimpleTable component (/simple_table)")), _react["default"].createElement("div", null, _react["default"].createElement(Link, {
     to: "/scrollable_tabs"
-  }, "To ScrollableTabs component (/scrollable_tabs)")), _react["default"].createElement("div", null, _react["default"].createElement(Link, {
+  }, "To ScrollableTabs component (/scrollable_tabs)")), _react["default"].createElement("div", {
+    style: {
+      marginBottom: 24
+    }
+  }, _react["default"].createElement(Link, {
     to: "/alertuser"
   }, "Alert user")));
 };

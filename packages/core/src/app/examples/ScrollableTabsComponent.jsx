@@ -1,6 +1,6 @@
 import React from "react";
 import BusinessIcon from '@material-ui/icons/Business';
-import AppContainer from '../../ui/AppContainer/AppContainer';
+import useUiContext from '../../ui/UseContext';
 import ScrollableTabs from '../../ui/ScrollableTabs/ScrollableTabs';
 import TabItem from '../../ui/ScrollableTabItem/ScrollableTabItem';
 
@@ -52,12 +52,13 @@ const mockedResponse = {
 };
 
 function ScrollableTabsComponent() {
+  const { Container } = useUiContext();
   const {data} = mockedResponse;
   const {lists} = data;
   let mapIndex = 1;
 
   return (
-    <AppContainer>
+    <Container>
       <div className="scrollable-ex">
         <ScrollableTabs>
           <TabItem
@@ -77,7 +78,7 @@ function ScrollableTabsComponent() {
           )}
         </ScrollableTabs>
       </div>
-    </AppContainer>
+    </Container>
   )
 }
 

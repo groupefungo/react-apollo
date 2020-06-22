@@ -1,10 +1,11 @@
 import useAppExt from "../ext";
 import React from "react";
+import useUiContext from '../../ui/UseContext';
 import CardGrid from "../../ui/CardGrid/CardGrid";
-import AppContainer from '../../ui/AppContainer/AppContainer';
 
 export default () => {
-  const {Link} = useAppExt();
+  const { Link } = useAppExt();
+  const { Container } = useUiContext();
 
   const data = [{
     id: 1,
@@ -34,7 +35,7 @@ export default () => {
   ];
 
   return (
-    <AppContainer>
+    <Container>
       <div style={{ margin: '24px 0' }}>in body</div>
 
       <div style={{ marginBottom: 24 }}>
@@ -68,9 +69,9 @@ export default () => {
         <Link to="/scrollable_tabs">To ScrollableTabs component (/scrollable_tabs)</Link>
       </div>
 
-      <div>
+      <div style={{ marginBottom: 24 }}>
         <Link to="/alertuser">Alert user</Link>
       </div>
-    </AppContainer>
+    </Container>
   );
 }

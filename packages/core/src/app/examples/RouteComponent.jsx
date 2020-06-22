@@ -1,8 +1,12 @@
 import React from "react";
-import AppContainer from '../../ui/AppContainer/AppContainer';
+import useUiContext from '../../ui/UseContext';
 
-export default () => (
-  <AppContainer>
-    <div>in route component</div>
-  </AppContainer>
-);
+export default () => {
+  const { Container } = useUiContext();
+
+  return (
+    <Container>
+      <div>in route component</div>
+    </Container>
+  );
+}
