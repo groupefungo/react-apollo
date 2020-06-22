@@ -20,12 +20,12 @@ var _default = function _default(_ref) {
       Typography = _useUiContext.Typography,
       Box = _useUiContext.Box;
 
-  return _react["default"].createElement(Box, {
+  return /*#__PURE__*/_react["default"].createElement(Box, {
     my: 3
-  }, _react["default"].createElement(Typography, {
+  }, /*#__PURE__*/_react["default"].createElement(Typography, {
     color: "secondary",
     variant: "h4"
-  }, title), _react["default"].createElement(Typography, {
+  }, title), /*#__PURE__*/_react["default"].createElement(Typography, {
     color: "textSecondary",
     variant: "h6"
   }, subtitle));

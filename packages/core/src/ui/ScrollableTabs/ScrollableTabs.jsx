@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import useUiContext from '../UseContext';
 
-export default (props) => {
+export default ({children}) => {
   const { AppBar, makeStyles, Tabs } = useUiContext();
   const [value, setValue] = useState(0);
 
@@ -41,7 +41,7 @@ export default (props) => {
           textColor="primary"
           aria-label="scrollable force tabs"
         >
-          {props.children}
+          {children}
         </Tabs>
       </AppBar>
     </div>

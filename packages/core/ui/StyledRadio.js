@@ -22,7 +22,7 @@ var _default = function _default(props) {
   var _useUiContext = (0, _UseContext["default"])(),
       Radio = _useUiContext.Radio;
 
-  return _react["default"].createElement(Radio, _extends({
+  return /*#__PURE__*/_react["default"].createElement(Radio, _extends({
     className: "filterItem",
     disableRipple: true,
     color: "default",

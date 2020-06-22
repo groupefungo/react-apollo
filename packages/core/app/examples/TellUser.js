@@ -26,9 +26,9 @@ var _default = function _default() {
     return informError('To hell, world!');
   };
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement("button", {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement("button", {
     onClick: onSuccess
-  }, "Click me to alert success"), _react["default"].createElement("button", {
+  }, "Click me to alert success"), /*#__PURE__*/_react["default"].createElement("button", {
     onClick: onError
   }, "Click me to alert error"));
 };

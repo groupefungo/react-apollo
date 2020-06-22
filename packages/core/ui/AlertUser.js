@@ -21,7 +21,7 @@ var _default = function _default() {
       makeStyles = _useUiContext.makeStyles;
 
   var Alert = function Alert(props) {
-    return _react["default"].createElement(MuiAlert, _extends({
+    return /*#__PURE__*/_react["default"].createElement(MuiAlert, _extends({
       elevation: 6,
       variant: "filled"
     }, props));
@@ -43,13 +43,13 @@ var _default = function _default() {
   var classes = useStyles();
   var msg = alert.msg,
       severity = alert.severity;
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     className: classes.root
-  }, _react["default"].createElement(Snackbar, {
+  }, /*#__PURE__*/_react["default"].createElement(Snackbar, {
     open: snackBarOpened,
     autoHideDuration: 6000,
     onClose: handleClose
-  }, _react["default"].createElement(Alert, {
+  }, /*#__PURE__*/_react["default"].createElement(Alert, {
     key: msg,
     onClose: handleClose,
     severity: severity

@@ -59,17 +59,17 @@ function MultiPurposeTable(props) {
       reverse = state.reverse;
 
   if (loading) {
-    return _react["default"].createElement(Container, null, _react["default"].createElement(TableContainer, null, _react["default"].createElement(Table, null, _react["default"].createElement(TableHead, null, _react["default"].createElement(TableRow, null, headers.map(function (header) {
-      return _react["default"].createElement(TableCell, {
+    return /*#__PURE__*/_react["default"].createElement(Container, null, /*#__PURE__*/_react["default"].createElement(TableContainer, null, /*#__PURE__*/_react["default"].createElement(Table, null, /*#__PURE__*/_react["default"].createElement(TableHead, null, /*#__PURE__*/_react["default"].createElement(TableRow, null, headers.map(function (header) {
+      return /*#__PURE__*/_react["default"].createElement(TableCell, {
         key: "".concat(header.sortKey, "_cell")
       }, header.label);
-    }))), _react["default"].createElement(TableBody, null, (0, _lodash.times)(first, function (index) {
-      return _react["default"].createElement(TableRow, {
+    }))), /*#__PURE__*/_react["default"].createElement(TableBody, null, (0, _lodash.times)(first, function (index) {
+      return /*#__PURE__*/_react["default"].createElement(TableRow, {
         key: index
       }, (0, _lodash.times)(columns.length, function (index2) {
-        return _react["default"].createElement(TableCell, {
+        return /*#__PURE__*/_react["default"].createElement(TableCell, {
           key: index2
-        }, _react["default"].createElement(_Skeleton["default"], null));
+        }, /*#__PURE__*/_react["default"].createElement(_Skeleton["default"], null));
       }));
     })))));
   }
@@ -91,19 +91,19 @@ function MultiPurposeTable(props) {
       if (isNewKey) {
         var _objectSpread2;
 
-        setState(_objectSpread({}, state, (_objectSpread2 = {}, _defineProperty(_objectSpread2, name, perPage), _defineProperty(_objectSpread2, "reverse", false), _defineProperty(_objectSpread2, "sortKey", newSortKey), _defineProperty(_objectSpread2, "before", null), _defineProperty(_objectSpread2, "after", null), _objectSpread2)));
+        setState(_objectSpread(_objectSpread({}, state), {}, (_objectSpread2 = {}, _defineProperty(_objectSpread2, name, perPage), _defineProperty(_objectSpread2, "reverse", false), _defineProperty(_objectSpread2, "sortKey", newSortKey), _defineProperty(_objectSpread2, "before", null), _defineProperty(_objectSpread2, "after", null), _objectSpread2)));
       } else if (reverse) {
-        setState(_objectSpread({}, state, _defineProperty({
+        setState(_objectSpread(_objectSpread({}, state), {}, _defineProperty({
           reverse: !reverse,
           sortKey: newSortKey
         }, name, perPage)));
       } else if (reverse == null) {
-        setState(_objectSpread({}, state, _defineProperty({
+        setState(_objectSpread(_objectSpread({}, state), {}, _defineProperty({
           reverse: !!reverse,
           sortKey: newSortKey
         }, name, perPage)));
       } else {
-        setState(_objectSpread({}, state, _defineProperty({
+        setState(_objectSpread(_objectSpread({}, state), {}, _defineProperty({
           reverse: !reverse,
           sortKey: newSortKey
         }, name, perPage)));
@@ -115,33 +115,33 @@ function MultiPurposeTable(props) {
     if (typeof column !== 'string') {
       var name = column.name,
           component = column.component;
-      return _react["default"].createElement(TableCell, {
+      return /*#__PURE__*/_react["default"].createElement(TableCell, {
         key: "".concat(column, "_").concat(object.id)
       }, component(object[name]));
     }
 
-    return _react["default"].createElement(TableCell, {
+    return /*#__PURE__*/_react["default"].createElement(TableCell, {
       key: "".concat(column, "_").concat(object.id)
     }, object[column]);
   };
 
-  return _react["default"].createElement(Container, null, _react["default"].createElement(TableContainer, null, _react["default"].createElement(Table, null, _react["default"].createElement(TableHead, null, _react["default"].createElement(TableRow, null, headers.map(function (header) {
-    return _react["default"].createElement(TableCell, {
+  return /*#__PURE__*/_react["default"].createElement(Container, null, /*#__PURE__*/_react["default"].createElement(TableContainer, null, /*#__PURE__*/_react["default"].createElement(Table, null, /*#__PURE__*/_react["default"].createElement(TableHead, null, /*#__PURE__*/_react["default"].createElement(TableRow, null, headers.map(function (header) {
+    return /*#__PURE__*/_react["default"].createElement(TableCell, {
       key: "".concat(header.sortKey, "_cell")
-    }, _react["default"].createElement(_TableSortLabel["default"], {
+    }, /*#__PURE__*/_react["default"].createElement(_TableSortLabel["default"], {
       key: "".concat(header.sortKey, "_cell_sort_label"),
       active: sortKey === header.sortKey,
       direction: reverse ? 'desc' : 'asc',
       onClick: handleSortChange(header.sortKey)
     }, header.label));
-  }))), _react["default"].createElement(TableBody, null, list.map(function (object) {
-    return _react["default"].createElement(TableRow, {
+  }))), /*#__PURE__*/_react["default"].createElement(TableBody, null, list.map(function (object) {
+    return /*#__PURE__*/_react["default"].createElement(TableRow, {
       key: object.id,
       onClick: handleRowClick(object.gid)
     }, columns.map(function (column) {
       return TableCellComponent(object, column);
     }));
-  })))), _react["default"].createElement(_MultiPurposeTablePagination["default"], {
+  })))), /*#__PURE__*/_react["default"].createElement(_MultiPurposeTablePagination["default"], {
     connectionState: connectionState,
     pageInfo: pageInfo,
     count: list.length
@@ -164,6 +164,6 @@ MultiPurposeTable.propTypes = {
   handleRowClick: PropTypes.func.isRequired
 };
 
-var _default = (0, _react.memo)(MultiPurposeTable);
+var _default = /*#__PURE__*/(0, _react.memo)(MultiPurposeTable);
 
 exports["default"] = _default;

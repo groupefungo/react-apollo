@@ -23,11 +23,15 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -52,7 +56,7 @@ var SelectEventType = function SelectEventType(_ref) {
     label: 'General'
   }];
   if (!eventTypes) return null;
-  return _react["default"].createElement(BaseSelect, {
+  return /*#__PURE__*/_react["default"].createElement(BaseSelect, {
     e: emptyValue,
     n: name,
     v: value,
@@ -81,7 +85,7 @@ var _default = function _default(props) {
         name = _ref2$target.name,
         value = _ref2$target.value;
     console.log('name', name, 'value', value);
-    setS(_objectSpread({}, s, _defineProperty({}, name, value)));
+    setS(_objectSpread(_objectSpread({}, s), {}, _defineProperty({}, name, value)));
   };
 
   var _useUiContext2 = (0, _UseContext["default"])(),
@@ -101,7 +105,7 @@ var _default = function _default(props) {
       kind = s.kind,
       eventDate = s.eventDate,
       description = s.description;
-  return _react["default"].createElement(Box, {
+  return /*#__PURE__*/_react["default"].createElement(Box, {
     mx: "auto",
     width: {
       xs: 1,
@@ -109,63 +113,63 @@ var _default = function _default(props) {
       lg: 1 / 2
     },
     alignSelf: "middle"
-  }, _react["default"].createElement("form", {
+  }, /*#__PURE__*/_react["default"].createElement("form", {
     onSubmit: function onSubmit() {
       return console.log('saved');
     }
-  }, _react["default"].createElement(Grid, {
+  }, /*#__PURE__*/_react["default"].createElement(Grid, {
     container: true,
     spacing: 3
-  }, _react["default"].createElement(Grid, {
+  }, /*#__PURE__*/_react["default"].createElement(Grid, {
     container: true,
     item: true,
     xs: 6
-  }, _react["default"].createElement(TitleControl, {
+  }, /*#__PURE__*/_react["default"].createElement(TitleControl, {
     value: title,
     onChange: formInputChanged,
     helperText: (terrors.title || []).join(','),
     required: true
-  })), _react["default"].createElement(Grid, {
+  })), /*#__PURE__*/_react["default"].createElement(Grid, {
     container: true,
     item: true,
     xs: 12,
     justify: "space-between"
-  }, _react["default"].createElement(Grid, {
+  }, /*#__PURE__*/_react["default"].createElement(Grid, {
     container: true,
     item: true,
     xs: 3
-  }, _react["default"].createElement(FormControl, {
+  }, /*#__PURE__*/_react["default"].createElement(FormControl, {
     fullWidth: true
-  }, _react["default"].createElement(InputLabel, {
+  }, /*#__PURE__*/_react["default"].createElement(InputLabel, {
     id: "event-kind-label"
-  }, "Type"), _react["default"].createElement(SelectEventType, {
+  }, "Type"), /*#__PURE__*/_react["default"].createElement(SelectEventType, {
     value: kind,
     changed: formInputChanged,
     required: true
-  }), _react["default"].createElement(FormHelperText, null, (terrors.kind || []).join(',')))), _react["default"].createElement(Grid, {
+  }), /*#__PURE__*/_react["default"].createElement(FormHelperText, null, (terrors.kind || []).join(',')))), /*#__PURE__*/_react["default"].createElement(Grid, {
     item: true
-  }, _react["default"].createElement(KeyboardDatePickerBase, {
+  }, /*#__PURE__*/_react["default"].createElement(KeyboardDatePickerBase, {
     name: "eventDate",
     value: eventDate,
     changed: function changed(v) {
-      return setS(_objectSpread({}, s, {
+      return setS(_objectSpread(_objectSpread({}, s), {}, {
         eventDate: v
       }));
     }
-  }))), _react["default"].createElement(Grid, {
+  }))), /*#__PURE__*/_react["default"].createElement(Grid, {
     container: true,
     item: true,
     xs: 12
-  }, _react["default"].createElement(DescriptionControl, {
+  }, /*#__PURE__*/_react["default"].createElement(DescriptionControl, {
     value: description,
     onChange: formInputChanged,
     helperText: (terrors.description || []).join(',')
-  })), _react["default"].createElement(Grid, {
+  })), /*#__PURE__*/_react["default"].createElement(Grid, {
     container: true,
     item: true,
     xs: 12,
     justify: "flex-end"
-  }, _react["default"].createElement(Button, {
+  }, /*#__PURE__*/_react["default"].createElement(Button, {
     type: "submit",
     variant: "contained",
     color: "primary"

@@ -29,10 +29,10 @@ var Dialog = function Dialog() {
       DialogContent = _useUiContext.DialogContent,
       DialogContentText = _useUiContext.DialogContentText;
 
-  return _react["default"].createElement(Dialog, {
+  return /*#__PURE__*/_react["default"].createElement(Dialog, {
     open: processing,
     onClose: null
-  }, _react["default"].createElement(DialogTitle, null, "Un instant svp"), _react["default"].createElement(DialogContent, null, _react["default"].createElement(DialogContentText, {
+  }, /*#__PURE__*/_react["default"].createElement(DialogTitle, null, "Un instant svp"), /*#__PURE__*/_react["default"].createElement(DialogContent, null, /*#__PURE__*/_react["default"].createElement(DialogContentText, {
     id: "dialogContentLoading"
   }, t('app.processing'))));
 };

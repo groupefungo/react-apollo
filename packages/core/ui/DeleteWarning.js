@@ -29,19 +29,19 @@ var _default = function _default(props) {
       Dialog = _useUiContext.Dialog,
       Button = _useUiContext.Button;
 
-  return _react["default"].createElement(Dialog, {
+  return /*#__PURE__*/_react["default"].createElement(Dialog, {
     open: open,
     onClose: handleCancel,
     "aria-labelledby": "alert-dialog-title",
     "aria-describedby": "alert-dialog-description"
-  }, _react["default"].createElement(_DialogTitle["default"], {
+  }, /*#__PURE__*/_react["default"].createElement(_DialogTitle["default"], {
     id: "alert-dialog-title"
-  }, "Effacer ".concat(title, "?")), _react["default"].createElement(_DialogContent["default"], null, _react["default"].createElement(_DialogContentText["default"], {
+  }, "Effacer ".concat(title, "?")), /*#__PURE__*/_react["default"].createElement(_DialogContent["default"], null, /*#__PURE__*/_react["default"].createElement(_DialogContentText["default"], {
     id: "alert-dialog-description"
-  }, "Cliquez sur le bouton supprimer pour confirmer votre d\xE9cision.")), _react["default"].createElement(_DialogActions["default"], null, _react["default"].createElement(Button, {
+  }, "Cliquez sur le bouton supprimer pour confirmer votre d\xE9cision.")), /*#__PURE__*/_react["default"].createElement(_DialogActions["default"], null, /*#__PURE__*/_react["default"].createElement(Button, {
     onClick: handleCancel,
     color: "primary"
-  }, "Annuler"), _react["default"].createElement(Button, {
+  }, "Annuler"), /*#__PURE__*/_react["default"].createElement(Button, {
     onClick: handleConfirm,
     color: "primary",
     autoFocus: true

@@ -12,7 +12,7 @@ var _AppContainer = _interopRequireDefault(require("../../ui/AppContainer/AppCon
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = function _default() {
-  return _react["default"].createElement(_AppContainer["default"], null, _react["default"].createElement("div", null, "in route component"));
+  return /*#__PURE__*/_react["default"].createElement(_AppContainer["default"], null, /*#__PURE__*/_react["default"].createElement("div", null, "in route component"));
 };
 
 exports["default"] = _default;

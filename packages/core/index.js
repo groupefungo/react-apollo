@@ -15,12 +15,12 @@ var _muithemeOverride = _interopRequireDefault(require("./muitheme-override"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var MyApp = function MyApp() {
-  return _react["default"].createElement(_Container["default"], {
+  return /*#__PURE__*/_react["default"].createElement(_Container["default"], {
     t: _muithemeOverride["default"],
     useProvideAuth: _useProvideAuth["default"]
-  }, _react["default"].createElement(_Body["default"], null));
+  }, /*#__PURE__*/_react["default"].createElement(_Body["default"], null));
 };
 
-_reactDom["default"].render(_react["default"].createElement(MyApp, null), document.getElementById('root'));
+_reactDom["default"].render( /*#__PURE__*/_react["default"].createElement(MyApp, null), document.getElementById('root'));
 
 console.log(process.env.NODE_ENV);

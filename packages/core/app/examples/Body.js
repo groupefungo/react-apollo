@@ -36,39 +36,39 @@ var _default = function _default() {
       Route = _useAppContext.Route,
       Switch = _useAppContext.Switch;
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_AppLayout["default"], null), _react["default"].createElement(Switch, null, _react["default"].createElement(Route, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_AppLayout["default"], null), /*#__PURE__*/_react["default"].createElement(Switch, null, /*#__PURE__*/_react["default"].createElement(Route, {
     component: _RootComponent["default"],
     path: '/',
     exact: true
-  }), _react["default"].createElement(Route, {
+  }), /*#__PURE__*/_react["default"].createElement(Route, {
     component: _RouteComponent["default"],
     path: '/rc',
     exact: true
-  }), _react["default"].createElement(Route, {
+  }), /*#__PURE__*/_react["default"].createElement(Route, {
     component: _FormComponent["default"],
     path: '/form',
     exact: true
-  }), _react["default"].createElement(Route, {
+  }), /*#__PURE__*/_react["default"].createElement(Route, {
     component: _DatePickerComponent["default"],
     path: '/datepicker',
     exact: true
-  }), _react["default"].createElement(Route, {
+  }), /*#__PURE__*/_react["default"].createElement(Route, {
     component: _MultiPuposeTableComponent["default"],
     path: '/multipurpose_table',
     exact: true
-  }), _react["default"].createElement(Route, {
+  }), /*#__PURE__*/_react["default"].createElement(Route, {
     component: _SimpleTableComponent["default"],
     path: '/simple_table',
     exact: true
-  }), _react["default"].createElement(Route, {
+  }), /*#__PURE__*/_react["default"].createElement(Route, {
     component: _ScrollableTabsComponent["default"],
     path: '/scrollable_tabs',
     exact: true
-  }), _react["default"].createElement(Route, {
+  }), /*#__PURE__*/_react["default"].createElement(Route, {
     component: _TellUser["default"],
     path: '/alertUser',
     exact: true
-  })), _react["default"].createElement(_AlertUser["default"], null));
+  })), /*#__PURE__*/_react["default"].createElement(_AlertUser["default"], null));
 };
 
 exports["default"] = _default;

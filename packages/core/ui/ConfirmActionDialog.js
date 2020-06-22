@@ -38,23 +38,23 @@ var _default = function _default(_ref) {
     setOpen(false);
   };
 
-  return _react["default"].createElement(Dialog, {
+  return /*#__PURE__*/_react["default"].createElement(Dialog, {
     open: open,
     onClose: function onClose() {
       return setOpen(false);
     },
     "aria-labelledby": "alert-dialog-title",
     "aria-describedby": "alert-dialog-description"
-  }, _react["default"].createElement(DialogTitle, {
+  }, /*#__PURE__*/_react["default"].createElement(DialogTitle, {
     id: "alert-dialog-title"
-  }, "".concat(action && action.name, "?")), _react["default"].createElement(DialogContent, null, _react["default"].createElement(DialogContentText, {
+  }, "".concat(action && action.name, "?")), /*#__PURE__*/_react["default"].createElement(DialogContent, null, /*#__PURE__*/_react["default"].createElement(DialogContentText, {
     id: "alert-dialog-description"
-  }, action && action.confirmMessage)), _react["default"].createElement(DialogActions, null, _react["default"].createElement(Button, {
+  }, action && action.confirmMessage)), /*#__PURE__*/_react["default"].createElement(DialogActions, null, /*#__PURE__*/_react["default"].createElement(Button, {
     onClick: function onClick() {
       return setOpen(false);
     },
     color: "primary"
-  }, t('cancel')), _react["default"].createElement(Button, {
+  }, t('cancel')), /*#__PURE__*/_react["default"].createElement(Button, {
     onClick: confirmed,
     color: "primary",
     autoFocus: true

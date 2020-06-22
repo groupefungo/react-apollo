@@ -465,7 +465,7 @@ var ext = {
 };
 
 var _default = function _default() {
-  return _objectSpread({}, ext, {
+  return _objectSpread(_objectSpread({}, ext), {}, {
     DrawerState: (0, _UseDrawer["default"])(),
     SnackBar: (0, _UseSnackBar["default"])()
   });

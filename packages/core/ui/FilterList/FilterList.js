@@ -30,12 +30,12 @@ var _default = function _default(props) {
         logo = filter.logo;
     if (!label && !title && !name) return null;
 
-    var checkedIcon = _react["default"].createElement(GroupWorkIcon, {
+    var checkedIcon = /*#__PURE__*/_react["default"].createElement(GroupWorkIcon, {
       color: "primary",
       fontSize: "inherit"
     });
 
-    var icon = _react["default"].createElement(GroupWorkIcon, {
+    var icon = /*#__PURE__*/_react["default"].createElement(GroupWorkIcon, {
       fontSize: "inherit",
       color: "disabled"
     });
@@ -44,12 +44,12 @@ var _default = function _default(props) {
         url = _ref.url;
 
     if (url) {
-      checkedIcon = _react["default"].createElement("img", {
+      checkedIcon = /*#__PURE__*/_react["default"].createElement("img", {
         src: url,
         height: 50,
         width: 50
       });
-      icon = _react["default"].createElement("img", {
+      icon = /*#__PURE__*/_react["default"].createElement("img", {
         src: url,
         height: 50,
         width: 50,
@@ -59,13 +59,13 @@ var _default = function _default(props) {
       });
     }
 
-    return _react["default"].createElement(FormControlLabel, {
+    return /*#__PURE__*/_react["default"].createElement(FormControlLabel, {
       key: id,
       value: id,
       onClick: function onClick() {
         return _onClick(id);
       },
-      control: _react["default"].createElement(_StyledRadio["default"], {
+      control: /*#__PURE__*/_react["default"].createElement(_StyledRadio["default"], {
         checked: id === selectedValue,
         checkedIcon: checkedIcon,
         icon: icon

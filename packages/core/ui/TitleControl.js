@@ -24,7 +24,7 @@ var _default = function _default(_ref) {
   var _useUiContext = (0, _UseContext["default"])(),
       TextField = _useUiContext.TextField;
 
-  return _react["default"].createElement(TextField, _extends({
+  return /*#__PURE__*/_react["default"].createElement(TextField, _extends({
     className: className,
     fullWidth: true,
     label: "Titre",

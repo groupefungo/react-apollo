@@ -13,14 +13,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 var _default = function _default(_ref) {
   var error = _ref.error;
-  return error.networkError && _react["default"].createElement(_Error["default"], {
+  return error.networkError && /*#__PURE__*/_react["default"].createElement(_Error["default"], {
     msg: "".concat(error.networkError.response.url, ": ").concat(error.networkError.response.status)
   }) || error.graphQLErrors && error.graphQLErrors.map(function (_ref2, _) {
     var message = _ref2.message;
-    return _react["default"].createElement(_Error["default"], {
+    return /*#__PURE__*/_react["default"].createElement(_Error["default"], {
       msg: message
     });
-  }) || _react["default"].createElement(_Error["default"], {
+  }) || /*#__PURE__*/_react["default"].createElement(_Error["default"], {
     msg: error
   });
 };

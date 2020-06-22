@@ -44,9 +44,9 @@ var _default = function _default(_ref) {
       if (el) el.innerHTML = "Vous n'avez pas le droit.";
     }
   });
-  return _react["default"].createElement(Route, _extends({}, rest, {
+  return /*#__PURE__*/_react["default"].createElement(Route, _extends({}, rest, {
     render: function render(props) {
-      return giveAccess ? Component ? _react["default"].createElement(Component, _extends({}, props, rest)) : children : _react["default"].createElement(_Error["default"], {
+      return giveAccess ? Component ? /*#__PURE__*/_react["default"].createElement(Component, _extends({}, props, rest)) : children : /*#__PURE__*/_react["default"].createElement(_Error["default"], {
         id: "restrictedError",
         msg: ""
       });

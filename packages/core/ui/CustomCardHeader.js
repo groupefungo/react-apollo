@@ -36,21 +36,21 @@ var _default = function _default(_ref) {
     return disabled ? "text.disabled" : "secondary.main";
   };
 
-  return _react["default"].createElement(Grid, {
+  return /*#__PURE__*/_react["default"].createElement(Grid, {
     container: true,
     justify: "space-between",
     spacing: 2
-  }, _react["default"].createElement(Grid, {
+  }, /*#__PURE__*/_react["default"].createElement(Grid, {
     item: true
-  }, _react["default"].createElement(Box, {
+  }, /*#__PURE__*/_react["default"].createElement(Box, {
     bgcolor: backgroundColor(),
     py: 0.5,
     px: 1,
     borderRadius: 8,
     color: "background.paper"
-  }, date.toLocaleDateString('fr', options))), _react["default"].createElement(Grid, {
+  }, date.toLocaleDateString('fr', options))), /*#__PURE__*/_react["default"].createElement(Grid, {
     item: true
-  }, _react["default"].createElement(Typography, {
+  }, /*#__PURE__*/_react["default"].createElement(Typography, {
     color: "textSecondary"
   }, category)));
 };

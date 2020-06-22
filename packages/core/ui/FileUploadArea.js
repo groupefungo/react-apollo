@@ -32,26 +32,26 @@ var _default = function _default(_ref) {
       Paper = _useUiContext.Paper,
       Box = _useUiContext.Box;
 
-  return _react["default"].createElement(Grid, {
+  return /*#__PURE__*/_react["default"].createElement(Grid, {
     container: true,
     spacing: 1
-  }, _react["default"].createElement(Grid, {
+  }, /*#__PURE__*/_react["default"].createElement(Grid, {
     container: true,
     item: true,
     sm: 12
-  }, _react["default"].createElement(Typography, {
+  }, /*#__PURE__*/_react["default"].createElement(Typography, {
     variant: "caption",
     color: "textSecondary"
-  }, t('uploaded_files'))), _react["default"].createElement(Grid, {
+  }, t('uploaded_files'))), /*#__PURE__*/_react["default"].createElement(Grid, {
     container: true,
     item: true
-  }, _react["default"].createElement(Box, {
+  }, /*#__PURE__*/_react["default"].createElement(Box, {
     mb: 1
-  }, _react["default"].createElement(Paper, {
+  }, /*#__PURE__*/_react["default"].createElement(Paper, {
     elevation: 0
-  }, _react["default"].createElement(Box, {
+  }, /*#__PURE__*/_react["default"].createElement(Box, {
     padding: 1
-  }, _react["default"].createElement(_ChipsArray["default"], {
+  }, /*#__PURE__*/_react["default"].createElement(_ChipsArray["default"], {
     chipClicked: chipClicked,
     chipsData: chipsData,
     chipDeleted: chipDeleted

@@ -65,7 +65,7 @@ function MultiPurposeTablePagination(props) {
   var handleRowChange = function handleRowChange(_ref) {
     var target = _ref.target;
     var value = target.value;
-    setState(_objectSpread({}, initialConnectionFilters, {
+    setState(_objectSpread(_objectSpread({}, initialConnectionFilters), {}, {
       sortKey: sortKey,
       reverse: reverse,
       first: value
@@ -74,7 +74,7 @@ function MultiPurposeTablePagination(props) {
 
   var handleBack = function handleBack() {
     var perPage = first || last;
-    setState(_objectSpread({}, connection, {
+    setState(_objectSpread(_objectSpread({}, connection), {}, {
       before: startCursor,
       after: null,
       last: perPage,
@@ -84,7 +84,7 @@ function MultiPurposeTablePagination(props) {
 
   var handleNext = function handleNext() {
     var perPage = first || last;
-    setState(_objectSpread({}, connection, {
+    setState(_objectSpread(_objectSpread({}, connection), {}, {
       before: null,
       after: endCursor,
       first: perPage,
@@ -92,34 +92,34 @@ function MultiPurposeTablePagination(props) {
     }));
   };
 
-  return _react["default"].createElement(_TableFooter["default"], {
+  return /*#__PURE__*/_react["default"].createElement(_TableFooter["default"], {
     component: "div"
-  }, _react["default"].createElement("div", {
+  }, /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'center'
     },
     id: "multipurpose_table_pagination_wrapper"
-  }, _react["default"].createElement(SelectMui, {
+  }, /*#__PURE__*/_react["default"].createElement(SelectMui, {
     id: "multipurpose_table_pagination_rows_per_page_select",
     name: first ? 'first' : 'last',
     label: "Rows Per Page",
     onChange: handleRowChange,
     options: perPageOptions,
     value: first || last
-  }), _react["default"].createElement("div", {
+  }), /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       display: 'flex'
     }
-  }, _react["default"].createElement(IconButton, {
+  }, /*#__PURE__*/_react["default"].createElement(IconButton, {
     id: "multipurpose_table_pagination_previous_page_button",
     disabled: !hasPreviousPage,
     onClick: handleBack
-  }, _react["default"].createElement(_ArrowBack["default"], null)), _react["default"].createElement(IconButton, {
+  }, /*#__PURE__*/_react["default"].createElement(_ArrowBack["default"], null)), /*#__PURE__*/_react["default"].createElement(IconButton, {
     id: "multipurpose_table_pagination_next_page_button",
     disabled: !hasNextPage,
     onClick: handleNext
-  }, _react["default"].createElement(_ArrowForward["default"], null)))));
+  }, /*#__PURE__*/_react["default"].createElement(_ArrowForward["default"], null)))));
 }
 
 MultiPurposeTablePagination.propTypes = {
@@ -127,6 +127,6 @@ MultiPurposeTablePagination.propTypes = {
   pageInfo: PropTypes.object.isRequired
 };
 
-var _default = (0, _react.memo)(MultiPurposeTablePagination);
+var _default = /*#__PURE__*/(0, _react.memo)(MultiPurposeTablePagination);
 
 exports["default"] = _default;

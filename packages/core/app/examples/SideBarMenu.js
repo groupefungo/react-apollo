@@ -27,34 +27,34 @@ var SideBarMenu = function SideBarMenu() {
       TemporaryDrawer = _useUiContext.TemporaryDrawer;
 
   var topItems = function topItems() {
-    return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(ListItem, {
+    return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(ListItem, {
       button: true,
       key: "0"
-    }, _react["default"].createElement(ListItemText, {
+    }, /*#__PURE__*/_react["default"].createElement(ListItemText, {
       primary: "Home",
       onClick: function onClick() {
         return router.push('/');
       }
-    })), _react["default"].createElement(Divider, null), _react["default"].createElement(ListItem, {
+    })), /*#__PURE__*/_react["default"].createElement(Divider, null), /*#__PURE__*/_react["default"].createElement(ListItem, {
       button: true,
       key: "1"
-    }, _react["default"].createElement(ListItemText, {
+    }, /*#__PURE__*/_react["default"].createElement(ListItemText, {
       primary: "Rc",
       onClick: function onClick() {
         return router.push('/rc');
       }
-    })), _react["default"].createElement(Divider, null), _react["default"].createElement(ListItem, {
+    })), /*#__PURE__*/_react["default"].createElement(Divider, null), /*#__PURE__*/_react["default"].createElement(ListItem, {
       button: true,
       key: "2"
-    }, _react["default"].createElement(ListItemIcon, null, _react["default"].createElement(MailIcon, null)), _react["default"].createElement(ListItemText, {
+    }, /*#__PURE__*/_react["default"].createElement(ListItemIcon, null, /*#__PURE__*/_react["default"].createElement(MailIcon, null)), /*#__PURE__*/_react["default"].createElement(ListItemText, {
       primary: "Form",
       onClick: function onClick() {
         return router.push('/form');
       }
-    })), _react["default"].createElement(ListItem, {
+    })), /*#__PURE__*/_react["default"].createElement(ListItem, {
       button: true,
       key: "3"
-    }, _react["default"].createElement(ListItemIcon, null), _react["default"].createElement(ListItemText, {
+    }, /*#__PURE__*/_react["default"].createElement(ListItemIcon, null), /*#__PURE__*/_react["default"].createElement(ListItemText, {
       primary: "DatePicker",
       onClick: function onClick() {
         return router.push('/datepicker');
@@ -62,7 +62,7 @@ var SideBarMenu = function SideBarMenu() {
     })));
   };
 
-  return _react["default"].createElement(TemporaryDrawer, {
+  return /*#__PURE__*/_react["default"].createElement(TemporaryDrawer, {
     bottomItems: [],
     topItems: topItems()
   });

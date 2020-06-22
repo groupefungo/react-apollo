@@ -40,7 +40,7 @@ var _default = function _default(_ref) {
     };
   };
 
-  return _react["default"].createElement(Button, {
+  return /*#__PURE__*/_react["default"].createElement(Button, {
     type: "button",
     variant: "contained",
     color: "secondary",
