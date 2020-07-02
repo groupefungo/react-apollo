@@ -42,6 +42,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var ext = {
   gql: _graphqlTag["default"],
   useQuery: _reactApollo.useQuery,
+  useLazyQuery: _reactApollo.useLazyQuery,
   useMutation: _reactApollo.useMutation,
   Route: _reactRouterDom.Route,
   Switch: _reactRouterDom.Switch,

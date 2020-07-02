@@ -1,5 +1,5 @@
 import gql from 'graphql-tag';
-import {useMutation, useQuery, ApolloProvider} from 'react-apollo';
+import {useMutation, useQuery, useLazyQuery, ApolloProvider} from 'react-apollo';
 import {
   Route, Switch, Link, Redirect, BrowserRouter as Router, useParams, useLocation, useHistory, useRouteMatch
 } from 'react-router-dom';
@@ -15,6 +15,7 @@ import useTranslate from "../UseTranslate";
 const ext = {
   gql,
   useQuery,
+  useLazyQuery,
   useMutation,
   Route,
   Switch,
