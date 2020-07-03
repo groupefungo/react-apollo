@@ -1,8 +1,12 @@
 import React from 'react';
 import useUiContext from './UseContext';
+import {useAppContext} from "../app/UseContext/useAppContext";
+import DialogActions from "./SpeedDialMenu/DialogActions";
 
-export default ({ headers, rows, columns, handleRowClick }) => {
-  const { makeStyles } = useUiContext();
+export default ({rows, translationNamespace, columns, rowObjectKey, rowClicked, actions}) => {
+  const {useTranslate} = useAppContext();
+  const {t} = useTranslate();
+  const {makeStyles} = useUiContext();
   const useStyles = makeStyles({
     table: {
       minWidth: 650,
@@ -14,30 +18,59 @@ export default ({ headers, rows, columns, handleRowClick }) => {
     TableContainer, Table, TableHead, TableRow, TableCell, TableBody, Paper,
   } = useUiContext();
 
-  const TableCellComponent = (object, column) => {
-    if (typeof column !== 'string') {
-      const {name, component} = column;
-      return <TableCell key={`${column}_${object.id}`}>{component(object[name])}</TableCell>;
+  const columnName = (c) => {
+    if (typeof c === "string") {
+      return c;
     }
-    return <TableCell key={`${column}_${object.id}`}>{object[column]}</TableCell>;
+
+    const {name} = c;
+    return name;
+  };
+
+  const columnNameValue = (c, o) => {
+    if (typeof x === "string") {
+      return [c, o[c]];
+    }
+
+    const name = columnName(c);
+    const {value} = c;
+    let v = value;
+    if (v && typeof v === "function") {
+      v = v(o);
+    } else {
+      if (!v) v = o[name];
+    }
+    return [name, v];
+  };
+
+  const TableCellComponent = (object, column) => {
+    const [n, v] = columnNameValue(column, object);
+    return <TableCell key={`col-${n}`} onClick={() => ((rowClicked && rowClicked(object))||null)}>{v}</TableCell>;
   };
 
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
-          <TableRow>
-            {headers.map((header) => (
-              <TableCell>
-                {header.label}
-              </TableCell>
-            ))}
+          <TableRow key="headers">
+            {columns.map((col) => {
+              const cname = columnName(col);
+              return (
+                <TableCell key={`header-${cname}`}>{t(`${translationNamespace}.${cname}`)}</TableCell>
+              );
+            })}
+            {actions && (
+              <TableCell key={`header-actions`}>{t('actions')}</TableCell>
+            )}
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((object) => (
-            <TableRow key={object.id} onClick={handleRowClick(object.id)}>
+            <TableRow key={`row-${object[rowObjectKey]}`}>
               {columns.map((column) => TableCellComponent(object, column))}
+              {actions && (
+                <TableCell key={`col-actions-${object.id}`}><DialogActions object={object} actions={actions}/></TableCell>
+              )}
             </TableRow>
           ))}
         </TableBody>

@@ -101,6 +101,8 @@ var _DialogContent = _interopRequireDefault(require("@material-ui/core/DialogCon
 
 var _Dialog = _interopRequireDefault(require("@material-ui/core/Dialog"));
 
+var _DialogActions = _interopRequireDefault(require("@material-ui/core/DialogActions"));
+
 var _DialogContentText = _interopRequireDefault(require("@material-ui/core/DialogContentText"));
 
 var _DialogTitle = _interopRequireDefault(require("@material-ui/core/DialogTitle"));
@@ -189,7 +191,11 @@ var _makeStyles = _interopRequireDefault(require("@material-ui/core/styles/makeS
 
 var _Menu = _interopRequireDefault(require("@material-ui/icons/Menu"));
 
+var _Menu2 = _interopRequireDefault(require("@material-ui/core/Menu"));
+
 var _MenuItem = _interopRequireDefault(require("@material-ui/core/MenuItem"));
+
+var _MoreVert = _interopRequireDefault(require("@material-ui/icons/MoreVert"));
 
 var _MultiPurposeTable = _interopRequireDefault(require("../MultiPurposeTable"));
 
@@ -202,6 +208,8 @@ var _Paper = _interopRequireDefault(require("@material-ui/core/Paper"));
 var _PeopleAlt = _interopRequireDefault(require("@material-ui/icons/PeopleAlt"));
 
 var _PersonSharp = _interopRequireDefault(require("@material-ui/icons/PersonSharp"));
+
+var _reactResponsivePinchZoomPan = _interopRequireDefault(require("@groupefungo/react-responsive-pinch-zoom-pan"));
 
 var _PostAdd = _interopRequireDefault(require("@material-ui/icons/PostAdd"));
 
@@ -232,6 +240,12 @@ var _SimpleTabs = _interopRequireDefault(require("../SimpleTabs"));
 var _Snackbar = _interopRequireDefault(require("@material-ui/core/Snackbar"));
 
 var _Skeleton = _interopRequireDefault(require("@material-ui/lab/Skeleton"));
+
+var _SpeedDial = _interopRequireDefault(require("@material-ui/lab/SpeedDial"));
+
+var _SpeedDialAction = _interopRequireDefault(require("@material-ui/lab/SpeedDialAction"));
+
+var _SpeedDialIcon = _interopRequireDefault(require("@material-ui/lab/SpeedDialIcon"));
 
 var _StyledRadio = _interopRequireDefault(require("../StyledRadio"));
 
@@ -346,6 +360,7 @@ var ext = {
   DeleteWarning: _DeleteWarning["default"],
   DescriptionControl: _DescriptionControl["default"],
   Dialog: _Dialog["default"],
+  DialogActions: _DialogActions["default"],
   DialogContent: _DialogContent["default"],
   DialogContentText: _DialogContentText["default"],
   DialogTitle: _DialogTitle["default"],
@@ -391,8 +406,10 @@ var ext = {
   ListItemAvatar: _ListItemAvatar["default"],
   MailIcon: _Mail["default"],
   makeStyles: _makeStyles["default"],
-  Menu: _Menu["default"],
+  Menu: _Menu2["default"],
+  MenuIcon: _Menu["default"],
   MenuItem: _MenuItem["default"],
+  MoreVertIcon: _MoreVert["default"],
   MuiPickersUtilsProvider: _pickers.MuiPickersUtilsProvider,
   MuiAlert: _Alert["default"],
   MultiPurposeTable: _MultiPurposeTable["default"],
@@ -401,6 +418,7 @@ var ext = {
   SimpleTable: _SimpleTable["default"],
   Paper: _Paper["default"],
   PeopleAltIcon: _PeopleAlt["default"],
+  PinchZoomPan: _reactResponsivePinchZoomPan["default"],
   PersonIcon: _PersonSharp["default"],
   PostAddIcon: _PostAdd["default"],
   Popper: _Popper["default"],
@@ -416,6 +434,9 @@ var ext = {
   SimpleTabs: _SimpleTabs["default"],
   Snackbar: _Snackbar["default"],
   Skeleton: _Skeleton["default"],
+  SpeedDial: _SpeedDial["default"],
+  SpeedDialAction: _SpeedDialAction["default"],
+  SpeedDialIcon: _SpeedDialIcon["default"],
   StyledRadio: _StyledRadio["default"],
   SwapVertIcon: _SwapVert["default"],
   SyncIcon: _Sync["default"],

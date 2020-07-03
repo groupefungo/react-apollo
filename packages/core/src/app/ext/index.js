@@ -11,6 +11,7 @@ import useCompleteState from '../UseCompleteState';
 import useBack from "../UseBack";
 import useProcessing from "../UseProcessing";
 import useTranslate from "../UseTranslate";
+import capitalize from "../capitalize";
 
 const ext = {
   gql,
@@ -32,7 +33,8 @@ const ext = {
   useLocation,
   useHistory,
   useRouteMatch,
-  useTranslate
+  useTranslate,
+  capitalize
 };
 
 export default () => (

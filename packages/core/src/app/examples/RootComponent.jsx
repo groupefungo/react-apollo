@@ -1,9 +1,11 @@
 import useAppExt from "../ext";
 import React from "react";
+import useUiContext from '../../ui/UseContext';
 import CardGrid from "../../ui/CardGrid/CardGrid";
 
 export default () => {
-  const {Link} = useAppExt();
+  const { Link } = useAppExt();
+  const { Container } = useUiContext();
 
   const data = [{
     id: 1,
@@ -33,16 +35,20 @@ export default () => {
   ];
 
   return (
-    <>
-      <CardGrid
-        data={data}
-        addLabel="un événement"
-        resourcesPath="/events"
-        action={(obj) => () => console.log('action clicked', obj.id)}
-        actionLabel="View this object"
-        dateHandler={(e) => e.eventDate}
-        categoryHandler={(e) => e.kind}
-      />
+    <Container>
+      <div style={{ margin: '24px 0' }}>in body</div>
+
+      <div style={{ marginBottom: 24 }}>
+        <CardGrid
+          data={data}
+          addLabel="un événement"
+          resourcesPath="/events"
+          action={(obj) => () => console.log('action clicked', obj.id)}
+          actionLabel="View this object"
+          dateHandler={(e) => e.eventDate}
+          categoryHandler={(e) => e.kind}
+        />
+      </div>
 
       <div>
         <Link to="/rc">To route component (/rc)</Link>
@@ -60,8 +66,12 @@ export default () => {
       </div>
 
       <div>
+        <Link to="/scrollable_tabs">To ScrollableTabs component (/scrollable_tabs)</Link>
+      </div>
+
+      <div style={{ marginBottom: 24 }}>
         <Link to="/alertuser">Alert user</Link>
       </div>
-    </>
+    </Container>
   );
 }

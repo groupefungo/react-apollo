@@ -11,11 +11,9 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _reactDropzone = require("react-dropzone");
 
-var _Typography = _interopRequireDefault(require("@material-ui/core/Typography"));
-
 var _UseContext = _interopRequireDefault(require("./UseContext"));
 
-var _Cancel = _interopRequireDefault(require("@material-ui/icons/Cancel"));
+var _useAppContext2 = require("../app/UseContext/useAppContext");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -106,14 +104,14 @@ var acceptStyle = {
 var rejectStyle = {
   borderColor: '#ff1744'
 };
-var bigContainer = {
-  display: 'flex',
-  borderColor: '#cccc',
-  borderWidth: 2,
-  borderRadius: 2
-};
 
 var _default = function _default(props) {
+  var _useAppContext = (0, _useAppContext2.useAppContext)(),
+      useTranslate = _useAppContext.useTranslate;
+
+  var _useTranslate = useTranslate(),
+      t = _useTranslate.t;
+
   var _useState = (0, _react.useState)(-1),
       _useState2 = _slicedToArray(_useState, 2),
       deleteButton = _useState2[0],
@@ -123,7 +121,7 @@ var _default = function _default(props) {
       file = props.file,
       multiple = props.multiple,
       _props$placeHolder = props.placeHolder,
-      placeHolder = _props$placeHolder === void 0 ? 'Déposez-vos fichiers ici' : _props$placeHolder;
+      placeHolder = _props$placeHolder === void 0 ? t('deposit_files') : _props$placeHolder;
 
   var _ref = file || {},
       filename = _ref.filename;
@@ -144,7 +142,9 @@ var _default = function _default(props) {
 
   var _useUiContext = (0, _UseContext["default"])(),
       Fade = _useUiContext.Fade,
-      IconButton = _useUiContext.IconButton;
+      IconButton = _useUiContext.IconButton,
+      CancelIcon = _useUiContext.CancelIcon,
+      Typography = _useUiContext.Typography;
 
   var _useState3 = (0, _react.useState)(initFiles),
       _useState4 = _slicedToArray(_useState3, 2),
@@ -213,7 +213,7 @@ var _default = function _default(props) {
         left: 20,
         bottom: 20
       }
-    }, _react["default"].createElement(_Cancel["default"], {
+    }, _react["default"].createElement(CancelIcon, {
       fontSize: "small",
       color: "primary"
     })))), _react["default"].createElement("div", {
@@ -223,19 +223,13 @@ var _default = function _default(props) {
       src: file.url || file.preview,
       style: img
     })));
-  }); // ** Voir si c'est problematique **
-  // useEffect(() => () => {
-  //   // Make sure to revoke the data uris to avoid memory leaks
-  //   files.forEach((file) => URL.revokeObjectURL(file.preview));
-  //   console.log(file);
-  // }, [files]);
-
+  });
   return _react["default"].createElement("section", {
     className: "container"
-  }, thumbs.length > 0 && _react["default"].createElement(_Typography["default"], {
+  }, thumbs.length > 0 && _react["default"].createElement(Typography, {
     variant: "caption",
     color: "textSecondary"
-  }, "Images de diaporama"), _react["default"].createElement("aside", {
+  }, t('images')), _react["default"].createElement("aside", {
     style: thumbsContainer
   }, thumbs), _react["default"].createElement("div", getRootProps({
     style: style

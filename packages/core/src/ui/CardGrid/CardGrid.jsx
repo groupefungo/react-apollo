@@ -37,28 +37,26 @@ export default (props) => {
     const {Grid, Box} = useUiContext();
 
     return (
-        <Box display="flex" flexGrow={1} mt={4}>
-            <Grid container spacing={3} alignItems="stretch">
-                {
-                    data.map((d) => (
-                        <Grid key={d.id} item xs={xs} sm={sm} md={md} lg={lg}>
-                            <CardControl
-                                key={d.id}
-                                id={d.id}
-                                title={(titleHandler && titleHandler(d)) || d.title}
-                                description={(descriptionHandler && descriptionHandler(d)) || d.description}
-                                category={categoryHandler && categoryHandler(d)}
-                                action={ action? action(d) : () => router.push(`${resourcesPath}/${d.id}`)}
-                                actionLabel={actionLabel || "Détail"}
-                                files={d.files}
-                                date={(dateHandler && dateHandler(d)) || d.createdAt}
-                                deleteCardFunction={deleteCardFunction}
-                                disabled={(disabledHandler && disabledHandler(d))}
-                            />
-                        </Grid>
-                    ))
-                }
-            </Grid>
-        </Box>
+        <Grid container spacing={3} alignItems="stretch">
+            {
+                data.map((d) => (
+                    <Grid key={d.id} item xs={xs} sm={sm} md={md} lg={lg}>
+                        <CardControl
+                            key={d.id}
+                            id={d.id}
+                            title={(titleHandler && titleHandler(d)) || d.title}
+                            description={(descriptionHandler && descriptionHandler(d)) || d.description}
+                            category={categoryHandler && categoryHandler(d)}
+                            action={ action? action(d) : () => router.push(`${resourcesPath}/${d.id}`)}
+                            actionLabel={actionLabel || "Détail"}
+                            files={d.files}
+                            date={(dateHandler && dateHandler(d)) || d.createdAt}
+                            deleteCardFunction={deleteCardFunction}
+                            disabled={(disabledHandler && disabledHandler(d))}
+                        />
+                    </Grid>
+                ))
+            }
+        </Grid>
     );
 };

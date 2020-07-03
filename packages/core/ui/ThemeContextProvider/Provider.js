@@ -27,7 +27,6 @@ var _default = function _default(_ref) {
   var ext = (0, _ext["default"])();
   var ThemeProvider = ext.ThemeProvider,
       createMuiTheme = ext.createMuiTheme,
-      Container = ext.Container,
       CssBaseline = ext.CssBaseline,
       MuiPickersUtilsProvider = ext.MuiPickersUtilsProvider,
       DateFnsUtils = ext.DateFnsUtils;
@@ -38,10 +37,7 @@ var _default = function _default(_ref) {
     theme: theme
   }, _react["default"].createElement(MuiPickersUtilsProvider, {
     utils: DateFnsUtils
-  }, _react["default"].createElement(Container, {
-    fixed: true,
-    disableGutters: true
-  }, _react["default"].createElement(CssBaseline, null), children))));
+  }, _react["default"].createElement(CssBaseline, null), children)));
 };
 
 exports["default"] = _default;

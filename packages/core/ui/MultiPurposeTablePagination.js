@@ -19,6 +19,8 @@ var _ArrowForward = _interopRequireDefault(require("@material-ui/icons/ArrowForw
 
 var _TableFooter = _interopRequireDefault(require("@material-ui/core/TableFooter"));
 
+var _TablePagination = _interopRequireDefault(require("@material-ui/core/TablePagination"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -94,7 +96,8 @@ function MultiPurposeTablePagination(props) {
     component: "div"
   }, _react["default"].createElement("div", {
     style: {
-      display: 'flex'
+      display: 'flex',
+      justifyContent: 'center'
     },
     id: "multipurpose_table_pagination_wrapper"
   }, _react["default"].createElement(SelectMui, {

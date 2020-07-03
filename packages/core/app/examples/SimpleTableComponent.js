@@ -86,6 +86,7 @@ var mockedResponse = {
 
 function SimpleTableComponent() {
   var _useUiContext = (0, _UseContext["default"])(),
+      Container = _useUiContext.Container,
       SimpleTable = _useUiContext.SimpleTable,
       Chip = _useUiContext.Chip;
 
@@ -115,12 +116,12 @@ function SimpleTableComponent() {
 
   var data = mockedResponse.data;
   var clients = data.clients;
-  return _react["default"].createElement(SimpleTable, {
+  return _react["default"].createElement(Container, null, _react["default"].createElement(SimpleTable, {
     rows: clients,
     headers: headers,
     columns: columns,
     handleRowClick: handleRowClick
-  });
+  }));
 }
 
 var _default = SimpleTableComponent;

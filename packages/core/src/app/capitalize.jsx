@@ -1,0 +1,1 @@
+export default ([i, ...rest]) => i.toUpperCase() + rest.join('');

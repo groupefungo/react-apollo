@@ -23,6 +23,8 @@ var _DatePickerComponent = _interopRequireDefault(require("./DatePickerComponent
 
 var _SimpleTableComponent = _interopRequireDefault(require("./SimpleTableComponent"));
 
+var _ScrollableTabsComponent = _interopRequireDefault(require("./ScrollableTabsComponent"));
+
 var _AlertUser = _interopRequireDefault(require("../../ui/AlertUser"));
 
 var _TellUser = _interopRequireDefault(require("./TellUser"));
@@ -34,7 +36,7 @@ var _default = function _default() {
       Route = _useAppContext.Route,
       Switch = _useAppContext.Switch;
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_AppLayout["default"], null), _react["default"].createElement("div", null, "in body"), _react["default"].createElement(Switch, null, _react["default"].createElement(Route, {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_AppLayout["default"], null), _react["default"].createElement(Switch, null, _react["default"].createElement(Route, {
     component: _RootComponent["default"],
     path: '/',
     exact: true
@@ -57,6 +59,10 @@ var _default = function _default() {
   }), _react["default"].createElement(Route, {
     component: _SimpleTableComponent["default"],
     path: '/simple_table',
+    exact: true
+  }), _react["default"].createElement(Route, {
+    component: _ScrollableTabsComponent["default"],
+    path: '/scrollable_tabs',
     exact: true
   }), _react["default"].createElement(Route, {
     component: _TellUser["default"],

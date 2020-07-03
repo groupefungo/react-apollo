@@ -13,6 +13,17 @@ export const useRouter = () => {
   const pushPath = (path) => push(path);
   const pushedPath = (path) => () => pushPath(path);
 
+  const useRouteParam = (paramName, matchUrl) => {
+    const { useRouteMatch } = useAppContext();
+    const urlRouteMatch = useRouteMatch(`${matchUrl}`);
+    let value = null;
+    if (urlRouteMatch) {
+      const { params } = urlRouteMatch;
+      value = params[paramName];
+    }
+    return value;
+  };
+
   // Return our custom router object
   // Memoize so that a new object is only returned if something changes
   return React.useMemo(() => (
@@ -32,6 +43,7 @@ export const useRouter = () => {
       history,
       pushPath,
       pushedPath,
+      useRouteParam
     }
   ), [params, match, location, history]);
 }

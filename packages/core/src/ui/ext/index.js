@@ -46,6 +46,7 @@ import DeleteWarning from "../DeleteWarning";
 import DescriptionControl from "../DescriptionControl";
 import DialogContent from '@material-ui/core/DialogContent';
 import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Divider from '@material-ui/core/Divider';
@@ -89,8 +90,10 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import MailIcon from '@material-ui/icons/Mail';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import Menu from '@material-ui/icons/Menu';
+import MenuIcon from '@material-ui/icons/Menu';
+import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
 import MultiPurposeTable from "../MultiPurposeTable";
 import MuiAlert from '@material-ui/lab/Alert';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
@@ -98,6 +101,7 @@ import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import Paper from '@material-ui/core/Paper';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import PersonIcon from '@material-ui/icons/PersonSharp';
+import PinchZoomPan from '@groupefungo/react-responsive-pinch-zoom-pan'
 import PostAddIcon from '@material-ui/icons/PostAdd';
 import Popper from '@material-ui/core/Popper';
 import Radio from '@material-ui/core/Radio';
@@ -113,6 +117,9 @@ import SimpleTable from "../SimpleTable";
 import SimpleTabs from "../SimpleTabs";
 import Snackbar from '@material-ui/core/Snackbar';
 import Skeleton from "@material-ui/lab/Skeleton";
+import SpeedDial from "@material-ui/lab/SpeedDial";
+import SpeedDialAction from "@material-ui/lab/SpeedDialAction";
+import SpeedDialIcon from "@material-ui/lab/SpeedDialIcon";
 import StyledRadio from "../StyledRadio";
 import SwapVertIcon from '@material-ui/icons/SwapVert';
 import SyncIcon from '@material-ui/icons/Sync';
@@ -191,6 +198,7 @@ const ext = {
   DeleteWarning,
   DescriptionControl,
   Dialog,
+  DialogActions,
   DialogContent,
   DialogContentText,
   DialogTitle,
@@ -237,7 +245,9 @@ const ext = {
   MailIcon,
   makeStyles,
   Menu,
+  MenuIcon,
   MenuItem,
+  MoreVertIcon,
   MuiPickersUtilsProvider,
   MuiAlert,
   MultiPurposeTable,
@@ -246,6 +256,7 @@ const ext = {
   SimpleTable,
   Paper,
   PeopleAltIcon,
+  PinchZoomPan,
   PersonIcon,
   PostAddIcon,
   Popper,
@@ -261,6 +272,9 @@ const ext = {
   SimpleTabs,
   Snackbar,
   Skeleton,
+  SpeedDial,
+  SpeedDialAction,
+  SpeedDialIcon,
   StyledRadio,
   SwapVertIcon,
   SyncIcon,
