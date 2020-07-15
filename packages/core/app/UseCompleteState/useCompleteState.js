@@ -97,6 +97,7 @@ var useCompleteState = function useCompleteState(initState) {
     }
   };
 
+  assureState();
   return {
     state: state,
     setState: setState,
