@@ -81,6 +81,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Icon from '@material-ui/core/Icon';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import InputMui from "../InputMui";
+import Input from "@material-ui/core/Input";
 import InputLabel from '@material-ui/core/InputLabel';
 import KeyboardDatePickerBase from '../KeyboardDatePickerBase';
 import List from '@material-ui/core/List';
@@ -121,6 +122,7 @@ import SpeedDial from "@material-ui/lab/SpeedDial";
 import SpeedDialAction from "@material-ui/lab/SpeedDialAction";
 import SpeedDialIcon from "@material-ui/lab/SpeedDialIcon";
 import StyledRadio from "../StyledRadio";
+import SvgIcon from "@material-ui/core/SvgIcon";
 import SwapVertIcon from '@material-ui/icons/SwapVert';
 import SyncIcon from '@material-ui/icons/Sync';
 import Tab from '@material-ui/core/Tab';
@@ -235,6 +237,7 @@ const ext = {
   IconButton,
   InputLabel,
   InputMui,
+  Input,
   KeyboardDatePicker,
   KeyboardDatePickerBase,
   List,
@@ -276,6 +279,7 @@ const ext = {
   SpeedDialAction,
   SpeedDialIcon,
   StyledRadio,
+  SvgIcon,
   SwapVertIcon,
   SyncIcon,
   Tab,

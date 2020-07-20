@@ -171,6 +171,8 @@ var _InputAdornment = _interopRequireDefault(require("@material-ui/core/InputAdo
 
 var _InputMui = _interopRequireDefault(require("../InputMui"));
 
+var _Input = _interopRequireDefault(require("@material-ui/core/Input"));
+
 var _InputLabel = _interopRequireDefault(require("@material-ui/core/InputLabel"));
 
 var _KeyboardDatePickerBase = _interopRequireDefault(require("../KeyboardDatePickerBase"));
@@ -248,6 +250,8 @@ var _SpeedDialAction = _interopRequireDefault(require("@material-ui/lab/SpeedDia
 var _SpeedDialIcon = _interopRequireDefault(require("@material-ui/lab/SpeedDialIcon"));
 
 var _StyledRadio = _interopRequireDefault(require("../StyledRadio"));
+
+var _SvgIcon = _interopRequireDefault(require("@material-ui/core/SvgIcon"));
 
 var _SwapVert = _interopRequireDefault(require("@material-ui/icons/SwapVert"));
 
@@ -397,6 +401,7 @@ var ext = {
   IconButton: _IconButton["default"],
   InputLabel: _InputLabel["default"],
   InputMui: _InputMui["default"],
+  Input: _Input["default"],
   KeyboardDatePicker: _pickers.KeyboardDatePicker,
   KeyboardDatePickerBase: _KeyboardDatePickerBase["default"],
   List: _List["default"],
@@ -438,6 +443,7 @@ var ext = {
   SpeedDialAction: _SpeedDialAction["default"],
   SpeedDialIcon: _SpeedDialIcon["default"],
   StyledRadio: _StyledRadio["default"],
+  SvgIcon: _SvgIcon["default"],
   SwapVertIcon: _SwapVert["default"],
   SyncIcon: _Sync["default"],
   Tab: _Tab["default"],
