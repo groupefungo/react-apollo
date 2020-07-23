@@ -68,7 +68,8 @@ var ext = {
 var _default = function _default() {
   return _objectSpread({}, ext, {
     UseBack: (0, _UseBack["default"])(),
-    UseProcessing: (0, _UseProcessing["default"])()
+    UseProcessing: (0, _UseProcessing["default"])(),
+    t: (0, _UseTranslate["default"])().t
   });
 };
 

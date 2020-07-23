@@ -65,6 +65,7 @@ import Fade from '@material-ui/core/Fade';
 import FileUploadArea from "../FileUploadArea";
 import FilterList from "../FilterList";
 import FolderOutlinedIcon from '@material-ui/icons/FolderOutlined';
+import FolderIcon from '@material-ui/icons/Folder';
 import FormControl from '@material-ui/core/FormControl';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
@@ -94,6 +95,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import MenuIcon from '@material-ui/icons/Menu';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import { Modal } from '@material-ui/core';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import MultiPurposeTable from "../MultiPurposeTable";
 import MuiAlert from '@material-ui/lab/Alert';
@@ -220,6 +222,7 @@ const ext = {
   FileUploadArea,
   FilterList,
   FolderOutlinedIcon,
+  FolderIcon,
   FormControl,
   FormControlLabel,
   FormGroup,
@@ -250,6 +253,7 @@ const ext = {
   Menu,
   MenuIcon,
   MenuItem,
+  Modal,
   MoreVertIcon,
   MuiPickersUtilsProvider,
   MuiAlert,

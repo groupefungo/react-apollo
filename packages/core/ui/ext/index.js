@@ -139,6 +139,8 @@ var _FilterList = _interopRequireDefault(require("../FilterList"));
 
 var _FolderOutlined = _interopRequireDefault(require("@material-ui/icons/FolderOutlined"));
 
+var _Folder = _interopRequireDefault(require("@material-ui/icons/Folder"));
+
 var _FormControl = _interopRequireDefault(require("@material-ui/core/FormControl"));
 
 var _FormControlLabel = _interopRequireDefault(require("@material-ui/core/FormControlLabel"));
@@ -196,6 +198,8 @@ var _Menu = _interopRequireDefault(require("@material-ui/icons/Menu"));
 var _Menu2 = _interopRequireDefault(require("@material-ui/core/Menu"));
 
 var _MenuItem = _interopRequireDefault(require("@material-ui/core/MenuItem"));
+
+var _core = require("@material-ui/core");
 
 var _MoreVert = _interopRequireDefault(require("@material-ui/icons/MoreVert"));
 
@@ -305,8 +309,6 @@ var _Zoom = _interopRequireDefault(require("@material-ui/core/Zoom"));
 
 var _pickers = require("@material-ui/pickers");
 
-var _core = require("@material-ui/core");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -384,6 +386,7 @@ var ext = {
   FileUploadArea: _FileUploadArea["default"],
   FilterList: _FilterList["default"],
   FolderOutlinedIcon: _FolderOutlined["default"],
+  FolderIcon: _Folder["default"],
   FormControl: _FormControl["default"],
   FormControlLabel: _FormControlLabel["default"],
   FormGroup: _FormGroup["default"],
@@ -414,6 +417,7 @@ var ext = {
   Menu: _Menu2["default"],
   MenuIcon: _Menu["default"],
   MenuItem: _MenuItem["default"],
+  Modal: _core.Modal,
   MoreVertIcon: _MoreVert["default"],
   MuiPickersUtilsProvider: _pickers.MuiPickersUtilsProvider,
   MuiAlert: _Alert["default"],
