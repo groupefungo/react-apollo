@@ -38,6 +38,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import Collapse from '@material-ui/core/Collapse';
 import CommentIcon from '@material-ui/icons/Comment';
 import Container from '@material-ui/core/Container';
+import CropIcon from '@material-ui/icons/Crop';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import CustomCardHeader from "../CustomCardHeader";
 import DateFnsUtils from '@date-io/date-fns';
@@ -53,6 +54,7 @@ import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import EditButton from "../EditButton";
 import EditIcon from '@material-ui/icons/Edit';
+import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
 import Error from '../Error';
 import EventIcon from '@material-ui/icons/Event';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
@@ -195,6 +197,7 @@ const ext = {
   CommentIcon,
   Container,
   createMuiTheme,
+  CropIcon,
   CssBaseline,
   CustomCardHeader,
   DateFnsUtils,
@@ -210,6 +213,7 @@ const ext = {
   Drawer,
   EditButton,
   EditIcon,
+  EmojiObjectsIcon,
   Error,
   EventIcon,
   ExitToAppIcon,

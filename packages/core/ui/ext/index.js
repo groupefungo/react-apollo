@@ -85,6 +85,8 @@ var _Comment = _interopRequireDefault(require("@material-ui/icons/Comment"));
 
 var _Container = _interopRequireDefault(require("@material-ui/core/Container"));
 
+var _Crop = _interopRequireDefault(require("@material-ui/icons/Crop"));
+
 var _CssBaseline = _interopRequireDefault(require("@material-ui/core/CssBaseline"));
 
 var _CustomCardHeader = _interopRequireDefault(require("../CustomCardHeader"));
@@ -114,6 +116,8 @@ var _Drawer = _interopRequireDefault(require("@material-ui/core/Drawer"));
 var _EditButton = _interopRequireDefault(require("../EditButton"));
 
 var _Edit = _interopRequireDefault(require("@material-ui/icons/Edit"));
+
+var _EmojiObjects = _interopRequireDefault(require("@material-ui/icons/EmojiObjects"));
 
 var _Error = _interopRequireDefault(require("../Error"));
 
@@ -359,6 +363,7 @@ var ext = {
   CommentIcon: _Comment["default"],
   Container: _Container["default"],
   createMuiTheme: _core.createMuiTheme,
+  CropIcon: _Crop["default"],
   CssBaseline: _CssBaseline["default"],
   CustomCardHeader: _CustomCardHeader["default"],
   DateFnsUtils: _dateFns["default"],
@@ -374,6 +379,7 @@ var ext = {
   Drawer: _Drawer["default"],
   EditButton: _EditButton["default"],
   EditIcon: _Edit["default"],
+  EmojiObjectsIcon: _EmojiObjects["default"],
   Error: _Error["default"],
   EventIcon: _Event["default"],
   ExitToAppIcon: _ExitToApp["default"],
