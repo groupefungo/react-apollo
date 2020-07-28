@@ -1,5 +1,6 @@
 import gql from 'graphql-tag';
 import {useMutation, useQuery, useLazyQuery, ApolloProvider} from 'react-apollo';
+import Lodash from 'lodash';
 import {
   Route, Switch, Link, Redirect, BrowserRouter as Router, useParams, useLocation, useHistory, useRouteMatch
 } from 'react-router-dom';
@@ -34,7 +35,8 @@ const ext = {
   useHistory,
   useRouteMatch,
   useTranslate,
-  capitalize
+  capitalize,
+  Lodash,
 };
 
 export default () => (

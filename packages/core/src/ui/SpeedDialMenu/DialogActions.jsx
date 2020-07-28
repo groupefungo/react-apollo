@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-import Icon from '@material-ui/core/Button';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 import useUiContext from "../UseContext";
 import ConfirmActionDialog from "../ConfirmActionDialog";
 
@@ -31,18 +29,18 @@ export default ({actions, object}) => {
     }
   };
 
-  const {Menu, MenuItem, ListItemIcon, Typography, Fade} = useUiContext();
+  const {Menu, MenuItem, ListItemIcon, Typography, Fade, MoreVertIcon, Button} = useUiContext();
 
   return (
     <div>
-      <Icon
+      <Button
         aria-controls="fade-menu"
         aria-haspopup="true"
         onClick={opened}
         id={`dialogActions-${object.id}`}
       >
         <MoreVertIcon/>
-      </Icon>
+      </Button>
       <ConfirmActionDialog
         open={openWarning}
         setOpen={setOpenWarning}

@@ -155,6 +155,8 @@ import Zoom from '@material-ui/core/Zoom';
 import {MuiPickersUtilsProvider, KeyboardDatePicker} from '@material-ui/pickers';
 import {ThemeProvider, createMuiTheme} from '@material-ui/core';
 
+import { Image, Line, Layer, Stage } from 'react-konva';
+
 const ext = {
   AccountCircle,
   AddButton,
@@ -242,11 +244,14 @@ const ext = {
   Icon,
   InputAdornment,
   IconButton,
+  Image,
   InputLabel,
   InputMui,
   Input,
   KeyboardDatePicker,
   KeyboardDatePickerBase,
+  Layer,
+  Line,
   List,
   ListItem,
   ListItemIcon,
@@ -286,6 +291,7 @@ const ext = {
   SpeedDial,
   SpeedDialAction,
   SpeedDialIcon,
+  Stage,
   StyledRadio,
   SvgIcon,
   SwapVertIcon,

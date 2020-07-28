@@ -1,6 +1,6 @@
 {
   "name": "@groupefungo/react-apollo.core",
-  "version": "1.1.42",
+  "version": "1.1.47",
   "description": "js modules",
   "main": "./index.js",
   "scripts": {
@@ -29,16 +29,19 @@
     "@material-ui/pickers": "^3.2.10",
     "react-apollo": "^3.1.3",
     "style-loader": "^1.1.3",
-    "webpack": "^4.0.0"
+    "webpack": "^4.0.0",
+    "lodash": "^4.17.15"
   },
   "peerDependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-apollo": "^3.1.3",
+    "react-konva": "^16.12.0-0",
     "@material-ui/core": "^4.9.4",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.44",
-    "@material-ui/pickers": "^3.2.10"
+    "@material-ui/pickers": "^3.2.10",
+    "lodash": "^4.17.15"
   },
   "dependencies": {
     "@date-io/date-fns": "^1.3.13",

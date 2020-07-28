@@ -6,17 +6,16 @@ import DialogActions from "./SpeedDialMenu/DialogActions";
 export default ({rows, translationNamespace, columns, rowObjectKey, rowClicked, actions}) => {
   const {useTranslate} = useAppContext();
   const {t} = useTranslate();
-  const {makeStyles} = useUiContext();
+  const {
+    TableContainer, Table, TableHead, TableRow, TableCell, TableBody, Paper, makeStyles,
+  } = useUiContext();
+
   const useStyles = makeStyles({
     table: {
       minWidth: 650,
     },
   });
-
   const classes = useStyles();
-  const {
-    TableContainer, Table, TableHead, TableRow, TableCell, TableBody, Paper,
-  } = useUiContext();
 
   const columnName = (c) => {
     if (typeof c === "string") {

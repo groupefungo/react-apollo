@@ -11,6 +11,8 @@ var _graphqlTag = _interopRequireDefault(require("graphql-tag"));
 
 var _reactApollo = require("react-apollo");
 
+var _lodash = _interopRequireDefault(require("lodash"));
+
 var _reactRouterDom = require("react-router-dom");
 
 var _UseAuth = _interopRequireWildcard(require("../UseAuth"));
@@ -62,7 +64,8 @@ var ext = {
   useHistory: _reactRouterDom.useHistory,
   useRouteMatch: _reactRouterDom.useRouteMatch,
   useTranslate: _UseTranslate["default"],
-  capitalize: _capitalize["default"]
+  capitalize: _capitalize["default"],
+  Lodash: _lodash["default"]
 };
 
 var _default = function _default() {

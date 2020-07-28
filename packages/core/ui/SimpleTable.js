@@ -38,6 +38,13 @@ var _default = function _default(_ref) {
       t = _useTranslate.t;
 
   var _useUiContext = (0, _UseContext["default"])(),
+      TableContainer = _useUiContext.TableContainer,
+      Table = _useUiContext.Table,
+      TableHead = _useUiContext.TableHead,
+      TableRow = _useUiContext.TableRow,
+      TableCell = _useUiContext.TableCell,
+      TableBody = _useUiContext.TableBody,
+      Paper = _useUiContext.Paper,
       makeStyles = _useUiContext.makeStyles;
 
   var useStyles = makeStyles({
@@ -46,15 +53,6 @@ var _default = function _default(_ref) {
     }
   });
   var classes = useStyles();
-
-  var _useUiContext2 = (0, _UseContext["default"])(),
-      TableContainer = _useUiContext2.TableContainer,
-      Table = _useUiContext2.Table,
-      TableHead = _useUiContext2.TableHead,
-      TableRow = _useUiContext2.TableRow,
-      TableCell = _useUiContext2.TableCell,
-      TableBody = _useUiContext2.TableBody,
-      Paper = _useUiContext2.Paper;
 
   var columnName = function columnName(c) {
     if (typeof c === "string") {

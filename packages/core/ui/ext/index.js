@@ -313,6 +313,8 @@ var _Zoom = _interopRequireDefault(require("@material-ui/core/Zoom"));
 
 var _pickers = require("@material-ui/pickers");
 
+var _reactKonva = require("react-konva");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -408,11 +410,14 @@ var ext = {
   Icon: _Icon["default"],
   InputAdornment: _InputAdornment["default"],
   IconButton: _IconButton["default"],
+  Image: _reactKonva.Image,
   InputLabel: _InputLabel["default"],
   InputMui: _InputMui["default"],
   Input: _Input["default"],
   KeyboardDatePicker: _pickers.KeyboardDatePicker,
   KeyboardDatePickerBase: _KeyboardDatePickerBase["default"],
+  Layer: _reactKonva.Layer,
+  Line: _reactKonva.Line,
   List: _List["default"],
   ListItem: _ListItem["default"],
   ListItemIcon: _ListItemIcon["default"],
@@ -452,6 +457,7 @@ var ext = {
   SpeedDial: _SpeedDial["default"],
   SpeedDialAction: _SpeedDialAction["default"],
   SpeedDialIcon: _SpeedDialIcon["default"],
+  Stage: _reactKonva.Stage,
   StyledRadio: _StyledRadio["default"],
   SvgIcon: _SvgIcon["default"],
   SwapVertIcon: _SwapVert["default"],

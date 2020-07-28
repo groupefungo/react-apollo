@@ -9,10 +9,6 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _Button = _interopRequireDefault(require("@material-ui/core/Button"));
-
-var _MoreVert = _interopRequireDefault(require("@material-ui/icons/MoreVert"));
-
 var _UseContext = _interopRequireDefault(require("../UseContext"));
 
 var _ConfirmActionDialog = _interopRequireDefault(require("../ConfirmActionDialog"));
@@ -81,14 +77,16 @@ var _default = function _default(_ref) {
       MenuItem = _useUiContext.MenuItem,
       ListItemIcon = _useUiContext.ListItemIcon,
       Typography = _useUiContext.Typography,
-      Fade = _useUiContext.Fade;
+      Fade = _useUiContext.Fade,
+      MoreVertIcon = _useUiContext.MoreVertIcon,
+      Button = _useUiContext.Button;
 
-  return _react["default"].createElement("div", null, _react["default"].createElement(_Button["default"], {
+  return _react["default"].createElement("div", null, _react["default"].createElement(Button, {
     "aria-controls": "fade-menu",
     "aria-haspopup": "true",
     onClick: opened,
     id: "dialogActions-".concat(object.id)
-  }, _react["default"].createElement(_MoreVert["default"], null)), _react["default"].createElement(_ConfirmActionDialog["default"], {
+  }, _react["default"].createElement(MoreVertIcon, null)), _react["default"].createElement(_ConfirmActionDialog["default"], {
     open: openWarning,
     setOpen: setOpenWarning,
     action: warningAction
