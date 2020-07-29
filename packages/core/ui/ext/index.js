@@ -1,5 +1,7 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -313,7 +315,13 @@ var _Zoom = _interopRequireDefault(require("@material-ui/core/Zoom"));
 
 var _pickers = require("@material-ui/pickers");
 
+var _reactScreenOrientation = _interopRequireWildcard(require("react-screen-orientation"));
+
 var _reactKonva = require("react-konva");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -372,6 +380,7 @@ var ext = {
   DeleteForeverIcon: _DeleteForever["default"],
   DeleteWarning: _DeleteWarning["default"],
   DescriptionControl: _DescriptionControl["default"],
+  DeviceOrientation: _reactScreenOrientation["default"],
   Dialog: _Dialog["default"],
   DialogActions: _DialogActions["default"],
   DialogContent: _DialogContent["default"],
@@ -435,6 +444,7 @@ var ext = {
   MultiPurposeTable: _MultiPurposeTable["default"],
   NavigateNextIcon: _NavigateNext["default"],
   NavigateBeforeIcon: _NavigateBefore["default"],
+  Orientation: _reactScreenOrientation.Orientation,
   SimpleTable: _SimpleTable["default"],
   Paper: _Paper["default"],
   PeopleAltIcon: _PeopleAlt["default"],

@@ -155,6 +155,8 @@ import Zoom from '@material-ui/core/Zoom';
 import {MuiPickersUtilsProvider, KeyboardDatePicker} from '@material-ui/pickers';
 import {ThemeProvider, createMuiTheme} from '@material-ui/core';
 
+import DeviceOrientation, { Orientation } from 'react-screen-orientation';
+
 import { Image, Line, Layer, Stage } from 'react-konva';
 
 const ext = {
@@ -206,6 +208,7 @@ const ext = {
   DeleteForeverIcon,
   DeleteWarning,
   DescriptionControl,
+  DeviceOrientation,
   Dialog,
   DialogActions,
   DialogContent,
@@ -269,6 +272,7 @@ const ext = {
   MultiPurposeTable,
   NavigateNextIcon,
   NavigateBeforeIcon,
+  Orientation,
   SimpleTable,
   Paper,
   PeopleAltIcon,
