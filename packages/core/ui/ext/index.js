@@ -185,6 +185,8 @@ var _InputLabel = _interopRequireDefault(require("@material-ui/core/InputLabel")
 
 var _KeyboardDatePickerBase = _interopRequireDefault(require("../KeyboardDatePickerBase"));
 
+var _VpnKey = _interopRequireDefault(require("@material-ui/icons/VpnKey"));
+
 var _List = _interopRequireDefault(require("@material-ui/core/List"));
 
 var _ListItem = _interopRequireDefault(require("@material-ui/core/ListItem"));
@@ -194,6 +196,8 @@ var _ListItemIcon = _interopRequireDefault(require("@material-ui/core/ListItemIc
 var _ListItemText = _interopRequireDefault(require("@material-ui/core/ListItemText"));
 
 var _ListItemAvatar = _interopRequireDefault(require("@material-ui/core/ListItemAvatar"));
+
+var _List2 = _interopRequireDefault(require("@material-ui/icons/List"));
 
 var _Mail = _interopRequireDefault(require("@material-ui/icons/Mail"));
 
@@ -423,11 +427,13 @@ var ext = {
   InputLabel: _InputLabel["default"],
   InputMui: _InputMui["default"],
   Input: _Input["default"],
+  KeyIcon: _VpnKey["default"],
   KeyboardDatePicker: _pickers.KeyboardDatePicker,
   KeyboardDatePickerBase: _KeyboardDatePickerBase["default"],
   Layer: _reactKonva.Layer,
   Line: _reactKonva.Line,
   List: _List["default"],
+  ListIcon: _List2["default"],
   ListItem: _ListItem["default"],
   ListItemIcon: _ListItemIcon["default"],
   ListItemText: _ListItemText["default"],

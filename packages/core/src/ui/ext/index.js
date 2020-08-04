@@ -87,11 +87,13 @@ import InputMui from "../InputMui";
 import Input from "@material-ui/core/Input";
 import InputLabel from '@material-ui/core/InputLabel';
 import KeyboardDatePickerBase from '../KeyboardDatePickerBase';
+import KeyIcon from '@material-ui/icons/VpnKey';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
+import ListIcon from '@material-ui/icons/List';
 import MailIcon from '@material-ui/icons/Mail';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -251,11 +253,13 @@ const ext = {
   InputLabel,
   InputMui,
   Input,
+  KeyIcon,
   KeyboardDatePicker,
   KeyboardDatePickerBase,
   Layer,
   Line,
   List,
+  ListIcon,
   ListItem,
   ListItemIcon,
   ListItemText,
