@@ -9,15 +9,28 @@ export default ({useProvideAuth, children}) => {
   const appExt = useExt();
   const {ProvideAuth, Router, ApolloProvider} = appExt;
 
-  return (
-    <AppContext.Provider value={appExt}>
-      <Dialog/>
-      <ApolloProvider client={APOLLO_CLIENT}>
+  const AuthProvider = () => {
+    if (useProvideAuth) {
+      return (
         <ProvideAuth useProvideAuth={useProvideAuth}>
           <Router>
             {children}
           </Router>
         </ProvideAuth>
+      )
+    }
+
+    return (
+        <Router>
+          {children}
+        </Router>
+    )
+  }
+  return (
+    <AppContext.Provider value={appExt}>
+      <Dialog/>
+      <ApolloProvider client={APOLLO_CLIENT}>
+        <AuthProvider />
       </ApolloProvider>
     </AppContext.Provider>
   )

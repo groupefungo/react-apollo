@@ -1,16 +1,23 @@
 import React from 'react';
+import * as PropTypes from 'prop-types';
 import AppContextProvider from '.';
 import ThemeContextProvider from '../ui';
 import ErrorBoundary from "../ui/ErrorBoundary";
 
-export default ({useProvideAuth, thm, children}) => {
+const Container = ({useProvideAuth, thm, children, withAuth}) => {
   return (
     <ErrorBoundary>
       <ThemeContextProvider thm={thm}>
-        <AppContextProvider useProvideAuth={useProvideAuth}>
+        <AppContextProvider useProvideAuth={withAuth ? useProvideAuth : null}>
           {children}
         </AppContextProvider>
       </ThemeContextProvider>
     </ErrorBoundary>
   );
 }
+
+Container.defaultProps = {
+  withAuth: true,
+}
+
+export default Container;

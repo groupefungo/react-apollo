@@ -13,6 +13,10 @@ import useBack from "../UseBack";
 import useProcessing from "../UseProcessing";
 import useTranslate from "../UseTranslate";
 import capitalize from "../capitalize";
+import * as JsPdf from 'jspdf'
+import * as Html2Canvas from 'html2canvas';
+
+// import jsPDF from 'jspdf';
 
 const ext = {
   gql,
@@ -37,6 +41,8 @@ const ext = {
   useTranslate,
   capitalize,
   Lodash,
+  JsPdf,
+  Html2Canvas,
 };
 
 export default () => (
