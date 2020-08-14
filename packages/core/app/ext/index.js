@@ -15,6 +15,8 @@ var _lodash = _interopRequireDefault(require("lodash"));
 
 var _reactRouterDom = require("react-router-dom");
 
+var _reactRouter = require("react-router");
+
 var _UseAuth = _interopRequireWildcard(require("../UseAuth"));
 
 var _UseRouter = _interopRequireDefault(require("../UseRouter"));
@@ -72,7 +74,8 @@ var ext = {
   capitalize: _capitalize["default"],
   Lodash: _lodash["default"],
   JsPdf: JsPdf,
-  Html2Canvas: Html2Canvas
+  Html2Canvas: Html2Canvas,
+  Prompt: _reactRouter.Prompt
 };
 
 var _default = function _default() {

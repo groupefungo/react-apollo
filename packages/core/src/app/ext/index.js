@@ -4,7 +4,7 @@ import Lodash from 'lodash';
 import {
   Route, Switch, Link, Redirect, BrowserRouter as Router, useParams, useLocation, useHistory, useRouteMatch
 } from 'react-router-dom';
-
+import {Prompt} from 'react-router'
 import useAuth, {ProvideAuth} from '../UseAuth';
 import useRouter from '../UseRouter';
 import useQueryWrapper from '../UseQueryWrapper';
@@ -43,6 +43,7 @@ const ext = {
   Lodash,
   JsPdf,
   Html2Canvas,
+  Prompt
 };
 
 export default () => (
