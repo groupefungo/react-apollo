@@ -89,6 +89,8 @@ var _Container = _interopRequireDefault(require("@material-ui/core/Container"));
 
 var _Crop = _interopRequireDefault(require("@material-ui/icons/Crop"));
 
+var _clsx = _interopRequireDefault(require("clsx"));
+
 var _CssBaseline = _interopRequireDefault(require("@material-ui/core/CssBaseline"));
 
 var _CustomCardHeader = _interopRequireDefault(require("../CustomCardHeader"));
@@ -176,6 +178,8 @@ var _IconButton = _interopRequireDefault(require("@material-ui/core/IconButton")
 var _Icon = _interopRequireDefault(require("@material-ui/core/Icon"));
 
 var _InputAdornment = _interopRequireDefault(require("@material-ui/core/InputAdornment"));
+
+var _reactInputMask = _interopRequireDefault(require("react-input-mask"));
 
 var _InputMui = _interopRequireDefault(require("../InputMui"));
 
@@ -378,6 +382,7 @@ var ext = {
   Container: _Container["default"],
   createMuiTheme: _core.createMuiTheme,
   CropIcon: _Crop["default"],
+  clsx: _clsx["default"],
   CssBaseline: _CssBaseline["default"],
   CustomCardHeader: _CustomCardHeader["default"],
   DateFnsUtils: _dateFns["default"],
@@ -425,6 +430,7 @@ var ext = {
   IconButton: _IconButton["default"],
   Image: _reactKonva.Image,
   InputLabel: _InputLabel["default"],
+  InputMask: _reactInputMask["default"],
   InputMui: _InputMui["default"],
   Input: _Input["default"],
   KeyIcon: _VpnKey["default"],

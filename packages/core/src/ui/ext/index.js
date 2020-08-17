@@ -39,6 +39,7 @@ import Collapse from '@material-ui/core/Collapse';
 import CommentIcon from '@material-ui/icons/Comment';
 import Container from '@material-ui/core/Container';
 import CropIcon from '@material-ui/icons/Crop';
+import clsx from 'clsx'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import CustomCardHeader from "../CustomCardHeader";
 import DateFnsUtils from '@date-io/date-fns';
@@ -83,6 +84,7 @@ import HomeWorkOutlinedIcon from '@material-ui/icons/HomeWorkOutlined';
 import IconButton from '@material-ui/core/IconButton';
 import Icon from '@material-ui/core/Icon';
 import InputAdornment from '@material-ui/core/InputAdornment';
+import InputMask from 'react-input-mask';
 import InputMui from "../InputMui";
 import Input from "@material-ui/core/Input";
 import InputLabel from '@material-ui/core/InputLabel';
@@ -204,6 +206,7 @@ const ext = {
   Container,
   createMuiTheme,
   CropIcon,
+  clsx,
   CssBaseline,
   CustomCardHeader,
   DateFnsUtils,
@@ -251,6 +254,7 @@ const ext = {
   IconButton,
   Image,
   InputLabel,
+  InputMask,
   InputMui,
   Input,
   KeyIcon,
