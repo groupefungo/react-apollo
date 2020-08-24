@@ -44,6 +44,5 @@ export default () => (
     ...ext,
     UseBack: useBack(),
     UseProcessing: useProcessing(),
-    t: useTranslate().t,
   }
 );
