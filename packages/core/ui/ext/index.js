@@ -319,6 +319,14 @@ var _Zoom = _interopRequireDefault(require("@material-ui/core/Zoom"));
 
 var _pickers = require("@material-ui/pickers");
 
+var _Landscape = _interopRequireDefault(require("@material-ui/icons/Landscape"));
+
+var _Portrait = _interopRequireDefault(require("@material-ui/icons/Portrait"));
+
+var _Language = _interopRequireDefault(require("@material-ui/icons/Language"));
+
+var _Print = _interopRequireDefault(require("@material-ui/icons/Print"));
+
 var _reactScreenOrientation = _interopRequireWildcard(require("react-screen-orientation"));
 
 var _reactKonva = require("react-konva");
@@ -499,7 +507,11 @@ var ext = {
   UseFormStyles: _UseFormStyles["default"],
   useTheme: _useTheme["default"],
   VisibilityIcon: _Visibility["default"],
-  Zoom: _Zoom["default"]
+  Zoom: _Zoom["default"],
+  LandscapeIcon: _Landscape["default"],
+  PortraitIcon: _Portrait["default"],
+  LanguageIcon: _Language["default"],
+  PrintIcon: _Print["default"]
 };
 
 var _default = function _default() {

@@ -156,6 +156,10 @@ import VisibilityIcon from '@material-ui/icons/Visibility';
 import Zoom from '@material-ui/core/Zoom';
 import {MuiPickersUtilsProvider, KeyboardDatePicker} from '@material-ui/pickers';
 import {ThemeProvider, createMuiTheme} from '@material-ui/core';
+import LandscapeIcon from '@material-ui/icons/Landscape';
+import PortraitIcon from '@material-ui/icons/Portrait';
+import LanguageIcon from '@material-ui/icons/Language';
+import PrintIcon from '@material-ui/icons/Print';
 
 import DeviceOrientation, { Orientation } from 'react-screen-orientation';
 
@@ -326,6 +330,10 @@ const ext = {
   useTheme,
   VisibilityIcon,
   Zoom,
+  LandscapeIcon,
+  PortraitIcon,
+  LanguageIcon,
+  PrintIcon
 };
 
 export default () => (
