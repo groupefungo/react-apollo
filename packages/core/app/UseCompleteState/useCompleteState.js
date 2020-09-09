@@ -95,9 +95,9 @@ var useCompleteState = function useCompleteState(initState) {
         }
       }
     }
-  };
+  }; // assureState();
 
-  assureState();
+
   return {
     state: state,
     setState: setState,

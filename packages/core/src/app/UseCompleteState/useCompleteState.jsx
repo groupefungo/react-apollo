@@ -57,7 +57,7 @@ export const useCompleteState = (initState) => {
     }
   };
 
-  assureState();
+  // assureState();
 
   return {
     state,
