@@ -291,6 +291,8 @@ var _TableRow = _interopRequireDefault(require("@material-ui/core/TableRow"));
 
 var _Tabs = _interopRequireDefault(require("@material-ui/core/Tabs"));
 
+var _TabPanel = _interopRequireDefault(require("../TabPanel/TabPanel"));
+
 var _TemporaryDrawer = _interopRequireDefault(require("../TemporaryDrawer"));
 
 var _TextField = _interopRequireDefault(require("@material-ui/core/TextField"));
@@ -492,6 +494,7 @@ var ext = {
   TableHead: _TableHead["default"],
   TableRow: _TableRow["default"],
   Tabs: _Tabs["default"],
+  TabPanel: _TabPanel["default"],
   TemporaryDrawer: _TemporaryDrawer["default"],
   TextField: _TextField["default"],
   ThemeProvider: _core.ThemeProvider,

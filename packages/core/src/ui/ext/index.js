@@ -141,6 +141,7 @@ import Table from '@material-ui/core/Table';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Tabs from '@material-ui/core/Tabs';
+import TabPanel from "../TabPanel/TabPanel";
 import TemporaryDrawer from "../TemporaryDrawer";
 import TextField from '@material-ui/core/TextField';
 import TitleControl from "../TitleControl";
@@ -316,6 +317,7 @@ const ext = {
   TableHead,
   TableRow,
   Tabs,
+  TabPanel,
   TemporaryDrawer,
   TextField,
   ThemeProvider,
