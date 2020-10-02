@@ -23,13 +23,14 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var _default = function _default(_ref) {
+function SimpleTable(_ref) {
   var rows = _ref.rows,
       translationNamespace = _ref.translationNamespace,
       columns = _ref.columns,
       rowObjectKey = _ref.rowObjectKey,
       rowClicked = _ref.rowClicked,
-      actions = _ref.actions;
+      actions = _ref.actions,
+      translateColumns = _ref.translateColumns;
 
   var _useAppContext = (0, _useAppContext2.useAppContext)(),
       useTranslate = _useAppContext.useTranslate;
@@ -92,7 +93,7 @@ var _default = function _default(_ref) {
       onClick: function onClick() {
         return rowClicked && rowClicked(object) || null;
       }
-    }, v);
+    }, object[v]);
   };
 
   return _react["default"].createElement(TableContainer, {
@@ -104,9 +105,16 @@ var _default = function _default(_ref) {
     key: "headers"
   }, columns.map(function (col) {
     var cname = columnName(col);
+
+    if (translateColumns) {
+      return _react["default"].createElement(TableCell, {
+        key: "header-".concat(cname)
+      }, t("".concat(translationNamespace, ".").concat(cname)));
+    }
+
     return _react["default"].createElement(TableCell, {
       key: "header-".concat(cname)
-    }, t("".concat(translationNamespace, ".").concat(cname)));
+    }, cname);
   }), actions && _react["default"].createElement(TableCell, {
     key: "header-actions"
   }, t('actions')))), _react["default"].createElement(TableBody, null, rows.map(function (object) {
@@ -121,6 +129,10 @@ var _default = function _default(_ref) {
       actions: actions
     })));
   }))));
-};
+}
 
+SimpleTable.defaultProps = {
+  translateColumns: true
+};
+var _default = SimpleTable;
 exports["default"] = _default;

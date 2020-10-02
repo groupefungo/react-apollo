@@ -87,6 +87,8 @@ var _Comment = _interopRequireDefault(require("@material-ui/icons/Comment"));
 
 var _Container = _interopRequireDefault(require("@material-ui/core/Container"));
 
+var _ContactPhone = _interopRequireDefault(require("@material-ui/icons/ContactPhone"));
+
 var _Crop = _interopRequireDefault(require("@material-ui/icons/Crop"));
 
 var _clsx = _interopRequireDefault(require("clsx"));
@@ -229,8 +231,6 @@ var _PeopleAlt = _interopRequireDefault(require("@material-ui/icons/PeopleAlt"))
 
 var _PersonSharp = _interopRequireDefault(require("@material-ui/icons/PersonSharp"));
 
-var _reactResponsivePinchZoomPan = _interopRequireDefault(require("@groupefungo/react-responsive-pinch-zoom-pan"));
-
 var _PostAdd = _interopRequireDefault(require("@material-ui/icons/PostAdd"));
 
 var _Popper = _interopRequireDefault(require("@material-ui/core/Popper"));
@@ -240,6 +240,8 @@ var _Radio = _interopRequireDefault(require("@material-ui/core/Radio"));
 var _RadioGroup = _interopRequireDefault(require("@material-ui/core/RadioGroup"));
 
 var _Save = _interopRequireDefault(require("@material-ui/icons/Save"));
+
+var _Schedule = _interopRequireDefault(require("@material-ui/icons/Schedule"));
 
 var _Search = _interopRequireDefault(require("@material-ui/icons/Search"));
 
@@ -327,8 +329,6 @@ var _pickers = require("@material-ui/pickers");
 
 var _reactScreenOrientation = _interopRequireWildcard(require("react-screen-orientation"));
 
-var _reactKonva = require("react-konva");
-
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -341,6 +341,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+// import { Image, Line, Layer, Stage } from 'react-konva';
 var ext = {
   AccountCircle: _AccountCircle["default"],
   AddButton: _AddButton["default"],
@@ -382,12 +383,15 @@ var ext = {
   Collapse: _Collapse["default"],
   CommentIcon: _Comment["default"],
   Container: _Container["default"],
+  ContactPhoneIcon: _ContactPhone["default"],
   createMuiTheme: _core.createMuiTheme,
   CropIcon: _Crop["default"],
   clsx: _clsx["default"],
   CssBaseline: _CssBaseline["default"],
   CustomCardHeader: _CustomCardHeader["default"],
   DateFnsUtils: _dateFns["default"],
+  DateRangePicker: _pickers.DateRangePicker,
+  DateRangeDelimiter: _pickers.DateRangeDelimiter,
   DeleteForeverIcon: _DeleteForever["default"],
   DeleteWarning: _DeleteWarning["default"],
   DescriptionControl: _DescriptionControl["default"],
@@ -430,7 +434,7 @@ var ext = {
   Icon: _Icon["default"],
   InputAdornment: _InputAdornment["default"],
   IconButton: _IconButton["default"],
-  Image: _reactKonva.Image,
+  Image: Image,
   InputLabel: _InputLabel["default"],
   InputMask: _reactInputMask["default"],
   InputMui: _InputMui["default"],
@@ -438,8 +442,8 @@ var ext = {
   KeyIcon: _VpnKey["default"],
   KeyboardDatePicker: _pickers.KeyboardDatePicker,
   KeyboardDatePickerBase: _KeyboardDatePickerBase["default"],
-  Layer: _reactKonva.Layer,
-  Line: _reactKonva.Line,
+  // Layer,
+  // Line,
   List: _List["default"],
   ListIcon: _List2["default"],
   ListItem: _ListItem["default"],
@@ -462,13 +466,14 @@ var ext = {
   SimpleTable: _SimpleTable["default"],
   Paper: _Paper["default"],
   PeopleAltIcon: _PeopleAlt["default"],
-  PinchZoomPan: _reactResponsivePinchZoomPan["default"],
+  // PinchZoomPan,
   PersonIcon: _PersonSharp["default"],
   PostAddIcon: _PostAdd["default"],
   Popper: _Popper["default"],
   Radio: _Radio["default"],
   RadioGroup: _RadioGroup["default"],
   SaveIcon: _Save["default"],
+  ScheduleIcon: _Schedule["default"],
   SearchIcon: _Search["default"],
   Select: _Select["default"],
   SelectMui: _SelectMui["default"],
@@ -481,7 +486,7 @@ var ext = {
   SpeedDial: _SpeedDial["default"],
   SpeedDialAction: _SpeedDialAction["default"],
   SpeedDialIcon: _SpeedDialIcon["default"],
-  Stage: _reactKonva.Stage,
+  // Stage,
   StyledRadio: _StyledRadio["default"],
   SvgIcon: _SvgIcon["default"],
   SwapVertIcon: _SwapVert["default"],

@@ -38,6 +38,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import Collapse from '@material-ui/core/Collapse';
 import CommentIcon from '@material-ui/icons/Comment';
 import Container from '@material-ui/core/Container';
+import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 import CropIcon from '@material-ui/icons/Crop';
 import clsx from 'clsx'
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -110,12 +111,13 @@ import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import Paper from '@material-ui/core/Paper';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import PersonIcon from '@material-ui/icons/PersonSharp';
-import PinchZoomPan from '@groupefungo/react-responsive-pinch-zoom-pan'
+// import PinchZoomPan from '@groupefungo/react-responsive-pinch-zoom-pan'
 import PostAddIcon from '@material-ui/icons/PostAdd';
 import Popper from '@material-ui/core/Popper';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import SaveIcon from '@material-ui/icons/Save';
+import ScheduleIcon from '@material-ui/icons/Schedule';
 import SearchIcon from '@material-ui/icons/Search';
 import Select from '@material-ui/core/Select';
 import SelectMui from "../SelectMui";
@@ -157,12 +159,12 @@ import UseFormStyles from "../UseFormStyles";
 import useTheme from "@material-ui/core/styles/useTheme";
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import Zoom from '@material-ui/core/Zoom';
-import {MuiPickersUtilsProvider, KeyboardDatePicker} from '@material-ui/pickers';
+import {MuiPickersUtilsProvider, KeyboardDatePicker, DateRangePicker, DateRangeDelimiter} from '@material-ui/pickers';
 import {ThemeProvider, createMuiTheme} from '@material-ui/core';
 
 import DeviceOrientation, { Orientation } from 'react-screen-orientation';
 
-import { Image, Line, Layer, Stage } from 'react-konva';
+// import { Image, Line, Layer, Stage } from 'react-konva';
 
 const ext = {
   AccountCircle,
@@ -205,12 +207,15 @@ const ext = {
   Collapse,
   CommentIcon,
   Container,
+  ContactPhoneIcon,
   createMuiTheme,
   CropIcon,
   clsx,
   CssBaseline,
   CustomCardHeader,
   DateFnsUtils,
+  DateRangePicker,
+  DateRangeDelimiter,
   DeleteForeverIcon,
   DeleteWarning,
   DescriptionControl,
@@ -261,8 +266,8 @@ const ext = {
   KeyIcon,
   KeyboardDatePicker,
   KeyboardDatePickerBase,
-  Layer,
-  Line,
+  // Layer,
+  // Line,
   List,
   ListIcon,
   ListItem,
@@ -285,13 +290,14 @@ const ext = {
   SimpleTable,
   Paper,
   PeopleAltIcon,
-  PinchZoomPan,
+  // PinchZoomPan,
   PersonIcon,
   PostAddIcon,
   Popper,
   Radio,
   RadioGroup,
   SaveIcon,
+  ScheduleIcon,
   SearchIcon,
   Select,
   SelectMui,
@@ -304,7 +310,7 @@ const ext = {
   SpeedDial,
   SpeedDialAction,
   SpeedDialIcon,
-  Stage,
+  // Stage,
   StyledRadio,
   SvgIcon,
   SwapVertIcon,

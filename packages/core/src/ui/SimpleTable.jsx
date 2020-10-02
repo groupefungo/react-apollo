@@ -3,7 +3,7 @@ import useUiContext from './UseContext';
 import {useAppContext} from "../app/UseContext/useAppContext";
 import DialogActions from "./SpeedDialMenu/DialogActions";
 
-export default ({rows, translationNamespace, columns, rowObjectKey, rowClicked, actions}) => {
+function SimpleTable({rows, translationNamespace, columns, rowObjectKey, rowClicked, actions, translateColumns}) {
   const {useTranslate} = useAppContext();
   const {t} = useTranslate();
   const {
@@ -44,7 +44,7 @@ export default ({rows, translationNamespace, columns, rowObjectKey, rowClicked, 
 
   const TableCellComponent = (object, column) => {
     const [n, v] = columnNameValue(column, object);
-    return <TableCell key={`col-${n}`} onClick={() => ((rowClicked && rowClicked(object))||null)}>{v}</TableCell>;
+    return <TableCell key={`col-${n}`} onClick={() => ((rowClicked && rowClicked(object))||null)}>{object[v]}</TableCell>;
   };
 
   return (
@@ -54,9 +54,13 @@ export default ({rows, translationNamespace, columns, rowObjectKey, rowClicked, 
           <TableRow key="headers">
             {columns.map((col) => {
               const cname = columnName(col);
-              return (
-                <TableCell key={`header-${cname}`}>{t(`${translationNamespace}.${cname}`)}</TableCell>
-              );
+
+              if (translateColumns) {
+                return (
+                  <TableCell key={`header-${cname}`}>{t(`${translationNamespace}.${cname}`)}</TableCell>
+                );
+              }
+              return <TableCell key={`header-${cname}`}>{cname}</TableCell>
             })}
             {actions && (
               <TableCell key={`header-actions`}>{t('actions')}</TableCell>
@@ -76,4 +80,10 @@ export default ({rows, translationNamespace, columns, rowObjectKey, rowClicked, 
       </Table>
     </TableContainer>
   );
-};
+}
+
+SimpleTable.defaultProps = {
+  translateColumns: true
+}
+
+export default SimpleTable;
