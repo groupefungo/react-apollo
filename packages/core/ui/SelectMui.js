@@ -55,7 +55,8 @@ function SelectMui(props) {
       fullWidth = props.fullWidth,
       color = props.color,
       name = props.name,
-      remainingProps = _objectWithoutProperties(props, ["label", "options", "error", "hasDefaultOption", "defaultOptionLabel", "fullWidth", "color", "name"]);
+      _native = props["native"],
+      remainingProps = _objectWithoutProperties(props, ["label", "options", "error", "hasDefaultOption", "defaultOptionLabel", "fullWidth", "color", "name", "native"]);
 
   (0, _react.useEffect)(function () {
     setLabelWidth(inputLabel.current.clientWidth);
@@ -71,13 +72,16 @@ function SelectMui(props) {
     ref: inputLabel,
     id: labelId
   }, label), _react["default"].createElement(Select, _extends({
+    "native": _native,
     labelId: labelId,
     id: elementId,
     labelWidth: labelWidth,
     name: name
-  }, remainingProps), hasDefaultOption ? _react["default"].createElement(MenuItem, {
+  }, remainingProps), hasDefaultOption && !_native ? _react["default"].createElement(MenuItem, {
     value: "-1"
-  }, _react["default"].createElement("em", null, defaultOptionLabel)) : null, options.map(function (option) {
+  }, _react["default"].createElement("em", null, defaultOptionLabel)) : null, hasDefaultOption && _native ? _react["default"].createElement("option", {
+    value: "-1"
+  }, defaultOptionLabel) : null, options.map(function (option) {
     var optionValue;
     var optionLabel;
 
@@ -87,6 +91,14 @@ function SelectMui(props) {
     } else {
       optionValue = option;
       optionLabel = option;
+    }
+
+    if (_native) {
+      return _react["default"].createElement("option", {
+        id: "menu_item_".concat(optionValue),
+        key: optionValue,
+        value: optionValue
+      }, optionLabel);
     }
 
     return _react["default"].createElement(MenuItem, {
@@ -102,7 +114,8 @@ SelectMui.defaultProps = {
   hasDefaultOption: false,
   defaultOptionLabel: '',
   fullWidth: true,
-  color: 'primary'
+  color: 'primary',
+  "native": false
 };
 SelectMui.propTypes = {
   color: PropTypes.string,
@@ -113,7 +126,8 @@ SelectMui.propTypes = {
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   onChange: PropTypes.func.isRequired,
   options: PropTypes.array.isRequired,
-  error: PropTypes.bool
+  error: PropTypes.bool,
+  "native": PropTypes.bool
 };
 var _default = SelectMui;
 exports["default"] = _default;

@@ -2,7 +2,7 @@ import React from "react";
 import useUiContext from "../UseContext";
 
 function TabPanel(props) {
-  const {Box, Typography} = useUiContext();
+  const {Box} = useUiContext();
 
   const { children, value, index, ...other } = props;
 
@@ -15,8 +15,8 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
+        <Box>
+          {children}
         </Box>
       )}
     </div>

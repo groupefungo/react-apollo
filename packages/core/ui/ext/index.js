@@ -1,7 +1,5 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -98,6 +96,8 @@ var _CssBaseline = _interopRequireDefault(require("@material-ui/core/CssBaseline
 var _CustomCardHeader = _interopRequireDefault(require("../CustomCardHeader"));
 
 var _dateFns = _interopRequireDefault(require("@date-io/date-fns"));
+
+var _DateRange = _interopRequireDefault(require("@material-ui/icons/DateRange"));
 
 var _DeleteForever = _interopRequireDefault(require("@material-ui/icons/DeleteForever"));
 
@@ -209,13 +209,13 @@ var _Mail = _interopRequireDefault(require("@material-ui/icons/Mail"));
 
 var _makeStyles = _interopRequireDefault(require("@material-ui/core/styles/makeStyles"));
 
+var _Modal = _interopRequireDefault(require("@material-ui/core/Modal"));
+
 var _Menu = _interopRequireDefault(require("@material-ui/icons/Menu"));
 
 var _Menu2 = _interopRequireDefault(require("@material-ui/core/Menu"));
 
 var _MenuItem = _interopRequireDefault(require("@material-ui/core/MenuItem"));
-
-var _core = require("@material-ui/core");
 
 var _MoreVert = _interopRequireDefault(require("@material-ui/icons/MoreVert"));
 
@@ -323,15 +323,23 @@ var _useTheme = _interopRequireDefault(require("@material-ui/core/styles/useThem
 
 var _Visibility = _interopRequireDefault(require("@material-ui/icons/Visibility"));
 
+var _ViewList = _interopRequireDefault(require("@material-ui/icons/ViewList"));
+
 var _Zoom = _interopRequireDefault(require("@material-ui/core/Zoom"));
 
 var _pickers = require("@material-ui/pickers");
 
-var _reactScreenOrientation = _interopRequireWildcard(require("react-screen-orientation"));
+var _core = require("@material-ui/core");
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+var _SentimentVeryDissatisfied = _interopRequireDefault(require("@material-ui/icons/SentimentVeryDissatisfied"));
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var _SentimentDissatisfied = _interopRequireDefault(require("@material-ui/icons/SentimentDissatisfied"));
+
+var _SentimentSatisfied = _interopRequireDefault(require("@material-ui/icons/SentimentSatisfied"));
+
+var _SentimentSatisfiedAltOutlined = _interopRequireDefault(require("@material-ui/icons/SentimentSatisfiedAltOutlined"));
+
+var _SentimentVerySatisfied = _interopRequireDefault(require("@material-ui/icons/SentimentVerySatisfied"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -341,7 +349,6 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-// import { Image, Line, Layer, Stage } from 'react-konva';
 var ext = {
   AccountCircle: _AccountCircle["default"],
   AddButton: _AddButton["default"],
@@ -391,11 +398,12 @@ var ext = {
   CustomCardHeader: _CustomCardHeader["default"],
   DateFnsUtils: _dateFns["default"],
   DateRangePicker: _pickers.DateRangePicker,
+  DateRangeIcon: _DateRange["default"],
   DateRangeDelimiter: _pickers.DateRangeDelimiter,
   DeleteForeverIcon: _DeleteForever["default"],
   DeleteWarning: _DeleteWarning["default"],
   DescriptionControl: _DescriptionControl["default"],
-  DeviceOrientation: _reactScreenOrientation["default"],
+  // DeviceOrientation,
   Dialog: _Dialog["default"],
   DialogActions: _DialogActions["default"],
   DialogContent: _DialogContent["default"],
@@ -455,14 +463,14 @@ var ext = {
   Menu: _Menu2["default"],
   MenuIcon: _Menu["default"],
   MenuItem: _MenuItem["default"],
-  Modal: _core.Modal,
+  Modal: _Modal["default"],
   MoreVertIcon: _MoreVert["default"],
   MuiPickersUtilsProvider: _pickers.MuiPickersUtilsProvider,
   MuiAlert: _Alert["default"],
   MultiPurposeTable: _MultiPurposeTable["default"],
   NavigateNextIcon: _NavigateNext["default"],
   NavigateBeforeIcon: _NavigateBefore["default"],
-  Orientation: _reactScreenOrientation.Orientation,
+  // Orientation,
   SimpleTable: _SimpleTable["default"],
   Paper: _Paper["default"],
   PeopleAltIcon: _PeopleAlt["default"],
@@ -513,7 +521,13 @@ var ext = {
   UseFormStyles: _UseFormStyles["default"],
   useTheme: _useTheme["default"],
   VisibilityIcon: _Visibility["default"],
-  Zoom: _Zoom["default"]
+  ViewListIcon: _ViewList["default"],
+  Zoom: _Zoom["default"],
+  SentimentVeryDissatisfiedIcon: _SentimentVeryDissatisfied["default"],
+  SentimentDissatisfiedIcon: _SentimentDissatisfied["default"],
+  SentimentSatisfiedIcon: _SentimentSatisfied["default"],
+  SentimentSatisfiedAltIcon: _SentimentSatisfiedAltOutlined["default"],
+  SentimentVerySatisfiedIcon: _SentimentVerySatisfied["default"]
 };
 
 var _default = function _default() {

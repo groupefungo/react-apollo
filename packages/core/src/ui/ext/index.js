@@ -44,6 +44,7 @@ import clsx from 'clsx'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import CustomCardHeader from "../CustomCardHeader";
 import DateFnsUtils from '@date-io/date-fns';
+import DateRangeIcon from '@material-ui/icons/DateRange';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import DeleteWarning from "../DeleteWarning";
 import DescriptionControl from "../DescriptionControl";
@@ -99,10 +100,10 @@ import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import ListIcon from '@material-ui/icons/List';
 import MailIcon from '@material-ui/icons/Mail';
 import makeStyles from '@material-ui/core/styles/makeStyles';
+import Modal from '@material-ui/core/Modal';
 import MenuIcon from '@material-ui/icons/Menu';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import { Modal } from '@material-ui/core';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import MultiPurposeTable from "../MultiPurposeTable";
 import MuiAlert from '@material-ui/lab/Alert';
@@ -158,13 +159,16 @@ import useSnackBar from '../UseSnackBar'
 import UseFormStyles from "../UseFormStyles";
 import useTheme from "@material-ui/core/styles/useTheme";
 import VisibilityIcon from '@material-ui/icons/Visibility';
+import ViewListIcon from '@material-ui/icons/ViewList';
 import Zoom from '@material-ui/core/Zoom';
 import {MuiPickersUtilsProvider, KeyboardDatePicker, DateRangePicker, DateRangeDelimiter} from '@material-ui/pickers';
 import {ThemeProvider, createMuiTheme} from '@material-ui/core';
 
-import DeviceOrientation, { Orientation } from 'react-screen-orientation';
-
-// import { Image, Line, Layer, Stage } from 'react-konva';
+import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
+import SentimentDissatisfiedIcon from '@material-ui/icons/SentimentDissatisfied';
+import SentimentSatisfiedIcon from '@material-ui/icons/SentimentSatisfied';
+import SentimentSatisfiedAltIcon from '@material-ui/icons/SentimentSatisfiedAltOutlined';
+import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfied';
 
 const ext = {
   AccountCircle,
@@ -215,11 +219,12 @@ const ext = {
   CustomCardHeader,
   DateFnsUtils,
   DateRangePicker,
+  DateRangeIcon,
   DateRangeDelimiter,
   DeleteForeverIcon,
   DeleteWarning,
   DescriptionControl,
-  DeviceOrientation,
+  // DeviceOrientation,
   Dialog,
   DialogActions,
   DialogContent,
@@ -286,7 +291,7 @@ const ext = {
   MultiPurposeTable,
   NavigateNextIcon,
   NavigateBeforeIcon,
-  Orientation,
+  // Orientation,
   SimpleTable,
   Paper,
   PeopleAltIcon,
@@ -337,7 +342,13 @@ const ext = {
   UseFormStyles,
   useTheme,
   VisibilityIcon,
+  ViewListIcon,
   Zoom,
+  SentimentVeryDissatisfiedIcon,
+  SentimentDissatisfiedIcon,
+  SentimentSatisfiedIcon,
+  SentimentSatisfiedAltIcon,
+  SentimentVerySatisfiedIcon,
 };
 
 export default () => (

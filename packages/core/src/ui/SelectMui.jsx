@@ -9,7 +9,7 @@ function SelectMui(props) {
   const inputLabel = useRef(null);
   const [labelWidth, setLabelWidth] = useState(0);
 
-  const { label, options, error, hasDefaultOption, defaultOptionLabel, fullWidth, color, name, ...remainingProps } = props;
+  const { label, options, error, hasDefaultOption, defaultOptionLabel, fullWidth, color, name, native, ...remainingProps } = props;
 
   useEffect(() => {
     setLabelWidth(inputLabel.current.clientWidth);
@@ -23,13 +23,15 @@ function SelectMui(props) {
         {label}
       </InputLabel>
       <Select
+        native={native}
         labelId={labelId}
         id={elementId}
         labelWidth={labelWidth}
         name={name}
         {...remainingProps}
       >
-        {hasDefaultOption ? <MenuItem value="-1"><em>{defaultOptionLabel}</em></MenuItem> : null}
+        {hasDefaultOption && !native ? <MenuItem value="-1"><em>{defaultOptionLabel}</em></MenuItem> : null}
+        {hasDefaultOption && native ? <option value="-1">{defaultOptionLabel}</option> : null}
         {options.map((option) => {
           let optionValue;
           let optionLabel;
@@ -40,6 +42,11 @@ function SelectMui(props) {
           } else {
             optionValue = option;
             optionLabel = option;
+          }
+          if (native) {
+            return (
+              <option id={`menu_item_${optionValue}`} key={optionValue} value={optionValue}>{optionLabel}</option>
+            )
           }
           return (
             <MenuItem id={`menu_item_${optionValue}`} key={optionValue} value={optionValue}>{optionLabel}</MenuItem>
@@ -56,6 +63,7 @@ SelectMui.defaultProps = {
   defaultOptionLabel: '',
   fullWidth: true,
   color: 'primary',
+  native: false
 };
 
 SelectMui.propTypes = {
@@ -68,6 +76,7 @@ SelectMui.propTypes = {
   onChange: PropTypes.func.isRequired,
   options: PropTypes.array.isRequired,
   error: PropTypes.bool,
+  native: PropTypes.bool,
 };
 
 export default SelectMui;
