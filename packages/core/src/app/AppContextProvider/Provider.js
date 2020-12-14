@@ -5,7 +5,7 @@ import AppContext from '../Context/Context';
 import APOLLO_CLIENT from "../Apollo";
 import {Dialog} from "../../ui/Dialog/Dialog";
 
-export default ({useProvideAuth, children}) => {
+export default ({useProvideAuth, children, customClient}) => {
   const appExt = useExt();
   const {ProvideAuth, Router, ApolloProvider} = appExt;
 
@@ -29,7 +29,7 @@ export default ({useProvideAuth, children}) => {
   return (
     <AppContext.Provider value={appExt}>
       <Dialog/>
-      <ApolloProvider client={APOLLO_CLIENT}>
+      <ApolloProvider client={customClient || APOLLO_CLIENT}>
         <AuthProvider />
       </ApolloProvider>
     </AppContext.Provider>

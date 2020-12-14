@@ -27,16 +27,19 @@ var Container = function Container(_ref) {
   var useProvideAuth = _ref.useProvideAuth,
       thm = _ref.thm,
       children = _ref.children,
-      withAuth = _ref.withAuth;
+      withAuth = _ref.withAuth,
+      customClient = _ref.customClient;
   return _react["default"].createElement(_ErrorBoundary["default"], null, _react["default"].createElement(_ui["default"], {
     thm: thm
   }, _react["default"].createElement(_["default"], {
-    useProvideAuth: withAuth ? useProvideAuth : null
+    useProvideAuth: withAuth ? useProvideAuth : null,
+    customClient: customClient
   }, children)));
 };
 
 Container.defaultProps = {
-  withAuth: true
+  withAuth: true,
+  customClient: null
 };
 var _default = Container;
 exports["default"] = _default;

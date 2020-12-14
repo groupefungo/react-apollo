@@ -19,7 +19,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 var _default = function _default(_ref) {
   var useProvideAuth = _ref.useProvideAuth,
-      children = _ref.children;
+      children = _ref.children,
+      customClient = _ref.customClient;
   var appExt = (0, _ext["default"])();
   var ProvideAuth = appExt.ProvideAuth,
       Router = appExt.Router,
@@ -38,7 +39,7 @@ var _default = function _default(_ref) {
   return _react["default"].createElement(_Context["default"].Provider, {
     value: appExt
   }, _react["default"].createElement(_Dialog.Dialog, null), _react["default"].createElement(ApolloProvider, {
-    client: _Apollo["default"]
+    client: customClient || _Apollo["default"]
   }, _react["default"].createElement(AuthProvider, null)));
 };
 
