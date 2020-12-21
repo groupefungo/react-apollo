@@ -48,7 +48,7 @@ var useChipFiles = function useChipFiles(stateFiles) {
       }
 
       var fileUrl = "".concat(process.env.API_URL).concat(process.env.ATTACHMENT_DOWNLOAD_PATH);
-      window.open("".concat(fileUrl, "/").concat(data.id, "/").concat(data.label));
+      window.open("".concat(fileUrl, "/").concat(data.id));
     };
   };
 

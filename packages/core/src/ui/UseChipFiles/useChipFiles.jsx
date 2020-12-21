@@ -46,7 +46,7 @@ export const useChipFiles = (stateFiles, setFilesState = null) => {
       return;
     }
     const fileUrl = `${process.env.API_URL}${process.env.ATTACHMENT_DOWNLOAD_PATH}`;
-    window.open(`${fileUrl}/${data.id}/${data.label}`);
+    window.open(`${fileUrl}/${data.id}`);
   };
 
   return {
