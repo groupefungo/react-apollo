@@ -1,6 +1,4 @@
-export const useQueryWrapper = (useQueryHandle, queryResultName) => {
-  const { data, error, refetch } = useQueryHandle();
-
+export const useQueryWrapper = ({ data, error, refetch }, queryResultName) => {
   if (error) return { error };
   if (!data) return { resultField: null };
 

@@ -5,12 +5,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.useQueryWrapper = void 0;
 
-var useQueryWrapper = function useQueryWrapper(useQueryHandle, queryResultName) {
-  var _useQueryHandle = useQueryHandle(),
-      data = _useQueryHandle.data,
-      error = _useQueryHandle.error,
-      refetch = _useQueryHandle.refetch;
-
+var useQueryWrapper = function useQueryWrapper(_ref, queryResultName) {
+  var data = _ref.data,
+      error = _ref.error,
+      refetch = _ref.refetch;
   if (error) return {
     error: error
   };
