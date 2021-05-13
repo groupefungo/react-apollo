@@ -65,7 +65,7 @@ function MultiPurposeTablePagination(props) {
   var handleRowChange = function handleRowChange(_ref) {
     var target = _ref.target;
     var value = target.value;
-    setState(_objectSpread({}, initialConnectionFilters, {
+    setState(_objectSpread({}, connection, {
       sortKey: sortKey,
       reverse: reverse,
       first: value

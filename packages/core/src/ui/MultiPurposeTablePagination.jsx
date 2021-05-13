@@ -28,7 +28,7 @@
       const { value } = target;
 
       setState({
-        ...initialConnectionFilters,
+        ...connection,
         sortKey,
         reverse,
         first: value,
