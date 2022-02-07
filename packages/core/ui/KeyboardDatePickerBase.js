@@ -15,6 +15,7 @@ var _default = function _default(_ref) {
   var value = _ref.value,
       changed = _ref.changed,
       name = _ref.name,
+      label = _ref.label,
       required = _ref.required,
       disabled = _ref.disabled;
 
@@ -29,7 +30,7 @@ var _default = function _default(_ref) {
     format: "dd/MM/yyyy",
     placeholder: "10/10/2018",
     id: "date-picker-inline",
-    label: "Date",
+    label: label || "Date",
     value: value,
     onChange: changed,
     KeyboardButtonProps: {
